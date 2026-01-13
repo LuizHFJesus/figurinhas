@@ -1,4 +1,4 @@
-# sticker_manager_wc22
+# Sticker Manager - 2022 World Cup
 
 Sticker manager for the 2022 World Cup sticker album.
 
