@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sticker_manager_wc22/common/di/initial_binding.dart';
 import 'package:sticker_manager_wc22/core/i18n/app_translations.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_router.dart';
 
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp.router(
       title: 'app_name'.tr,
       debugShowCheckedModeBanner: false,
+
+      // Dependency injection configuration
+      initialBinding: InitialBinding(),
 
       // Locale configuration
       fallbackLocale: const Locale('pt', 'BR'),
