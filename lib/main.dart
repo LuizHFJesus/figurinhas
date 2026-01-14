@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sticker_manager_wc22/core/i18n/app_translations.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_router.dart';
 
 void main() {
@@ -14,9 +15,15 @@ class MyApp extends StatelessWidget {
     final router = AppRouter.router;
 
     return GetMaterialApp.router(
-      title: 'Sticker Manager - World Cup 2022',
+      title: 'app_name'.tr,
       debugShowCheckedModeBanner: false,
 
+      // Locale configuration
+      fallbackLocale: const Locale('pt', 'BR'),
+      locale: Get.deviceLocale,
+      translations: AppTranslations(),
+
+      // Router configuration
       routerDelegate: router.routerDelegate,
       routeInformationParser: router.routeInformationParser,
       routeInformationProvider: router.routeInformationProvider,
