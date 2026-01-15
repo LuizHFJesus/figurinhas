@@ -6,6 +6,7 @@ import 'package:sticker_manager_wc22/core/navigation/app_router.dart';
 import 'package:sticker_manager_wc22/core/theme/app_theme.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
