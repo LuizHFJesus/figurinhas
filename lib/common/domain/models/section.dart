@@ -19,5 +19,24 @@ class Section {
 
   final category = IsarLink<Group>();
   final stickers = IsarLinks<Sticker>();
+
+  Section();
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'icon': icon,
+      'displayOrder': displayOrder,
+    };
+  }
+
+  factory Section.fromMap(Map<String, dynamic> map) {
+    return Section()
+      ..id = map['id'] as String
+      ..name = map['name'] as String
+      ..icon = map['icon'] as String?
+      ..displayOrder = map['displayOrder'] as int? ?? 0;
+  }
 }
 
