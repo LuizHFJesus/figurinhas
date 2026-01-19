@@ -7,6 +7,9 @@ class SectionStats {
   Id isarId = Isar.autoIncrement;
 
   @Index()
+  late String albumId;
+
+  @Index()
   late String sectionId;
 
   late int total;
@@ -21,6 +24,7 @@ class SectionStats {
 
   Map<String, dynamic> toMap() {
     return {
+      'albumId': albumId,
       'sectionId': sectionId,
       'total': total,
       'owned': owned,
@@ -32,6 +36,7 @@ class SectionStats {
 
   factory SectionStats.fromMap(Map<String, dynamic> map) {
     return SectionStats()
+      ..albumId = map['albumId'] as String
       ..sectionId = map['sectionId'] as String
       ..total = map['total'] as int? ?? 0
       ..owned = map['owned'] as int? ?? 0
