@@ -8,9 +8,6 @@ part 'group.g.dart';
 class Group {
   Id isarId = Isar.autoIncrement;
 
-  @Index(unique: true, replace: true)
-  String? id;
-
   late String name;
 
   @Index()
@@ -18,4 +15,19 @@ class Group {
 
   final album = IsarLink<Album>();
   final sections = IsarLinks<Section>();
+
+  Group();
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': name,
+      'displayOrder': displayOrder,
+    };
+  }
+
+  factory Group.fromMap(Map<String, dynamic> map) {
+    return Group()
+      ..name = map['name'] as String
+      ..displayOrder = map['displayOrder'] as int? ?? 0;
+  }
 }
