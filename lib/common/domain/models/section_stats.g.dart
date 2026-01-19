@@ -17,21 +17,22 @@ const SectionStatsSchema = CollectionSchema(
   name: r'SectionStats',
   id: 8576181233710557392,
   properties: {
-    r'missing': PropertySchema(id: 0, name: r'missing', type: IsarType.long),
-    r'owned': PropertySchema(id: 1, name: r'owned', type: IsarType.long),
+    r'albumId': PropertySchema(id: 0, name: r'albumId', type: IsarType.string),
+    r'missing': PropertySchema(id: 1, name: r'missing', type: IsarType.long),
+    r'owned': PropertySchema(id: 2, name: r'owned', type: IsarType.long),
     r'progress': PropertySchema(
-      id: 2,
+      id: 3,
       name: r'progress',
       type: IsarType.double,
     ),
     r'sectionId': PropertySchema(
-      id: 3,
+      id: 4,
       name: r'sectionId',
       type: IsarType.string,
     ),
-    r'total': PropertySchema(id: 4, name: r'total', type: IsarType.long),
+    r'total': PropertySchema(id: 5, name: r'total', type: IsarType.long),
     r'updatedAt': PropertySchema(
-      id: 5,
+      id: 6,
       name: r'updatedAt',
       type: IsarType.dateTime,
     ),
@@ -43,6 +44,19 @@ const SectionStatsSchema = CollectionSchema(
   deserializeProp: _sectionStatsDeserializeProp,
   idName: r'isarId',
   indexes: {
+    r'albumId': IndexSchema(
+      id: -3314078833704812111,
+      name: r'albumId',
+      unique: false,
+      replace: false,
+      properties: [
+        IndexPropertySchema(
+          name: r'albumId',
+          type: IndexType.hash,
+          caseSensitive: true,
+        ),
+      ],
+    ),
     r'sectionId': IndexSchema(
       id: 2871565378294445407,
       name: r'sectionId',
@@ -72,6 +86,7 @@ int _sectionStatsEstimateSize(
   Map<Type, List<int>> allOffsets,
 ) {
   var bytesCount = offsets.last;
+  bytesCount += 3 + object.albumId.length * 3;
   bytesCount += 3 + object.sectionId.length * 3;
   return bytesCount;
 }
@@ -82,12 +97,13 @@ void _sectionStatsSerialize(
   List<int> offsets,
   Map<Type, List<int>> allOffsets,
 ) {
-  writer.writeLong(offsets[0], object.missing);
-  writer.writeLong(offsets[1], object.owned);
-  writer.writeDouble(offsets[2], object.progress);
-  writer.writeString(offsets[3], object.sectionId);
-  writer.writeLong(offsets[4], object.total);
-  writer.writeDateTime(offsets[5], object.updatedAt);
+  writer.writeString(offsets[0], object.albumId);
+  writer.writeLong(offsets[1], object.missing);
+  writer.writeLong(offsets[2], object.owned);
+  writer.writeDouble(offsets[3], object.progress);
+  writer.writeString(offsets[4], object.sectionId);
+  writer.writeLong(offsets[5], object.total);
+  writer.writeDateTime(offsets[6], object.updatedAt);
 }
 
 SectionStats _sectionStatsDeserialize(
@@ -97,13 +113,14 @@ SectionStats _sectionStatsDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = SectionStats();
+  object.albumId = reader.readString(offsets[0]);
   object.isarId = id;
-  object.missing = reader.readLong(offsets[0]);
-  object.owned = reader.readLong(offsets[1]);
-  object.progress = reader.readDouble(offsets[2]);
-  object.sectionId = reader.readString(offsets[3]);
-  object.total = reader.readLong(offsets[4]);
-  object.updatedAt = reader.readDateTime(offsets[5]);
+  object.missing = reader.readLong(offsets[1]);
+  object.owned = reader.readLong(offsets[2]);
+  object.progress = reader.readDouble(offsets[3]);
+  object.sectionId = reader.readString(offsets[4]);
+  object.total = reader.readLong(offsets[5]);
+  object.updatedAt = reader.readDateTime(offsets[6]);
   return object;
 }
 
@@ -115,16 +132,18 @@ P _sectionStatsDeserializeProp<P>(
 ) {
   switch (propertyId) {
     case 0:
-      return (reader.readLong(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 1:
       return (reader.readLong(offset)) as P;
     case 2:
-      return (reader.readDouble(offset)) as P;
-    case 3:
-      return (reader.readString(offset)) as P;
-    case 4:
       return (reader.readLong(offset)) as P;
+    case 3:
+      return (reader.readDouble(offset)) as P;
+    case 4:
+      return (reader.readString(offset)) as P;
     case 5:
+      return (reader.readLong(offset)) as P;
+    case 6:
       return (reader.readDateTime(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -232,6 +251,60 @@ extension SectionStatsQueryWhere
     });
   }
 
+  QueryBuilder<SectionStats, SectionStats, QAfterWhereClause> albumIdEqualTo(
+    String albumId,
+  ) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addWhereClause(
+        IndexWhereClause.equalTo(indexName: r'albumId', value: [albumId]),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterWhereClause> albumIdNotEqualTo(
+    String albumId,
+  ) {
+    return QueryBuilder.apply(this, (query) {
+      if (query.whereSort == Sort.asc) {
+        return query
+            .addWhereClause(
+              IndexWhereClause.between(
+                indexName: r'albumId',
+                lower: [],
+                upper: [albumId],
+                includeUpper: false,
+              ),
+            )
+            .addWhereClause(
+              IndexWhereClause.between(
+                indexName: r'albumId',
+                lower: [albumId],
+                includeLower: false,
+                upper: [],
+              ),
+            );
+      } else {
+        return query
+            .addWhereClause(
+              IndexWhereClause.between(
+                indexName: r'albumId',
+                lower: [albumId],
+                includeLower: false,
+                upper: [],
+              ),
+            )
+            .addWhereClause(
+              IndexWhereClause.between(
+                indexName: r'albumId',
+                lower: [],
+                upper: [albumId],
+                includeUpper: false,
+              ),
+            );
+      }
+    });
+  }
+
   QueryBuilder<SectionStats, SectionStats, QAfterWhereClause> sectionIdEqualTo(
     String sectionId,
   ) {
@@ -288,6 +361,147 @@ extension SectionStatsQueryWhere
 
 extension SectionStatsQueryFilter
     on QueryBuilder<SectionStats, SectionStats, QFilterCondition> {
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdEqualTo(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(
+          property: r'albumId',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdGreaterThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'albumId',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdLessThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'albumId',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdBetween(
+    String lower,
+    String upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'albumId',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdStartsWith(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.startsWith(
+          property: r'albumId',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdEndsWith(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.endsWith(
+          property: r'albumId',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdContains(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.contains(
+          property: r'albumId',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdMatches(String pattern, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.matches(
+          property: r'albumId',
+          wildcard: pattern,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'albumId', value: ''),
+      );
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition>
+  albumIdIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(property: r'albumId', value: ''),
+      );
+    });
+  }
+
   QueryBuilder<SectionStats, SectionStats, QAfterFilterCondition> isarIdEqualTo(
     Id value,
   ) {
@@ -792,6 +1006,18 @@ extension SectionStatsQueryLinks
 
 extension SectionStatsQuerySortBy
     on QueryBuilder<SectionStats, SectionStats, QSortBy> {
+  QueryBuilder<SectionStats, SectionStats, QAfterSortBy> sortByAlbumId() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'albumId', Sort.asc);
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterSortBy> sortByAlbumIdDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'albumId', Sort.desc);
+    });
+  }
+
   QueryBuilder<SectionStats, SectionStats, QAfterSortBy> sortByMissing() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'missing', Sort.asc);
@@ -867,6 +1093,18 @@ extension SectionStatsQuerySortBy
 
 extension SectionStatsQuerySortThenBy
     on QueryBuilder<SectionStats, SectionStats, QSortThenBy> {
+  QueryBuilder<SectionStats, SectionStats, QAfterSortBy> thenByAlbumId() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'albumId', Sort.asc);
+    });
+  }
+
+  QueryBuilder<SectionStats, SectionStats, QAfterSortBy> thenByAlbumIdDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'albumId', Sort.desc);
+    });
+  }
+
   QueryBuilder<SectionStats, SectionStats, QAfterSortBy> thenByIsarId() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'isarId', Sort.asc);
@@ -954,6 +1192,14 @@ extension SectionStatsQuerySortThenBy
 
 extension SectionStatsQueryWhereDistinct
     on QueryBuilder<SectionStats, SectionStats, QDistinct> {
+  QueryBuilder<SectionStats, SectionStats, QDistinct> distinctByAlbumId({
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'albumId', caseSensitive: caseSensitive);
+    });
+  }
+
   QueryBuilder<SectionStats, SectionStats, QDistinct> distinctByMissing() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'missing');
@@ -998,6 +1244,12 @@ extension SectionStatsQueryProperty
   QueryBuilder<SectionStats, int, QQueryOperations> isarIdProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'isarId');
+    });
+  }
+
+  QueryBuilder<SectionStats, String, QQueryOperations> albumIdProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'albumId');
     });
   }
 
