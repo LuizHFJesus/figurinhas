@@ -7,7 +7,7 @@ part 'sticker.g.dart';
 class Sticker {
   Id isarId = Isar.autoIncrement;
 
-  @Index()
+  @Index(unique: true, type: IndexType.hash)
   late String id;
 
   @Index()

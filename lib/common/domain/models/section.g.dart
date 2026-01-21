@@ -37,7 +37,7 @@ const SectionSchema = CollectionSchema(
       id: -3268401673993471357,
       name: r'id',
       unique: true,
-      replace: true,
+      replace: false,
       properties: [
         IndexPropertySchema(
           name: r'id',
@@ -61,9 +61,9 @@ const SectionSchema = CollectionSchema(
     ),
   },
   links: {
-    r'category': LinkSchema(
-      id: 3554521581181023482,
-      name: r'category',
+    r'group': LinkSchema(
+      id: -2010791197628717705,
+      name: r'group',
       target: r'Group',
       single: true,
     ),
@@ -94,12 +94,7 @@ int _sectionEstimateSize(
       bytesCount += 3 + value.length * 3;
     }
   }
-  {
-    final value = object.id;
-    if (value != null) {
-      bytesCount += 3 + value.length * 3;
-    }
-  }
+  bytesCount += 3 + object.id.length * 3;
   bytesCount += 3 + object.name.length * 3;
   return bytesCount;
 }
@@ -125,7 +120,7 @@ Section _sectionDeserialize(
   final object = Section();
   object.displayOrder = reader.readLong(offsets[0]);
   object.icon = reader.readStringOrNull(offsets[1]);
-  object.id = reader.readStringOrNull(offsets[2]);
+  object.id = reader.readString(offsets[2]);
   object.isarId = id;
   object.name = reader.readString(offsets[3]);
   return object;
@@ -143,7 +138,7 @@ P _sectionDeserializeProp<P>(
     case 1:
       return (reader.readStringOrNull(offset)) as P;
     case 2:
-      return (reader.readStringOrNull(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 3:
       return (reader.readString(offset)) as P;
     default:
@@ -156,48 +151,48 @@ Id _sectionGetId(Section object) {
 }
 
 List<IsarLinkBase<dynamic>> _sectionGetLinks(Section object) {
-  return [object.category, object.stickers];
+  return [object.group, object.stickers];
 }
 
 void _sectionAttach(IsarCollection<dynamic> col, Id id, Section object) {
   object.isarId = id;
-  object.category.attach(col, col.isar.collection<Group>(), r'category', id);
+  object.group.attach(col, col.isar.collection<Group>(), r'group', id);
   object.stickers.attach(col, col.isar.collection<Sticker>(), r'stickers', id);
 }
 
 extension SectionByIndex on IsarCollection<Section> {
-  Future<Section?> getById(String? id) {
+  Future<Section?> getById(String id) {
     return getByIndex(r'id', [id]);
   }
 
-  Section? getByIdSync(String? id) {
+  Section? getByIdSync(String id) {
     return getByIndexSync(r'id', [id]);
   }
 
-  Future<bool> deleteById(String? id) {
+  Future<bool> deleteById(String id) {
     return deleteByIndex(r'id', [id]);
   }
 
-  bool deleteByIdSync(String? id) {
+  bool deleteByIdSync(String id) {
     return deleteByIndexSync(r'id', [id]);
   }
 
-  Future<List<Section?>> getAllById(List<String?> idValues) {
+  Future<List<Section?>> getAllById(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return getAllByIndex(r'id', values);
   }
 
-  List<Section?> getAllByIdSync(List<String?> idValues) {
+  List<Section?> getAllByIdSync(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return getAllByIndexSync(r'id', values);
   }
 
-  Future<int> deleteAllById(List<String?> idValues) {
+  Future<int> deleteAllById(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return deleteAllByIndex(r'id', values);
   }
 
-  int deleteAllByIdSync(List<String?> idValues) {
+  int deleteAllByIdSync(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return deleteAllByIndexSync(r'id', values);
   }
@@ -308,28 +303,7 @@ extension SectionQueryWhere on QueryBuilder<Section, Section, QWhereClause> {
     });
   }
 
-  QueryBuilder<Section, Section, QAfterWhereClause> idIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addWhereClause(
-        IndexWhereClause.equalTo(indexName: r'id', value: [null]),
-      );
-    });
-  }
-
-  QueryBuilder<Section, Section, QAfterWhereClause> idIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addWhereClause(
-        IndexWhereClause.between(
-          indexName: r'id',
-          lower: [null],
-          includeLower: false,
-          upper: [],
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<Section, Section, QAfterWhereClause> idEqualTo(String? id) {
+  QueryBuilder<Section, Section, QAfterWhereClause> idEqualTo(String id) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(
         IndexWhereClause.equalTo(indexName: r'id', value: [id]),
@@ -337,7 +311,7 @@ extension SectionQueryWhere on QueryBuilder<Section, Section, QWhereClause> {
     });
   }
 
-  QueryBuilder<Section, Section, QAfterWhereClause> idNotEqualTo(String? id) {
+  QueryBuilder<Section, Section, QAfterWhereClause> idNotEqualTo(String id) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -711,24 +685,8 @@ extension SectionQueryFilter
     });
   }
 
-  QueryBuilder<Section, Section, QAfterFilterCondition> idIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNull(property: r'id'),
-      );
-    });
-  }
-
-  QueryBuilder<Section, Section, QAfterFilterCondition> idIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNotNull(property: r'id'),
-      );
-    });
-  }
-
   QueryBuilder<Section, Section, QAfterFilterCondition> idEqualTo(
-    String? value, {
+    String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
@@ -743,7 +701,7 @@ extension SectionQueryFilter
   }
 
   QueryBuilder<Section, Section, QAfterFilterCondition> idGreaterThan(
-    String? value, {
+    String value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -760,7 +718,7 @@ extension SectionQueryFilter
   }
 
   QueryBuilder<Section, Section, QAfterFilterCondition> idLessThan(
-    String? value, {
+    String value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -777,8 +735,8 @@ extension SectionQueryFilter
   }
 
   QueryBuilder<Section, Section, QAfterFilterCondition> idBetween(
-    String? lower,
-    String? upper, {
+    String lower,
+    String upper, {
     bool includeLower = true,
     bool includeUpper = true,
     bool caseSensitive = true,
@@ -1084,17 +1042,17 @@ extension SectionQueryObject
 
 extension SectionQueryLinks
     on QueryBuilder<Section, Section, QFilterCondition> {
-  QueryBuilder<Section, Section, QAfterFilterCondition> category(
+  QueryBuilder<Section, Section, QAfterFilterCondition> group(
     FilterQuery<Group> q,
   ) {
     return QueryBuilder.apply(this, (query) {
-      return query.link(q, r'category');
+      return query.link(q, r'group');
     });
   }
 
-  QueryBuilder<Section, Section, QAfterFilterCondition> categoryIsNull() {
+  QueryBuilder<Section, Section, QAfterFilterCondition> groupIsNull() {
     return QueryBuilder.apply(this, (query) {
-      return query.linkLength(r'category', 0, true, 0, true);
+      return query.linkLength(r'group', 0, true, 0, true);
     });
   }
 
@@ -1326,7 +1284,7 @@ extension SectionQueryProperty
     });
   }
 
-  QueryBuilder<Section, String?, QQueryOperations> idProperty() {
+  QueryBuilder<Section, String, QQueryOperations> idProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'id');
     });

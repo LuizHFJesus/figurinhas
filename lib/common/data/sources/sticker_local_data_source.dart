@@ -60,7 +60,7 @@ class StickerLocalDataSource implements IStickerLocalDataSource {
       final stickers = await _isar.stickers
           .filter()
           .section(
-            (q) => q.category((c) => c.album((a) => a.idEqualTo(albumId))),
+            (q) => q.group((c) => c.album((a) => a.idEqualTo(albumId))),
           )
           .findAll();
       return Right(stickers);
@@ -81,7 +81,7 @@ class StickerLocalDataSource implements IStickerLocalDataSource {
           .quantityGreaterThan(1)
           .and()
           .section(
-            (q) => q.category((c) => c.album((a) => a.idEqualTo(albumId))),
+            (q) => q.group((c) => c.album((a) => a.idEqualTo(albumId))),
           )
           .findAll();
       return Right(stickers);
@@ -100,7 +100,7 @@ class StickerLocalDataSource implements IStickerLocalDataSource {
           .quantityEqualTo(0)
           .and()
           .section(
-            (q) => q.category((c) => c.album((a) => a.idEqualTo(albumId))),
+            (q) => q.group((c) => c.album((a) => a.idEqualTo(albumId))),
           )
           .findAll();
       return Right(stickers);
@@ -120,7 +120,7 @@ class StickerLocalDataSource implements IStickerLocalDataSource {
           .codeContains(query, caseSensitive: false)
           .and()
           .section(
-            (q) => q.category((c) => c.album((a) => a.idEqualTo(albumId))),
+            (q) => q.group((c) => c.album((a) => a.idEqualTo(albumId))),
           )
           .findAll();
       return Right(stickers);

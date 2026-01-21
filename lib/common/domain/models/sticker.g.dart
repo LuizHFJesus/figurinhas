@@ -48,7 +48,7 @@ const StickerSchema = CollectionSchema(
     r'id': IndexSchema(
       id: -3268401673993471357,
       name: r'id',
-      unique: false,
+      unique: true,
       replace: false,
       properties: [
         IndexPropertySchema(
@@ -244,6 +244,60 @@ List<IsarLinkBase<dynamic>> _stickerGetLinks(Sticker object) {
 void _stickerAttach(IsarCollection<dynamic> col, Id id, Sticker object) {
   object.isarId = id;
   object.section.attach(col, col.isar.collection<Section>(), r'section', id);
+}
+
+extension StickerByIndex on IsarCollection<Sticker> {
+  Future<Sticker?> getById(String id) {
+    return getByIndex(r'id', [id]);
+  }
+
+  Sticker? getByIdSync(String id) {
+    return getByIndexSync(r'id', [id]);
+  }
+
+  Future<bool> deleteById(String id) {
+    return deleteByIndex(r'id', [id]);
+  }
+
+  bool deleteByIdSync(String id) {
+    return deleteByIndexSync(r'id', [id]);
+  }
+
+  Future<List<Sticker?>> getAllById(List<String> idValues) {
+    final values = idValues.map((e) => [e]).toList();
+    return getAllByIndex(r'id', values);
+  }
+
+  List<Sticker?> getAllByIdSync(List<String> idValues) {
+    final values = idValues.map((e) => [e]).toList();
+    return getAllByIndexSync(r'id', values);
+  }
+
+  Future<int> deleteAllById(List<String> idValues) {
+    final values = idValues.map((e) => [e]).toList();
+    return deleteAllByIndex(r'id', values);
+  }
+
+  int deleteAllByIdSync(List<String> idValues) {
+    final values = idValues.map((e) => [e]).toList();
+    return deleteAllByIndexSync(r'id', values);
+  }
+
+  Future<Id> putById(Sticker object) {
+    return putByIndex(r'id', object);
+  }
+
+  Id putByIdSync(Sticker object, {bool saveLinks = true}) {
+    return putByIndexSync(r'id', object, saveLinks: saveLinks);
+  }
+
+  Future<List<Id>> putAllById(List<Sticker> objects) {
+    return putAllByIndex(r'id', objects);
+  }
+
+  List<Id> putAllByIdSync(List<Sticker> objects, {bool saveLinks = true}) {
+    return putAllByIndexSync(r'id', objects, saveLinks: saveLinks);
+  }
 }
 
 extension StickerQueryWhereSort on QueryBuilder<Sticker, Sticker, QWhere> {
