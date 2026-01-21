@@ -7,8 +7,8 @@ part 'album.g.dart';
 class Album {
   Id isarId = Isar.autoIncrement;
 
-  @Index(unique: true, replace: true)
-  String? id;
+  @Index(unique: true, type: IndexType.hash)
+  late String id;
 
   @Index()
   String? userId;
@@ -40,7 +40,7 @@ class Album {
 
   factory Album.fromMap(Map<String, dynamic> map) {
     return Album()
-      ..id = map['id'] as String?
+      ..id = map['id'] as String
       ..userId = map['userId'] as String?
       ..name = map['name'] as String
       ..edition = map['edition'] as String

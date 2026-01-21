@@ -44,7 +44,7 @@ const AlbumSchema = CollectionSchema(
       id: -3268401673993471357,
       name: r'id',
       unique: true,
-      replace: true,
+      replace: false,
       properties: [
         IndexPropertySchema(
           name: r'id',
@@ -103,12 +103,7 @@ int _albumEstimateSize(
 ) {
   var bytesCount = offsets.last;
   bytesCount += 3 + object.edition.length * 3;
-  {
-    final value = object.id;
-    if (value != null) {
-      bytesCount += 3 + value.length * 3;
-    }
-  }
+  bytesCount += 3 + object.id.length * 3;
   bytesCount += 3 + object.name.length * 3;
   {
     final value = object.userId;
@@ -143,7 +138,7 @@ Album _albumDeserialize(
   final object = Album();
   object.createdAt = reader.readDateTime(offsets[0]);
   object.edition = reader.readString(offsets[1]);
-  object.id = reader.readStringOrNull(offsets[2]);
+  object.id = reader.readString(offsets[2]);
   object.isActive = reader.readBool(offsets[3]);
   object.isarId = id;
   object.name = reader.readString(offsets[4]);
@@ -164,7 +159,7 @@ P _albumDeserializeProp<P>(
     case 1:
       return (reader.readString(offset)) as P;
     case 2:
-      return (reader.readStringOrNull(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 3:
       return (reader.readBool(offset)) as P;
     case 4:
@@ -197,38 +192,38 @@ void _albumAttach(IsarCollection<dynamic> col, Id id, Album object) {
 }
 
 extension AlbumByIndex on IsarCollection<Album> {
-  Future<Album?> getById(String? id) {
+  Future<Album?> getById(String id) {
     return getByIndex(r'id', [id]);
   }
 
-  Album? getByIdSync(String? id) {
+  Album? getByIdSync(String id) {
     return getByIndexSync(r'id', [id]);
   }
 
-  Future<bool> deleteById(String? id) {
+  Future<bool> deleteById(String id) {
     return deleteByIndex(r'id', [id]);
   }
 
-  bool deleteByIdSync(String? id) {
+  bool deleteByIdSync(String id) {
     return deleteByIndexSync(r'id', [id]);
   }
 
-  Future<List<Album?>> getAllById(List<String?> idValues) {
+  Future<List<Album?>> getAllById(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return getAllByIndex(r'id', values);
   }
 
-  List<Album?> getAllByIdSync(List<String?> idValues) {
+  List<Album?> getAllByIdSync(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return getAllByIndexSync(r'id', values);
   }
 
-  Future<int> deleteAllById(List<String?> idValues) {
+  Future<int> deleteAllById(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return deleteAllByIndex(r'id', values);
   }
 
-  int deleteAllByIdSync(List<String?> idValues) {
+  int deleteAllByIdSync(List<String> idValues) {
     final values = idValues.map((e) => [e]).toList();
     return deleteAllByIndexSync(r'id', values);
   }
@@ -337,28 +332,7 @@ extension AlbumQueryWhere on QueryBuilder<Album, Album, QWhereClause> {
     });
   }
 
-  QueryBuilder<Album, Album, QAfterWhereClause> idIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addWhereClause(
-        IndexWhereClause.equalTo(indexName: r'id', value: [null]),
-      );
-    });
-  }
-
-  QueryBuilder<Album, Album, QAfterWhereClause> idIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addWhereClause(
-        IndexWhereClause.between(
-          indexName: r'id',
-          lower: [null],
-          includeLower: false,
-          upper: [],
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<Album, Album, QAfterWhereClause> idEqualTo(String? id) {
+  QueryBuilder<Album, Album, QAfterWhereClause> idEqualTo(String id) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(
         IndexWhereClause.equalTo(indexName: r'id', value: [id]),
@@ -366,7 +340,7 @@ extension AlbumQueryWhere on QueryBuilder<Album, Album, QWhereClause> {
     });
   }
 
-  QueryBuilder<Album, Album, QAfterWhereClause> idNotEqualTo(String? id) {
+  QueryBuilder<Album, Album, QAfterWhereClause> idNotEqualTo(String id) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -740,24 +714,8 @@ extension AlbumQueryFilter on QueryBuilder<Album, Album, QFilterCondition> {
     });
   }
 
-  QueryBuilder<Album, Album, QAfterFilterCondition> idIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNull(property: r'id'),
-      );
-    });
-  }
-
-  QueryBuilder<Album, Album, QAfterFilterCondition> idIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNotNull(property: r'id'),
-      );
-    });
-  }
-
   QueryBuilder<Album, Album, QAfterFilterCondition> idEqualTo(
-    String? value, {
+    String value, {
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
@@ -772,7 +730,7 @@ extension AlbumQueryFilter on QueryBuilder<Album, Album, QFilterCondition> {
   }
 
   QueryBuilder<Album, Album, QAfterFilterCondition> idGreaterThan(
-    String? value, {
+    String value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -789,7 +747,7 @@ extension AlbumQueryFilter on QueryBuilder<Album, Album, QFilterCondition> {
   }
 
   QueryBuilder<Album, Album, QAfterFilterCondition> idLessThan(
-    String? value, {
+    String value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -806,8 +764,8 @@ extension AlbumQueryFilter on QueryBuilder<Album, Album, QFilterCondition> {
   }
 
   QueryBuilder<Album, Album, QAfterFilterCondition> idBetween(
-    String? lower,
-    String? upper, {
+    String lower,
+    String upper, {
     bool includeLower = true,
     bool includeUpper = true,
     bool caseSensitive = true,
@@ -1659,7 +1617,7 @@ extension AlbumQueryProperty on QueryBuilder<Album, Album, QQueryProperty> {
     });
   }
 
-  QueryBuilder<Album, String?, QQueryOperations> idProperty() {
+  QueryBuilder<Album, String, QQueryOperations> idProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'id');
     });

@@ -34,7 +34,7 @@ class AlbumRepository implements IAlbumRepository {
 
   @override
   Future<Either<Failure, List<Section>>> getSections(int groupId) =>
-      sectionLocalDataSource.getSectionsByCategory(groupId);
+      sectionLocalDataSource.getSectionsByGroup(groupId);
 
   @override
   Future<Either<Failure, AlbumStats?>> getAlbumStats(String albumId) =>

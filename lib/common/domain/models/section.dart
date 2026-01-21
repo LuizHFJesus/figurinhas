@@ -8,8 +8,8 @@ part 'section.g.dart';
 class Section {
   Id isarId = Isar.autoIncrement;
 
-  @Index(unique: true, replace: true)
-  String? id;
+  @Index(unique: true, type: IndexType.hash)
+  late String id;
 
   late String name;
   String? icon;
@@ -17,7 +17,7 @@ class Section {
   @Index()
   late int displayOrder;
 
-  final category = IsarLink<Group>();
+  final group = IsarLink<Group>();
   final stickers = IsarLinks<Sticker>();
 
   Section();

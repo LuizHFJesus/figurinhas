@@ -16,7 +16,7 @@ class SectionLocalDataSource implements ISectionLocalDataSource {
       await _isar.writeTxn(() async {
         await _isar.sections.putAll(sections);
         for (final section in sections) {
-          await section.category.save();
+          await section.group.save();
         }
       });
       return const Right(null);
@@ -26,13 +26,13 @@ class SectionLocalDataSource implements ISectionLocalDataSource {
   }
 
   @override
-  Future<Either<Failure, List<Section>>> getSectionsByCategory(
-    int categoryId,
+  Future<Either<Failure, List<Section>>> getSectionsByGroup(
+    int groupId,
   ) async {
     try {
       final sections = await _isar.sections
           .filter()
-          .category((q) => q.isarIdEqualTo(categoryId))
+          .group((q) => q.isarIdEqualTo(groupId))
           .sortByDisplayOrder()
           .findAll();
       return Right(sections);
