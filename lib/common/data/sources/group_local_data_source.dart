@@ -11,11 +11,11 @@ class GroupLocalDataSource implements IGroupLocalDataSource {
   final Isar _isar = Get.find<IsarService>().isar;
 
   @override
-  Future<Either<Failure, void>> saveCategories(List<Group> categories) async {
+  Future<Either<Failure, void>> saveGroups(List<Group> groups) async {
     try {
       await _isar.writeTxn(() async {
-        await _isar.groups.putAll(categories);
-        for (final group in categories) {
+        await _isar.groups.putAll(groups);
+        for (final group in groups) {
           await group.album.save();
         }
       });
@@ -26,16 +26,16 @@ class GroupLocalDataSource implements IGroupLocalDataSource {
   }
 
   @override
-  Future<Either<Failure, List<Group>>> getCategoriesByAlbum(
+  Future<Either<Failure, List<Group>>> getGroupsByAlbum(
     String albumId,
   ) async {
     try {
-      final categories = await _isar.groups
+      final groups = await _isar.groups
           .filter()
           .album((q) => q.idEqualTo(albumId))
           .sortByDisplayOrder()
           .findAll();
-      return Right(categories);
+      return Right(groups);
     } catch (e) {
       return Left(DatabaseFailure(message: 'Falha ao buscar categorias: $e'));
     }
