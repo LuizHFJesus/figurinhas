@@ -2,7 +2,7 @@ import 'package:dart_either/dart_either.dart';
 import 'package:sticker_manager_wc22/common/data/repositories/i_sticker_repository.dart';
 import 'package:sticker_manager_wc22/common/data/sources/i_sticker_local_data_source.dart';
 import 'package:sticker_manager_wc22/common/domain/models/sticker.dart';
-import 'package:sticker_manager_wc22/common/util/failure.dart';
+import 'package:sticker_manager_wc22/common/utils/failure.dart';
 
 class StickerRepository implements IStickerRepository {
   final IStickerLocalDataSource localDataSource;

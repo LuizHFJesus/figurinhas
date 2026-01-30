@@ -7,7 +7,7 @@ import 'package:sticker_manager_wc22/common/domain/models/album.dart';
 import 'package:sticker_manager_wc22/common/domain/models/group.dart';
 import 'package:sticker_manager_wc22/common/domain/models/section.dart';
 import 'package:sticker_manager_wc22/common/domain/models/sticker.dart';
-import 'package:sticker_manager_wc22/common/util/failure.dart';
+import 'package:sticker_manager_wc22/common/utils/failure.dart';
 
 class StickerLocalDataSource implements IStickerLocalDataSource {
   final Isar _isar = Get.find<IsarService>().isar;

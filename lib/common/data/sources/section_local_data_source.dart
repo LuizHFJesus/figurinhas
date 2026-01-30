@@ -5,7 +5,7 @@ import 'package:sticker_manager_wc22/common/data/services/isar_service.dart';
 import 'package:sticker_manager_wc22/common/data/sources/i_section_local_data_source.dart';
 import 'package:sticker_manager_wc22/common/domain/models/group.dart';
 import 'package:sticker_manager_wc22/common/domain/models/section.dart';
-import 'package:sticker_manager_wc22/common/util/failure.dart';
+import 'package:sticker_manager_wc22/common/utils/failure.dart';
 
 class SectionLocalDataSource implements ISectionLocalDataSource {
   final Isar _isar = Get.find<IsarService>().isar;

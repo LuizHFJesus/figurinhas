@@ -4,7 +4,7 @@ import 'package:isar_community/isar.dart';
 import 'package:sticker_manager_wc22/common/data/services/isar_service.dart';
 import 'package:sticker_manager_wc22/common/data/sources/i_album_local_data_source.dart';
 import 'package:sticker_manager_wc22/common/domain/models/album.dart';
-import 'package:sticker_manager_wc22/common/util/failure.dart';
+import 'package:sticker_manager_wc22/common/utils/failure.dart';
 
 class AlbumLocalDataSource implements IAlbumLocalDataSource {
   final Isar _isar = Get.find<IsarService>().isar;
