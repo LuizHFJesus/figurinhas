@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:isar_community/isar.dart';
 import 'package:sticker_manager_wc22/common/di/initial_binding.dart';
+import 'package:sticker_manager_wc22/common/di/isar_module.dart';
 import 'package:sticker_manager_wc22/core/i18n/app_translations.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_router.dart';
 import 'package:sticker_manager_wc22/core/theme/app_theme.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  final isar = await openIsar();
+  Get.put<Isar>(isar, permanent: true);
+
   runApp(const MyApp());
 }
 

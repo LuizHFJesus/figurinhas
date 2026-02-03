@@ -18,13 +18,7 @@ import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository
 
 class InitialBinding extends Bindings {
   @override
-  Future<void> dependencies() async {
-    // Isar (async singleton)
-    await Get.putAsync<Isar>(
-      () async => openIsar(),
-      permanent: true,
-    );
-
+  void dependencies() {
     // Datasources (local)
     Get.lazyPut<CatalogLocalDataSource>(
       () => IsarCatalogLocalDataSource(Get.find<Isar>()),
