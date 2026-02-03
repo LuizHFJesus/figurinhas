@@ -13,42 +13,42 @@
           "stickers": [
             {
               "code": "00",
-              "dysplayName": "Panini",
+              "displayName": "Panini",
               "isFoil": true
             },
             {
               "code": "FWC1",
-              "dysplayName": "FIFA",
+              "displayName": "FIFA",
               "isFoil": false
             },
             {
               "code": "FWC2",
-              "dysplayName": "Official Trophy",
+              "displayName": "Official Trophy",
               "isFoil": true
             },
             {
               "code": "FWC3",
-              "dysplayName": "Official Trophy",
+              "displayName": "Official Trophy",
               "isFoil": true
             },
             {
               "code": "FWC4",
-              "dysplayName": "Official Mascot",
+              "displayName": "Official Mascot",
               "isFoil": true
             },
             {
               "code": "FWC5",
-              "dysplayName": "Official Mascot",
+              "displayName": "Official Mascot",
               "isFoil": true
             },
             {
               "code": "FWC6",
-              "dysplayName": "Official Emblem",
+              "displayName": "Official Emblem",
               "isFoil": true
             },
             {
               "code": "FWC7",
-              "dysplayName": "Official Emblem",
+              "displayName": "Official Emblem",
               "isFoil": true
             }
           ]
@@ -60,57 +60,57 @@
           "stickers": [
             {
               "code": "FWC8",
-              "dysplayName": "Ahmad Bin Ali Stadium",
+              "displayName": "Ahmad Bin Ali Stadium",
               "isFoil": false
             },
             {
               "code": "FWC9",
-              "dysplayName": "Al Janoub Stadium",
+              "displayName": "Al Janoub Stadium",
               "isFoil": false
             },
             {
               "code": "FWC10",
-              "dysplayName": "Al Thumama Stadium",
+              "displayName": "Al Thumama Stadium",
               "isFoil": false
             },
             {
               "code": "FWC11",
-              "dysplayName": "Education City Stadium",
+              "displayName": "Education City Stadium",
               "isFoil": false
             },
             {
               "code": "FWC12",
-              "dysplayName": "Khalifa International Stadium",
+              "displayName": "Khalifa International Stadium",
               "isFoil": false
             },
             {
               "code": "FWC13",
-              "dysplayName": "Stadium 974",
+              "displayName": "Stadium 974",
               "isFoil": false
             },
             {
               "code": "FWC14",
-              "dysplayName": "Al Bayt Stadium outdoor",
+              "displayName": "Al Bayt Stadium outdoor",
               "isFoil": false
             },
             {
               "code": "FWC15",
-              "dysplayName": "Al Bayt Stadium indoor",
+              "displayName": "Al Bayt Stadium indoor",
               "isFoil": false
             },
             {
               "code": "FWC16",
-              "dysplayName": "Lusail Stadium outdoor",
+              "displayName": "Lusail Stadium outdoor",
               "isFoil": false
             },
             {
               "code": "FWC17",
-              "dysplayName": "Lusail Stadium indoor",
+              "displayName": "Lusail Stadium indoor",
               "isFoil": false
             },
             {
               "code": "FWC18",
-              "dysplayName": "Official Match Ball",
+              "displayName": "Official Match Ball",
               "isFoil": false
             }
           ]
@@ -122,57 +122,57 @@
           "stickers": [
             {
               "code": "FWC19",
-              "dysplayName": "Uruguay 1930",
+              "displayName": "Uruguay 1930",
               "isFoil": true
             },
             {
               "code": "FWC20",
-              "dysplayName": "Italy 1938",
+              "displayName": "Italy 1938",
               "isFoil": true
             },
             {
               "code": "FWC21",
-              "dysplayName": "Brazil 1958",
+              "displayName": "Brazil 1958",
               "isFoil": true
             },
             {
               "code": "FWC22",
-              "dysplayName": "England 1966",
+              "displayName": "England 1966",
               "isFoil": true
             },
             {
               "code": "FWC23",
-              "dysplayName": "Brazil 1970",
+              "displayName": "Brazil 1970",
               "isFoil": true
             },
             {
               "code": "FWC24",
-              "dysplayName": "Argentina 1978",
+              "displayName": "Argentina 1978",
               "isFoil": true
             },
             {
               "code": "FWC25",
-              "dysplayName": "Italy 1982",
+              "displayName": "Italy 1982",
               "isFoil": true
             },
             {
               "code": "FWC26",
-              "dysplayName": "Germany 1990",
+              "displayName": "Germany 1990",
               "isFoil": true
             },
             {
               "code": "FWC27",
-              "dysplayName": "France 1998",
+              "displayName": "France 1998",
               "isFoil": true
             },
             {
               "code": "FWC28",
-              "dysplayName": "Spain 2010",
+              "displayName": "Spain 2010",
               "isFoil": true
             },
             {
               "code": "FWC29",
-              "dysplayName": "France 2018",
+              "displayName": "France 2018",
               "isFoil": true
             }
           ]
@@ -184,42 +184,42 @@
           "stickers": [
             {
               "code": "C1",
-              "dysplayName": "Serge Gnabry",
+              "displayName": "Serge Gnabry",
               "isFoil": false
             },
             {
               "code": "C2",
-              "dysplayName": "Emiliano Martínez",
+              "displayName": "Emiliano Martínez",
               "isFoil": false
             },
             {
               "code": "C3",
-              "dysplayName": "Kevin De Bruyne",
+              "displayName": "Kevin De Bruyne",
               "isFoil": false
             },
             {
               "code": "C4",
-              "dysplayName": "Luka Modrić",
+              "displayName": "Luka Modrić",
               "isFoil": false
             },
             {
               "code": "C5",
-              "dysplayName": "Declan Rice",
+              "displayName": "Declan Rice",
               "isFoil": false
             },
             {
               "code": "C6",
-              "dysplayName": "Gavi",
+              "displayName": "Gavi",
               "isFoil": false
             },
             {
               "code": "C7",
-              "dysplayName": "Hirving Lozano",
+              "displayName": "Hirving Lozano",
               "isFoil": false
             },
             {
               "code": "C8",
-              "dysplayName": "Heung",
+              "displayName": "Heung",
               "isFoil": false
             }
           ]
@@ -237,102 +237,102 @@
           "stickers": [
             {
               "code": "QAT1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "QAT2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "QAT3",
-              "dysplayName": "Saad Al Sheeb",
+              "displayName": "Saad Al Sheeb",
               "isFoil": false
             },
             {
               "code": "QAT4",
-              "dysplayName": "Meshaal Barsham",
+              "displayName": "Meshaal Barsham",
               "isFoil": false
             },
             {
               "code": "QAT5",
-              "dysplayName": "Homam Ahmed",
+              "displayName": "Homam Ahmed",
               "isFoil": false
             },
             {
               "code": "QAT6",
-              "dysplayName": "Bassam Alrawi",
+              "displayName": "Bassam Alrawi",
               "isFoil": false
             },
             {
               "code": "QAT7",
-              "dysplayName": "Abdulkarim Hassan",
+              "displayName": "Abdulkarim Hassan",
               "isFoil": false
             },
             {
               "code": "QAT8",
-              "dysplayName": "Musaab Khidir",
+              "displayName": "Musaab Khidir",
               "isFoil": false
             },
             {
               "code": "QAT9",
-              "dysplayName": "Boualem Khoukhi",
+              "displayName": "Boualem Khoukhi",
               "isFoil": false
             },
             {
               "code": "QAT10",
-              "dysplayName": "Pedro Miguel",
+              "displayName": "Pedro Miguel",
               "isFoil": false
             },
             {
               "code": "QAT11",
-              "dysplayName": "Tarek Salman",
+              "displayName": "Tarek Salman",
               "isFoil": false
             },
             {
               "code": "QAT12",
-              "dysplayName": "Karim Boudiaf",
+              "displayName": "Karim Boudiaf",
               "isFoil": false
             },
             {
               "code": "QAT13",
-              "dysplayName": "Abdulaziz Hatem",
+              "displayName": "Abdulaziz Hatem",
               "isFoil": false
             },
             {
               "code": "QAT14",
-              "dysplayName": "Assim Omer Madibo",
+              "displayName": "Assim Omer Madibo",
               "isFoil": false
             },
             {
               "code": "QAT15",
-              "dysplayName": "Yousuf Abdurisag",
+              "displayName": "Yousuf Abdurisag",
               "isFoil": false
             },
             {
               "code": "QAT16",
-              "dysplayName": "Akram Hassan Afif",
+              "displayName": "Akram Hassan Afif",
               "isFoil": false
             },
             {
               "code": "QAT17",
-              "dysplayName": "Ahmad Alaaeldin",
+              "displayName": "Ahmad Alaaeldin",
               "isFoil": false
             },
             {
               "code": "QAT18",
-              "dysplayName": "Hasan Al",
+              "displayName": "Hasan Al",
               "isFoil": false
             },
             {
               "code": "QAT19",
-              "dysplayName": "Almoez Ali",
+              "displayName": "Almoez Ali",
               "isFoil": false
             },
             {
               "code": "QAT20",
-              "dysplayName": "Mohammed Muntari",
+              "displayName": "Mohammed Muntari",
               "isFoil": false
             }
           ]
@@ -344,102 +344,102 @@
           "stickers": [
             {
               "code": "ECU1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ECU2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "ECU3",
-              "dysplayName": "Hernán Galíndez",
+              "displayName": "Hernán Galíndez",
               "isFoil": false
             },
             {
               "code": "ECU4",
-              "dysplayName": "Alexander Domínguez",
+              "displayName": "Alexander Domínguez",
               "isFoil": false
             },
             {
               "code": "ECU5",
-              "dysplayName": "Robert Arboleda",
+              "displayName": "Robert Arboleda",
               "isFoil": false
             },
             {
               "code": "ECU6",
-              "dysplayName": "Byron Castillo",
+              "displayName": "Byron Castillo",
               "isFoil": false
             },
             {
               "code": "ECU7",
-              "dysplayName": "Pervis Estupiñán",
+              "displayName": "Pervis Estupiñán",
               "isFoil": false
             },
             {
               "code": "ECU8",
-              "dysplayName": "Piero Hincapié",
+              "displayName": "Piero Hincapié",
               "isFoil": false
             },
             {
               "code": "ECU9",
-              "dysplayName": "Ángelo Preciado",
+              "displayName": "Ángelo Preciado",
               "isFoil": false
             },
             {
               "code": "ECU10",
-              "dysplayName": "Félix Torres",
+              "displayName": "Félix Torres",
               "isFoil": false
             },
             {
               "code": "ECU11",
-              "dysplayName": "Moisés Caicedo",
+              "displayName": "Moisés Caicedo",
               "isFoil": false
             },
             {
               "code": "ECU12",
-              "dysplayName": "Alan Franco",
+              "displayName": "Alan Franco",
               "isFoil": false
             },
             {
               "code": "ECU13",
-              "dysplayName": "Carlos Gruezo",
+              "displayName": "Carlos Gruezo",
               "isFoil": false
             },
             {
               "code": "ECU14",
-              "dysplayName": "Jhegson Méndez",
+              "displayName": "Jhegson Méndez",
               "isFoil": false
             },
             {
               "code": "ECU15",
-              "dysplayName": "Jeremy Sarmiento",
+              "displayName": "Jeremy Sarmiento",
               "isFoil": false
             },
             {
               "code": "ECU16",
-              "dysplayName": "Michael Estrada",
+              "displayName": "Michael Estrada",
               "isFoil": false
             },
             {
               "code": "ECU17",
-              "dysplayName": "Ángel Mena",
+              "displayName": "Ángel Mena",
               "isFoil": false
             },
             {
               "code": "ECU18",
-              "dysplayName": "Gonzalo Plata",
+              "displayName": "Gonzalo Plata",
               "isFoil": false
             },
             {
               "code": "ECU19",
-              "dysplayName": "Ayrton Preciado",
+              "displayName": "Ayrton Preciado",
               "isFoil": false
             },
             {
               "code": "ECU20",
-              "dysplayName": "Enner Valencia",
+              "displayName": "Enner Valencia",
               "isFoil": false
             }
           ]
@@ -451,102 +451,102 @@
           "stickers": [
             {
               "code": "SEN1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SEN2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "SEN3",
-              "dysplayName": "Édouard Mendy",
+              "displayName": "Édouard Mendy",
               "isFoil": false
             },
             {
               "code": "SEN4",
-              "dysplayName": "Alfred Gomis",
+              "displayName": "Alfred Gomis",
               "isFoil": false
             },
             {
               "code": "SEN5",
-              "dysplayName": "Saliou Ciss",
+              "displayName": "Saliou Ciss",
               "isFoil": false
             },
             {
               "code": "SEN6",
-              "dysplayName": "Pape Abou Cissé",
+              "displayName": "Pape Abou Cissé",
               "isFoil": false
             },
             {
               "code": "SEN7",
-              "dysplayName": "Abdou Diallo",
+              "displayName": "Abdou Diallo",
               "isFoil": false
             },
             {
               "code": "SEN8",
-              "dysplayName": "Kalidou Koulibaly",
+              "displayName": "Kalidou Koulibaly",
               "isFoil": false
             },
             {
               "code": "SEN9",
-              "dysplayName": "Ibrahima Mbaye",
+              "displayName": "Ibrahima Mbaye",
               "isFoil": false
             },
             {
               "code": "SEN10",
-              "dysplayName": "Bouna Sarr",
+              "displayName": "Bouna Sarr",
               "isFoil": false
             },
             {
               "code": "SEN11",
-              "dysplayName": "Krépin Diatta",
+              "displayName": "Krépin Diatta",
               "isFoil": false
             },
             {
               "code": "SEN12",
-              "dysplayName": "Idrissa Gueye",
+              "displayName": "Idrissa Gueye",
               "isFoil": false
             },
             {
               "code": "SEN13",
-              "dysplayName": "Pape Gueye",
+              "displayName": "Pape Gueye",
               "isFoil": false
             },
             {
               "code": "SEN14",
-              "dysplayName": "Cheikhou Kouyaté",
+              "displayName": "Cheikhou Kouyaté",
               "isFoil": false
             },
             {
               "code": "SEN15",
-              "dysplayName": "Nampalys Mendy",
+              "displayName": "Nampalys Mendy",
               "isFoil": false
             },
             {
               "code": "SEN16",
-              "dysplayName": "Boulaye Dia",
+              "displayName": "Boulaye Dia",
               "isFoil": false
             },
             {
               "code": "SEN17",
-              "dysplayName": "Famara Diédhiou",
+              "displayName": "Famara Diédhiou",
               "isFoil": false
             },
             {
               "code": "SEN18",
-              "dysplayName": "Bamba Dieng",
+              "displayName": "Bamba Dieng",
               "isFoil": false
             },
             {
               "code": "SEN19",
-              "dysplayName": "Sadio Mané",
+              "displayName": "Sadio Mané",
               "isFoil": false
             },
             {
               "code": "SEN20",
-              "dysplayName": "Ismaïla Sarr",
+              "displayName": "Ismaïla Sarr",
               "isFoil": false
             }
           ]
@@ -558,102 +558,102 @@
           "stickers": [
             {
               "code": "NED1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "NED2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "NED3",
-              "dysplayName": "Justin Bijlow",
+              "displayName": "Justin Bijlow",
               "isFoil": false
             },
             {
               "code": "NED4",
-              "dysplayName": "Jasper Cillessen",
+              "displayName": "Jasper Cillessen",
               "isFoil": false
             },
             {
               "code": "NED5",
-              "dysplayName": "Daley Blind",
+              "displayName": "Daley Blind",
               "isFoil": false
             },
             {
               "code": "NED6",
-              "dysplayName": "Matthijs de Ligt",
+              "displayName": "Matthijs de Ligt",
               "isFoil": false
             },
             {
               "code": "NED7",
-              "dysplayName": "Stefan de Vrij",
+              "displayName": "Stefan de Vrij",
               "isFoil": false
             },
             {
               "code": "NED8",
-              "dysplayName": "Denzel Dumfries",
+              "displayName": "Denzel Dumfries",
               "isFoil": false
             },
             {
               "code": "NED9",
-              "dysplayName": "Virgil van Dijk",
+              "displayName": "Virgil van Dijk",
               "isFoil": false
             },
             {
               "code": "NED10",
-              "dysplayName": "Steven Berghuis",
+              "displayName": "Steven Berghuis",
               "isFoil": false
             },
             {
               "code": "NED11",
-              "dysplayName": "Frenkie de Jong",
+              "displayName": "Frenkie de Jong",
               "isFoil": false
             },
             {
               "code": "NED12",
-              "dysplayName": "Ryan Gravenberch",
+              "displayName": "Ryan Gravenberch",
               "isFoil": false
             },
             {
               "code": "NED13",
-              "dysplayName": "Davy Klaassen",
+              "displayName": "Davy Klaassen",
               "isFoil": false
             },
             {
               "code": "NED14",
-              "dysplayName": "Teun Koopmeiners",
+              "displayName": "Teun Koopmeiners",
               "isFoil": false
             },
             {
               "code": "NED15",
-              "dysplayName": "Georginio Wijnaldum",
+              "displayName": "Georginio Wijnaldum",
               "isFoil": false
             },
             {
               "code": "NED16",
-              "dysplayName": "Steven Bergwijn",
+              "displayName": "Steven Bergwijn",
               "isFoil": false
             },
             {
               "code": "NED17",
-              "dysplayName": "Arnaut Danjuma",
+              "displayName": "Arnaut Danjuma",
               "isFoil": false
             },
             {
               "code": "NED18",
-              "dysplayName": "Memphis Depay",
+              "displayName": "Memphis Depay",
               "isFoil": false
             },
             {
               "code": "NED19",
-              "dysplayName": "Cody Gakpo",
+              "displayName": "Cody Gakpo",
               "isFoil": false
             },
             {
               "code": "NED20",
-              "dysplayName": "Donyell Malen",
+              "displayName": "Donyell Malen",
               "isFoil": false
             }
           ]
@@ -671,102 +671,102 @@
           "stickers": [
             {
               "code": "ENG1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ENG2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "ENG3",
-              "dysplayName": "Jordan Pickford",
+              "displayName": "Jordan Pickford",
               "isFoil": false
             },
             {
               "code": "ENG4",
-              "dysplayName": "Aaron Ramsdale",
+              "displayName": "Aaron Ramsdale",
               "isFoil": false
             },
             {
               "code": "ENG5",
-              "dysplayName": "Trent Alexander",
+              "displayName": "Trent Alexander",
               "isFoil": false
             },
             {
               "code": "ENG6",
-              "dysplayName": "Conor Coady",
+              "displayName": "Conor Coady",
               "isFoil": false
             },
             {
               "code": "ENG7",
-              "dysplayName": "Harry Maguire",
+              "displayName": "Harry Maguire",
               "isFoil": false
             },
             {
               "code": "ENG8",
-              "dysplayName": "Luke Shaw",
+              "displayName": "Luke Shaw",
               "isFoil": false
             },
             {
               "code": "ENG9",
-              "dysplayName": "John Stones",
+              "displayName": "John Stones",
               "isFoil": false
             },
             {
               "code": "ENG10",
-              "dysplayName": "Kyle Walker",
+              "displayName": "Kyle Walker",
               "isFoil": false
             },
             {
               "code": "ENG11",
-              "dysplayName": "Jude Bellingham",
+              "displayName": "Jude Bellingham",
               "isFoil": false
             },
             {
               "code": "ENG12",
-              "dysplayName": "Jack Grealish",
+              "displayName": "Jack Grealish",
               "isFoil": false
             },
             {
               "code": "ENG13",
-              "dysplayName": "Jordan Henderson",
+              "displayName": "Jordan Henderson",
               "isFoil": false
             },
             {
               "code": "ENG14",
-              "dysplayName": "Mason Mount",
+              "displayName": "Mason Mount",
               "isFoil": false
             },
             {
               "code": "ENG15",
-              "dysplayName": "Kalvin Phillips",
+              "displayName": "Kalvin Phillips",
               "isFoil": false
             },
             {
               "code": "ENG16",
-              "dysplayName": "Declan Rice",
+              "displayName": "Declan Rice",
               "isFoil": false
             },
             {
               "code": "ENG17",
-              "dysplayName": "Phil Foden",
+              "displayName": "Phil Foden",
               "isFoil": false
             },
             {
               "code": "ENG18",
-              "dysplayName": "Harry Kane",
+              "displayName": "Harry Kane",
               "isFoil": false
             },
             {
               "code": "ENG19",
-              "dysplayName": "Bukayo Saka",
+              "displayName": "Bukayo Saka",
               "isFoil": false
             },
             {
               "code": "ENG20",
-              "dysplayName": "Raheem Sterling",
+              "displayName": "Raheem Sterling",
               "isFoil": false
             }
           ]
@@ -778,102 +778,102 @@
           "stickers": [
             {
               "code": "IRN1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "IRN2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "IRN3",
-              "dysplayName": "Amir Abedzadeh",
+              "displayName": "Amir Abedzadeh",
               "isFoil": false
             },
             {
               "code": "IRN4",
-              "dysplayName": "Alireza Beiranvand",
+              "displayName": "Alireza Beiranvand",
               "isFoil": false
             },
             {
               "code": "IRN5",
-              "dysplayName": "Ehsan Hajsafi",
+              "displayName": "Ehsan Hajsafi",
               "isFoil": false
             },
             {
               "code": "IRN6",
-              "dysplayName": "Majid Hosseini",
+              "displayName": "Majid Hosseini",
               "isFoil": false
             },
             {
               "code": "IRN7",
-              "dysplayName": "Hossein Kanaani",
+              "displayName": "Hossein Kanaani",
               "isFoil": false
             },
             {
               "code": "IRN8",
-              "dysplayName": "Shoja Khalilzadeh",
+              "displayName": "Shoja Khalilzadeh",
               "isFoil": false
             },
             {
               "code": "IRN9",
-              "dysplayName": "Milad Mohammadi",
+              "displayName": "Milad Mohammadi",
               "isFoil": false
             },
             {
               "code": "IRN10",
-              "dysplayName": "Sadegh Moharrami",
+              "displayName": "Sadegh Moharrami",
               "isFoil": false
             },
             {
               "code": "IRN11",
-              "dysplayName": "Omid Noorafkan",
+              "displayName": "Omid Noorafkan",
               "isFoil": false
             },
             {
               "code": "IRN12",
-              "dysplayName": "Vahid Amiri",
+              "displayName": "Vahid Amiri",
               "isFoil": false
             },
             {
               "code": "IRN13",
-              "dysplayName": "Saeid Ezatolahi",
+              "displayName": "Saeid Ezatolahi",
               "isFoil": false
             },
             {
               "code": "IRN14",
-              "dysplayName": "Ali Gholizadeh",
+              "displayName": "Ali Gholizadeh",
               "isFoil": false
             },
             {
               "code": "IRN15",
-              "dysplayName": "Alireza Jahanbakhsh",
+              "displayName": "Alireza Jahanbakhsh",
               "isFoil": false
             },
             {
               "code": "IRN16",
-              "dysplayName": "Ahmad Nourollahi",
+              "displayName": "Ahmad Nourollahi",
               "isFoil": false
             },
             {
               "code": "IRN17",
-              "dysplayName": "Karim Ansarifard",
+              "displayName": "Karim Ansarifard",
               "isFoil": false
             },
             {
               "code": "IRN18",
-              "dysplayName": "Sardar Azmoun",
+              "displayName": "Sardar Azmoun",
               "isFoil": false
             },
             {
               "code": "IRN19",
-              "dysplayName": "Saman Ghoddos",
+              "displayName": "Saman Ghoddos",
               "isFoil": false
             },
             {
               "code": "IRN20",
-              "dysplayName": "Mehdi Taremi",
+              "displayName": "Mehdi Taremi",
               "isFoil": false
             }
           ]
@@ -885,102 +885,102 @@
           "stickers": [
             {
               "code": "USA1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "USA2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "USA3",
-              "dysplayName": "Matt Turner",
+              "displayName": "Matt Turner",
               "isFoil": false
             },
             {
               "code": "USA4",
-              "dysplayName": "Zack Steffen",
+              "displayName": "Zack Steffen",
               "isFoil": false
             },
             {
               "code": "USA5",
-              "dysplayName": "Sergiño Dest",
+              "displayName": "Sergiño Dest",
               "isFoil": false
             },
             {
               "code": "USA6",
-              "dysplayName": "Aaron Long",
+              "displayName": "Aaron Long",
               "isFoil": false
             },
             {
               "code": "USA7",
-              "dysplayName": "Chris Richards",
+              "displayName": "Chris Richards",
               "isFoil": false
             },
             {
               "code": "USA8",
-              "dysplayName": "Antonee Robinson",
+              "displayName": "Antonee Robinson",
               "isFoil": false
             },
             {
               "code": "USA9",
-              "dysplayName": "DeAndre Yedlin",
+              "displayName": "DeAndre Yedlin",
               "isFoil": false
             },
             {
               "code": "USA10",
-              "dysplayName": "Walker Zimmerman",
+              "displayName": "Walker Zimmerman",
               "isFoil": false
             },
             {
               "code": "USA11",
-              "dysplayName": "Brenden Aaronson",
+              "displayName": "Brenden Aaronson",
               "isFoil": false
             },
             {
               "code": "USA12",
-              "dysplayName": "Kellyn Acosta",
+              "displayName": "Kellyn Acosta",
               "isFoil": false
             },
             {
               "code": "USA13",
-              "dysplayName": "Tyler Adams",
+              "displayName": "Tyler Adams",
               "isFoil": false
             },
             {
               "code": "USA14",
-              "dysplayName": "Weston McKennie",
+              "displayName": "Weston McKennie",
               "isFoil": false
             },
             {
               "code": "USA15",
-              "dysplayName": "Yunus Musah",
+              "displayName": "Yunus Musah",
               "isFoil": false
             },
             {
               "code": "USA16",
-              "dysplayName": "Jesús Ferreira",
+              "displayName": "Jesús Ferreira",
               "isFoil": false
             },
             {
               "code": "USA17",
-              "dysplayName": "Ricardo Pepi",
+              "displayName": "Ricardo Pepi",
               "isFoil": false
             },
             {
               "code": "USA18",
-              "dysplayName": "Christian Pulisic",
+              "displayName": "Christian Pulisic",
               "isFoil": false
             },
             {
               "code": "USA19",
-              "dysplayName": "Giovanni Reyna",
+              "displayName": "Giovanni Reyna",
               "isFoil": false
             },
             {
               "code": "USA20",
-              "dysplayName": "Timothy Weah",
+              "displayName": "Timothy Weah",
               "isFoil": false
             }
           ]
@@ -992,102 +992,102 @@
           "stickers": [
             {
               "code": "WAL1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "WAL2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "WAL3",
-              "dysplayName": "Danny Ward",
+              "displayName": "Danny Ward",
               "isFoil": false
             },
             {
               "code": "WAL4",
-              "dysplayName": "Wayne Hennessey",
+              "displayName": "Wayne Hennessey",
               "isFoil": false
             },
             {
               "code": "WAL5",
-              "dysplayName": "Ethan Ampadu",
+              "displayName": "Ethan Ampadu",
               "isFoil": false
             },
             {
               "code": "WAL6",
-              "dysplayName": "Ben Davies",
+              "displayName": "Ben Davies",
               "isFoil": false
             },
             {
               "code": "WAL7",
-              "dysplayName": "Chris Gunter",
+              "displayName": "Chris Gunter",
               "isFoil": false
             },
             {
               "code": "WAL8",
-              "dysplayName": "Chris Mepham",
+              "displayName": "Chris Mepham",
               "isFoil": false
             },
             {
               "code": "WAL9",
-              "dysplayName": "Connor Roberts",
+              "displayName": "Connor Roberts",
               "isFoil": false
             },
             {
               "code": "WAL10",
-              "dysplayName": "Joe Rodon",
+              "displayName": "Joe Rodon",
               "isFoil": false
             },
             {
               "code": "WAL11",
-              "dysplayName": "Neco Williams",
+              "displayName": "Neco Williams",
               "isFoil": false
             },
             {
               "code": "WAL12",
-              "dysplayName": "Joe Allen",
+              "displayName": "Joe Allen",
               "isFoil": false
             },
             {
               "code": "WAL13",
-              "dysplayName": "Joe Morrell",
+              "displayName": "Joe Morrell",
               "isFoil": false
             },
             {
               "code": "WAL14",
-              "dysplayName": "Aaron Ramsey",
+              "displayName": "Aaron Ramsey",
               "isFoil": false
             },
             {
               "code": "WAL15",
-              "dysplayName": "Jonathan Williams",
+              "displayName": "Jonathan Williams",
               "isFoil": false
             },
             {
               "code": "WAL16",
-              "dysplayName": "Harry Wilson",
+              "displayName": "Harry Wilson",
               "isFoil": false
             },
             {
               "code": "WAL17",
-              "dysplayName": "Gareth Bale",
+              "displayName": "Gareth Bale",
               "isFoil": false
             },
             {
               "code": "WAL18",
-              "dysplayName": "Daniel James",
+              "displayName": "Daniel James",
               "isFoil": false
             },
             {
               "code": "WAL19",
-              "dysplayName": "Brennan Johnson",
+              "displayName": "Brennan Johnson",
               "isFoil": false
             },
             {
               "code": "WAL20",
-              "dysplayName": "Kieffer Moore",
+              "displayName": "Kieffer Moore",
               "isFoil": false
             }
           ]
@@ -1105,102 +1105,102 @@
           "stickers": [
             {
               "code": "ARG1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ARG2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "ARG3",
-              "dysplayName": "Emiliano Martínez",
+              "displayName": "Emiliano Martínez",
               "isFoil": false
             },
             {
               "code": "ARG4",
-              "dysplayName": "Franco Armani",
+              "displayName": "Franco Armani",
               "isFoil": false
             },
             {
               "code": "ARG5",
-              "dysplayName": "Marcos Acuña",
+              "displayName": "Marcos Acuña",
               "isFoil": false
             },
             {
               "code": "ARG6",
-              "dysplayName": "Nahuel Molina",
+              "displayName": "Nahuel Molina",
               "isFoil": false
             },
             {
               "code": "ARG7",
-              "dysplayName": "Nicolás Otamendi",
+              "displayName": "Nicolás Otamendi",
               "isFoil": false
             },
             {
               "code": "ARG8",
-              "dysplayName": "Germán Pezzella",
+              "displayName": "Germán Pezzella",
               "isFoil": false
             },
             {
               "code": "ARG9",
-              "dysplayName": "Cristian Romero",
+              "displayName": "Cristian Romero",
               "isFoil": false
             },
             {
               "code": "ARG10",
-              "dysplayName": "Rodrigo De Paul",
+              "displayName": "Rodrigo De Paul",
               "isFoil": false
             },
             {
               "code": "ARG11",
-              "dysplayName": "Ángel Di María",
+              "displayName": "Ángel Di María",
               "isFoil": false
             },
             {
               "code": "ARG12",
-              "dysplayName": "Giovani Lo Celso",
+              "displayName": "Giovani Lo Celso",
               "isFoil": false
             },
             {
               "code": "ARG13",
-              "dysplayName": "Leandro Paredes",
+              "displayName": "Leandro Paredes",
               "isFoil": false
             },
             {
               "code": "ARG14",
-              "dysplayName": "Guido Rodríguez",
+              "displayName": "Guido Rodríguez",
               "isFoil": false
             },
             {
               "code": "ARG15",
-              "dysplayName": "Julián Álvarez",
+              "displayName": "Julián Álvarez",
               "isFoil": false
             },
             {
               "code": "ARG16",
-              "dysplayName": "Joaquín Correa",
+              "displayName": "Joaquín Correa",
               "isFoil": false
             },
             {
               "code": "ARG17",
-              "dysplayName": "Alejandro Gómez",
+              "displayName": "Alejandro Gómez",
               "isFoil": false
             },
             {
               "code": "ARG18",
-              "dysplayName": "Nicolás González",
+              "displayName": "Nicolás González",
               "isFoil": false
             },
             {
               "code": "ARG19",
-              "dysplayName": "Lautaro Martínez",
+              "displayName": "Lautaro Martínez",
               "isFoil": false
             },
             {
               "code": "ARG20",
-              "dysplayName": "Lionel Messi",
+              "displayName": "Lionel Messi",
               "isFoil": false
             }
           ]
@@ -1212,102 +1212,102 @@
           "stickers": [
             {
               "code": "KSA1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "KSA2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "KSA3",
-              "dysplayName": "Mohammed Al",
+              "displayName": "Mohammed Al",
               "isFoil": false
             },
             {
               "code": "KSA4",
-              "dysplayName": "Mohammed Al",
+              "displayName": "Mohammed Al",
               "isFoil": false
             },
             {
               "code": "KSA5",
-              "dysplayName": "Abdulelah Al",
+              "displayName": "Abdulelah Al",
               "isFoil": false
             },
             {
               "code": "KSA6",
-              "dysplayName": "Ali Al",
+              "displayName": "Ali Al",
               "isFoil": false
             },
             {
               "code": "KSA7",
-              "dysplayName": "Mohammed Al",
+              "displayName": "Mohammed Al",
               "isFoil": false
             },
             {
               "code": "KSA8",
-              "dysplayName": "Sultan Al",
+              "displayName": "Sultan Al",
               "isFoil": false
             },
             {
               "code": "KSA9",
-              "dysplayName": "Yasser Al",
+              "displayName": "Yasser Al",
               "isFoil": false
             },
             {
               "code": "KSA10",
-              "dysplayName": "Hassan Al",
+              "displayName": "Hassan Al",
               "isFoil": false
             },
             {
               "code": "KSA11",
-              "dysplayName": "Abdullah Madu",
+              "displayName": "Abdullah Madu",
               "isFoil": false
             },
             {
               "code": "KSA12",
-              "dysplayName": "Salman Al",
+              "displayName": "Salman Al",
               "isFoil": false
             },
             {
               "code": "KSA13",
-              "dysplayName": "Abdulelah Al",
+              "displayName": "Abdulelah Al",
               "isFoil": false
             },
             {
               "code": "KSA14",
-              "dysplayName": "Sami Al",
+              "displayName": "Sami Al",
               "isFoil": false
             },
             {
               "code": "KSA15",
-              "dysplayName": "Hattan Bahebri",
+              "displayName": "Hattan Bahebri",
               "isFoil": false
             },
             {
               "code": "KSA16",
-              "dysplayName": "Mohamed Kanno",
+              "displayName": "Mohamed Kanno",
               "isFoil": false
             },
             {
               "code": "KSA17",
-              "dysplayName": "Abdullah Otayf",
+              "displayName": "Abdullah Otayf",
               "isFoil": false
             },
             {
               "code": "KSA18",
-              "dysplayName": "Firas Al",
+              "displayName": "Firas Al",
               "isFoil": false
             },
             {
               "code": "KSA19",
-              "dysplayName": "Salem Al",
+              "displayName": "Salem Al",
               "isFoil": false
             },
             {
               "code": "KSA20",
-              "dysplayName": "Khalid Al",
+              "displayName": "Khalid Al",
               "isFoil": false
             }
           ]
@@ -1319,102 +1319,102 @@
           "stickers": [
             {
               "code": "MEX1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "MEX2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "MEX3",
-              "dysplayName": "Guillermo Ochoa",
+              "displayName": "Guillermo Ochoa",
               "isFoil": false
             },
             {
               "code": "MEX4",
-              "dysplayName": "Alfredo Talavera",
+              "displayName": "Alfredo Talavera",
               "isFoil": false
             },
             {
               "code": "MEX5",
-              "dysplayName": "Néstor Araújo",
+              "displayName": "Néstor Araújo",
               "isFoil": false
             },
             {
               "code": "MEX6",
-              "dysplayName": "Jesús Gallardo",
+              "displayName": "Jesús Gallardo",
               "isFoil": false
             },
             {
               "code": "MEX7",
-              "dysplayName": "César Montes",
+              "displayName": "César Montes",
               "isFoil": false
             },
             {
               "code": "MEX8",
-              "dysplayName": "Héctor Moreno",
+              "displayName": "Héctor Moreno",
               "isFoil": false
             },
             {
               "code": "MEX9",
-              "dysplayName": "Luis Romo",
+              "displayName": "Luis Romo",
               "isFoil": false
             },
             {
               "code": "MEX10",
-              "dysplayName": "Jorge Sánchez",
+              "displayName": "Jorge Sánchez",
               "isFoil": false
             },
             {
               "code": "MEX11",
-              "dysplayName": "Edson Álvarez",
+              "displayName": "Edson Álvarez",
               "isFoil": false
             },
             {
               "code": "MEX12",
-              "dysplayName": "Jesús Manuel Corona",
+              "displayName": "Jesús Manuel Corona",
               "isFoil": false
             },
             {
               "code": "MEX13",
-              "dysplayName": "Andrés Guardado",
+              "displayName": "Andrés Guardado",
               "isFoil": false
             },
             {
               "code": "MEX14",
-              "dysplayName": "Érick Gutiérrez",
+              "displayName": "Érick Gutiérrez",
               "isFoil": false
             },
             {
               "code": "MEX15",
-              "dysplayName": "Héctor Herrera",
+              "displayName": "Héctor Herrera",
               "isFoil": false
             },
             {
               "code": "MEX16",
-              "dysplayName": "Diego Lainez",
+              "displayName": "Diego Lainez",
               "isFoil": false
             },
             {
               "code": "MEX17",
-              "dysplayName": "Carlos Rodríguez",
+              "displayName": "Carlos Rodríguez",
               "isFoil": false
             },
             {
               "code": "MEX18",
-              "dysplayName": "Rogelio Funes Mori",
+              "displayName": "Rogelio Funes Mori",
               "isFoil": false
             },
             {
               "code": "MEX19",
-              "dysplayName": "Raúl Jiménez",
+              "displayName": "Raúl Jiménez",
               "isFoil": false
             },
             {
               "code": "MEX20",
-              "dysplayName": "Hirving Lozano",
+              "displayName": "Hirving Lozano",
               "isFoil": false
             }
           ]
@@ -1426,102 +1426,102 @@
           "stickers": [
             {
               "code": "POL1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "POL2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "POL3",
-              "dysplayName": "Wojciech Szczęsny",
+              "displayName": "Wojciech Szczęsny",
               "isFoil": false
             },
             {
               "code": "POL4",
-              "dysplayName": "Łukasz Skorupski",
+              "displayName": "Łukasz Skorupski",
               "isFoil": false
             },
             {
               "code": "POL5",
-              "dysplayName": "Jan Bednarek",
+              "displayName": "Jan Bednarek",
               "isFoil": false
             },
             {
               "code": "POL6",
-              "dysplayName": "Bartosz Bereszyński",
+              "displayName": "Bartosz Bereszyński",
               "isFoil": false
             },
             {
               "code": "POL7",
-              "dysplayName": "Matty Cash",
+              "displayName": "Matty Cash",
               "isFoil": false
             },
             {
               "code": "POL8",
-              "dysplayName": "Kamil Glik",
+              "displayName": "Kamil Glik",
               "isFoil": false
             },
             {
               "code": "POL9",
-              "dysplayName": "Tymoteusz Puchacz",
+              "displayName": "Tymoteusz Puchacz",
               "isFoil": false
             },
             {
               "code": "POL10",
-              "dysplayName": "Maciej Rybus",
+              "displayName": "Maciej Rybus",
               "isFoil": false
             },
             {
               "code": "POL11",
-              "dysplayName": "Kamil Jóźwiak",
+              "displayName": "Kamil Jóźwiak",
               "isFoil": false
             },
             {
               "code": "POL12",
-              "dysplayName": "Mateusz Klich",
+              "displayName": "Mateusz Klich",
               "isFoil": false
             },
             {
               "code": "POL13",
-              "dysplayName": "Grzegorz Krychowiak",
+              "displayName": "Grzegorz Krychowiak",
               "isFoil": false
             },
             {
               "code": "POL14",
-              "dysplayName": "Jakub Moder",
+              "displayName": "Jakub Moder",
               "isFoil": false
             },
             {
               "code": "POL15",
-              "dysplayName": "Sebastian Szymański",
+              "displayName": "Sebastian Szymański",
               "isFoil": false
             },
             {
               "code": "POL16",
-              "dysplayName": "Piotr Zieliński",
+              "displayName": "Piotr Zieliński",
               "isFoil": false
             },
             {
               "code": "POL17",
-              "dysplayName": "Robert Lewandowski",
+              "displayName": "Robert Lewandowski",
               "isFoil": false
             },
             {
               "code": "POL18",
-              "dysplayName": "Arkadiusz Milik",
+              "displayName": "Arkadiusz Milik",
               "isFoil": false
             },
             {
               "code": "POL19",
-              "dysplayName": "Krzysztof Piątek",
+              "displayName": "Krzysztof Piątek",
               "isFoil": false
             },
             {
               "code": "POL20",
-              "dysplayName": "Karol Świderski",
+              "displayName": "Karol Świderski",
               "isFoil": false
             }
           ]
@@ -1539,102 +1539,102 @@
           "stickers": [
             {
               "code": "FRA1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "FRA2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "FRA3",
-              "dysplayName": "Hugo Lloris",
+              "displayName": "Hugo Lloris",
               "isFoil": false
             },
             {
               "code": "FRA4",
-              "dysplayName": "Mike Maignan",
+              "displayName": "Mike Maignan",
               "isFoil": false
             },
             {
               "code": "FRA5",
-              "dysplayName": "Lucas Hernández",
+              "displayName": "Lucas Hernández",
               "isFoil": false
             },
             {
               "code": "FRA6",
-              "dysplayName": "Theo Hernández",
+              "displayName": "Theo Hernández",
               "isFoil": false
             },
             {
               "code": "FRA7",
-              "dysplayName": "Presnel Kimpembe",
+              "displayName": "Presnel Kimpembe",
               "isFoil": false
             },
             {
               "code": "FRA8",
-              "dysplayName": "Jules Koundé",
+              "displayName": "Jules Koundé",
               "isFoil": false
             },
             {
               "code": "FRA9",
-              "dysplayName": "Benjamin Pavard",
+              "displayName": "Benjamin Pavard",
               "isFoil": false
             },
             {
               "code": "FRA10",
-              "dysplayName": "Raphaël Varane",
+              "displayName": "Raphaël Varane",
               "isFoil": false
             },
             {
               "code": "FRA11",
-              "dysplayName": "N’Golo Kanté",
+              "displayName": "N’Golo Kanté",
               "isFoil": false
             },
             {
               "code": "FRA12",
-              "dysplayName": "Paul Pogba",
+              "displayName": "Paul Pogba",
               "isFoil": false
             },
             {
               "code": "FRA13",
-              "dysplayName": "Adrien Rabiot",
+              "displayName": "Adrien Rabiot",
               "isFoil": false
             },
             {
               "code": "FRA14",
-              "dysplayName": "Aurélien Tchouaméni",
+              "displayName": "Aurélien Tchouaméni",
               "isFoil": false
             },
             {
               "code": "FRA15",
-              "dysplayName": "Wissam Ben Yedder",
+              "displayName": "Wissam Ben Yedder",
               "isFoil": false
             },
             {
               "code": "FRA16",
-              "dysplayName": "Karim Benzema",
+              "displayName": "Karim Benzema",
               "isFoil": false
             },
             {
               "code": "FRA17",
-              "dysplayName": "Kingsley Coman",
+              "displayName": "Kingsley Coman",
               "isFoil": false
             },
             {
               "code": "FRA18",
-              "dysplayName": "Antoine Griezmann",
+              "displayName": "Antoine Griezmann",
               "isFoil": false
             },
             {
               "code": "FRA19",
-              "dysplayName": "Kylian Mbappé",
+              "displayName": "Kylian Mbappé",
               "isFoil": false
             },
             {
               "code": "FRA20",
-              "dysplayName": "Christopher Nkunku",
+              "displayName": "Christopher Nkunku",
               "isFoil": false
             }
           ]
@@ -1646,102 +1646,102 @@
           "stickers": [
             {
               "code": "AUS1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "AUS2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "AUS3",
-              "dysplayName": "Mathew Ryan",
+              "displayName": "Mathew Ryan",
               "isFoil": false
             },
             {
               "code": "AUS4",
-              "dysplayName": "Andrew Redmayne",
+              "displayName": "Andrew Redmayne",
               "isFoil": false
             },
             {
               "code": "AUS5",
-              "dysplayName": "Aziz Behich",
+              "displayName": "Aziz Behich",
               "isFoil": false
             },
             {
               "code": "AUS6",
-              "dysplayName": "Miloš Degenek",
+              "displayName": "Miloš Degenek",
               "isFoil": false
             },
             {
               "code": "AUS7",
-              "dysplayName": "Rhyan Grant",
+              "displayName": "Rhyan Grant",
               "isFoil": false
             },
             {
               "code": "AUS8",
-              "dysplayName": "Joel King",
+              "displayName": "Joel King",
               "isFoil": false
             },
             {
               "code": "AUS9",
-              "dysplayName": "Trent Sainsbury",
+              "displayName": "Trent Sainsbury",
               "isFoil": false
             },
             {
               "code": "AUS10",
-              "dysplayName": "Harry Souttar",
+              "displayName": "Harry Souttar",
               "isFoil": false
             },
             {
               "code": "AUS11",
-              "dysplayName": "Ajdin Hrustić",
+              "displayName": "Ajdin Hrustić",
               "isFoil": false
             },
             {
               "code": "AUS12",
-              "dysplayName": "Jackson Irvine",
+              "displayName": "Jackson Irvine",
               "isFoil": false
             },
             {
               "code": "AUS13",
-              "dysplayName": "James Jeggo",
+              "displayName": "James Jeggo",
               "isFoil": false
             },
             {
               "code": "AUS14",
-              "dysplayName": "Awer Mabil",
+              "displayName": "Awer Mabil",
               "isFoil": false
             },
             {
               "code": "AUS15",
-              "dysplayName": "Aaron Mooy",
+              "displayName": "Aaron Mooy",
               "isFoil": false
             },
             {
               "code": "AUS16",
-              "dysplayName": "Martin Boyle",
+              "displayName": "Martin Boyle",
               "isFoil": false
             },
             {
               "code": "AUS17",
-              "dysplayName": "Mitchell Duke",
+              "displayName": "Mitchell Duke",
               "isFoil": false
             },
             {
               "code": "AUS18",
-              "dysplayName": "Craig Goodwin",
+              "displayName": "Craig Goodwin",
               "isFoil": false
             },
             {
               "code": "AUS19",
-              "dysplayName": "Mathew Leckie",
+              "displayName": "Mathew Leckie",
               "isFoil": false
             },
             {
               "code": "AUS20",
-              "dysplayName": "Adam Taggart",
+              "displayName": "Adam Taggart",
               "isFoil": false
             }
           ]
@@ -1753,102 +1753,102 @@
           "stickers": [
             {
               "code": "DEN1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "DEN2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "DEN3",
-              "dysplayName": "Kasper Schmeichel",
+              "displayName": "Kasper Schmeichel",
               "isFoil": false
             },
             {
               "code": "DEN4",
-              "dysplayName": "Frederik Rønnow",
+              "displayName": "Frederik Rønnow",
               "isFoil": false
             },
             {
               "code": "DEN5",
-              "dysplayName": "Andreas Christensen",
+              "displayName": "Andreas Christensen",
               "isFoil": false
             },
             {
               "code": "DEN6",
-              "dysplayName": "Simon Kjær",
+              "displayName": "Simon Kjær",
               "isFoil": false
             },
             {
               "code": "DEN7",
-              "dysplayName": "Joakim Mæhle",
+              "displayName": "Joakim Mæhle",
               "isFoil": false
             },
             {
               "code": "DEN8",
-              "dysplayName": "Jens Stryger Larsen",
+              "displayName": "Jens Stryger Larsen",
               "isFoil": false
             },
             {
               "code": "DEN9",
-              "dysplayName": "Jannik Vestergaard",
+              "displayName": "Jannik Vestergaard",
               "isFoil": false
             },
             {
               "code": "DEN10",
-              "dysplayName": "Mikkel Damsgaard",
+              "displayName": "Mikkel Damsgaard",
               "isFoil": false
             },
             {
               "code": "DEN11",
-              "dysplayName": "Thomas Delaney",
+              "displayName": "Thomas Delaney",
               "isFoil": false
             },
             {
               "code": "DEN12",
-              "dysplayName": "Christian Eriksen",
+              "displayName": "Christian Eriksen",
               "isFoil": false
             },
             {
               "code": "DEN13",
-              "dysplayName": "Pierre Emile Højbjerg",
+              "displayName": "Pierre Emile Højbjerg",
               "isFoil": false
             },
             {
               "code": "DEN14",
-              "dysplayName": "Christian Nørgaard",
+              "displayName": "Christian Nørgaard",
               "isFoil": false
             },
             {
               "code": "DEN15",
-              "dysplayName": "Daniel Wass",
+              "displayName": "Daniel Wass",
               "isFoil": false
             },
             {
               "code": "DEN16",
-              "dysplayName": "Martin Braithwaite",
+              "displayName": "Martin Braithwaite",
               "isFoil": false
             },
             {
               "code": "DEN17",
-              "dysplayName": "Kasper Dolberg",
+              "displayName": "Kasper Dolberg",
               "isFoil": false
             },
             {
               "code": "DEN18",
-              "dysplayName": "Yussuf Poulsen",
+              "displayName": "Yussuf Poulsen",
               "isFoil": false
             },
             {
               "code": "DEN19",
-              "dysplayName": "Andreas Skov Olsen",
+              "displayName": "Andreas Skov Olsen",
               "isFoil": false
             },
             {
               "code": "DEN20",
-              "dysplayName": "Jonas Wind",
+              "displayName": "Jonas Wind",
               "isFoil": false
             }
           ]
@@ -1860,102 +1860,102 @@
           "stickers": [
             {
               "code": "TUN1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "TUN2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "TUN3",
-              "dysplayName": "Bechir Ben Saïd",
+              "displayName": "Bechir Ben Saïd",
               "isFoil": false
             },
             {
               "code": "TUN4",
-              "dysplayName": "Farouk Ben Mustapha",
+              "displayName": "Farouk Ben Mustapha",
               "isFoil": false
             },
             {
               "code": "TUN5",
-              "dysplayName": "Dylan Bronn",
+              "displayName": "Dylan Bronn",
               "isFoil": false
             },
             {
               "code": "TUN6",
-              "dysplayName": "Mohamed Dräger",
+              "displayName": "Mohamed Dräger",
               "isFoil": false
             },
             {
               "code": "TUN7",
-              "dysplayName": "Bilel Ifa",
+              "displayName": "Bilel Ifa",
               "isFoil": false
             },
             {
               "code": "TUN8",
-              "dysplayName": "Ali Maâloul",
+              "displayName": "Ali Maâloul",
               "isFoil": false
             },
             {
               "code": "TUN9",
-              "dysplayName": "Hamza Mathlouthi",
+              "displayName": "Hamza Mathlouthi",
               "isFoil": false
             },
             {
               "code": "TUN10",
-              "dysplayName": "Yassine Meriah",
+              "displayName": "Yassine Meriah",
               "isFoil": false
             },
             {
               "code": "TUN11",
-              "dysplayName": "Montassar Talbi",
+              "displayName": "Montassar Talbi",
               "isFoil": false
             },
             {
               "code": "TUN12",
-              "dysplayName": "Mohamed Ali Ben Romdhane",
+              "displayName": "Mohamed Ali Ben Romdhane",
               "isFoil": false
             },
             {
               "code": "TUN13",
-              "dysplayName": "Wahbi Khazri",
+              "displayName": "Wahbi Khazri",
               "isFoil": false
             },
             {
               "code": "TUN14",
-              "dysplayName": "Aïssa Laïdouni",
+              "displayName": "Aïssa Laïdouni",
               "isFoil": false
             },
             {
               "code": "TUN15",
-              "dysplayName": "Ferjani Sassi",
+              "displayName": "Ferjani Sassi",
               "isFoil": false
             },
             {
               "code": "TUN16",
-              "dysplayName": "Ellyes Skhiri",
+              "displayName": "Ellyes Skhiri",
               "isFoil": false
             },
             {
               "code": "TUN17",
-              "dysplayName": "Anis Slimane",
+              "displayName": "Anis Slimane",
               "isFoil": false
             },
             {
               "code": "TUN18",
-              "dysplayName": "Seifeddine Jaziri",
+              "displayName": "Seifeddine Jaziri",
               "isFoil": false
             },
             {
               "code": "TUN19",
-              "dysplayName": "Youssef Msakni",
+              "displayName": "Youssef Msakni",
               "isFoil": false
             },
             {
               "code": "TUN20",
-              "dysplayName": "Naïm Sliti",
+              "displayName": "Naïm Sliti",
               "isFoil": false
             }
           ]
@@ -1973,102 +1973,102 @@
           "stickers": [
             {
               "code": "ESP1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ESP2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "ESP3",
-              "dysplayName": "Unai Simón",
+              "displayName": "Unai Simón",
               "isFoil": false
             },
             {
               "code": "ESP4",
-              "dysplayName": "Robert Sánchez",
+              "displayName": "Robert Sánchez",
               "isFoil": false
             },
             {
               "code": "ESP5",
-              "dysplayName": "César Azpilicueta",
+              "displayName": "César Azpilicueta",
               "isFoil": false
             },
             {
               "code": "ESP6",
-              "dysplayName": "Eric García",
+              "displayName": "Eric García",
               "isFoil": false
             },
             {
               "code": "ESP7",
-              "dysplayName": "Jordi Alba",
+              "displayName": "Jordi Alba",
               "isFoil": false
             },
             {
               "code": "ESP8",
-              "dysplayName": "Aymeric Laporte",
+              "displayName": "Aymeric Laporte",
               "isFoil": false
             },
             {
               "code": "ESP9",
-              "dysplayName": "Pau Torres",
+              "displayName": "Pau Torres",
               "isFoil": false
             },
             {
               "code": "ESP10",
-              "dysplayName": "Gavi",
+              "displayName": "Gavi",
               "isFoil": false
             },
             {
               "code": "ESP11",
-              "dysplayName": "Koke",
+              "displayName": "Koke",
               "isFoil": false
             },
             {
               "code": "ESP12",
-              "dysplayName": "Marcos Llorente",
+              "displayName": "Marcos Llorente",
               "isFoil": false
             },
             {
               "code": "ESP13",
-              "dysplayName": "Pedri",
+              "displayName": "Pedri",
               "isFoil": false
             },
             {
               "code": "ESP14",
-              "dysplayName": "Rodri",
+              "displayName": "Rodri",
               "isFoil": false
             },
             {
               "code": "ESP15",
-              "dysplayName": "Sergio Busquets",
+              "displayName": "Sergio Busquets",
               "isFoil": false
             },
             {
               "code": "ESP16",
-              "dysplayName": "Dani Olmo",
+              "displayName": "Dani Olmo",
               "isFoil": false
             },
             {
               "code": "ESP17",
-              "dysplayName": "Ansu Fati",
+              "displayName": "Ansu Fati",
               "isFoil": false
             },
             {
               "code": "ESP18",
-              "dysplayName": "Ferran Torres",
+              "displayName": "Ferran Torres",
               "isFoil": false
             },
             {
               "code": "ESP19",
-              "dysplayName": "Álvaro Morata",
+              "displayName": "Álvaro Morata",
               "isFoil": false
             },
             {
               "code": "ESP20",
-              "dysplayName": "Pablo Sarabia",
+              "displayName": "Pablo Sarabia",
               "isFoil": false
             }
           ]
@@ -2080,102 +2080,102 @@
           "stickers": [
             {
               "code": "CRC1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CRC2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "CRC3",
-              "dysplayName": "Keylor Navas",
+              "displayName": "Keylor Navas",
               "isFoil": false
             },
             {
               "code": "CRC4",
-              "dysplayName": "Leonel Moreira",
+              "displayName": "Leonel Moreira",
               "isFoil": false
             },
             {
               "code": "CRC5",
-              "dysplayName": "Ricardo Blanco",
+              "displayName": "Ricardo Blanco",
               "isFoil": false
             },
             {
               "code": "CRC6",
-              "dysplayName": "Francisco Calvo",
+              "displayName": "Francisco Calvo",
               "isFoil": false
             },
             {
               "code": "CRC7",
-              "dysplayName": "Óscar Duarte",
+              "displayName": "Óscar Duarte",
               "isFoil": false
             },
             {
               "code": "CRC8",
-              "dysplayName": "Keysher Fuller",
+              "displayName": "Keysher Fuller",
               "isFoil": false
             },
             {
               "code": "CRC9",
-              "dysplayName": "Bryan Oviedo",
+              "displayName": "Bryan Oviedo",
               "isFoil": false
             },
             {
               "code": "CRC10",
-              "dysplayName": "Juan Pablo Vargas",
+              "displayName": "Juan Pablo Vargas",
               "isFoil": false
             },
             {
               "code": "CRC11",
-              "dysplayName": "Kendall Waston",
+              "displayName": "Kendall Waston",
               "isFoil": false
             },
             {
               "code": "CRC12",
-              "dysplayName": "Celso Borges",
+              "displayName": "Celso Borges",
               "isFoil": false
             },
             {
               "code": "CRC13",
-              "dysplayName": "Orlando Galo",
+              "displayName": "Orlando Galo",
               "isFoil": false
             },
             {
               "code": "CRC14",
-              "dysplayName": "Bryan Ruiz",
+              "displayName": "Bryan Ruiz",
               "isFoil": false
             },
             {
               "code": "CRC15",
-              "dysplayName": "Yeltsin Tejeda",
+              "displayName": "Yeltsin Tejeda",
               "isFoil": false
             },
             {
               "code": "CRC16",
-              "dysplayName": "Jewison Bennette",
+              "displayName": "Jewison Bennette",
               "isFoil": false
             },
             {
               "code": "CRC17",
-              "dysplayName": "Joel Campbell",
+              "displayName": "Joel Campbell",
               "isFoil": false
             },
             {
               "code": "CRC18",
-              "dysplayName": "Anthony Contreras",
+              "displayName": "Anthony Contreras",
               "isFoil": false
             },
             {
               "code": "CRC19",
-              "dysplayName": "Gerson Torres",
+              "displayName": "Gerson Torres",
               "isFoil": false
             },
             {
               "code": "CRC20",
-              "dysplayName": "Johan Venegas",
+              "displayName": "Johan Venegas",
               "isFoil": false
             }
           ]
@@ -2187,102 +2187,102 @@
           "stickers": [
             {
               "code": "GER1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "GER2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "GER3",
-              "dysplayName": "Manuel Neuer",
+              "displayName": "Manuel Neuer",
               "isFoil": false
             },
             {
               "code": "GER4",
-              "dysplayName": "Marc",
+              "displayName": "Marc",
               "isFoil": false
             },
             {
               "code": "GER5",
-              "dysplayName": "Matthias Ginter",
+              "displayName": "Matthias Ginter",
               "isFoil": false
             },
             {
               "code": "GER6",
-              "dysplayName": "Robin Gosens",
+              "displayName": "Robin Gosens",
               "isFoil": false
             },
             {
               "code": "GER7",
-              "dysplayName": "Thilo Kehrer",
+              "displayName": "Thilo Kehrer",
               "isFoil": false
             },
             {
               "code": "GER8",
-              "dysplayName": "David Raum",
+              "displayName": "David Raum",
               "isFoil": false
             },
             {
               "code": "GER9",
-              "dysplayName": "Antonio Rüdiger",
+              "displayName": "Antonio Rüdiger",
               "isFoil": false
             },
             {
               "code": "GER10",
-              "dysplayName": "Niklas Süle",
+              "displayName": "Niklas Süle",
               "isFoil": false
             },
             {
               "code": "GER11",
-              "dysplayName": "Leon Goretzka",
+              "displayName": "Leon Goretzka",
               "isFoil": false
             },
             {
               "code": "GER12",
-              "dysplayName": "İlkay Gündoğan",
+              "displayName": "İlkay Gündoğan",
               "isFoil": false
             },
             {
               "code": "GER13",
-              "dysplayName": "Kai Havertz",
+              "displayName": "Kai Havertz",
               "isFoil": false
             },
             {
               "code": "GER14",
-              "dysplayName": "Jonas Hofmann",
+              "displayName": "Jonas Hofmann",
               "isFoil": false
             },
             {
               "code": "GER15",
-              "dysplayName": "Joshua Kimmich",
+              "displayName": "Joshua Kimmich",
               "isFoil": false
             },
             {
               "code": "GER16",
-              "dysplayName": "Serge Gnabry",
+              "displayName": "Serge Gnabry",
               "isFoil": false
             },
             {
               "code": "GER17",
-              "dysplayName": "Thomas Müller",
+              "displayName": "Thomas Müller",
               "isFoil": false
             },
             {
               "code": "GER18",
-              "dysplayName": "Marco Reus",
+              "displayName": "Marco Reus",
               "isFoil": false
             },
             {
               "code": "GER19",
-              "dysplayName": "Leroy Sané",
+              "displayName": "Leroy Sané",
               "isFoil": false
             },
             {
               "code": "GER20",
-              "dysplayName": "Timo Werner",
+              "displayName": "Timo Werner",
               "isFoil": false
             }
           ]
@@ -2294,102 +2294,102 @@
           "stickers": [
             {
               "code": "JPN1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "JPN2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "JPN3",
-              "dysplayName": "Shuichi Gonda",
+              "displayName": "Shuichi Gonda",
               "isFoil": false
             },
             {
               "code": "JPN4",
-              "dysplayName": "Eiji Kawashima",
+              "displayName": "Eiji Kawashima",
               "isFoil": false
             },
             {
               "code": "JPN5",
-              "dysplayName": "Yuto Nagatomo",
+              "displayName": "Yuto Nagatomo",
               "isFoil": false
             },
             {
               "code": "JPN6",
-              "dysplayName": "Yuta Nakayama",
+              "displayName": "Yuta Nakayama",
               "isFoil": false
             },
             {
               "code": "JPN7",
-              "dysplayName": "Takehiro Tomiyasu",
+              "displayName": "Takehiro Tomiyasu",
               "isFoil": false
             },
             {
               "code": "JPN8",
-              "dysplayName": "Miki Yamane",
+              "displayName": "Miki Yamane",
               "isFoil": false
             },
             {
               "code": "JPN9",
-              "dysplayName": "Maya Yoshida",
+              "displayName": "Maya Yoshida",
               "isFoil": false
             },
             {
               "code": "JPN10",
-              "dysplayName": "Wataru Endo",
+              "displayName": "Wataru Endo",
               "isFoil": false
             },
             {
               "code": "JPN11",
-              "dysplayName": "Genki Haraguchi",
+              "displayName": "Genki Haraguchi",
               "isFoil": false
             },
             {
               "code": "JPN12",
-              "dysplayName": "Hidemasa Morita",
+              "displayName": "Hidemasa Morita",
               "isFoil": false
             },
             {
               "code": "JPN13",
-              "dysplayName": "Gaku Shibasaki",
+              "displayName": "Gaku Shibasaki",
               "isFoil": false
             },
             {
               "code": "JPN14",
-              "dysplayName": "Ao Tanaka",
+              "displayName": "Ao Tanaka",
               "isFoil": false
             },
             {
               "code": "JPN15",
-              "dysplayName": "Takuma Asano",
+              "displayName": "Takuma Asano",
               "isFoil": false
             },
             {
               "code": "JPN16",
-              "dysplayName": "Kyogo Furuhashi",
+              "displayName": "Kyogo Furuhashi",
               "isFoil": false
             },
             {
               "code": "JPN17",
-              "dysplayName": "Junya Ito",
+              "displayName": "Junya Ito",
               "isFoil": false
             },
             {
               "code": "JPN18",
-              "dysplayName": "Takumi Minamino",
+              "displayName": "Takumi Minamino",
               "isFoil": false
             },
             {
               "code": "JPN19",
-              "dysplayName": "Kaoru Mitoma",
+              "displayName": "Kaoru Mitoma",
               "isFoil": false
             },
             {
               "code": "JPN20",
-              "dysplayName": "Yuya Osako",
+              "displayName": "Yuya Osako",
               "isFoil": false
             }
           ]
@@ -2407,102 +2407,102 @@
           "stickers": [
             {
               "code": "BEL1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "BEL2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "BEL3",
-              "dysplayName": "Thibaut Courtois",
+              "displayName": "Thibaut Courtois",
               "isFoil": false
             },
             {
               "code": "BEL4",
-              "dysplayName": "Simon Mignolet",
+              "displayName": "Simon Mignolet",
               "isFoil": false
             },
             {
               "code": "BEL5",
-              "dysplayName": "Toby Alderweireld",
+              "displayName": "Toby Alderweireld",
               "isFoil": false
             },
             {
               "code": "BEL6",
-              "dysplayName": "Timothy Castagne",
+              "displayName": "Timothy Castagne",
               "isFoil": false
             },
             {
               "code": "BEL7",
-              "dysplayName": "Jason Denayer",
+              "displayName": "Jason Denayer",
               "isFoil": false
             },
             {
               "code": "BEL8",
-              "dysplayName": "Thomas Meunier",
+              "displayName": "Thomas Meunier",
               "isFoil": false
             },
             {
               "code": "BEL9",
-              "dysplayName": "Jan Vertonghen",
+              "displayName": "Jan Vertonghen",
               "isFoil": false
             },
             {
               "code": "BEL10",
-              "dysplayName": "Yannick Carrasco",
+              "displayName": "Yannick Carrasco",
               "isFoil": false
             },
             {
               "code": "BEL11",
-              "dysplayName": "Kevin De Bruyne",
+              "displayName": "Kevin De Bruyne",
               "isFoil": false
             },
             {
               "code": "BEL12",
-              "dysplayName": "Charles De Ketelaere",
+              "displayName": "Charles De Ketelaere",
               "isFoil": false
             },
             {
               "code": "BEL13",
-              "dysplayName": "Thorgan Hazard",
+              "displayName": "Thorgan Hazard",
               "isFoil": false
             },
             {
               "code": "BEL14",
-              "dysplayName": "Youri Tielemans",
+              "displayName": "Youri Tielemans",
               "isFoil": false
             },
             {
               "code": "BEL15",
-              "dysplayName": "Hans Vanaken",
+              "displayName": "Hans Vanaken",
               "isFoil": false
             },
             {
               "code": "BEL16",
-              "dysplayName": "Axel Witsel",
+              "displayName": "Axel Witsel",
               "isFoil": false
             },
             {
               "code": "BEL17",
-              "dysplayName": "Jérémy Doku",
+              "displayName": "Jérémy Doku",
               "isFoil": false
             },
             {
               "code": "BEL18",
-              "dysplayName": "Eden Hazard",
+              "displayName": "Eden Hazard",
               "isFoil": false
             },
             {
               "code": "BEL19",
-              "dysplayName": "Romelu Lukaku",
+              "displayName": "Romelu Lukaku",
               "isFoil": false
             },
             {
               "code": "BEL20",
-              "dysplayName": "Dries Mertens",
+              "displayName": "Dries Mertens",
               "isFoil": false
             }
           ]
@@ -2514,102 +2514,102 @@
           "stickers": [
             {
               "code": "CAN1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CAN2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "CAN3",
-              "dysplayName": "Milan Borjan",
+              "displayName": "Milan Borjan",
               "isFoil": false
             },
             {
               "code": "CAN4",
-              "dysplayName": "Maxime Crépeau",
+              "displayName": "Maxime Crépeau",
               "isFoil": false
             },
             {
               "code": "CAN5",
-              "dysplayName": "Samuel Adekugbe",
+              "displayName": "Samuel Adekugbe",
               "isFoil": false
             },
             {
               "code": "CAN6",
-              "dysplayName": "Doneil Henry",
+              "displayName": "Doneil Henry",
               "isFoil": false
             },
             {
               "code": "CAN7",
-              "dysplayName": "Alistair Johnston",
+              "displayName": "Alistair Johnston",
               "isFoil": false
             },
             {
               "code": "CAN8",
-              "dysplayName": "Richie Laryea",
+              "displayName": "Richie Laryea",
               "isFoil": false
             },
             {
               "code": "CAN9",
-              "dysplayName": "Kamal Miller",
+              "displayName": "Kamal Miller",
               "isFoil": false
             },
             {
               "code": "CAN10",
-              "dysplayName": "Steven Vitória",
+              "displayName": "Steven Vitória",
               "isFoil": false
             },
             {
               "code": "CAN11",
-              "dysplayName": "Tajon Buchanan",
+              "displayName": "Tajon Buchanan",
               "isFoil": false
             },
             {
               "code": "CAN12",
-              "dysplayName": "Alphonso Davies",
+              "displayName": "Alphonso Davies",
               "isFoil": false
             },
             {
               "code": "CAN13",
-              "dysplayName": "Stephen Eustáquio",
+              "displayName": "Stephen Eustáquio",
               "isFoil": false
             },
             {
               "code": "CAN14",
-              "dysplayName": "Atiba Hutchinson",
+              "displayName": "Atiba Hutchinson",
               "isFoil": false
             },
             {
               "code": "CAN15",
-              "dysplayName": "Mark",
+              "displayName": "Mark",
               "isFoil": false
             },
             {
               "code": "CAN16",
-              "dysplayName": "Jonathan Osorio",
+              "displayName": "Jonathan Osorio",
               "isFoil": false
             },
             {
               "code": "CAN17",
-              "dysplayName": "Samuel Piette",
+              "displayName": "Samuel Piette",
               "isFoil": false
             },
             {
               "code": "CAN18",
-              "dysplayName": "Jonathan David",
+              "displayName": "Jonathan David",
               "isFoil": false
             },
             {
               "code": "CAN19",
-              "dysplayName": "David Junior Hoilett",
+              "displayName": "David Junior Hoilett",
               "isFoil": false
             },
             {
               "code": "CAN20",
-              "dysplayName": "Cyle Larin",
+              "displayName": "Cyle Larin",
               "isFoil": false
             }
           ]
@@ -2621,102 +2621,102 @@
           "stickers": [
             {
               "code": "MAR1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "MAR2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "MAR3",
-              "dysplayName": "Yassine Bounou",
+              "displayName": "Yassine Bounou",
               "isFoil": false
             },
             {
               "code": "MAR4",
-              "dysplayName": "Munir Mohamedi",
+              "displayName": "Munir Mohamedi",
               "isFoil": false
             },
             {
               "code": "MAR5",
-              "dysplayName": "Nayef Aguerd",
+              "displayName": "Nayef Aguerd",
               "isFoil": false
             },
             {
               "code": "MAR6",
-              "dysplayName": "Achraf Hakimi",
+              "displayName": "Achraf Hakimi",
               "isFoil": false
             },
             {
               "code": "MAR7",
-              "dysplayName": "Adam Masina",
+              "displayName": "Adam Masina",
               "isFoil": false
             },
             {
               "code": "MAR8",
-              "dysplayName": "Samy Mmaee",
+              "displayName": "Samy Mmaee",
               "isFoil": false
             },
             {
               "code": "MAR9",
-              "dysplayName": "Romain Saïss",
+              "displayName": "Romain Saïss",
               "isFoil": false
             },
             {
               "code": "MAR10",
-              "dysplayName": "Selim Amallah",
+              "displayName": "Selim Amallah",
               "isFoil": false
             },
             {
               "code": "MAR11",
-              "dysplayName": "Sofyan Amrabat",
+              "displayName": "Sofyan Amrabat",
               "isFoil": false
             },
             {
               "code": "MAR12",
-              "dysplayName": "Aymen Barkok",
+              "displayName": "Aymen Barkok",
               "isFoil": false
             },
             {
               "code": "MAR13",
-              "dysplayName": "Ilias Chair",
+              "displayName": "Ilias Chair",
               "isFoil": false
             },
             {
               "code": "MAR14",
-              "dysplayName": "Imrân Louza",
+              "displayName": "Imrân Louza",
               "isFoil": false
             },
             {
               "code": "MAR15",
-              "dysplayName": "Sofiane Boufal",
+              "displayName": "Sofiane Boufal",
               "isFoil": false
             },
             {
               "code": "MAR16",
-              "dysplayName": "Ayoub El Kaabi",
+              "displayName": "Ayoub El Kaabi",
               "isFoil": false
             },
             {
               "code": "MAR17",
-              "dysplayName": "Youssef En",
+              "displayName": "Youssef En",
               "isFoil": false
             },
             {
               "code": "MAR18",
-              "dysplayName": "Ryan Mmaee",
+              "displayName": "Ryan Mmaee",
               "isFoil": false
             },
             {
               "code": "MAR19",
-              "dysplayName": "Munir",
+              "displayName": "Munir",
               "isFoil": false
             },
             {
               "code": "MAR20",
-              "dysplayName": "Tarik Tissoudali",
+              "displayName": "Tarik Tissoudali",
               "isFoil": false
             }
           ]
@@ -2728,102 +2728,102 @@
           "stickers": [
             {
               "code": "CRO1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CRO2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "CRO3",
-              "dysplayName": "Dominik Livaković",
+              "displayName": "Dominik Livaković",
               "isFoil": false
             },
             {
               "code": "CRO4",
-              "dysplayName": "Ivica Ivušić",
+              "displayName": "Ivica Ivušić",
               "isFoil": false
             },
             {
               "code": "CRO5",
-              "dysplayName": "Duje Ćaleta",
+              "displayName": "Duje Ćaleta",
               "isFoil": false
             },
             {
               "code": "CRO6",
-              "dysplayName": "Joško Gvardiol",
+              "displayName": "Joško Gvardiol",
               "isFoil": false
             },
             {
               "code": "CRO7",
-              "dysplayName": "Josip Juranović",
+              "displayName": "Josip Juranović",
               "isFoil": false
             },
             {
               "code": "CRO8",
-              "dysplayName": "Dejan Lovren",
+              "displayName": "Dejan Lovren",
               "isFoil": false
             },
             {
               "code": "CRO9",
-              "dysplayName": "Borna Sosa",
+              "displayName": "Borna Sosa",
               "isFoil": false
             },
             {
               "code": "CRO10",
-              "dysplayName": "Domagoj Vida",
+              "displayName": "Domagoj Vida",
               "isFoil": false
             },
             {
               "code": "CRO11",
-              "dysplayName": "Marcelo Brozović",
+              "displayName": "Marcelo Brozović",
               "isFoil": false
             },
             {
               "code": "CRO12",
-              "dysplayName": "Mateo Kovačić",
+              "displayName": "Mateo Kovačić",
               "isFoil": false
             },
             {
               "code": "CRO13",
-              "dysplayName": "Luka Modrić",
+              "displayName": "Luka Modrić",
               "isFoil": false
             },
             {
               "code": "CRO14",
-              "dysplayName": "Mario Pašalić",
+              "displayName": "Mario Pašalić",
               "isFoil": false
             },
             {
               "code": "CRO15",
-              "dysplayName": "Ivan Perišić",
+              "displayName": "Ivan Perišić",
               "isFoil": false
             },
             {
               "code": "CRO16",
-              "dysplayName": "Nikola Vlašić",
+              "displayName": "Nikola Vlašić",
               "isFoil": false
             },
             {
               "code": "CRO17",
-              "dysplayName": "Josip Brekalo",
+              "displayName": "Josip Brekalo",
               "isFoil": false
             },
             {
               "code": "CRO18",
-              "dysplayName": "Andrej Kramarić",
+              "displayName": "Andrej Kramarić",
               "isFoil": false
             },
             {
               "code": "CRO19",
-              "dysplayName": "Marko Livaja",
+              "displayName": "Marko Livaja",
               "isFoil": false
             },
             {
               "code": "CRO20",
-              "dysplayName": "Mislav Oršić",
+              "displayName": "Mislav Oršić",
               "isFoil": false
             }
           ]
@@ -2841,102 +2841,102 @@
           "stickers": [
             {
               "code": "BRA1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "BRA2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "BRA3",
-              "dysplayName": "Alisson",
+              "displayName": "Alisson",
               "isFoil": false
             },
             {
               "code": "BRA4",
-              "dysplayName": "Ederson",
+              "displayName": "Ederson",
               "isFoil": false
             },
             {
               "code": "BRA5",
-              "dysplayName": "Alex Sandro",
+              "displayName": "Alex Sandro",
               "isFoil": false
             },
             {
               "code": "BRA6",
-              "dysplayName": "Danilo",
+              "displayName": "Danilo",
               "isFoil": false
             },
             {
               "code": "BRA7",
-              "dysplayName": "Éder Militão",
+              "displayName": "Éder Militão",
               "isFoil": false
             },
             {
               "code": "BRA8",
-              "dysplayName": "Marquinhos",
+              "displayName": "Marquinhos",
               "isFoil": false
             },
             {
               "code": "BRA9",
-              "dysplayName": "Thiago Silva",
+              "displayName": "Thiago Silva",
               "isFoil": false
             },
             {
               "code": "BRA10",
-              "dysplayName": "Casemiro",
+              "displayName": "Casemiro",
               "isFoil": false
             },
             {
               "code": "BRA11",
-              "dysplayName": "Philippe Coutinho",
+              "displayName": "Philippe Coutinho",
               "isFoil": false
             },
             {
               "code": "BRA12",
-              "dysplayName": "Fabinho",
+              "displayName": "Fabinho",
               "isFoil": false
             },
             {
               "code": "BRA13",
-              "dysplayName": "Fred",
+              "displayName": "Fred",
               "isFoil": false
             },
             {
               "code": "BRA14",
-              "dysplayName": "Lucas Paquetá",
+              "displayName": "Lucas Paquetá",
               "isFoil": false
             },
             {
               "code": "BRA15",
-              "dysplayName": "Antony",
+              "displayName": "Antony",
               "isFoil": false
             },
             {
               "code": "BRA16",
-              "dysplayName": "Gabriel Jesus",
+              "displayName": "Gabriel Jesus",
               "isFoil": false
             },
             {
               "code": "BRA17",
-              "dysplayName": "Neymar Jr",
+              "displayName": "Neymar Jr",
               "isFoil": false
             },
             {
               "code": "BRA18",
-              "dysplayName": "Raphinha",
+              "displayName": "Raphinha",
               "isFoil": false
             },
             {
               "code": "BRA19",
-              "dysplayName": "Richarlison",
+              "displayName": "Richarlison",
               "isFoil": false
             },
             {
               "code": "BRA20",
-              "dysplayName": "Vinícius Jr",
+              "displayName": "Vinícius Jr",
               "isFoil": false
             }
           ]
@@ -2948,102 +2948,102 @@
           "stickers": [
             {
               "code": "SRB1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SRB2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "SRB3",
-              "dysplayName": "Predrag Rajković",
+              "displayName": "Predrag Rajković",
               "isFoil": false
             },
             {
               "code": "SRB4",
-              "dysplayName": "Vanja Milinković",
+              "displayName": "Vanja Milinković",
               "isFoil": false
             },
             {
               "code": "SRB5",
-              "dysplayName": "Nikola Milenković",
+              "displayName": "Nikola Milenković",
               "isFoil": false
             },
             {
               "code": "SRB6",
-              "dysplayName": "Strahinja Pavlović",
+              "displayName": "Strahinja Pavlović",
               "isFoil": false
             },
             {
               "code": "SRB7",
-              "dysplayName": "Miloš Veljković",
+              "displayName": "Miloš Veljković",
               "isFoil": false
             },
             {
               "code": "SRB8",
-              "dysplayName": "Filip Đuričić",
+              "displayName": "Filip Đuričić",
               "isFoil": false
             },
             {
               "code": "SRB9",
-              "dysplayName": "Nemanja Gudelj",
+              "displayName": "Nemanja Gudelj",
               "isFoil": false
             },
             {
               "code": "SRB10",
-              "dysplayName": "Filip Kostić",
+              "displayName": "Filip Kostić",
               "isFoil": false
             },
             {
               "code": "SRB11",
-              "dysplayName": "Darko Lazović",
+              "displayName": "Darko Lazović",
               "isFoil": false
             },
             {
               "code": "SRB12",
-              "dysplayName": "Saša Lukić",
+              "displayName": "Saša Lukić",
               "isFoil": false
             },
             {
               "code": "SRB13",
-              "dysplayName": "Nemanja Maksimović",
+              "displayName": "Nemanja Maksimović",
               "isFoil": false
             },
             {
               "code": "SRB14",
-              "dysplayName": "Sergej Milinković",
+              "displayName": "Sergej Milinković",
               "isFoil": false
             },
             {
               "code": "SRB15",
-              "dysplayName": "Nemanja Radonjić",
+              "displayName": "Nemanja Radonjić",
               "isFoil": false
             },
             {
               "code": "SRB16",
-              "dysplayName": "Andrija Živković",
+              "displayName": "Andrija Živković",
               "isFoil": false
             },
             {
               "code": "SRB17",
-              "dysplayName": "Luka Jović",
+              "displayName": "Luka Jović",
               "isFoil": false
             },
             {
               "code": "SRB18",
-              "dysplayName": "Aleksandar Mitrović",
+              "displayName": "Aleksandar Mitrović",
               "isFoil": false
             },
             {
               "code": "SRB19",
-              "dysplayName": "Dušan Tadić",
+              "displayName": "Dušan Tadić",
               "isFoil": false
             },
             {
               "code": "SRB20",
-              "dysplayName": "Dušan Vlahović",
+              "displayName": "Dušan Vlahović",
               "isFoil": false
             }
           ]
@@ -3055,102 +3055,102 @@
           "stickers": [
             {
               "code": "SUI1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SUI2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "SUI3",
-              "dysplayName": "Yann Sommer",
+              "displayName": "Yann Sommer",
               "isFoil": false
             },
             {
               "code": "SUI4",
-              "dysplayName": "Gregor Kobel",
+              "displayName": "Gregor Kobel",
               "isFoil": false
             },
             {
               "code": "SUI5",
-              "dysplayName": "Manuel Akanji",
+              "displayName": "Manuel Akanji",
               "isFoil": false
             },
             {
               "code": "SUI6",
-              "dysplayName": "Nico Elvedi",
+              "displayName": "Nico Elvedi",
               "isFoil": false
             },
             {
               "code": "SUI7",
-              "dysplayName": "Kevin Mbabu",
+              "displayName": "Kevin Mbabu",
               "isFoil": false
             },
             {
               "code": "SUI8",
-              "dysplayName": "Ricardo Rodríguez",
+              "displayName": "Ricardo Rodríguez",
               "isFoil": false
             },
             {
               "code": "SUI9",
-              "dysplayName": "Fabian Schär",
+              "displayName": "Fabian Schär",
               "isFoil": false
             },
             {
               "code": "SUI10",
-              "dysplayName": "Silvan Widmer",
+              "displayName": "Silvan Widmer",
               "isFoil": false
             },
             {
               "code": "SUI11",
-              "dysplayName": "Remo Freuler",
+              "displayName": "Remo Freuler",
               "isFoil": false
             },
             {
               "code": "SUI12",
-              "dysplayName": "Xherdan Shaqiri",
+              "displayName": "Xherdan Shaqiri",
               "isFoil": false
             },
             {
               "code": "SUI13",
-              "dysplayName": "Djibril Sow",
+              "displayName": "Djibril Sow",
               "isFoil": false
             },
             {
               "code": "SUI14",
-              "dysplayName": "Granit Xhaka",
+              "displayName": "Granit Xhaka",
               "isFoil": false
             },
             {
               "code": "SUI15",
-              "dysplayName": "Denis Zakaria",
+              "displayName": "Denis Zakaria",
               "isFoil": false
             },
             {
               "code": "SUI16",
-              "dysplayName": "Steven Zuber",
+              "displayName": "Steven Zuber",
               "isFoil": false
             },
             {
               "code": "SUI17",
-              "dysplayName": "Breel Embolo",
+              "displayName": "Breel Embolo",
               "isFoil": false
             },
             {
               "code": "SUI18",
-              "dysplayName": "Noah Okafor",
+              "displayName": "Noah Okafor",
               "isFoil": false
             },
             {
               "code": "SUI19",
-              "dysplayName": "Haris Seferović",
+              "displayName": "Haris Seferović",
               "isFoil": false
             },
             {
               "code": "SUI20",
-              "dysplayName": "Ruben Vargas",
+              "displayName": "Ruben Vargas",
               "isFoil": false
             }
           ]
@@ -3162,102 +3162,102 @@
           "stickers": [
             {
               "code": "CMR1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CMR2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "CMR3",
-              "dysplayName": "André Onana",
+              "displayName": "André Onana",
               "isFoil": false
             },
             {
               "code": "CMR4",
-              "dysplayName": "Devis Epassy",
+              "displayName": "Devis Epassy",
               "isFoil": false
             },
             {
               "code": "CMR5",
-              "dysplayName": "Jean",
+              "displayName": "Jean",
               "isFoil": false
             },
             {
               "code": "CMR6",
-              "dysplayName": "Collins Fai",
+              "displayName": "Collins Fai",
               "isFoil": false
             },
             {
               "code": "CMR7",
-              "dysplayName": "Olivier Mbaizo",
+              "displayName": "Olivier Mbaizo",
               "isFoil": false
             },
             {
               "code": "CMR8",
-              "dysplayName": "Harold Moukoudi",
+              "displayName": "Harold Moukoudi",
               "isFoil": false
             },
             {
               "code": "CMR9",
-              "dysplayName": "Michael Ngadeu",
+              "displayName": "Michael Ngadeu",
               "isFoil": false
             },
             {
               "code": "CMR10",
-              "dysplayName": "Nouhou",
+              "displayName": "Nouhou",
               "isFoil": false
             },
             {
               "code": "CMR11",
-              "dysplayName": "Martin Hongla",
+              "displayName": "Martin Hongla",
               "isFoil": false
             },
             {
               "code": "CMR12",
-              "dysplayName": "Pierre Kunde",
+              "displayName": "Pierre Kunde",
               "isFoil": false
             },
             {
               "code": "CMR13",
-              "dysplayName": "James Léa Siliki",
+              "displayName": "James Léa Siliki",
               "isFoil": false
             },
             {
               "code": "CMR14",
-              "dysplayName": "Samuel Oum Gouet",
+              "displayName": "Samuel Oum Gouet",
               "isFoil": false
             },
             {
               "code": "CMR15",
-              "dysplayName": "André",
+              "displayName": "André",
               "isFoil": false
             },
             {
               "code": "CMR16",
-              "dysplayName": "Vincent Aboubakar",
+              "displayName": "Vincent Aboubakar",
               "isFoil": false
             },
             {
               "code": "CMR17",
-              "dysplayName": "Stéphane Bahoken",
+              "displayName": "Stéphane Bahoken",
               "isFoil": false
             },
             {
               "code": "CMR18",
-              "dysplayName": "Eric Maxim Choupo",
+              "displayName": "Eric Maxim Choupo",
               "isFoil": false
             },
             {
               "code": "CMR19",
-              "dysplayName": "Nicolas Moumi Ngamaleu",
+              "displayName": "Nicolas Moumi Ngamaleu",
               "isFoil": false
             },
             {
               "code": "CMR20",
-              "dysplayName": "Karl Toko Ekambi",
+              "displayName": "Karl Toko Ekambi",
               "isFoil": false
             }
           ]
@@ -3275,102 +3275,102 @@
           "stickers": [
             {
               "code": "POR1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "POR2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "POR3",
-              "dysplayName": "Diogo Costa",
+              "displayName": "Diogo Costa",
               "isFoil": false
             },
             {
               "code": "POR4",
-              "dysplayName": "Rui Patrício",
+              "displayName": "Rui Patrício",
               "isFoil": false
             },
             {
               "code": "POR5",
-              "dysplayName": "João Cancelo",
+              "displayName": "João Cancelo",
               "isFoil": false
             },
             {
               "code": "POR6",
-              "dysplayName": "José Fonte",
+              "displayName": "José Fonte",
               "isFoil": false
             },
             {
               "code": "POR7",
-              "dysplayName": "Nuno Mendes",
+              "displayName": "Nuno Mendes",
               "isFoil": false
             },
             {
               "code": "POR8",
-              "dysplayName": "Pepe",
+              "displayName": "Pepe",
               "isFoil": false
             },
             {
               "code": "POR9",
-              "dysplayName": "Raphaël Guerreiro",
+              "displayName": "Raphaël Guerreiro",
               "isFoil": false
             },
             {
               "code": "POR10",
-              "dysplayName": "Rúben Dias",
+              "displayName": "Rúben Dias",
               "isFoil": false
             },
             {
               "code": "POR11",
-              "dysplayName": "Bernardo Silva",
+              "displayName": "Bernardo Silva",
               "isFoil": false
             },
             {
               "code": "POR12",
-              "dysplayName": "Bruno Fernandes",
+              "displayName": "Bruno Fernandes",
               "isFoil": false
             },
             {
               "code": "POR13",
-              "dysplayName": "Danilo Pereira",
+              "displayName": "Danilo Pereira",
               "isFoil": false
             },
             {
               "code": "POR14",
-              "dysplayName": "João Moutinho",
+              "displayName": "João Moutinho",
               "isFoil": false
             },
             {
               "code": "POR15",
-              "dysplayName": "Renato Sanches",
+              "displayName": "Renato Sanches",
               "isFoil": false
             },
             {
               "code": "POR16",
-              "dysplayName": "Rúben Neves",
+              "displayName": "Rúben Neves",
               "isFoil": false
             },
             {
               "code": "POR17",
-              "dysplayName": "André Silva",
+              "displayName": "André Silva",
               "isFoil": false
             },
             {
               "code": "POR18",
-              "dysplayName": "Cristiano Ronaldo",
+              "displayName": "Cristiano Ronaldo",
               "isFoil": false
             },
             {
               "code": "POR19",
-              "dysplayName": "Diogo Jota",
+              "displayName": "Diogo Jota",
               "isFoil": false
             },
             {
               "code": "POR20",
-              "dysplayName": "Gonçalo Guedes",
+              "displayName": "Gonçalo Guedes",
               "isFoil": false
             }
           ]
@@ -3382,102 +3382,102 @@
           "stickers": [
             {
               "code": "GHA1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "GHA2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "GHA3",
-              "dysplayName": "Joe Wollacott",
+              "displayName": "Joe Wollacott",
               "isFoil": false
             },
             {
               "code": "GHA4",
-              "dysplayName": "Richard Ofori",
+              "displayName": "Richard Ofori",
               "isFoil": false
             },
             {
               "code": "GHA5",
-              "dysplayName": "Daniel Amartey",
+              "displayName": "Daniel Amartey",
               "isFoil": false
             },
             {
               "code": "GHA6",
-              "dysplayName": "Abdul",
+              "displayName": "Abdul",
               "isFoil": false
             },
             {
               "code": "GHA7",
-              "dysplayName": "Alexander Djiku",
+              "displayName": "Alexander Djiku",
               "isFoil": false
             },
             {
               "code": "GHA8",
-              "dysplayName": "Gideon Mensah",
+              "displayName": "Gideon Mensah",
               "isFoil": false
             },
             {
               "code": "GHA9",
-              "dysplayName": "Jonathan Mensah",
+              "displayName": "Jonathan Mensah",
               "isFoil": false
             },
             {
               "code": "GHA10",
-              "dysplayName": "Andy Yiadom",
+              "displayName": "Andy Yiadom",
               "isFoil": false
             },
             {
               "code": "GHA11",
-              "dysplayName": "Iddrisu Baba",
+              "displayName": "Iddrisu Baba",
               "isFoil": false
             },
             {
               "code": "GHA12",
-              "dysplayName": "Mohammed Kudus",
+              "displayName": "Mohammed Kudus",
               "isFoil": false
             },
             {
               "code": "GHA13",
-              "dysplayName": "Daniel",
+              "displayName": "Daniel",
               "isFoil": false
             },
             {
               "code": "GHA14",
-              "dysplayName": "Thomas Partey",
+              "displayName": "Thomas Partey",
               "isFoil": false
             },
             {
               "code": "GHA15",
-              "dysplayName": "Mubarak Wakaso",
+              "displayName": "Mubarak Wakaso",
               "isFoil": false
             },
             {
               "code": "GHA16",
-              "dysplayName": "Felix Afena",
+              "displayName": "Felix Afena",
               "isFoil": false
             },
             {
               "code": "GHA17",
-              "dysplayName": "André Ayew",
+              "displayName": "André Ayew",
               "isFoil": false
             },
             {
               "code": "GHA18",
-              "dysplayName": "Jordan Ayew",
+              "displayName": "Jordan Ayew",
               "isFoil": false
             },
             {
               "code": "GHA19",
-              "dysplayName": "Issahaku Abdul Fatawu",
+              "displayName": "Issahaku Abdul Fatawu",
               "isFoil": false
             },
             {
               "code": "GHA20",
-              "dysplayName": "Kamaldeen Sulemana",
+              "displayName": "Kamaldeen Sulemana",
               "isFoil": false
             }
           ]
@@ -3489,102 +3489,102 @@
           "stickers": [
             {
               "code": "URU1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "URU2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "URU3",
-              "dysplayName": "Fernando Muslera",
+              "displayName": "Fernando Muslera",
               "isFoil": false
             },
             {
               "code": "URU4",
-              "dysplayName": "Sergio Rochet",
+              "displayName": "Sergio Rochet",
               "isFoil": false
             },
             {
               "code": "URU5",
-              "dysplayName": "Ronald Araújo",
+              "displayName": "Ronald Araújo",
               "isFoil": false
             },
             {
               "code": "URU6",
-              "dysplayName": "Martín Cáceres",
+              "displayName": "Martín Cáceres",
               "isFoil": false
             },
             {
               "code": "URU7",
-              "dysplayName": "José María Giménez",
+              "displayName": "José María Giménez",
               "isFoil": false
             },
             {
               "code": "URU8",
-              "dysplayName": "Diego Godín",
+              "displayName": "Diego Godín",
               "isFoil": false
             },
             {
               "code": "URU9",
-              "dysplayName": "Mathías Olivera",
+              "displayName": "Mathías Olivera",
               "isFoil": false
             },
             {
               "code": "URU10",
-              "dysplayName": "Matías Viña",
+              "displayName": "Matías Viña",
               "isFoil": false
             },
             {
               "code": "URU11",
-              "dysplayName": "Rodrigo Bentancur",
+              "displayName": "Rodrigo Bentancur",
               "isFoil": false
             },
             {
               "code": "URU12",
-              "dysplayName": "Giorgian De Arrascaeta",
+              "displayName": "Giorgian De Arrascaeta",
               "isFoil": false
             },
             {
               "code": "URU13",
-              "dysplayName": "Nicolás De La Cruz",
+              "displayName": "Nicolás De La Cruz",
               "isFoil": false
             },
             {
               "code": "URU14",
-              "dysplayName": "Lucas Torreira",
+              "displayName": "Lucas Torreira",
               "isFoil": false
             },
             {
               "code": "URU15",
-              "dysplayName": "Federico Valverde",
+              "displayName": "Federico Valverde",
               "isFoil": false
             },
             {
               "code": "URU16",
-              "dysplayName": "Matías Vecino",
+              "displayName": "Matías Vecino",
               "isFoil": false
             },
             {
               "code": "URU17",
-              "dysplayName": "Edinson Cavani",
+              "displayName": "Edinson Cavani",
               "isFoil": false
             },
             {
               "code": "URU18",
-              "dysplayName": "Darwin Núñez",
+              "displayName": "Darwin Núñez",
               "isFoil": false
             },
             {
               "code": "URU19",
-              "dysplayName": "Facundo Pellistri",
+              "displayName": "Facundo Pellistri",
               "isFoil": false
             },
             {
               "code": "URU20",
-              "dysplayName": "Luis Suárez",
+              "displayName": "Luis Suárez",
               "isFoil": false
             }
           ]
@@ -3596,102 +3596,102 @@
           "stickers": [
             {
               "code": "KOR1",
-              "dysplayName": "Team Photo",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "KOR2",
-              "dysplayName": "Team Logo",
+              "displayName": "Team Logo",
               "isFoil": true
             },
             {
               "code": "KOR3",
-              "dysplayName": "Seung",
+              "displayName": "Seung",
               "isFoil": false
             },
             {
               "code": "KOR4",
-              "dysplayName": "Hyeon",
+              "displayName": "Hyeon",
               "isFoil": false
             },
             {
               "code": "KOR5",
-              "dysplayName": "Chul Hong",
+              "displayName": "Chul Hong",
               "isFoil": false
             },
             {
               "code": "KOR6",
-              "dysplayName": "Tae",
+              "displayName": "Tae",
               "isFoil": false
             },
             {
               "code": "KOR7",
-              "dysplayName": "Min",
+              "displayName": "Min",
               "isFoil": false
             },
             {
               "code": "KOR8",
-              "dysplayName": "Young",
+              "displayName": "Young",
               "isFoil": false
             },
             {
               "code": "KOR9",
-              "dysplayName": "Jin",
+              "displayName": "Jin",
               "isFoil": false
             },
             {
               "code": "KOR10",
-              "dysplayName": "Yong Lee",
+              "displayName": "Yong Lee",
               "isFoil": false
             },
             {
               "code": "KOR11",
-              "dysplayName": "In",
+              "displayName": "In",
               "isFoil": false
             },
             {
               "code": "KOR12",
-              "dysplayName": "Woo",
+              "displayName": "Woo",
               "isFoil": false
             },
             {
               "code": "KOR13",
-              "dysplayName": "Jae",
+              "displayName": "Jae",
               "isFoil": false
             },
             {
               "code": "KOR14",
-              "dysplayName": "Seung",
+              "displayName": "Seung",
               "isFoil": false
             },
             {
               "code": "KOR15",
-              "dysplayName": "Gue",
+              "displayName": "Gue",
               "isFoil": false
             },
             {
               "code": "KOR16",
-              "dysplayName": "Hee",
+              "displayName": "Hee",
               "isFoil": false
             },
             {
               "code": "KOR17",
-              "dysplayName": "Ui",
+              "displayName": "Ui",
               "isFoil": false
             },
             {
               "code": "KOR18",
-              "dysplayName": "Chang",
+              "displayName": "Chang",
               "isFoil": false
             },
             {
               "code": "KOR19",
-              "dysplayName": "Heung",
+              "displayName": "Heung",
               "isFoil": false
             },
             {
               "code": "KOR20",
-              "dysplayName": "Min",
+              "displayName": "Min",
               "isFoil": false
             }
           ]
