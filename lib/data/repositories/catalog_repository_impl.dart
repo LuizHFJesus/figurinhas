@@ -7,6 +7,7 @@ import 'package:sticker_manager_wc22/data/entities/group_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/section_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/sticker_entity.dart';
 import 'package:sticker_manager_wc22/data/mappers/entity_mappers.dart';
+import 'package:sticker_manager_wc22/domain/models/group.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
@@ -126,6 +127,24 @@ class CatalogRepositoryImpl implements CatalogRepository {
       sections: sections,
       stickers: stickers,
     );
+  }
+
+  @override
+  Future<List<Group>> getGroups(String albumId) async {
+    final list = await _local.getGroups(albumId);
+    return list.map(EntityMappers.toGroup).toList(growable: false);
+  }
+
+  @override
+  Future<List<Section>> getSectionsByGroup({
+    required String albumId,
+    required String groupId,
+  }) async {
+    final list = await _local.getSectionsByGroup(
+      albumId: albumId,
+      groupId: groupId,
+    );
+    return list.map(EntityMappers.toSection).toList(growable: false);
   }
 
   @override
