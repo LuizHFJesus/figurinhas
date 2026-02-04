@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
-import 'package:sticker_manager_wc22/features/splash/controllers/splash_controller.dart';
+import 'package:sticker_manager_wc22/ui/splash/controllers/splash_controller.dart';
 
 class SplashPage extends GetView<SplashController> {
   const SplashPage({super.key});
