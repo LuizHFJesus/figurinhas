@@ -26,6 +26,29 @@ class IsarCatalogLocalDataSource implements CatalogLocalDataSource {
   }
 
   @override
+  Future<List<GroupEntity>> getGroups(String albumId) {
+    return _isar.groupEntitys
+        .filter()
+        .albumIdEqualTo(albumId)
+        .sortByOrder()
+        .findAll();
+  }
+
+  @override
+  Future<List<SectionEntity>> getSectionsByGroup({
+    required String albumId,
+    required String groupId,
+  }) {
+    return _isar.sectionEntitys
+        .filter()
+        .albumIdEqualTo(albumId)
+        .and()
+        .groupIdEqualTo(groupId)
+        .sortByOrder()
+        .findAll();
+  }
+
+  @override
   Future<SectionEntity?> getSectionById({
     required String albumId,
     required String sectionId,

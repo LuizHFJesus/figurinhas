@@ -11,6 +11,13 @@ abstract class CatalogLocalDataSource {
     required List<StickerEntity> stickers,
   });
 
+  Future<List<GroupEntity>> getGroups(String albumId);
+
+  Future<List<SectionEntity>> getSectionsByGroup({
+    required String albumId,
+    required String groupId,
+  });
+
   Future<SectionEntity?> getSectionById({
     required String albumId,
     required String sectionId,
