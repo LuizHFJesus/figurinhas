@@ -8,7 +8,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_album_groups_usecase.da
 import 'package:sticker_manager_wc22/domain/usecases/get_sections_by_group_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
-import 'package:sticker_manager_wc22/features/home/models/group_sections.dart';
+import 'package:sticker_manager_wc22/ui/home/models/group_sections.dart';
 
 class HomeController extends GetxController {
   final UserProfileRepository _profileRepo;

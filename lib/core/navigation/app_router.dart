@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_routes.dart';
-import 'package:sticker_manager_wc22/features/splash/di/splash_binding.dart';
-import 'package:sticker_manager_wc22/features/splash/views/splash_page.dart';
+import 'package:sticker_manager_wc22/ui/splash/di/splash_binding.dart';
+import 'package:sticker_manager_wc22/ui/splash/views/splash_page.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
