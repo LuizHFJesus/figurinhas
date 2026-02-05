@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_routes.dart';
+import 'package:sticker_manager_wc22/ui/home/di/home_binding.dart';
 import 'package:sticker_manager_wc22/ui/home/presentations/dashboard_shell.dart';
+import 'package:sticker_manager_wc22/ui/home/presentations/home_view.dart';
 import 'package:sticker_manager_wc22/ui/splash/di/splash_binding.dart';
 import 'package:sticker_manager_wc22/ui/splash/views/splash_page.dart';
 
@@ -23,12 +25,10 @@ class AppRouter {
         branches: [
           StatefulShellBranch(
             routes: [
-              GoRoute(
-                name: AppRoutes.home,
+              GoRouteWithBinding(
                 path: AppRoutes.home,
-                builder: (context, state) => const Scaffold(
-                  body: Center(child: Text('Início')),
-                ),
+                builder: (context, state) => const HomeView(),
+                binding: HomeBinding(),
               ),
             ],
           ),

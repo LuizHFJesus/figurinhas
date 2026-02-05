@@ -12,4 +12,8 @@ const Map<String, String> ptBR = {
   'nav_home': 'Início',
   'nav_overview': 'Visão Geral',
   'nav_repeated': 'Repetidas',
+
+  'lbl_stickers_progress': 'figurinhas',
+  'lbl_missing_progress': 'faltantes',
+  'lbl_percentage_progress': 'concluído',
 };
