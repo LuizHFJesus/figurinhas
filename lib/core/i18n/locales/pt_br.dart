@@ -7,4 +7,9 @@ const Map<String, String> ptBR = {
       'Não conseguimos preparar o seu álbum.\n'
       'Verifique se há espaço disponível e tente novamente.',
   'error_retry': 'Tentar Novamente',
+
+  // Home
+  'nav_home': 'Início',
+  'nav_overview': 'Visão Geral',
+  'nav_repeated': 'Repetidas',
 };
