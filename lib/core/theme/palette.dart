@@ -6,4 +6,5 @@ class AppPalette {
   static const successGreen = Color(0xFF54A174);
   static const accentGold = Color(0xFFFFC244);
   static const accentGoldLight = Color(0xFFFFD784);
+  static const surfaceLight = Color(0xFFF1F1F1);
 }
