@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:sticker_manager_wc22/common/utils/constants.dart';
 
 class GradientHeaderScaffold extends StatefulWidget {
-  final String title;
-  final String? subtitle;
+  final Widget title;
+  final Widget? subtitle;
   final Widget? leading;
   final List<Widget> actions;
   final Widget progressCard;
@@ -59,8 +59,8 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
     final topInset = MediaQuery.of(context).padding.top;
     final gradient = widget.gradient ?? AppConstants.brandGradient;
     final gradientHeight = _headerH + (_cardH * widget.cardOverlapFraction);
+
     final colorScheme = Theme.of(context).colorScheme;
-    final textTheme = TextTheme.of(context);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
@@ -93,20 +93,10 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            widget.title,
-                            style: textTheme.headlineSmall?.copyWith(
-                              color: colorScheme.onPrimary,
-                            ),
-                          ),
+                          widget.title,
                           if (widget.subtitle != null) ...[
                             const SizedBox(height: 4),
-                            Text(
-                              widget.subtitle!,
-                              style: textTheme.titleSmall?.copyWith(
-                                color: colorScheme.onPrimary,
-                              ),
-                            ),
+                            widget.subtitle!
                           ],
                         ],
                       ),
