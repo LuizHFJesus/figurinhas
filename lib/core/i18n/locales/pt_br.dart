@@ -13,7 +13,14 @@ const Map<String, String> ptBR = {
   'nav_overview': 'Visão Geral',
   'nav_repeated': 'Repetidas',
 
+  'home_my_stickers': 'Minhas Figurinhas',
+  'home_search': 'Pesquisar',
+  'home_stats': 'Estatísticas',
+  'home_share': 'Compartilhar',
+  'home_summary': 'Sumário',
+
   'lbl_stickers_progress': 'figurinhas',
   'lbl_missing_progress': 'faltantes',
   'lbl_percentage_progress': 'concluído',
+  'lbl_of': 'de',
 };
