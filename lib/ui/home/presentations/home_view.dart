@@ -9,8 +9,8 @@ import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
-import 'package:sticker_manager_wc22/ui/home/widgets/progress_card.dart';
-import 'package:sticker_manager_wc22/ui/home/widgets/section_icon.dart';
+import 'package:sticker_manager_wc22/common/widgets/progress_card.dart';
+import 'package:sticker_manager_wc22/ui/section/widgets/section_icon.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 
 class HomeView extends GetView<HomeController> {
