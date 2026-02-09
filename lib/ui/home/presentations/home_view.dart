@@ -7,6 +7,7 @@ import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
 import 'package:sticker_manager_wc22/ui/home/widgets/progress_card.dart';
+import 'package:sticker_manager_wc22/ui/home/widgets/section_icon.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -169,20 +170,7 @@ class _SectionTile extends StatelessWidget {
             child: Row(
               spacing: 16,
               children: [
-                DecoratedBox(
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  child: const SizedBox(
-                    width: 48,
-                    height: 48,
-                    child: Icon(
-                      Icons.shield_moon_rounded,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ),
+                SectionIcon(size: 48, icon: section.icon),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

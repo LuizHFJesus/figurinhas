@@ -63,6 +63,39 @@ flutter:
   assets:
     - assets/data/
     - assets/icons/
+    - assets/flags/coca_cola.svg
+    - assets/flags/ar.svg
+    - assets/flags/au.svg
+    - assets/flags/be.svg
+    - assets/flags/br.svg
+    - assets/flags/ca.svg
+    - assets/flags/ch.svg
+    - assets/flags/cm.svg
+    - assets/flags/cr.svg
+    - assets/flags/de.svg
+    - assets/flags/dk.svg
+    - assets/flags/ec.svg
+    - assets/flags/es.svg
+    - assets/flags/fr.svg
+    - assets/flags/gb-eng.svg
+    - assets/flags/gb-wls.svg
+    - assets/flags/gh.svg
+    - assets/flags/hr.svg
+    - assets/flags/ir.svg
+    - assets/flags/jp.svg
+    - assets/flags/kr.svg
+    - assets/flags/ma.svg
+    - assets/flags/mx.svg
+    - assets/flags/nl.svg
+    - assets/flags/pl.svg
+    - assets/flags/pt.svg
+    - assets/flags/qa.svg
+    - assets/flags/rs.svg
+    - assets/flags/sa.svg
+    - assets/flags/sn.svg
+    - assets/flags/tn.svg
+    - assets/flags/us.svg
+    - assets/flags/uy.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
