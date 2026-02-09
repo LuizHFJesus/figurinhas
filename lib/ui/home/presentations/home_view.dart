@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/common/widgets/svg_icon.dart';
+import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
@@ -14,14 +15,14 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    final lightColorScheme = AppColorSchemes.light;
     final textTheme = Theme.of(context).textTheme;
 
     return GradientHeaderScaffold(
       title: Text(
         'home_my_stickers'.tr,
         style: textTheme.headlineSmall?.copyWith(
-          color: colorScheme.onPrimary,
+          color: lightColorScheme.onPrimary,
         ),
       ),
 
@@ -29,20 +30,20 @@ class HomeView extends GetView<HomeController> {
         () => Text(
           controller.activeAlbum.value?.name ?? '',
           style: textTheme.titleSmall?.copyWith(
-            color: colorScheme.onPrimary,
+            color: lightColorScheme.onPrimary,
           ),
         ),
       ),
 
       actions: [
         IconButton(
-          icon: SvgIcon('arrow-switch', color: colorScheme.onPrimary),
+          icon: SvgIcon('arrow-switch', color: lightColorScheme.onPrimary),
           padding: EdgeInsets.zero,
           visualDensity: VisualDensity.compact,
           onPressed: () {},
         ),
         IconButton(
-          icon: SvgIcon('more-vertical', color: colorScheme.onPrimary),
+          icon: SvgIcon('more-vertical', color: lightColorScheme.onPrimary),
           padding: EdgeInsets.zero,
           visualDensity: VisualDensity.compact,
           onPressed: () {},
