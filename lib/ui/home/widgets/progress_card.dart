@@ -50,76 +50,72 @@ class ProgressCard extends StatelessWidget {
           ),
         ],
       ),
-      child: Column(
+      child: Row(
         children: [
-          Row(
-            children: [
-              leading,
-              const SizedBox(width: 24),
-              Expanded(
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text.rich(
+          leading,
+          const SizedBox(width: 24),
+          Expanded(
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text.rich(
+                    TextSpan(
+                      text: '$obtained',
+                      style: textTheme.headlineSmall,
+                      children: [
                         TextSpan(
-                          text: '$obtained',
-                          style: textTheme.headlineSmall,
-                          children: [
-                            TextSpan(
-                              text: ' / $total ${'lbl_stickers_progress'.tr}',
-                              style: textTheme.headlineSmall?.copyWith(
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
+                          text: ' / $total ${'lbl_stickers_progress'.tr}',
+                          style: textTheme.headlineSmall?.copyWith(
+                            fontWeight: FontWeight.w400,
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                    const SizedBox(height: 8),
-                    LinearProgressIndicator(
-                      value: progress,
-                      minHeight: 3,
-                      borderRadius: BorderRadius.circular(15),
-                      backgroundColor: colorScheme.inverseSurface.withValues(
-                        alpha: 0.1,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 3,
+                  borderRadius: BorderRadius.circular(15),
+                  backgroundColor: colorScheme.inverseSurface.withValues(
+                    alpha: 0.1,
+                  ),
+                  valueColor: const AlwaysStoppedAnimation(
+                    AppPalette.successGreen,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text.rich(
+                    TextSpan(
+                      text: '$missing',
+                      style: textTheme.labelSmall?.copyWith(
+                        fontWeight: FontWeight.w600,
                       ),
-                      valueColor: const AlwaysStoppedAnimation(
-                        AppPalette.successGreen,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Text.rich(
+                      children: [
                         TextSpan(
-                          text: '$missing',
+                          text: ' ${'lbl_missing_progress'.tr} | ',
+                          style: textTheme.labelSmall,
+                        ),
+                        TextSpan(
+                          text: '$percentage%',
                           style: textTheme.labelSmall?.copyWith(
                             fontWeight: FontWeight.w600,
                           ),
-                          children: [
-                            TextSpan(
-                              text: ' ${'lbl_missing_progress'.tr} | ',
-                              style: textTheme.labelSmall,
-                            ),
-                            TextSpan(
-                              text: '$percentage%',
-                              style: textTheme.labelSmall?.copyWith(
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            TextSpan(
-                              text: ' ${'lbl_percentage_progress'.tr}',
-                              style: textTheme.labelSmall,
-                            ),
-                          ],
                         ),
-                      ),
+                        TextSpan(
+                          text: ' ${'lbl_percentage_progress'.tr}',
+                          style: textTheme.labelSmall,
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
