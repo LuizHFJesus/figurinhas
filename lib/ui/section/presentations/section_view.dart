@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
-import 'package:sticker_manager_wc22/ui/home/widgets/progress_card.dart';
+import 'package:sticker_manager_wc22/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/section/controllers/section_controller.dart';
 
 class SectionView extends GetView<SectionController> {
