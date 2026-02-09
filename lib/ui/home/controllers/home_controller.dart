@@ -9,19 +9,25 @@ import 'package:sticker_manager_wc22/domain/usecases/get_sections_by_group_useca
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/models/group_sections.dart';
+import 'package:sticker_manager_wc22/ui/home/models/home_route_args.dart';
 
 class HomeController extends GetxController {
+  // Dependencies
   final UserProfileRepository _profileRepo;
   final GetActiveUserAlbumUseCase _getActiveAlbum;
   final WatchAlbumStatsUseCase _watchAlbumStats;
   final WatchSectionStatsUseCase _watchSectionStats;
-
   final GetAlbumGroupsUseCase _getGroups;
   final GetSectionsByGroupUseCase _getSections;
 
+  // Parameters
+  final HomeRouteArgs? homeArgs;
+
+  // State
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
   final Rx<AlbumStats?> albumStats = Rx<AlbumStats?>(null);
 
+  // Data
   final RxList<GroupSections> catalogStructure = <GroupSections>[].obs;
 
   HomeController(
@@ -30,27 +36,28 @@ class HomeController extends GetxController {
     this._watchAlbumStats,
     this._watchSectionStats,
     this._getGroups,
-    this._getSections,
-  );
+    this._getSections, {
+    this.homeArgs,
+  });
 
   @override
   Future<void> onInit() async {
     super.onInit();
+    activeAlbum.value = homeArgs?.album;
+    albumStats.value = homeArgs?.albumStats;
     await _loadData();
   }
 
   Future<void> _loadData() async {
     final profileId = await _profileRepo.ensureLocalProfileId();
+    activeAlbum.value ??= await _getActiveAlbum(profileId);
 
-    final album = await _getActiveAlbum(profileId);
-    activeAlbum.value = album;
-
-    final groups = await _getGroups(album.albumId);
+    final groups = await _getGroups(activeAlbum.value!.albumId);
 
     final viewModels = await Future.wait(
       groups.map((group) async {
         final sections = await _getSections(
-          albumId: album.albumId,
+          albumId: activeAlbum.value!.albumId,
           groupId: group.groupId,
         );
         return GroupSections(group: group, sections: sections);
@@ -61,8 +68,8 @@ class HomeController extends GetxController {
 
     _watchAlbumStats
         .watch(
-          userAlbumId: album.userAlbumId,
-          albumId: album.albumId,
+          userAlbumId: activeAlbum.value!.userAlbumId,
+          albumId: activeAlbum.value!.albumId,
         )
         .listen((stats) {
           albumStats.value = stats;

@@ -3,10 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_router.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_routes.dart';
+import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_local_profile_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/ui/home/models/home_route_args.dart';
 
 class SplashController extends GetxController {
   final CatalogRepository _catalogRepository;
@@ -40,11 +42,11 @@ class SplashController extends GetxController {
       }
 
       final profileId = await _ensureProfile();
-
+      late final UserAlbum album;
       try {
-        await _getActiveAlbum(profileId);
+        album = await _getActiveAlbum(profileId);
       } catch (_) {
-        await _createAlbum(
+        album = await _createAlbum(
           profileId: profileId,
           albumId: '2022FWC',
           name: 'Álbum Qatar 2022',
@@ -53,7 +55,7 @@ class SplashController extends GetxController {
 
       await minDelay;
 
-      AppRouter.router.go(AppRoutes.home);
+      AppRouter.router.go(AppRoutes.home, extra: HomeRouteArgs(album: album));
     } catch (e, s) {
       debugPrint('Bootstrap failed: $e\n$s');
 
