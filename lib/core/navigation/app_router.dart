@@ -30,7 +30,7 @@ class AppRouter {
               GoRouteWithBinding(
                 path: AppRoutes.home,
                 builder: (context, state) => const HomeView(),
-                bindingBuilder: (_) => HomeBinding(),
+                bindingBuilder: HomeBinding.new,
               ),
             ],
           ),

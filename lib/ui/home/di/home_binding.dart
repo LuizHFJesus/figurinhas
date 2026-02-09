@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
@@ -9,10 +10,17 @@ import 'package:sticker_manager_wc22/domain/usecases/get_sections_by_group_useca
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
+import 'package:sticker_manager_wc22/ui/home/models/home_route_args.dart';
 
 class HomeBinding extends Bindings {
+  final GoRouterState state;
+
+  HomeBinding(this.state);
+
   @override
   void dependencies() {
+    final homeArgs = state.extra as HomeRouteArgs?;
+
     Get.lazyPut(() => GetAlbumGroupsUseCase(Get.find<CatalogRepository>()));
     Get.lazyPut(() => GetSectionsByGroupUseCase(Get.find<CatalogRepository>()));
 
@@ -33,6 +41,7 @@ class HomeBinding extends Bindings {
         Get.find<WatchSectionStatsUseCase>(),
         Get.find<GetAlbumGroupsUseCase>(),
         Get.find<GetSectionsByGroupUseCase>(),
+        homeArgs: homeArgs,
       ),
     );
   }
