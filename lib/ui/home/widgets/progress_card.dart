@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
+import 'package:sticker_manager_wc22/ui/home/widgets/section_icon.dart';
 
 class ProgressCard extends StatelessWidget {
   final int obtained;
@@ -9,7 +10,7 @@ class ProgressCard extends StatelessWidget {
   final int missing;
   final double progress;
   final String icon;
-  final bool isCircular;
+  final bool isSection;
 
   const ProgressCard({
     required this.obtained,
@@ -17,7 +18,7 @@ class ProgressCard extends StatelessWidget {
     required this.missing,
     required this.progress,
     this.icon = 'stickers',
-    this.isCircular = false,
+    this.isSection = false,
     super.key,
   });
 
@@ -26,6 +27,13 @@ class ProgressCard extends StatelessWidget {
     final percentage = (progress * 100).toStringAsFixed(0);
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = TextTheme.of(context);
+
+    final Widget leading = isSection
+        ? SectionIcon(size: 56, icon: icon)
+        : SvgPicture.asset(
+            'assets/icons/$icon.svg',
+            height: 56,
+          );
 
     return Container(
       margin: const EdgeInsets.only(top: 20),
@@ -46,16 +54,7 @@ class ProgressCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Material(
-                shape: isCircular ? const CircleBorder() : null,
-                clipBehavior: isCircular ? Clip.antiAlias : Clip.none,
-                child: SvgPicture.asset('assets/icons/user.svg'),
-              ),
-              SvgPicture.asset(
-                'assets/icons/$icon.svg',
-                fit: BoxFit.fitHeight,
-
-              ),
+              leading,
               const SizedBox(width: 24),
               Expanded(
                 child: Column(
