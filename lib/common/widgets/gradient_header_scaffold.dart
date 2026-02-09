@@ -6,7 +6,7 @@ class GradientHeaderScaffold extends StatefulWidget {
   final Widget title;
   final Widget? subtitle;
   final Widget? leading;
-  final List<Widget> actions;
+  final List<Widget>? actions;
   final Widget progressCard;
   final Widget body;
 
@@ -19,10 +19,10 @@ class GradientHeaderScaffold extends StatefulWidget {
   const GradientHeaderScaffold({
     required this.title,
     required this.subtitle,
-    required this.actions,
     required this.progressCard,
     required this.body,
     this.leading,
+    this.actions,
     this.gradient,
     this.cardOverlapFraction = 0.5,
     this.horizontalPadding = 24,
@@ -101,7 +101,7 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                         ],
                       ),
                       const Spacer(),
-                      ...widget.actions,
+                      if (widget.actions != null) ...widget.actions!,
                     ],
                   ),
                 ),
