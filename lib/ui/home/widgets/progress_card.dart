@@ -9,7 +9,7 @@ class ProgressCard extends StatelessWidget {
   final int total;
   final int missing;
   final double progress;
-  final String icon;
+  final String? icon;
   final bool isSection;
 
   const ProgressCard({
@@ -28,10 +28,10 @@ class ProgressCard extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = TextTheme.of(context);
 
-    final Widget leading = isSection
-        ? SectionIcon(size: 56, icon: icon)
+    final Widget leading = (isSection && icon != null)
+        ? SectionIcon(size: 56, icon: icon!)
         : SvgPicture.asset(
-            'assets/icons/$icon.svg',
+            'assets/icons/stickers.svg',
             height: 56,
           );
 

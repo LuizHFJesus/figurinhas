@@ -11,6 +11,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 
 class SectionController extends GetxController {
   // Dependencies
@@ -23,7 +24,8 @@ class SectionController extends GetxController {
   final IncrementStickerQuantityUseCase _incrementSticker;
 
   // Parameters
-  late String _sectionId;
+  final String sectionId;
+  final SectionRouteArgs? sectionArgs;
 
   // State
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
@@ -42,60 +44,59 @@ class SectionController extends GetxController {
     this._getStickers,
     this._watchStats,
     this._stateRepo,
-    this._incrementSticker,
-  );
+    this._incrementSticker, {
+    required this.sectionId,
+    required this.sectionArgs,
+  });
 
   @override
-  Future<void> onInit() async {
+  void onInit() {
     super.onInit();
-    _sectionId = Get.parameters['sectionId'] ?? '';
-    await _loadData();
+    activeAlbum.value = sectionArgs?.album;
+    section.value = sectionArgs?.section;
+    stats.value = sectionArgs?.stats;
+    _loadData();
   }
 
   Future<void> _loadData() async {
-    if (_sectionId.isEmpty) return;
+    if (sectionId.isEmpty) return;
 
     final profileId = await _profileRepo.ensureLocalProfileId();
-    final album = await _getActiveAlbum(profileId);
-    activeAlbum.value = album;
+    activeAlbum.value ??= await _getActiveAlbum(profileId);
 
-    if (Get.arguments is Section) {
-      section.value = Get.arguments as Section;
-    } else {
-      section.value = await _catalogRepo.getSectionById(
-        albumId: album.albumId,
-        sectionId: _sectionId,
-      );
-    }
+    section.value ??= await _catalogRepo.getSectionById(
+      albumId: activeAlbum.value!.albumId,
+      sectionId: sectionId,
+    );
 
     final list = await _getStickers(
-      albumId: album.albumId,
-      sectionId: _sectionId,
+      albumId: activeAlbum.value!.albumId,
+      sectionId: sectionId,
     );
     allStickers.assignAll(list);
 
     final allQuantities = await _stateRepo.getAllQuantitiesForUserAlbum(
-      album.userAlbumId,
+      activeAlbum.value!.userAlbumId,
     );
     quantities.assignAll(allQuantities);
 
     _watchStats
         .watch(
-          userAlbumId: album.userAlbumId,
-          albumId: album.albumId,
-          sectionId: _sectionId,
+          userAlbumId: activeAlbum.value!.userAlbumId,
+          albumId: activeAlbum.value!.albumId,
+          sectionId: sectionId,
         )
-        .listen((s) {
-          stats.value = s;
-        });
+        .listen((s) => stats.value = s);
 
-    _stateRepo.watchAllStatesForUserAlbum(album.userAlbumId).listen((states) {
-      for (final s in states) {
-        if (allStickers.any((st) => st.code == s.code)) {
-          quantities[s.code] = s.quantity;
-        }
-      }
-    });
+    _stateRepo
+        .watchAllStatesForUserAlbum(activeAlbum.value!.userAlbumId)
+        .listen((states) {
+          for (final s in states) {
+            if (allStickers.any((st) => st.code == s.code)) {
+              quantities[s.code] = s.quantity;
+            }
+          }
+        });
   }
 
   // Actions
