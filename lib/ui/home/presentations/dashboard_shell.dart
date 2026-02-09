@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sticker_manager_wc22/common/utils/constants.dart';
-import 'package:sticker_manager_wc22/common/widgets/gradient_mask.dart';
 import 'package:sticker_manager_wc22/common/widgets/svg_icon.dart';
 
 class DashboardShell extends StatelessWidget {
@@ -54,26 +52,20 @@ class DashboardShell extends StatelessWidget {
           destinations: [
             NavigationDestination(
               icon: SvgIcon('home', color: colorScheme.outline),
-              selectedIcon: const GradientMask(
-                gradient: AppConstants.brandGradient,
-                child: SvgIcon('home'),
-              ),
+              selectedIcon: SvgIcon('home', color: colorScheme.primary),
               label: 'nav_home'.tr,
             ),
             NavigationDestination(
               icon: SvgIcon('stack-vertical', color: colorScheme.outline),
-              selectedIcon: const GradientMask(
-                gradient: AppConstants.brandGradient,
-                child: SvgIcon('stack-vertical'),
+              selectedIcon: SvgIcon(
+                'stack-vertical',
+                color: colorScheme.primary,
               ),
               label: 'nav_overview'.tr,
             ),
             NavigationDestination(
               icon: SvgIcon('repeated2', color: colorScheme.outline),
-              selectedIcon: const GradientMask(
-                gradient: AppConstants.brandGradient,
-                child: SvgIcon('repeated2'),
-              ),
+              selectedIcon: SvgIcon('repeated2', color: colorScheme.primary),
               label: 'nav_repeated'.tr,
             ),
           ],
