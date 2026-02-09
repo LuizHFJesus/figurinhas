@@ -9,7 +9,7 @@
         {
           "id": "SPECIALS",
           "name": "Specials",
-          "icon": "assets/icons/specials.png",
+          "icon": "ic_specials",
           "stickers": [
             {
               "code": "00",
@@ -56,7 +56,7 @@
         {
           "id": "STADIUMS",
           "name": "Stadiums",
-          "icon": "assets/icons/stadiums.png",
+          "icon": "ic_stadiums",
           "stickers": [
             {
               "code": "FWC8",
@@ -118,7 +118,7 @@
         {
           "id": "FIFA_MUSEUM",
           "name": "FIFA Museum",
-          "icon": "assets/icons/fifa_museum.png",
+          "icon": "ic_fifa_museum",
           "stickers": [
             {
               "code": "FWC19",
@@ -180,7 +180,7 @@
         {
           "id": "COCA_COLA",
           "name": "Coca-Cola",
-          "icon": "assets/icons/coca_cola.png",
+          "icon": "coca_cola",
           "stickers": [
             {
               "code": "C1",
@@ -233,7 +233,7 @@
         {
           "id": "QATAR",
           "name": "Qatar",
-          "icon": "assets/flags/qatar.png",
+          "icon": "qa",
           "stickers": [
             {
               "code": "QAT1",
@@ -340,7 +340,7 @@
         {
           "id": "ECUADOR",
           "name": "Ecuador",
-          "icon": "assets/flags/ecuador.png",
+          "icon": "ec",
           "stickers": [
             {
               "code": "ECU1",
@@ -447,7 +447,7 @@
         {
           "id": "SENEGAL",
           "name": "Senegal",
-          "icon": "assets/flags/senegal.png",
+          "icon": "sn",
           "stickers": [
             {
               "code": "SEN1",
@@ -554,7 +554,7 @@
         {
           "id": "NETHERLANDS",
           "name": "Netherlands",
-          "icon": "assets/flags/netherlands.png",
+          "icon": "nl",
           "stickers": [
             {
               "code": "NED1",
@@ -667,7 +667,7 @@
         {
           "id": "ENGLAND",
           "name": "England",
-          "icon": "assets/flags/england.png",
+          "icon": "gb-eng",
           "stickers": [
             {
               "code": "ENG1",
@@ -774,7 +774,7 @@
         {
           "id": "IRAN",
           "name": "Iran",
-          "icon": "assets/flags/iran.png",
+          "icon": "ir",
           "stickers": [
             {
               "code": "IRN1",
@@ -881,7 +881,7 @@
         {
           "id": "USA",
           "name": "USA",
-          "icon": "assets/flags/usa.png",
+          "icon": "us",
           "stickers": [
             {
               "code": "USA1",
@@ -988,7 +988,7 @@
         {
           "id": "WALES",
           "name": "Wales",
-          "icon": "assets/flags/wales.png",
+          "icon": "gb-wls",
           "stickers": [
             {
               "code": "WAL1",
@@ -1101,7 +1101,7 @@
         {
           "id": "ARGENTINA",
           "name": "Argentina",
-          "icon": "assets/flags/argentina.png",
+          "icon": "ar",
           "stickers": [
             {
               "code": "ARG1",
@@ -1208,7 +1208,7 @@
         {
           "id": "SAUDI_ARABIA",
           "name": "Saudi Arabia",
-          "icon": "assets/flags/saudi_arabia.png",
+          "icon": "sa",
           "stickers": [
             {
               "code": "KSA1",
@@ -1315,7 +1315,7 @@
         {
           "id": "MEXICO",
           "name": "Mexico",
-          "icon": "assets/flags/mexico.png",
+          "icon": "mx",
           "stickers": [
             {
               "code": "MEX1",
@@ -1422,7 +1422,7 @@
         {
           "id": "POLAND",
           "name": "Poland",
-          "icon": "assets/flags/poland.png",
+          "icon": "pl",
           "stickers": [
             {
               "code": "POL1",
@@ -1535,7 +1535,7 @@
         {
           "id": "FRANCE",
           "name": "France",
-          "icon": "assets/flags/france.png",
+          "icon": "fr",
           "stickers": [
             {
               "code": "FRA1",
@@ -1642,7 +1642,7 @@
         {
           "id": "AUSTRALIA",
           "name": "Australia",
-          "icon": "assets/flags/australia.png",
+          "icon": "au",
           "stickers": [
             {
               "code": "AUS1",
@@ -1749,7 +1749,7 @@
         {
           "id": "DENMARK",
           "name": "Denmark",
-          "icon": "assets/flags/denmark.png",
+          "icon": "dk",
           "stickers": [
             {
               "code": "DEN1",
@@ -1856,7 +1856,7 @@
         {
           "id": "TUNISIA",
           "name": "Tunisia",
-          "icon": "assets/flags/tunisia.png",
+          "icon": "tn",
           "stickers": [
             {
               "code": "TUN1",
@@ -1969,7 +1969,7 @@
         {
           "id": "SPAIN",
           "name": "Spain",
-          "icon": "assets/flags/spain.png",
+          "icon": "es",
           "stickers": [
             {
               "code": "ESP1",
@@ -2076,7 +2076,7 @@
         {
           "id": "COSTA_RICA",
           "name": "Costa Rica",
-          "icon": "assets/flags/costa_rica.png",
+          "icon": "cr",
           "stickers": [
             {
               "code": "CRC1",
@@ -2183,7 +2183,7 @@
         {
           "id": "GERMANY",
           "name": "Germany",
-          "icon": "assets/flags/germany.png",
+          "icon": "de",
           "stickers": [
             {
               "code": "GER1",
@@ -2290,7 +2290,7 @@
         {
           "id": "JAPAN",
           "name": "Japan",
-          "icon": "assets/flags/japan.png",
+          "icon": "jp",
           "stickers": [
             {
               "code": "JPN1",
@@ -2403,7 +2403,7 @@
         {
           "id": "BELGIUM",
           "name": "Belgium",
-          "icon": "assets/flags/belgium.png",
+          "icon": "be",
           "stickers": [
             {
               "code": "BEL1",
@@ -2510,7 +2510,7 @@
         {
           "id": "CANADA",
           "name": "Canada",
-          "icon": "assets/flags/canada.png",
+          "icon": "ca",
           "stickers": [
             {
               "code": "CAN1",
@@ -2617,7 +2617,7 @@
         {
           "id": "MOROCCO",
           "name": "Morocco",
-          "icon": "assets/flags/morocco.png",
+          "icon": "ma",
           "stickers": [
             {
               "code": "MAR1",
@@ -2724,7 +2724,7 @@
         {
           "id": "CROATIA",
           "name": "Croatia",
-          "icon": "assets/flags/croatia.png",
+          "icon": "hr",
           "stickers": [
             {
               "code": "CRO1",
@@ -2837,7 +2837,7 @@
         {
           "id": "BRAZIL",
           "name": "Brazil",
-          "icon": "assets/flags/brazil.png",
+          "icon": "br",
           "stickers": [
             {
               "code": "BRA1",
@@ -2944,7 +2944,7 @@
         {
           "id": "SERBIA",
           "name": "Serbia",
-          "icon": "assets/flags/serbia.png",
+          "icon": "rs",
           "stickers": [
             {
               "code": "SRB1",
@@ -3051,7 +3051,7 @@
         {
           "id": "SWITZERLAND",
           "name": "Switzerland",
-          "icon": "assets/flags/switzerland.png",
+          "icon": "ch",
           "stickers": [
             {
               "code": "SUI1",
@@ -3158,7 +3158,7 @@
         {
           "id": "CAMEROON",
           "name": "Cameroon",
-          "icon": "assets/flags/cameroon.png",
+          "icon": "cm",
           "stickers": [
             {
               "code": "CMR1",
@@ -3271,7 +3271,7 @@
         {
           "id": "PORTUGAL",
           "name": "Portugal",
-          "icon": "assets/flags/portugal.png",
+          "icon": "pt",
           "stickers": [
             {
               "code": "POR1",
@@ -3378,7 +3378,7 @@
         {
           "id": "GHANA",
           "name": "Ghana",
-          "icon": "assets/flags/ghana.png",
+          "icon": "gh",
           "stickers": [
             {
               "code": "GHA1",
@@ -3485,7 +3485,7 @@
         {
           "id": "URUGUAY",
           "name": "Uruguay",
-          "icon": "assets/flags/uruguay.png",
+          "icon": "uy",
           "stickers": [
             {
               "code": "URU1",
@@ -3592,7 +3592,7 @@
         {
           "id": "SOUTH_KOREA",
           "name": "South Korea",
-          "icon": "assets/flags/south_korea.png",
+          "icon": "kr",
           "stickers": [
             {
               "code": "KOR1",
