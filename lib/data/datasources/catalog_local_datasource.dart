@@ -25,6 +25,8 @@ abstract class CatalogLocalDataSource {
 
   Future<List<String>> getAllSectionIds(String albumId);
 
+  Future<List<StickerEntity>> getAllStickers(String albumId);
+
   Future<int> countStickers(String albumId);
 
   Future<int> countFoils(String albumId);

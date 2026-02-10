@@ -72,6 +72,15 @@ class IsarCatalogLocalDataSource implements CatalogLocalDataSource {
   }
 
   @override
+  Future<List<StickerEntity>> getAllStickers(String albumId) {
+    return _isar.stickerEntitys
+        .filter()
+        .albumIdEqualTo(albumId)
+        .sortByOrder()
+        .findAll();
+  }
+
+  @override
   Future<int> countStickers(String albumId) {
     return _isar.stickerEntitys.filter().albumIdEqualTo(albumId).count();
   }
