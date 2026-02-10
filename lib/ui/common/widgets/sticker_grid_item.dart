@@ -18,6 +18,7 @@ class StickerGridItem extends StatelessWidget {
   });
 
   bool get _isObtained => quantity > 0;
+
   bool get _isRepeated => quantity > 1;
 
   static const _radius = BorderRadius.all(Radius.circular(8));
@@ -142,7 +143,7 @@ class StickerGridItem extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(6),
                   child: Text(
-                    '$quantity',
+                    '${quantity - 1}',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 10,
