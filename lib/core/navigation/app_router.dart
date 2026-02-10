@@ -5,6 +5,8 @@ import 'package:sticker_manager_wc22/core/navigation/app_routes.dart';
 import 'package:sticker_manager_wc22/ui/home/di/home_binding.dart';
 import 'package:sticker_manager_wc22/ui/home/presentations/dashboard_shell.dart';
 import 'package:sticker_manager_wc22/ui/home/presentations/home_view.dart';
+import 'package:sticker_manager_wc22/ui/overview/di/overview_binding.dart';
+import 'package:sticker_manager_wc22/ui/overview/presentations/overview_view.dart';
 import 'package:sticker_manager_wc22/ui/section/di/section_binding.dart';
 import 'package:sticker_manager_wc22/ui/section/presentations/section_view.dart';
 import 'package:sticker_manager_wc22/ui/splash/di/splash_binding.dart';
@@ -36,12 +38,10 @@ class AppRouter {
           ),
           StatefulShellBranch(
             routes: [
-              GoRoute(
-                name: AppRoutes.overview,
+              GoRouteWithBinding(
                 path: AppRoutes.overview,
-                builder: (context, state) => const Scaffold(
-                  body: Center(child: Text('Visão Geral')),
-                ),
+                builder: (context, state) => const OverviewView(),
+                bindingBuilder: OverviewBinding.new,
               ),
             ],
           ),
