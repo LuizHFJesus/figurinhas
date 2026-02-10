@@ -1,11 +1,14 @@
 import 'package:sticker_manager_wc22/data/repositories/stats_repository_impl.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
+import 'package:synchronized/synchronized.dart';
 
 class IsarStatsUpdater {
   final CatalogRepository _catalog;
   final StatsRepositoryImpl _stats;
 
   IsarStatsUpdater(this._catalog, this._stats);
+
+  static final Map<String, Lock> _locks = {};
 
   Future<void> applyStickerQuantityChange({
     required String userAlbumId,
@@ -14,97 +17,101 @@ class IsarStatsUpdater {
     required int oldQty,
     required int newQty,
   }) async {
-    await _stats.ensureAlbumStatsInitialized(
-      userAlbumId: userAlbumId,
-      albumId: albumId,
-    );
-
-    final sectionId = await _catalog.getSectionIdByCode(code);
-    await _stats.ensureSectionStatsInitialized(
-      userAlbumId: userAlbumId,
-      albumId: albumId,
-      sectionId: sectionId,
-    );
-
-    final isFoil = await _catalog.isFoilByCode(code);
-    final obtainedDelta = _obtainedFlag(newQty) - _obtainedFlag(oldQty);
-    final dupDelta = _dups(newQty) - _dups(oldQty);
-    final now = DateTime.now();
-
-    // Album
-    final albumStats = await _stats.requireAlbumStats(userAlbumId);
-
-    albumStats.obtainedStickers = _clampInt(
-      value: albumStats.obtainedStickers + obtainedDelta,
-      min: 0,
-      max: albumStats.totalStickers,
-    );
-
-    albumStats.missingStickers = _clampInt(
-      value: albumStats.totalStickers - albumStats.obtainedStickers,
-      min: 0,
-      max: albumStats.totalStickers,
-    );
-
-    albumStats.duplicateStickers = _clampInt(
-      value: albumStats.duplicateStickers + dupDelta,
-      min: 0,
-      max: 1 << 30,
-    );
-
-    albumStats.progress = _calcProgress(
-      albumStats.obtainedStickers,
-      albumStats.totalStickers,
-    );
-
-    if (isFoil) {
-      albumStats.obtainedFoils = _clampInt(
-        value: albumStats.obtainedFoils + obtainedDelta,
-        min: 0,
-        max: albumStats.totalFoils,
+    final lock = _locks.putIfAbsent(userAlbumId, Lock.new);
+    await lock.synchronized(() async {
+      await _stats.ensureAlbumStatsInitialized(
+        userAlbumId: userAlbumId,
+        albumId: albumId,
       );
 
-      albumStats.missingFoils = _clampInt(
-        value: albumStats.totalFoils - albumStats.obtainedFoils,
-        min: 0,
-        max: albumStats.totalFoils,
+      final sectionId = await _catalog.getSectionIdByCode(code);
+
+      await _stats.ensureSectionStatsInitialized(
+        userAlbumId: userAlbumId,
+        albumId: albumId,
+        sectionId: sectionId,
       );
-    }
 
-    albumStats.updatedAt = now;
-    await _stats.putAlbumStats(albumStats);
+      final isFoil = await _catalog.isFoilByCode(code);
+      final obtainedDelta = _obtainedFlag(newQty) - _obtainedFlag(oldQty);
+      final dupDelta = _dups(newQty) - _dups(oldQty);
+      final now = DateTime.now();
 
-    // Section
-    final sectionStats = await _stats.requireSectionStats(
-      userAlbumId,
-      sectionId,
-    );
+      // Album stats
+      final albumStats = await _stats.requireAlbumStats(userAlbumId);
 
-    sectionStats.obtainedStickers = _clampInt(
-      value: sectionStats.obtainedStickers + obtainedDelta,
-      min: 0,
-      max: sectionStats.totalStickers,
-    );
+      albumStats.obtainedStickers = _clampInt(
+        value: albumStats.obtainedStickers + obtainedDelta,
+        min: 0,
+        max: albumStats.totalStickers,
+      );
 
-    sectionStats.missingStickers = _clampInt(
-      value: sectionStats.totalStickers - sectionStats.obtainedStickers,
-      min: 0,
-      max: sectionStats.totalStickers,
-    );
+      albumStats.missingStickers = _clampInt(
+        value: albumStats.totalStickers - albumStats.obtainedStickers,
+        min: 0,
+        max: albumStats.totalStickers,
+      );
 
-    sectionStats.duplicateStickers = _clampInt(
-      value: sectionStats.duplicateStickers + dupDelta,
-      min: 0,
-      max: 1 << 30,
-    );
+      albumStats.duplicateStickers = _clampInt(
+        value: albumStats.duplicateStickers + dupDelta,
+        min: 0,
+        max: 1 << 30,
+      );
 
-    sectionStats.progress = _calcProgress(
-      sectionStats.obtainedStickers,
-      sectionStats.totalStickers,
-    );
+      albumStats.progress = _calcProgress(
+        albumStats.obtainedStickers,
+        albumStats.totalStickers,
+      );
 
-    sectionStats.updatedAt = now;
-    await _stats.putSectionStats(sectionStats);
+      if (isFoil) {
+        albumStats.obtainedFoils = _clampInt(
+          value: albumStats.obtainedFoils + obtainedDelta,
+          min: 0,
+          max: albumStats.totalFoils,
+        );
+
+        albumStats.missingFoils = _clampInt(
+          value: albumStats.totalFoils - albumStats.obtainedFoils,
+          min: 0,
+          max: albumStats.totalFoils,
+        );
+      }
+
+      albumStats.updatedAt = now;
+      await _stats.putAlbumStats(albumStats);
+
+      // Section stats
+      final sectionStats = await _stats.requireSectionStats(
+        userAlbumId,
+        sectionId,
+      );
+
+      sectionStats.obtainedStickers = _clampInt(
+        value: sectionStats.obtainedStickers + obtainedDelta,
+        min: 0,
+        max: sectionStats.totalStickers,
+      );
+
+      sectionStats.missingStickers = _clampInt(
+        value: sectionStats.totalStickers - sectionStats.obtainedStickers,
+        min: 0,
+        max: sectionStats.totalStickers,
+      );
+
+      sectionStats.duplicateStickers = _clampInt(
+        value: sectionStats.duplicateStickers + dupDelta,
+        min: 0,
+        max: 1 << 30,
+      );
+
+      sectionStats.progress = _calcProgress(
+        sectionStats.obtainedStickers,
+        sectionStats.totalStickers,
+      );
+
+      sectionStats.updatedAt = now;
+      await _stats.putSectionStats(sectionStats);
+    });
   }
 
   static double _calcProgress(int obtained, int total) =>
