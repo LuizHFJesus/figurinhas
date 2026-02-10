@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sticker_manager_wc22/common/widgets/gradient_header_scaffold.dart';
-import 'package:sticker_manager_wc22/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/core/navigation/app_routes.dart';
 import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
-import 'package:sticker_manager_wc22/common/widgets/progress_card.dart';
-import 'package:sticker_manager_wc22/ui/section/widgets/section_icon.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
+import 'package:sticker_manager_wc22/ui/section/widgets/section_icon.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
