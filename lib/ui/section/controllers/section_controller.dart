@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker_filter.dart';
+import 'package:sticker_manager_wc22/domain/models/sticker_state.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
@@ -11,6 +13,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 
 class SectionController extends GetxController {
@@ -31,11 +34,17 @@ class SectionController extends GetxController {
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
   final Rx<Section?> section = Rx<Section?>(null);
   final Rx<SectionStats?> stats = Rx<SectionStats?>(null);
+  final Rx<StickerFilter> currentFilter = StickerFilter.all.obs;
 
   // Data
-  final RxList<Sticker> allStickers = <Sticker>[].obs;
-  final RxMap<String, int> quantities = <String, int>{}.obs;
-  final Rx<StickerFilter> currentFilter = StickerFilter.all.obs;
+  final List<Sticker> _allStickers = [];
+  final Map<String, int> _quantities = {};
+  final Set<String> _sectionCodes = {};
+  final RxList<Sticker> visibleStickers = <Sticker>[].obs;
+  final StickerQtyStore stickerQtyStore = StickerQtyStore();
+
+  StreamSubscription<SectionStats>? _sectionStatsSubscription;
+  StreamSubscription<List<StickerState>>? _stickerStatesSubscription;
 
   SectionController(
     this._profileRepo,
@@ -50,12 +59,20 @@ class SectionController extends GetxController {
   });
 
   @override
-  void onInit() {
+  Future<void> onInit() async {
     super.onInit();
     activeAlbum.value = sectionArgs?.album;
     section.value = sectionArgs?.section;
     stats.value = sectionArgs?.stats;
-    _loadData();
+    await _loadData();
+  }
+
+  @override
+  Future<void> onClose() async {
+    await _sectionStatsSubscription?.cancel();
+    await _stickerStatesSubscription?.cancel();
+    stickerQtyStore.dispose();
+    super.onClose();
   }
 
   Future<void> _loadData() async {
@@ -64,91 +81,137 @@ class SectionController extends GetxController {
     final profileId = await _profileRepo.ensureLocalProfileId();
     activeAlbum.value ??= await _getActiveAlbum(profileId);
 
+    final album = activeAlbum.value;
+    if (album == null) return;
+
     section.value ??= await _catalogRepo.getSectionById(
-      albumId: activeAlbum.value!.albumId,
+      albumId: album.albumId,
       sectionId: sectionId,
     );
 
-    final list = await _getStickers(
-      albumId: activeAlbum.value!.albumId,
+    final stickers = await _getStickers(
+      albumId: album.albumId,
       sectionId: sectionId,
     );
-    allStickers.assignAll(list);
+
+    _allStickers
+      ..clear()
+      ..addAll(stickers);
+
+    _sectionCodes
+      ..clear()
+      ..addAll(_allStickers.map((e) => e.code));
 
     final allQuantities = await _stateRepo.getAllQuantitiesForUserAlbum(
-      activeAlbum.value!.userAlbumId,
+      album.userAlbumId,
     );
-    quantities.assignAll(allQuantities);
 
-    _watchStats
-        .watch(
-          userAlbumId: activeAlbum.value!.userAlbumId,
-          albumId: activeAlbum.value!.albumId,
-          sectionId: sectionId,
-        )
-        .listen((s) => stats.value = s);
+    _quantities
+      ..clear()
+      ..addAll(allQuantities);
 
-    _stateRepo
-        .watchAllStatesForUserAlbum(activeAlbum.value!.userAlbumId)
-        .listen((states) {
-          for (final s in states) {
-            if (allStickers.any((st) => st.code == s.code)) {
-              quantities[s.code] = s.quantity;
-            }
-          }
-        });
+    _syncQtyStoreForAll();
+    _rebuildVisibleStickers();
+
+    await _listenSectionStats(album);
+    await _listenStickerStates(album);
   }
 
   // Actions
 
-  Future<void> setFilter(StickerFilter filter) async =>
-      currentFilter.value = filter;
+  Future<void> setFilter(StickerFilter filter) async {
+    if (currentFilter.value == filter) return;
+    currentFilter.value = filter;
+    _rebuildVisibleStickers();
+  }
 
   Future<void> onStickerTap(Sticker sticker) async {
-    if (activeAlbum.value == null) return;
+    final album = activeAlbum.value;
+    if (album == null) return;
 
     await _incrementSticker(
-      userAlbumId: activeAlbum.value!.userAlbumId,
-      albumId: activeAlbum.value!.albumId,
+      userAlbumId: album.userAlbumId,
+      albumId: album.albumId,
       code: sticker.code,
     );
-
-    final current = quantities[sticker.code] ?? 0;
-    quantities[sticker.code] = current + 1;
   }
 
   Future<void> onStickerLongPress(Sticker sticker) async {
-    if (activeAlbum.value == null) return;
+    final album = activeAlbum.value;
+    if (album == null) return;
 
-    final current = quantities[sticker.code] ?? 0;
-    if (current > 0) {
-      await _incrementSticker(
-        userAlbumId: activeAlbum.value!.userAlbumId,
-        albumId: activeAlbum.value!.albumId,
-        code: sticker.code,
-        delta: -1,
-      );
-      quantities[sticker.code] = current - 1;
+    final current = quantityOf(sticker.code);
+    if (current <= 0) return;
+
+    await _incrementSticker(
+      userAlbumId: album.userAlbumId,
+      albumId: album.albumId,
+      code: sticker.code,
+      delta: -1,
+    );
+  }
+
+  int quantityOf(String code) => _quantities[code] ?? 0;
+
+  Future<void> _listenSectionStats(UserAlbum album) async {
+    await _sectionStatsSubscription?.cancel();
+    _sectionStatsSubscription = _watchStats
+        .watch(
+          userAlbumId: album.userAlbumId,
+          albumId: album.albumId,
+          sectionId: sectionId,
+        )
+        .listen((s) => stats.value = s);
+  }
+
+  Future<void> _listenStickerStates(UserAlbum album) async {
+    await _stickerStatesSubscription?.cancel();
+    _stickerStatesSubscription = _stateRepo
+        .watchAllStatesForUserAlbum(album.userAlbumId)
+        .listen((states) {
+          for (final s in states) {
+            if (!_sectionCodes.contains(s.code)) continue;
+            _applyQtyChange(code: s.code, newQty: s.quantity);
+          }
+        });
+  }
+
+  void _syncQtyStoreForAll() {
+    for (final st in _allStickers) {
+      stickerQtyStore.set(st.code, quantityOf(st.code));
     }
   }
 
-  // Getters
+  bool _isVisibleForFilter(int qty) {
+    return switch (currentFilter.value) {
+      StickerFilter.all => true,
+      StickerFilter.obtained => qty > 0,
+      StickerFilter.missing => qty == 0,
+      StickerFilter.repeated => qty > 1,
+    };
+  }
 
-  List<Sticker> get filteredStickers {
-    if (currentFilter.value == StickerFilter.all) return allStickers;
+  void _rebuildVisibleStickers() {
+    visibleStickers.assignAll(
+      _allStickers.where((st) => _isVisibleForFilter(quantityOf(st.code))),
+    );
+  }
 
-    return allStickers.where((s) {
-      final qty = quantities[s.code] ?? 0;
-      switch (currentFilter.value) {
-        case StickerFilter.obtained:
-          return qty > 0;
-        case StickerFilter.missing:
-          return qty == 0;
-        case StickerFilter.repeated:
-          return qty > 1;
-        case StickerFilter.all:
-          return true;
-      }
-    }).toList();
+  void _applyQtyChange({required String code, required int newQty}) {
+    final oldQty = quantityOf(code);
+    if (oldQty == newQty) return;
+
+    final filter = currentFilter.value;
+
+    final checkVisibility = filter != StickerFilter.all;
+    final wasVisible = !checkVisibility || _isVisibleForFilter(oldQty);
+
+    _quantities[code] = newQty;
+    stickerQtyStore.set(code, newQty);
+
+    if (!checkVisibility) return;
+
+    final isVisible = _isVisibleForFilter(newQty);
+    if (wasVisible != isVisible) _rebuildVisibleStickers();
   }
 }
