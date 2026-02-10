@@ -23,4 +23,10 @@ const Map<String, String> ptBR = {
   'lbl_missing_progress': 'faltantes',
   'lbl_percentage_progress': 'concluído',
   'lbl_of': 'de',
+
+  // Filter
+  'filter_all': 'Todas',
+  'filter_missing': 'Faltantes',
+  'filter_obtained': 'Obtidas',
+  'filter_repeated': 'Repetidas'
 };
