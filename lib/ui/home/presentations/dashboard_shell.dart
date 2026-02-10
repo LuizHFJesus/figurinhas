@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sticker_manager_wc22/common/widgets/svg_icon.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 
 class DashboardShell extends StatelessWidget {
   final StatefulNavigationShell navigationShell;
