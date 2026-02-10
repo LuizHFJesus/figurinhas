@@ -25,10 +25,10 @@ class StickerFilterChip extends StatelessWidget {
       selected: isSelected,
       showCheckmark: false,
       onSelected: (_) => onTap(),
-      backgroundColor: colorScheme.surface,
+      backgroundColor: colorScheme.onPrimary,
       selectedColor: colorScheme.onPrimary,
       side: BorderSide(
-        color: isSelected ? colorScheme.primary : colorScheme.outline,
+        color: isSelected ? colorScheme.primary : Colors.transparent,
       ),
       labelStyle: textTheme.labelLarge?.copyWith(
         color: textColor,
