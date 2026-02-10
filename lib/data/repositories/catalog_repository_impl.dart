@@ -165,6 +165,12 @@ class CatalogRepositoryImpl implements CatalogRepository {
       _local.getAllSectionIds(albumId);
 
   @override
+  Future<List<Sticker>> getAllStickers(String albumId) async {
+    final list = await _local.getAllStickers(albumId);
+    return list.map(EntityMappers.toSticker).toList(growable: false);
+  }
+
+  @override
   Future<int> countStickers(String albumId) => _local.countStickers(albumId);
 
   @override

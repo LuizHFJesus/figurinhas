@@ -19,6 +19,8 @@ abstract class CatalogRepository {
 
   Future<List<String>> getAllSectionIds(String albumId);
 
+  Future<List<Sticker>> getAllStickers(String albumId);
+
   Future<int> countStickers(String albumId);
 
   Future<int> countFoils(String albumId);
