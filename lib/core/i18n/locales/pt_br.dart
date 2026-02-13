@@ -19,6 +19,7 @@ const Map<String, String> ptBR = {
   'home_share': 'Compartilhar',
   'home_summary': 'Sumário',
 
+  // Progress
   'lbl_stickers_progress': 'figurinhas',
   'lbl_missing_progress': 'faltantes',
   'lbl_percentage_progress': 'concluído',
@@ -28,5 +29,9 @@ const Map<String, String> ptBR = {
   'filter_all': 'Todas',
   'filter_missing': 'Faltantes',
   'filter_obtained': 'Obtidas',
-  'filter_repeated': 'Repetidas'
+  'filter_repeated': 'Repetidas',
+
+  // Overview
+  'search_hint': 'Buscar figurinha, seção...',
+  'empty_search': 'Nenhuma figurinha encontrada com esses filtros.',
 };
