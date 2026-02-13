@@ -15,7 +15,9 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/overview/models/overview_view_model.dart';
 
 class OverviewController extends GetxController {
@@ -25,26 +27,34 @@ class OverviewController extends GetxController {
   final WatchAlbumStatsUseCase _watchAlbumStats;
   final GetAllSectionsUseCase _getAllSections;
   final GetAllStickersUseCase _getAllStickers;
+  final SearchSectionsUseCase _searchSections;
   final StickerStateRepository _stateRepo;
   final IncrementStickerQuantityUseCase _incrementSticker;
 
-  StreamSubscription<List<StickerState>>? _stickersSubscription;
+  // Subscriptions
+  StreamSubscription<List<StickerState>>? _statesSub;
+  StreamSubscription<AlbumStats>? _albumStatsSub;
 
   // State
   final RxBool isLoading = true.obs;
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
   final Rx<AlbumStats?> albumStats = Rx<AlbumStats?>(null);
 
-  // Data (Raw)
-  List<Section> _allSections = [];
-  List<Sticker> _allStickers = [];
-  final RxMap<String, int> quantities = <String, int>{}.obs;
-
-  // Filters State
+  // Filters
   final TextEditingController searchController = TextEditingController();
   final RxString searchQuery = ''.obs;
-  late final Rx<StickerFilter> currentFilter = StickerFilter.all.obs;
-  final RxList<OverviewSection> filteredSections = <OverviewSection>[].obs;
+  final Rx<StickerFilter> currentFilter = StickerFilter.all.obs;
+
+  // Raw data (stable)
+  final List<Section> _allSections = [];
+  final List<Sticker> _allStickers = [];
+  final Map<String, List<Sticker>> _stickersBySection = {};
+  final Map<String, int> _quantities = {};
+
+  final StickerQtyStore qtyStore = StickerQtyStore();
+
+  // Output
+  final RxList<OverviewSection> visibleSections = <OverviewSection>[].obs;
 
   OverviewController(
     this._profileRepo,
@@ -52,6 +62,7 @@ class OverviewController extends GetxController {
     this._watchAlbumStats,
     this._getAllSections,
     this._getAllStickers,
+    this._searchSections,
     this._stateRepo,
     this._incrementSticker,
   );
@@ -62,24 +73,20 @@ class OverviewController extends GetxController {
 
     debounce(
       searchQuery,
-      (_) => _applyFilters(),
-      time: const Duration(milliseconds: 300),
+      (_) => _rebuildVisibleSections(),
+      time: const Duration(milliseconds: 250),
     );
 
-    ever(currentFilter, (_) => _applyFilters());
-
-    ever(quantities, (_) {
-      if (currentFilter.value != StickerFilter.all) {
-        _applyFilters();
-      }
-    });
+    ever(currentFilter, (_) => _rebuildVisibleSections());
 
     await _loadData();
   }
 
   @override
   Future<void> onClose() async {
-    await _stickersSubscription?.cancel();
+    await _statesSub?.cancel();
+    await _albumStatsSub?.cancel();
+    qtyStore.dispose();
     searchController.dispose();
     super.onClose();
   }
@@ -87,133 +94,190 @@ class OverviewController extends GetxController {
   Future<void> _loadData() async {
     try {
       isLoading.value = true;
+
       final profileId = await _profileRepo.ensureLocalProfileId();
       final album = await _getActiveAlbum(profileId);
       activeAlbum.value = album;
 
-      _allSections = await _getAllSections(album.albumId);
-      _allStickers = await _getAllStickers(album.albumId);
+      final results = await Future.wait([
+        _getAllSections(album.albumId),
+        _getAllStickers(album.albumId),
+        _stateRepo.getAllQuantitiesForUserAlbum(album.userAlbumId),
+      ]);
 
-      final allQuantities = await _stateRepo.getAllQuantitiesForUserAlbum(
-        album.userAlbumId,
-      );
-      quantities.assignAll(allQuantities);
+      _allSections
+        ..clear()
+        ..addAll(results[0] as List<Section>);
 
-      _applyFilters();
+      _allStickers
+        ..clear()
+        ..addAll(results[1] as List<Sticker>);
 
-      _watchAlbumStats
+      final initialQuantities = results[2] as Map<String, int>;
+      _quantities
+        ..clear()
+        ..addAll(initialQuantities);
+
+      _buildSectionIndex();
+
+      for (final st in _allStickers) {
+        qtyStore.set(st.code, _quantities[st.code] ?? 0);
+      }
+
+      await _rebuildVisibleSections();
+
+      _albumStatsSub = _watchAlbumStats
           .watch(userAlbumId: album.userAlbumId, albumId: album.albumId)
           .listen((s) => albumStats.value = s);
 
-      _stickersSubscription = _stateRepo
+      _statesSub = _stateRepo
           .watchAllStatesForUserAlbum(album.userAlbumId)
-          .listen((states) {
-            final updates = <String, int>{};
+          .listen((states) async {
             for (final s in states) {
-              updates[s.code] = s.quantity;
+              await _applyQtyChange(code: s.code, newQty: s.quantity);
             }
-            quantities.addAll(updates);
           });
     } finally {
       isLoading.value = false;
     }
   }
 
-  void _applyFilters() {
-    if (isLoading.value) return;
+  void _buildSectionIndex() {
+    _stickersBySection.clear();
+    for (final s in _allSections) {
+      _stickersBySection[s.sectionId] = <Sticker>[];
+    }
+    for (final st in _allStickers) {
+      (_stickersBySection[st.sectionId] ??= <Sticker>[]).add(st);
+    }
+  }
 
-    final query = TextNormalizer.normalize(searchQuery.value);
-    final filter = currentFilter.value;
+  // Filtering core
+
+  bool _matchesFilter(int qty) {
+    return switch (currentFilter.value) {
+      StickerFilter.all => true,
+      StickerFilter.obtained => qty > 0,
+      StickerFilter.missing => qty == 0,
+      StickerFilter.repeated => qty > 1,
+    };
+  }
+
+  bool _matchesQuery({
+    required String normalizedQuery,
+    required Section section,
+    required Sticker sticker,
+  }) {
+    if (normalizedQuery.isEmpty) return true;
+
+    final matchCode = sticker.code.toLowerCase().contains(normalizedQuery);
+    final matchName = TextNormalizer.normalize(
+      sticker.displayName,
+    ).contains(normalizedQuery);
+    final matchSection = TextNormalizer.normalize(
+      section.name,
+    ).contains(normalizedQuery);
+
+    return matchCode || matchName || matchSection;
+  }
+
+  Future<void> _rebuildVisibleSections() async {
+    final album = activeAlbum.value;
+    if (album == null) return;
+
+    final query = searchQuery.value.trim();
+    final normalizedQuery = TextNormalizer.normalize(query);
+
+    Set<String>? allowedSectionIds;
+    if (query.isNotEmpty) {
+      final ids = await _searchSections(albumId: album.albumId, query: query);
+      allowedSectionIds = ids.toSet();
+    }
+
     final result = <OverviewSection>[];
 
     for (final section in _allSections) {
-      final sectionStickers = _allStickers.where(
-        (s) => s.sectionId == section.sectionId,
-      );
+      if (allowedSectionIds != null &&
+          !allowedSectionIds.contains(section.sectionId)) {
+        continue;
+      }
 
-      final visibleStickers = sectionStickers.where((sticker) {
-        final qty = quantities[sticker.code] ?? 0;
+      final stickers =
+          _stickersBySection[section.sectionId] ?? const <Sticker>[];
 
-        var matchesStatus = true;
-        switch (filter) {
-          case StickerFilter.all:
-            matchesStatus = true;
-          case StickerFilter.obtained:
-            matchesStatus = qty > 0;
-          case StickerFilter.missing:
-            matchesStatus = qty == 0;
-          case StickerFilter.repeated:
-            matchesStatus = qty > 1;
-        }
-        if (!matchesStatus) return false;
+      final visible = <Sticker>[];
+      for (final st in stickers) {
+        final qty = _quantities[st.code] ?? 0;
 
-        if (query.isNotEmpty) {
-          final matchCode = sticker.code.toLowerCase().contains(query);
-          final matchName = TextNormalizer.normalize(
-            sticker.displayName,
-          ).contains(query);
-          final matchSection = TextNormalizer.normalize(
-            section.name,
-          ).contains(query);
-
-          if (!matchCode && !matchName && !matchSection) return false;
+        if (!_matchesFilter(qty)) continue;
+        if (!_matchesQuery(
+          normalizedQuery: normalizedQuery,
+          section: section,
+          sticker: st,
+        )) {
+          continue;
         }
 
-        return true;
-      }).toList();
+        visible.add(st);
+      }
 
-      if (visibleStickers.isNotEmpty) {
-        result.add(
-          OverviewSection(section: section, visibleStickers: visibleStickers),
-        );
+      if (visible.isNotEmpty) {
+        result.add(OverviewSection(section: section, visibleStickers: visible));
       }
     }
 
-    filteredSections.assignAll(result);
+    visibleSections.assignAll(result);
+  }
+
+  Future<void> _applyQtyChange({
+    required String code,
+    required int newQty,
+  }) async {
+    final oldQty = _quantities[code] ?? 0;
+    if (oldQty == newQty) return;
+
+    _quantities[code] = newQty;
+    qtyStore.set(code, newQty);
+
+    if (currentFilter.value == StickerFilter.all) return;
+
+    if (_matchesFilter(oldQty) != _matchesFilter(newQty)) {
+      await _rebuildVisibleSections();
+    }
   }
 
   // Actions
+
   Future<void> updateSearch(String value) async => searchQuery.value = value;
 
-  Future<void> setFilter(StickerFilter filter) async =>
-      currentFilter.value = filter;
+  Future<void> setFilter(StickerFilter filter) async {
+    if (currentFilter.value == filter) return;
+    currentFilter.value = filter;
+  }
 
   Future<void> onStickerTap(Sticker sticker) async {
-    if (activeAlbum.value == null) return;
+    final album = activeAlbum.value;
+    if (album == null) return;
 
-    final currentQty = quantities[sticker.code] ?? 0;
-    final newQty = currentQty + 1;
-    quantities[sticker.code] = newQty;
-
-    try {
-      await _incrementSticker(
-        userAlbumId: activeAlbum.value!.userAlbumId,
-        albumId: activeAlbum.value!.albumId,
-        code: sticker.code,
-      );
-    } catch (e) {
-      quantities[sticker.code] = currentQty;
-    }
+    await _incrementSticker(
+      userAlbumId: album.userAlbumId,
+      albumId: album.albumId,
+      code: sticker.code,
+    );
   }
 
   Future<void> onStickerLongPress(Sticker sticker) async {
-    if (activeAlbum.value == null) return;
+    final album = activeAlbum.value;
+    if (album == null) return;
 
-    final currentQty = quantities[sticker.code] ?? 0;
-    if (currentQty > 0) {
-      final newQty = currentQty - 1;
-      quantities[sticker.code] = newQty;
+    final current = _quantities[sticker.code] ?? 0;
+    if (current <= 0) return;
 
-      try {
-        await _incrementSticker(
-          userAlbumId: activeAlbum.value!.userAlbumId,
-          albumId: activeAlbum.value!.albumId,
-          code: sticker.code,
-          delta: -1,
-        );
-      } catch (e) {
-        quantities[sticker.code] = currentQty;
-      }
-    }
+    await _incrementSticker(
+      userAlbumId: album.userAlbumId,
+      albumId: album.albumId,
+      code: sticker.code,
+      delta: -1,
+    );
   }
 }

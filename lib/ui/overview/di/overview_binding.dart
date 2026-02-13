@@ -10,6 +10,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 
@@ -32,6 +33,7 @@ class OverviewBinding extends Bindings {
     // UseCases
     Get.lazyPut(() => GetAllSectionsUseCase(Get.find<CatalogRepository>()));
     Get.lazyPut(() => GetAllStickersUseCase(Get.find<CatalogRepository>()));
+    Get.lazyPut(() => SearchSectionsUseCase(Get.find<CatalogRepository>()));
     Get.lazyPut(() => WatchAlbumStatsUseCase(Get.find<StatsRepository>()));
     Get.lazyPut(
       () => IncrementStickerQuantityUseCase(
@@ -48,6 +50,7 @@ class OverviewBinding extends Bindings {
         Get.find<WatchAlbumStatsUseCase>(),
         Get.find<GetAllSectionsUseCase>(),
         Get.find<GetAllStickersUseCase>(),
+        Get.find<SearchSectionsUseCase>(),
         Get.find<StickerStateRepository>(),
         Get.find<IncrementStickerQuantityUseCase>(),
       ),
