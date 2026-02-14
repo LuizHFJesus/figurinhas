@@ -40,7 +40,7 @@ class ProgressCard extends StatelessWidget {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: colorScheme.onPrimary,
-        borderRadius: BorderRadius.circular(6),
+        borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
             color: colorScheme.inverseSurface.withValues(alpha: 0.05),
