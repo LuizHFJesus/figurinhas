@@ -32,6 +32,6 @@ const Map<String, String> ptBR = {
   'filter_repeated': 'Repetidas',
 
   // Overview
-  'search_hint': 'Buscar figurinha, seção...',
+  'search_hint': 'Buscar grupo, seleção, figurinha...',
   'empty_search': 'Nenhuma figurinha encontrada com esses filtros.',
 };

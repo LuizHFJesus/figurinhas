@@ -210,13 +210,13 @@ class OverviewController extends GetxController {
         final qty = _quantities[st.code] ?? 0;
 
         if (!_matchesFilter(qty)) continue;
-        if (!_matchesQuery(
-          normalizedQuery: normalizedQuery,
-          section: section,
-          sticker: st,
-        )) {
-          continue;
-        }
+        // if (!_matchesQuery(
+        //   normalizedQuery: normalizedQuery,
+        //   section: section,
+        //   sticker: st,
+        // )) {
+        //   continue;
+        // }
 
         visible.add(st);
       }
@@ -249,6 +249,11 @@ class OverviewController extends GetxController {
   // Actions
 
   Future<void> updateSearch(String value) async => searchQuery.value = value;
+
+  Future<void> cleanSearch() async {
+    searchController.clear();
+    await updateSearch('');
+  }
 
   Future<void> setFilter(StickerFilter filter) async {
     if (currentFilter.value == filter) return;
