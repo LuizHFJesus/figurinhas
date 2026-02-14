@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/sticker_filter_chips_bar.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/overview/widgets/overview_section_item.dart';
@@ -46,6 +47,17 @@ class OverviewView extends GetView<OverviewController> {
         },
       ),
 
+      header: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Obx(() => StickerFilterChipsBar(
+            selected: controller.currentFilter.value,
+            onChanged: controller.setFilter,
+          )),
+          const SizedBox(height: 16),
+        ],
+      ),
+
       body: CustomScrollView(
         slivers: [
           Obx(() {
@@ -72,7 +84,7 @@ class OverviewView extends GetView<OverviewController> {
                       Text(
                         'empty_search'.tr,
                         style: textTheme.titleMedium?.copyWith(
-                          color: colorScheme.outline
+                          color: colorScheme.outline,
                         ),
                         textAlign: TextAlign.center,
                       ),
