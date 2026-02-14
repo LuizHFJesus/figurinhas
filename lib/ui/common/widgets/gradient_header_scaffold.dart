@@ -10,6 +10,7 @@ class GradientHeaderScaffold extends StatefulWidget {
   final Widget progressCard;
   final Widget body;
 
+  final Widget? header;
   final Gradient? gradient;
   final double cardOverlapFraction;
   final double horizontalPadding;
@@ -21,6 +22,7 @@ class GradientHeaderScaffold extends StatefulWidget {
     required this.subtitle,
     required this.progressCard,
     required this.body,
+    this.header,
     this.leading,
     this.actions,
     this.gradient,
@@ -96,7 +98,7 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                           widget.title,
                           if (widget.subtitle != null) ...[
                             const SizedBox(height: 4),
-                            widget.subtitle!
+                            widget.subtitle!,
                           ],
                         ],
                       ),
@@ -118,6 +120,12 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                     ),
                   ),
                 ),
+
+                if (widget.header != null)
+                  ColoredBox(
+                    color: colorScheme.surface,
+                    child: widget.header,
+                  ),
 
                 Expanded(
                   child: ColoredBox(
