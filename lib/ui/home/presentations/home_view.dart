@@ -6,6 +6,7 @@ import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/action_button.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
@@ -72,6 +73,33 @@ class HomeView extends GetView<HomeController> {
             sliver: SliverList(
               delegate: SliverChildListDelegate.fixed([
                 const SizedBox(height: 4),
+                Row(
+                  spacing: 16,
+                  children: [
+                    Expanded(
+                      child: ActionButton(
+                        icon: 'search',
+                        label: 'home_search'.tr,
+                        onTap: () {},
+                      ),
+                    ),
+                    Expanded(
+                      child: ActionButton(
+                        icon: 'bar-chart-vertical',
+                        label: 'home_stats'.tr,
+                        onTap: () {},
+                      ),
+                    ),
+                    Expanded(
+                      child: ActionButton(
+                        icon: 'share',
+                        label: 'home_share'.tr,
+                        onTap: () {},
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
                 Text('home_summary'.tr, style: textTheme.headlineSmall),
                 const SizedBox(height: 16),
               ]),
