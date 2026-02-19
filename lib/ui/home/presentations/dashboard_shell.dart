@@ -63,11 +63,11 @@ class DashboardShell extends StatelessWidget {
               ),
               label: 'nav_overview'.tr,
             ),
-            NavigationDestination(
-              icon: SvgIcon('repeated2', color: colorScheme.outline),
-              selectedIcon: SvgIcon('repeated2', color: colorScheme.primary),
-              label: 'nav_repeated'.tr,
-            ),
+            // NavigationDestination(
+            //   icon: SvgIcon('repeated2', color: colorScheme.outline),
+            //   selectedIcon: SvgIcon('repeated2', color: colorScheme.primary),
+            //   label: 'nav_repeated'.tr,
+            // ),
           ],
         ),
       ),
