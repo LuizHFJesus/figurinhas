@@ -24,7 +24,7 @@ class ProgressCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final percentage = (progress * 100).toStringAsFixed(0);
+    final percentage = (progress * 100).toStringAsFixed(1);
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = TextTheme.of(context);
 
