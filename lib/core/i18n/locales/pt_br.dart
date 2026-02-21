@@ -34,4 +34,13 @@ const Map<String, String> ptBR = {
   // Overview
   'search_hint': 'Buscar grupo, seleção, figurinha...',
   'empty_search': 'Nenhuma figurinha encontrada com esses filtros.',
+
+  // Stats
+  'stats_title': 'Estatísticas',
+  'stats_total_stickers': 'Total',
+  'stats_obtained': 'Obtidas',
+  'stats_missing': 'Faltantes',
+  'stats_repeated': 'Repetidas',
+  'stats_foils': 'Brilhantes',
+  'stats_progress': 'Conclúido',
 };

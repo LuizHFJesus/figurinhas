@@ -11,6 +11,8 @@ import 'package:sticker_manager_wc22/ui/section/di/section_binding.dart';
 import 'package:sticker_manager_wc22/ui/section/presentations/section_view.dart';
 import 'package:sticker_manager_wc22/ui/splash/di/splash_binding.dart';
 import 'package:sticker_manager_wc22/ui/splash/views/splash_page.dart';
+import 'package:sticker_manager_wc22/ui/stats/di/stats_binding.dart';
+import 'package:sticker_manager_wc22/ui/stats/presentation/stats_view.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -63,6 +65,13 @@ class AppRouter {
         path: AppRoutes.section,
         builder: (context, state) => const SectionView(),
         bindingBuilder: SectionBinding.new,
+        useTransition: true,
+      ),
+
+      GoRouteWithBinding(
+        path: AppRoutes.stats,
+        builder: (context, state) => const StatsView(),
+        bindingBuilder: StatsBinding.new,
         useTransition: true,
       ),
     ],
