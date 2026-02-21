@@ -21,14 +21,15 @@ class ActionButton extends StatelessWidget {
 
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(8),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 18),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: colorScheme.onPrimary,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgIcon(icon, color: colorScheme.onSurfaceVariant),
             const SizedBox(height: 10),

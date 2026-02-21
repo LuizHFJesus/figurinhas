@@ -69,48 +69,47 @@ class HomeView extends GetView<HomeController> {
 
       body: CustomScrollView(
         slivers: [
+          SliverToBoxAdapter(
+            child: GridView.count(
+              crossAxisCount: 3,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+              mainAxisSpacing: 8,
+              crossAxisSpacing: 8,
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              children: [
+                ActionButton(
+                  icon: 'search',
+                  label: 'home_search'.tr,
+                  onTap: () {},
+                ),
+                ActionButton(
+                  icon: 'bar-chart-vertical',
+                  label: 'home_stats'.tr,
+                  onTap: () async {
+                    await context.push(
+                      AppRoutes.stats,
+                      extra: StatsRouteArgs(
+                        album: controller.activeAlbum.value,
+                        stats: controller.albumStats.value,
+                      ),
+                    );
+                  },
+                ),
+                ActionButton(
+                  icon: 'share',
+                  label: 'home_share'.tr,
+                  onTap: () {},
+                ),
+              ],
+            ),
+          ),
+
           SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
             sliver: SliverList(
               delegate: SliverChildListDelegate.fixed([
-                const SizedBox(height: 4),
-                Row(
-                  spacing: 16,
-                  children: [
-                    Expanded(
-                      child: ActionButton(
-                        icon: 'search',
-                        label: 'home_search'.tr,
-                        onTap: () {},
-                      ),
-                    ),
-                    Expanded(
-                      child: ActionButton(
-                        icon: 'bar-chart-vertical',
-                        label: 'home_stats'.tr,
-                        onTap: () async {
-                          await context.push(
-                            AppRoutes.stats,
-                            extra: StatsRouteArgs(
-                              album: controller.activeAlbum.value,
-                              stats: controller.albumStats.value,
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                    Expanded(
-                      child: ActionButton(
-                        icon: 'share',
-                        label: 'home_share'.tr,
-                        onTap: () {},
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 16),
                 Text('home_summary'.tr, style: textTheme.headlineSmall),
-                const SizedBox(height: 16),
               ]),
             ),
           ),
