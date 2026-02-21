@@ -13,6 +13,7 @@ import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 import 'package:sticker_manager_wc22/ui/section/widgets/section_icon.dart';
+import 'package:sticker_manager_wc22/ui/stats/models/stats_route_args.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -87,7 +88,15 @@ class HomeView extends GetView<HomeController> {
                       child: ActionButton(
                         icon: 'bar-chart-vertical',
                         label: 'home_stats'.tr,
-                        onTap: () {},
+                        onTap: () async {
+                          await context.push(
+                            AppRoutes.stats,
+                            extra: StatsRouteArgs(
+                              album: controller.activeAlbum.value,
+                              stats: controller.albumStats.value,
+                            ),
+                          );
+                        },
                       ),
                     ),
                     Expanded(

@@ -6,8 +6,11 @@ class AppRoutes {
   static const String overview = '/overview';
   static const String repeated = '/repeated';
 
-  // Details
+  // Section
   static const String section = '/section/:sectionId';
+
+  // Stats
+  static const String stats = '/stats';
 
   static String sectionPath(String id) => '/section/$id';
 }

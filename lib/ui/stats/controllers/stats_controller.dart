@@ -1,39 +1,48 @@
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
+import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/stats/models/stats_route_args.dart';
 
 class StatsController extends GetxController {
   final UserProfileRepository _profileRepo;
   final GetActiveUserAlbumUseCase _getActiveAlbum;
   final WatchAlbumStatsUseCase _watchAlbumStats;
 
-  final AlbumStats? albumStats;
+  final StatsRouteArgs? args;
+
+  final Rx<UserAlbum?> album = Rx<UserAlbum?>(null);
   final Rx<AlbumStats?> stats = Rx<AlbumStats?>(null);
 
   StatsController(
     this._profileRepo,
     this._getActiveAlbum,
     this._watchAlbumStats, {
-    required this.albumStats,
+    required this.args,
   });
 
   @override
   Future<void> onInit() async {
     super.onInit();
-    stats.value = albumStats;
+    album.value = args?.album;
+    stats.value = args?.stats;
     await _loadStats();
   }
 
   Future<void> _loadStats() async {
-    final profileId = await _profileRepo.ensureLocalProfileId();
-    final album = await _getActiveAlbum(profileId);
+    final profileId =
+        args?.album?.profileId ?? await _profileRepo.ensureLocalProfileId();
+
+    final currentAlbum = album.value ?? await _getActiveAlbum(profileId);
+    album.value = currentAlbum;
 
     _watchAlbumStats
-        .watch(userAlbumId: album.userAlbumId, albumId: album.albumId)
-        .listen((s) {
-          stats.value = s;
-        });
+        .watch(
+          userAlbumId: currentAlbum.userAlbumId,
+          albumId: currentAlbum.albumId,
+        )
+        .listen((s) => stats.value = s);
   }
 }
