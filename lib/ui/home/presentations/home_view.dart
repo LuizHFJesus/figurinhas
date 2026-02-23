@@ -11,6 +11,7 @@ import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
+import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 import 'package:sticker_manager_wc22/ui/section/widgets/section_icon.dart';
 import 'package:sticker_manager_wc22/ui/stats/models/stats_route_args.dart';
@@ -81,7 +82,14 @@ class HomeView extends GetView<HomeController> {
                 ActionButton(
                   icon: 'search',
                   label: 'home_search'.tr,
-                  onTap: () {},
+                  onTap: () async {
+                    StatefulNavigationShell.of(context).goBranch(1);
+                    Future.delayed(const Duration(milliseconds: 300), () {
+                      if (Get.isRegistered<OverviewController>()) {
+                        Get.find<OverviewController>().focusSearch();
+                      }
+                    });
+                  },
                 ),
                 ActionButton(
                   icon: 'bar-chart-vertical',

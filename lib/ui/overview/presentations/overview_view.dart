@@ -53,6 +53,7 @@ class OverviewView extends GetView<OverviewController> {
         children: [
           SearchTextField(
             controller: controller.searchController,
+            focusNode: controller.searchFocus,
             onChanged: controller.updateSearch,
             onCleaned: controller.cleanSearch,
           ),
