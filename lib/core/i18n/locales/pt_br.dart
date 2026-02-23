@@ -43,4 +43,15 @@ const Map<String, String> ptBR = {
   'stats_repeated': 'Repetidas',
   'stats_foils': 'Brilhantes',
   'stats_progress': 'Conclúido',
+
+  // Share
+  'share_title': 'Compartilhar',
+  'share_stats': 'Estatísticas do álbum',
+  'share_missing': 'Figurinhas faltantes',
+  'share_repeated': 'Figurinhas repetidas',
+  'share_app': 'Figurinhas repetidas',
+  'share_loading': 'Gerando lista...',
+  'share_lbl_album': 'Álbum',
+  'share_organize_your_stickers': 'Organize suas figurinhas',
+  'share_app_link': 'https://app.stickermanager.com',
 };
