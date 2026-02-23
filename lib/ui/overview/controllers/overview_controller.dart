@@ -37,6 +37,7 @@ class OverviewController extends GetxController {
 
   // State
   final RxBool isLoading = true.obs;
+  final RxBool isSearching = false.obs;
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
   final Rx<AlbumStats?> albumStats = Rx<AlbumStats?>(null);
 
@@ -52,6 +53,7 @@ class OverviewController extends GetxController {
   final Map<String, int> _quantities = {};
 
   final StickerQtyStore qtyStore = StickerQtyStore();
+  final FocusNode searchFocus = FocusNode();
 
   // Output
   final RxList<OverviewSection> visibleSections = <OverviewSection>[].obs;
@@ -88,6 +90,7 @@ class OverviewController extends GetxController {
     await _albumStatsSub?.cancel();
     qtyStore.dispose();
     searchController.dispose();
+    searchFocus.dispose();
     super.onClose();
   }
 
@@ -247,6 +250,8 @@ class OverviewController extends GetxController {
   }
 
   // Actions
+
+  void focusSearch() => searchFocus.requestFocus();
 
   Future<void> updateSearch(String value) async => searchQuery.value = value;
 

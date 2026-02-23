@@ -4,11 +4,13 @@ import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 
 class SearchTextField extends StatelessWidget {
   final TextEditingController controller;
+  final FocusNode focusNode;
   final void Function(String) onChanged;
   final VoidCallback onCleaned;
 
   const SearchTextField({
     required this.controller,
+    required this.focusNode,
     required this.onChanged,
     required this.onCleaned,
     super.key,
@@ -29,6 +31,7 @@ class SearchTextField extends StatelessWidget {
 
           return TextField(
             controller: controller,
+            focusNode: focusNode,
             onChanged: onChanged,
             onTapOutside: (_) => FocusScope.of(context).unfocus(),
             decoration: InputDecoration(
