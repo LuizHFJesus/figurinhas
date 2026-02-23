@@ -62,6 +62,7 @@ class CatalogRepositoryImpl implements CatalogRepository {
         final sectionId = sm['id'] as String;
         final sectionName = sm['name'] as String;
         final icon = sm['icon'] as String;
+        final emoji = sm['emoji'] as String?;
 
         final sectionSearch = TextNormalizer.buildSearchText([
           sectionId,
@@ -78,6 +79,7 @@ class CatalogRepositoryImpl implements CatalogRepository {
             ..groupId = groupId
             ..name = sectionName
             ..icon = icon
+            ..emoji = emoji
             ..order = sectionOrder
             ..searchText = sectionSearch,
         );

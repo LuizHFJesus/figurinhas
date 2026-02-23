@@ -37,6 +37,7 @@ class EntityMappers {
     groupId: e.groupId,
     name: e.name,
     icon: e.icon,
+    emoji: e.emoji,
     order: e.order,
   );
 
