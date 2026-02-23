@@ -4,6 +4,7 @@ class Section {
   final String groupId;
   final String name;
   final String icon;
+  final String? emoji;
   final int order;
 
   const Section({
@@ -12,6 +13,7 @@ class Section {
     required this.groupId,
     required this.name,
     required this.icon,
+    required this.emoji,
     required this.order,
   });
 }

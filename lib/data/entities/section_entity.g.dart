@@ -18,17 +18,18 @@ const SectionEntitySchema = CollectionSchema(
   id: 7420051759404344004,
   properties: {
     r'albumId': PropertySchema(id: 0, name: r'albumId', type: IsarType.string),
-    r'groupId': PropertySchema(id: 1, name: r'groupId', type: IsarType.string),
-    r'icon': PropertySchema(id: 2, name: r'icon', type: IsarType.string),
-    r'name': PropertySchema(id: 3, name: r'name', type: IsarType.string),
-    r'order': PropertySchema(id: 4, name: r'order', type: IsarType.long),
+    r'emoji': PropertySchema(id: 1, name: r'emoji', type: IsarType.string),
+    r'groupId': PropertySchema(id: 2, name: r'groupId', type: IsarType.string),
+    r'icon': PropertySchema(id: 3, name: r'icon', type: IsarType.string),
+    r'name': PropertySchema(id: 4, name: r'name', type: IsarType.string),
+    r'order': PropertySchema(id: 5, name: r'order', type: IsarType.long),
     r'searchText': PropertySchema(
-      id: 5,
+      id: 6,
       name: r'searchText',
       type: IsarType.string,
     ),
     r'sectionId': PropertySchema(
-      id: 6,
+      id: 7,
       name: r'sectionId',
       type: IsarType.string,
     ),
@@ -122,6 +123,12 @@ int _sectionEntityEstimateSize(
 ) {
   var bytesCount = offsets.last;
   bytesCount += 3 + object.albumId.length * 3;
+  {
+    final value = object.emoji;
+    if (value != null) {
+      bytesCount += 3 + value.length * 3;
+    }
+  }
   bytesCount += 3 + object.groupId.length * 3;
   bytesCount += 3 + object.icon.length * 3;
   bytesCount += 3 + object.name.length * 3;
@@ -142,12 +149,13 @@ void _sectionEntitySerialize(
   Map<Type, List<int>> allOffsets,
 ) {
   writer.writeString(offsets[0], object.albumId);
-  writer.writeString(offsets[1], object.groupId);
-  writer.writeString(offsets[2], object.icon);
-  writer.writeString(offsets[3], object.name);
-  writer.writeLong(offsets[4], object.order);
-  writer.writeString(offsets[5], object.searchText);
-  writer.writeString(offsets[6], object.sectionId);
+  writer.writeString(offsets[1], object.emoji);
+  writer.writeString(offsets[2], object.groupId);
+  writer.writeString(offsets[3], object.icon);
+  writer.writeString(offsets[4], object.name);
+  writer.writeLong(offsets[5], object.order);
+  writer.writeString(offsets[6], object.searchText);
+  writer.writeString(offsets[7], object.sectionId);
 }
 
 SectionEntity _sectionEntityDeserialize(
@@ -158,13 +166,14 @@ SectionEntity _sectionEntityDeserialize(
 ) {
   final object = SectionEntity();
   object.albumId = reader.readString(offsets[0]);
-  object.groupId = reader.readString(offsets[1]);
-  object.icon = reader.readString(offsets[2]);
+  object.emoji = reader.readStringOrNull(offsets[1]);
+  object.groupId = reader.readString(offsets[2]);
+  object.icon = reader.readString(offsets[3]);
   object.isarId = id;
-  object.name = reader.readString(offsets[3]);
-  object.order = reader.readLong(offsets[4]);
-  object.searchText = reader.readStringOrNull(offsets[5]);
-  object.sectionId = reader.readString(offsets[6]);
+  object.name = reader.readString(offsets[4]);
+  object.order = reader.readLong(offsets[5]);
+  object.searchText = reader.readStringOrNull(offsets[6]);
+  object.sectionId = reader.readString(offsets[7]);
   return object;
 }
 
@@ -178,16 +187,18 @@ P _sectionEntityDeserializeProp<P>(
     case 0:
       return (reader.readString(offset)) as P;
     case 1:
-      return (reader.readString(offset)) as P;
+      return (reader.readStringOrNull(offset)) as P;
     case 2:
       return (reader.readString(offset)) as P;
     case 3:
       return (reader.readString(offset)) as P;
     case 4:
-      return (reader.readLong(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 5:
-      return (reader.readStringOrNull(offset)) as P;
+      return (reader.readLong(offset)) as P;
     case 6:
+      return (reader.readStringOrNull(offset)) as P;
+    case 7:
       return (reader.readString(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -833,6 +844,165 @@ extension SectionEntityQueryFilter
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(
         FilterCondition.greaterThan(property: r'albumId', value: ''),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        const FilterCondition.isNull(property: r'emoji'),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        const FilterCondition.isNotNull(property: r'emoji'),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiEqualTo(String? value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(
+          property: r'emoji',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiGreaterThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'emoji',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiLessThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'emoji',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiBetween(
+    String? lower,
+    String? upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'emoji',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiStartsWith(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.startsWith(
+          property: r'emoji',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiEndsWith(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.endsWith(
+          property: r'emoji',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiContains(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.contains(
+          property: r'emoji',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiMatches(String pattern, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.matches(
+          property: r'emoji',
+          wildcard: pattern,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'emoji', value: ''),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  emojiIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(property: r'emoji', value: ''),
       );
     });
   }
@@ -1697,6 +1867,18 @@ extension SectionEntityQuerySortBy
     });
   }
 
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> sortByEmoji() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'emoji', Sort.asc);
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> sortByEmojiDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'emoji', Sort.desc);
+    });
+  }
+
   QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> sortByGroupId() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'groupId', Sort.asc);
@@ -1783,6 +1965,18 @@ extension SectionEntityQuerySortThenBy
   QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> thenByAlbumIdDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'albumId', Sort.desc);
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> thenByEmoji() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'emoji', Sort.asc);
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> thenByEmojiDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'emoji', Sort.desc);
     });
   }
 
@@ -1883,6 +2077,14 @@ extension SectionEntityQueryWhereDistinct
     });
   }
 
+  QueryBuilder<SectionEntity, SectionEntity, QDistinct> distinctByEmoji({
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'emoji', caseSensitive: caseSensitive);
+    });
+  }
+
   QueryBuilder<SectionEntity, SectionEntity, QDistinct> distinctByGroupId({
     bool caseSensitive = true,
   }) {
@@ -1941,6 +2143,12 @@ extension SectionEntityQueryProperty
   QueryBuilder<SectionEntity, String, QQueryOperations> albumIdProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'albumId');
+    });
+  }
+
+  QueryBuilder<SectionEntity, String?, QQueryOperations> emojiProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'emoji');
     });
   }
 
