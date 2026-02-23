@@ -10,6 +10,7 @@
           "id": "SPECIALS",
           "name": "Specials",
           "icon": "ic_specials",
+          "emoji": "⭐",
           "stickers": [
             {
               "code": "00",
@@ -57,6 +58,7 @@
           "id": "STADIUMS",
           "name": "Stadiums",
           "icon": "ic_stadiums",
+          "emoji": "🏟️",
           "stickers": [
             {
               "code": "FWC8",
@@ -119,6 +121,7 @@
           "id": "FIFA_MUSEUM",
           "name": "FIFA Museum",
           "icon": "ic_fifa_museum",
+          "emoji": "🏆",
           "stickers": [
             {
               "code": "FWC19",
@@ -181,6 +184,7 @@
           "id": "COCA_COLA",
           "name": "Coca-Cola",
           "icon": "coca_cola",
+          "emoji": "🥤",
           "stickers": [
             {
               "code": "C1",
@@ -234,6 +238,7 @@
           "id": "QATAR",
           "name": "Qatar",
           "icon": "qa",
+          "emoji": "🇶🇦",
           "stickers": [
             {
               "code": "QAT1",
@@ -341,6 +346,7 @@
           "id": "ECUADOR",
           "name": "Ecuador",
           "icon": "ec",
+          "emoji": "🇪🇨",
           "stickers": [
             {
               "code": "ECU1",
@@ -448,6 +454,7 @@
           "id": "SENEGAL",
           "name": "Senegal",
           "icon": "sn",
+          "emoji": "🇸🇳",
           "stickers": [
             {
               "code": "SEN1",
@@ -555,6 +562,7 @@
           "id": "NETHERLANDS",
           "name": "Netherlands",
           "icon": "nl",
+          "emoji": "🇳🇱",
           "stickers": [
             {
               "code": "NED1",
@@ -668,6 +676,7 @@
           "id": "ENGLAND",
           "name": "England",
           "icon": "gb-eng",
+          "emoji": "🇽🇪",
           "stickers": [
             {
               "code": "ENG1",
@@ -775,6 +784,7 @@
           "id": "IRAN",
           "name": "Iran",
           "icon": "ir",
+          "emoji": "🇮🇷",
           "stickers": [
             {
               "code": "IRN1",
@@ -882,6 +892,7 @@
           "id": "USA",
           "name": "USA",
           "icon": "us",
+          "emoji": "🇺🇸",
           "stickers": [
             {
               "code": "USA1",
@@ -989,6 +1000,7 @@
           "id": "WALES",
           "name": "Wales",
           "icon": "gb-wls",
+          "emoji": "🇽🇼",
           "stickers": [
             {
               "code": "WAL1",
@@ -1102,6 +1114,7 @@
           "id": "ARGENTINA",
           "name": "Argentina",
           "icon": "ar",
+          "emoji": "🇦🇷",
           "stickers": [
             {
               "code": "ARG1",
@@ -1209,6 +1222,7 @@
           "id": "SAUDI_ARABIA",
           "name": "Saudi Arabia",
           "icon": "sa",
+          "emoji": "🇸🇦",
           "stickers": [
             {
               "code": "KSA1",
@@ -1316,6 +1330,7 @@
           "id": "MEXICO",
           "name": "Mexico",
           "icon": "mx",
+          "emoji": "🇲🇽",
           "stickers": [
             {
               "code": "MEX1",
@@ -1423,6 +1438,7 @@
           "id": "POLAND",
           "name": "Poland",
           "icon": "pl",
+          "emoji": "🇵🇱",
           "stickers": [
             {
               "code": "POL1",
@@ -1536,6 +1552,7 @@
           "id": "FRANCE",
           "name": "France",
           "icon": "fr",
+          "emoji": "🇫🇷",
           "stickers": [
             {
               "code": "FRA1",
@@ -1643,6 +1660,7 @@
           "id": "AUSTRALIA",
           "name": "Australia",
           "icon": "au",
+          "emoji": "🇦🇺",
           "stickers": [
             {
               "code": "AUS1",
@@ -1750,6 +1768,7 @@
           "id": "DENMARK",
           "name": "Denmark",
           "icon": "dk",
+          "emoji": "🇩🇰",
           "stickers": [
             {
               "code": "DEN1",
@@ -1857,6 +1876,7 @@
           "id": "TUNISIA",
           "name": "Tunisia",
           "icon": "tn",
+          "emoji": "🇹🇳",
           "stickers": [
             {
               "code": "TUN1",
@@ -1970,6 +1990,7 @@
           "id": "SPAIN",
           "name": "Spain",
           "icon": "es",
+          "emoji": "🇪🇸",
           "stickers": [
             {
               "code": "ESP1",
@@ -2077,6 +2098,7 @@
           "id": "COSTA_RICA",
           "name": "Costa Rica",
           "icon": "cr",
+          "emoji": "🇨🇷",
           "stickers": [
             {
               "code": "CRC1",
@@ -2184,6 +2206,7 @@
           "id": "GERMANY",
           "name": "Germany",
           "icon": "de",
+          "emoji": "🇩🇪",
           "stickers": [
             {
               "code": "GER1",
@@ -2291,6 +2314,7 @@
           "id": "JAPAN",
           "name": "Japan",
           "icon": "jp",
+          "emoji": "🇯🇵",
           "stickers": [
             {
               "code": "JPN1",
@@ -2404,6 +2428,7 @@
           "id": "BELGIUM",
           "name": "Belgium",
           "icon": "be",
+          "emoji": "🇧🇪",
           "stickers": [
             {
               "code": "BEL1",
@@ -2511,6 +2536,7 @@
           "id": "CANADA",
           "name": "Canada",
           "icon": "ca",
+          "emoji": "🇨🇦",
           "stickers": [
             {
               "code": "CAN1",
@@ -2618,6 +2644,7 @@
           "id": "MOROCCO",
           "name": "Morocco",
           "icon": "ma",
+          "emoji": "🇲🇦",
           "stickers": [
             {
               "code": "MAR1",
@@ -2725,6 +2752,7 @@
           "id": "CROATIA",
           "name": "Croatia",
           "icon": "hr",
+          "emoji": "🇭🇷",
           "stickers": [
             {
               "code": "CRO1",
@@ -2838,6 +2866,7 @@
           "id": "BRAZIL",
           "name": "Brazil",
           "icon": "br",
+          "emoji": "🇧🇷",
           "stickers": [
             {
               "code": "BRA1",
@@ -2945,6 +2974,7 @@
           "id": "SERBIA",
           "name": "Serbia",
           "icon": "rs",
+          "emoji": "🇷🇸",
           "stickers": [
             {
               "code": "SRB1",
@@ -3052,6 +3082,7 @@
           "id": "SWITZERLAND",
           "name": "Switzerland",
           "icon": "ch",
+          "emoji": "🇨🇭",
           "stickers": [
             {
               "code": "SUI1",
@@ -3159,6 +3190,7 @@
           "id": "CAMEROON",
           "name": "Cameroon",
           "icon": "cm",
+          "emoji": "🇨🇲",
           "stickers": [
             {
               "code": "CMR1",
@@ -3272,6 +3304,7 @@
           "id": "PORTUGAL",
           "name": "Portugal",
           "icon": "pt",
+          "emoji": "🇵🇹",
           "stickers": [
             {
               "code": "POR1",
@@ -3379,6 +3412,7 @@
           "id": "GHANA",
           "name": "Ghana",
           "icon": "gh",
+          "emoji": "🇬🇭",
           "stickers": [
             {
               "code": "GHA1",
@@ -3486,6 +3520,7 @@
           "id": "URUGUAY",
           "name": "Uruguay",
           "icon": "uy",
+          "emoji": "🇺🇾",
           "stickers": [
             {
               "code": "URU1",
@@ -3593,6 +3628,7 @@
           "id": "SOUTH_KOREA",
           "name": "South Korea",
           "icon": "kr",
+          "emoji": "🇰🇷",
           "stickers": [
             {
               "code": "KOR1",
