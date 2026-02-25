@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
@@ -10,6 +11,7 @@ import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.d
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/models/group_sections.dart';
 import 'package:sticker_manager_wc22/ui/home/models/home_route_args.dart';
+import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 
 class HomeController extends GetxController {
   // Dependencies
@@ -19,6 +21,7 @@ class HomeController extends GetxController {
   final WatchSectionStatsUseCase _watchSectionStats;
   final GetAlbumGroupsUseCase _getGroups;
   final GetSectionsByGroupUseCase _getSections;
+  final ShareCoordinator _shareCoordinator;
 
   // Parameters
   final HomeRouteArgs? homeArgs;
@@ -36,7 +39,8 @@ class HomeController extends GetxController {
     this._watchAlbumStats,
     this._watchSectionStats,
     this._getGroups,
-    this._getSections, {
+    this._getSections,
+    this._shareCoordinator, {
     this.homeArgs,
   });
 
@@ -84,5 +88,10 @@ class HomeController extends GetxController {
       albumId: activeAlbum.value!.albumId,
       sectionId: sectionId,
     );
+  }
+
+  Future<void> showShareOptions(BuildContext context) async {
+    if (activeAlbum.value == null) return;
+    await _shareCoordinator.showShareOptions(context, activeAlbum.value!);
   }
 }
