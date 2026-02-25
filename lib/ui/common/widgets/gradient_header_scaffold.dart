@@ -73,7 +73,7 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
               top: 0,
               left: 0,
               right: 0,
-              height: gradientHeight > 0 ? gradientHeight : 220,
+              height: gradientHeight > 0 ? gradientHeight : 197,
               child: DecoratedBox(
                 decoration: BoxDecoration(gradient: gradient),
               ),
