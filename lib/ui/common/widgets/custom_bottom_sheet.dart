@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/bottom_sheet_tile.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   final String title;
@@ -14,11 +16,12 @@ class CustomBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
     final textTheme = theme.textTheme;
 
     return Container(
       decoration: BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+        color: colorScheme.onPrimary,
         borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
       ),
       child: SafeArea(
@@ -28,7 +31,18 @@ class CustomBottomSheet extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: textTheme.headlineMedium),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(title, style: textTheme.headlineMedium),
+                  IconButton(
+                    icon: SvgIcon('close', color: colorScheme.onSurfaceVariant),
+                    padding: EdgeInsets.zero,
+                    visualDensity: VisualDensity.compact,
+                    onPressed: () => context.pop(),
+                  ),
+                ],
+              ),
               const SizedBox(height: 24),
               ListView.separated(
                 shrinkWrap: true,
