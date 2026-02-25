@@ -19,6 +19,7 @@ import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dar
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/overview/models/overview_view_model.dart';
+import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 
 class OverviewController extends GetxController {
   // Dependencies
@@ -30,6 +31,7 @@ class OverviewController extends GetxController {
   final SearchSectionsUseCase _searchSections;
   final StickerStateRepository _stateRepo;
   final IncrementStickerQuantityUseCase _incrementSticker;
+  final ShareCoordinator _shareCoordinator;
 
   // Subscriptions
   StreamSubscription<List<StickerState>>? _statesSub;
@@ -67,6 +69,7 @@ class OverviewController extends GetxController {
     this._searchSections,
     this._stateRepo,
     this._incrementSticker,
+    this._shareCoordinator,
   );
 
   @override
@@ -289,5 +292,10 @@ class OverviewController extends GetxController {
       code: sticker.code,
       delta: -1,
     );
+  }
+
+  Future<void> showShareOptions(BuildContext context) async {
+    if (activeAlbum.value == null) return;
+    await _shareCoordinator.showShareOptions(context, activeAlbum.value!);
   }
 }

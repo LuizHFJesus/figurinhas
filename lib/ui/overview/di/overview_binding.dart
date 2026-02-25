@@ -13,6 +13,8 @@ import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
+import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
+import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
 
 class OverviewBinding extends Bindings {
   final GoRouterState state;
@@ -42,6 +44,23 @@ class OverviewBinding extends Bindings {
       ),
     );
 
+    if (!Get.isRegistered<GenerateShareStickersTextUseCase>()) {
+      Get.lazyPut(
+        () => GenerateShareStickersTextUseCase(
+          Get.find<CatalogRepository>(),
+          Get.find<StickerStateRepository>(),
+        ),
+        fenix: true,
+      );
+    }
+
+    if (!Get.isRegistered<ShareCoordinator>()) {
+      Get.lazyPut(
+        () => ShareCoordinator(Get.find<GenerateShareStickersTextUseCase>()),
+        fenix: true,
+      );
+    }
+
     // Controller
     Get.put(
       OverviewController(
@@ -53,6 +72,7 @@ class OverviewBinding extends Bindings {
         Get.find<SearchSectionsUseCase>(),
         Get.find<StickerStateRepository>(),
         Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<ShareCoordinator>(),
       ),
     );
   }
