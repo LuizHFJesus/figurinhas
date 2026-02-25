@@ -12,14 +12,15 @@ class ShareCoordinator {
   ShareCoordinator(this._generateShareText);
 
   Future<void> showShareOptions(BuildContext context, UserAlbum album) async {
+    final scaffoldContext = Scaffold.of(context).context;
     final option = await showModalBottomSheet<ShareOptionType>(
-      context: context,
+      context: scaffoldContext,
       isScrollControlled: true,
       builder: (_) => const ShareBottomSheet(),
     );
 
-    if (option != null && context.mounted) {
-      await _handleShareOption(context, option, album);
+    if (option != null && scaffoldContext.mounted) {
+      await _handleShareOption(scaffoldContext, option, album);
     }
   }
 
