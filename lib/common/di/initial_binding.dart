@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:isar_community/isar.dart';
-import 'package:sticker_manager_wc22/common/di/isar_module.dart';
 import 'package:sticker_manager_wc22/data/datasources/catalog_local_datasource.dart';
 import 'package:sticker_manager_wc22/data/datasources/isar/isar_catalog_local_datasource.dart';
 import 'package:sticker_manager_wc22/data/datasources/isar/isar_user_local_datasource.dart';
@@ -10,6 +9,7 @@ import 'package:sticker_manager_wc22/data/repositories/stats_repository_impl.dar
 import 'package:sticker_manager_wc22/data/repositories/sticker_state_repository_impl.dart';
 import 'package:sticker_manager_wc22/data/repositories/user_album_repository_impl.dart';
 import 'package:sticker_manager_wc22/data/repositories/user_profile_repository_impl.dart';
+import 'package:sticker_manager_wc22/di/bootstrap_binding.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
@@ -44,14 +44,6 @@ class InitialBinding extends Bindings {
       fenix: true,
     );
 
-    Get.lazyPut<StatsRepository>(
-      () => StatsRepositoryImpl(
-        Get.find<UserLocalDataSource>(),
-        Get.find<CatalogRepository>(),
-      ),
-      fenix: true,
-    );
-
     Get.lazyPut<StickerStateRepository>(
       () => StickerStateRepositoryImpl(Get.find<UserLocalDataSource>()),
       fenix: true,
@@ -66,5 +58,7 @@ class InitialBinding extends Bindings {
       () => UserProfileRepositoryImpl(Get.find<UserLocalDataSource>()),
       fenix: true,
     );
+
+    BootstrapBinding().dependencies();
   }
 }
