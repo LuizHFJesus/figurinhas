@@ -41,21 +41,6 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
 
-      actions: [
-        IconButton(
-          icon: SvgIcon('arrow-switch', color: lightColorScheme.onPrimary),
-          padding: EdgeInsets.zero,
-          visualDensity: VisualDensity.compact,
-          onPressed: () {},
-        ),
-        IconButton(
-          icon: SvgIcon('more-vertical', color: lightColorScheme.onPrimary),
-          padding: EdgeInsets.zero,
-          visualDensity: VisualDensity.compact,
-          onPressed: () {},
-        ),
-      ],
-
       progressCard: Obx(
         () {
           final albumStats = controller.albumStats.value;
