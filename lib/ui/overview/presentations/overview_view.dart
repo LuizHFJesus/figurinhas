@@ -36,6 +36,15 @@ class OverviewView extends GetView<OverviewController> {
         ),
       ),
 
+      actions: [
+        IconButton(
+          icon: SvgIcon('share', color: lightColorScheme.onPrimary),
+          padding: EdgeInsets.zero,
+          visualDensity: VisualDensity.compact,
+          onPressed: () => controller.showShareOptions(context),
+        ),
+      ],
+
       progressCard: Obx(
         () {
           final albumStats = controller.albumStats.value;
