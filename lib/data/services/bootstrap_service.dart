@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.dart';
@@ -11,15 +12,19 @@ class BootstrapService extends GetxService {
   final EnsureLocalProfileUseCase _ensureProfile;
   final GetActiveUserAlbumUseCase _getActiveAlbum;
   final CreateUserAlbumUseCase _createAlbum;
+  final ActiveAlbumService _activeAlbumService;
 
   BootstrapService(
     this._catalogRepository,
     this._ensureProfile,
     this._getActiveAlbum,
     this._createAlbum,
+    this._activeAlbumService,
   );
 
-  Future<UserAlbum> execute() async {
+  Future<void> execute() async {
+    if (_activeAlbumService.activeAlbum.value != null) return;
+
     final stickerCount = await _catalogRepository.countStickers('2022FWC');
     if (stickerCount == 0) {
       final jsonString = await rootBundle.loadString(
@@ -39,6 +44,7 @@ class BootstrapService extends GetxService {
         name: 'Álbum Qatar 2022',
       );
     }
-    return album;
+
+    _activeAlbumService.setActiveAlbum(album);
   }
 }
