@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/data/repositories/stats_repository_impl.dart';
+import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/data/services/isar_stats_updater.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
@@ -66,13 +67,13 @@ class OverviewBinding extends Bindings {
       OverviewController(
         Get.find<UserProfileRepository>(),
         Get.find<GetActiveUserAlbumUseCase>(),
-        Get.find<WatchAlbumStatsUseCase>(),
         Get.find<GetAllSectionsUseCase>(),
         Get.find<GetAllStickersUseCase>(),
         Get.find<SearchSectionsUseCase>(),
         Get.find<StickerStateRepository>(),
         Get.find<IncrementStickerQuantityUseCase>(),
         Get.find<ShareCoordinator>(),
+        Get.find<ActiveAlbumService>(),
       ),
     );
   }

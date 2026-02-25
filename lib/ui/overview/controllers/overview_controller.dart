@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/common/utils/text_normalizer.dart';
+import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
@@ -16,7 +17,6 @@ import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.da
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
-import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/overview/models/overview_view_model.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
@@ -25,23 +25,22 @@ class OverviewController extends GetxController {
   // Dependencies
   final UserProfileRepository _profileRepo;
   final GetActiveUserAlbumUseCase _getActiveAlbum;
-  final WatchAlbumStatsUseCase _watchAlbumStats;
   final GetAllSectionsUseCase _getAllSections;
   final GetAllStickersUseCase _getAllStickers;
   final SearchSectionsUseCase _searchSections;
   final StickerStateRepository _stateRepo;
   final IncrementStickerQuantityUseCase _incrementSticker;
   final ShareCoordinator _shareCoordinator;
+  final ActiveAlbumService _activeAlbumService;
 
   // Subscriptions
   StreamSubscription<List<StickerState>>? _statesSub;
-  StreamSubscription<AlbumStats>? _albumStatsSub;
 
   // State
   final RxBool isLoading = true.obs;
   final RxBool isSearching = false.obs;
-  final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
-  final Rx<AlbumStats?> albumStats = Rx<AlbumStats?>(null);
+  Rx<UserAlbum?> get activeAlbum => _activeAlbumService.activeAlbum;
+  Rx<AlbumStats?> get albumStats => _activeAlbumService.albumStats;
 
   // Filters
   final TextEditingController searchController = TextEditingController();
@@ -63,13 +62,13 @@ class OverviewController extends GetxController {
   OverviewController(
     this._profileRepo,
     this._getActiveAlbum,
-    this._watchAlbumStats,
     this._getAllSections,
     this._getAllStickers,
     this._searchSections,
     this._stateRepo,
     this._incrementSticker,
     this._shareCoordinator,
+    this._activeAlbumService,
   );
 
   @override
@@ -90,7 +89,6 @@ class OverviewController extends GetxController {
   @override
   Future<void> onClose() async {
     await _statesSub?.cancel();
-    await _albumStatsSub?.cancel();
     qtyStore.dispose();
     searchController.dispose();
     searchFocus.dispose();
@@ -101,9 +99,12 @@ class OverviewController extends GetxController {
     try {
       isLoading.value = true;
 
-      final profileId = await _profileRepo.ensureLocalProfileId();
-      final album = await _getActiveAlbum(profileId);
-      activeAlbum.value = album;
+      if (activeAlbum.value == null) {
+        final profileId = await _profileRepo.ensureLocalProfileId();
+        final album = await _getActiveAlbum(profileId);
+        _activeAlbumService.setActiveAlbum(album);
+      }
+      final album = activeAlbum.value!;
 
       final results = await Future.wait([
         _getAllSections(album.albumId),
@@ -131,10 +132,6 @@ class OverviewController extends GetxController {
       }
 
       await _rebuildVisibleSections();
-
-      _albumStatsSub = _watchAlbumStats
-          .watch(userAlbumId: album.userAlbumId, albumId: album.albumId)
-          .listen((s) => albumStats.value = s);
 
       _statesSub = _stateRepo
           .watchAllStatesForUserAlbum(album.userAlbumId)
