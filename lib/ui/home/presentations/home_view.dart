@@ -107,7 +107,7 @@ class HomeView extends GetView<HomeController> {
                 ActionButton(
                   icon: 'share',
                   label: 'home_share'.tr,
-                  onTap: () {},
+                  onTap: () => controller.showShareOptions(context),
                 ),
               ],
             ),

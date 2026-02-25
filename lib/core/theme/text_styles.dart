@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
   static final TextTheme textTheme = GoogleFonts.rajdhaniTextTheme().copyWith(
+    headlineMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
     headlineSmall: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
     titleLarge: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
     titleMedium: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),

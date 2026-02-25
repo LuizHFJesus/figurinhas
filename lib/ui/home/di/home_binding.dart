@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
+import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
@@ -11,6 +12,8 @@ import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.d
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
 import 'package:sticker_manager_wc22/ui/home/models/home_route_args.dart';
+import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
+import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
 
 class HomeBinding extends Bindings {
   final GoRouterState state;
@@ -33,6 +36,19 @@ class HomeBinding extends Bindings {
       );
     }
 
+    Get.lazyPut(
+          () => GenerateShareStickersTextUseCase(
+        Get.find<CatalogRepository>(),
+        Get.find<StickerStateRepository>(),
+      ),
+      fenix: true,
+    );
+
+    Get.lazyPut(
+      () => ShareCoordinator(Get.find<GenerateShareStickersTextUseCase>()),
+      fenix: true,
+    );
+
     Get.put(
       HomeController(
         Get.find<UserProfileRepository>(),
@@ -41,6 +57,7 @@ class HomeBinding extends Bindings {
         Get.find<WatchSectionStatsUseCase>(),
         Get.find<GetAlbumGroupsUseCase>(),
         Get.find<GetSectionsByGroupUseCase>(),
+        Get.find<ShareCoordinator>(),
         homeArgs: homeArgs,
       ),
     );
