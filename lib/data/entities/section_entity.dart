@@ -16,7 +16,8 @@ class SectionEntity {
 
   late String name;
   late String icon;
-  late String? emoji;
+  late String emoji;
+  late String tag;
 
   @Index()
   late int order;

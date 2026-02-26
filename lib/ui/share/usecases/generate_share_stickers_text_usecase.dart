@@ -50,8 +50,8 @@ class GenerateShareStickersTextUseCase {
         if (filtered.isNotEmpty) {
           groupHasStickers = true;
 
-          final emoji = section.emoji ?? '▪️';
-          final prefix = section.sectionId;
+          final emoji = section.emoji;
+          final prefix = section.tag;
 
           final numbers = filtered
               .map((s) {
