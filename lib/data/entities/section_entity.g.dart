@@ -33,6 +33,7 @@ const SectionEntitySchema = CollectionSchema(
       name: r'sectionId',
       type: IsarType.string,
     ),
+    r'tag': PropertySchema(id: 8, name: r'tag', type: IsarType.string),
   },
 
   estimateSize: _sectionEntityEstimateSize,
@@ -123,12 +124,7 @@ int _sectionEntityEstimateSize(
 ) {
   var bytesCount = offsets.last;
   bytesCount += 3 + object.albumId.length * 3;
-  {
-    final value = object.emoji;
-    if (value != null) {
-      bytesCount += 3 + value.length * 3;
-    }
-  }
+  bytesCount += 3 + object.emoji.length * 3;
   bytesCount += 3 + object.groupId.length * 3;
   bytesCount += 3 + object.icon.length * 3;
   bytesCount += 3 + object.name.length * 3;
@@ -139,6 +135,7 @@ int _sectionEntityEstimateSize(
     }
   }
   bytesCount += 3 + object.sectionId.length * 3;
+  bytesCount += 3 + object.tag.length * 3;
   return bytesCount;
 }
 
@@ -156,6 +153,7 @@ void _sectionEntitySerialize(
   writer.writeLong(offsets[5], object.order);
   writer.writeString(offsets[6], object.searchText);
   writer.writeString(offsets[7], object.sectionId);
+  writer.writeString(offsets[8], object.tag);
 }
 
 SectionEntity _sectionEntityDeserialize(
@@ -166,7 +164,7 @@ SectionEntity _sectionEntityDeserialize(
 ) {
   final object = SectionEntity();
   object.albumId = reader.readString(offsets[0]);
-  object.emoji = reader.readStringOrNull(offsets[1]);
+  object.emoji = reader.readString(offsets[1]);
   object.groupId = reader.readString(offsets[2]);
   object.icon = reader.readString(offsets[3]);
   object.isarId = id;
@@ -174,6 +172,7 @@ SectionEntity _sectionEntityDeserialize(
   object.order = reader.readLong(offsets[5]);
   object.searchText = reader.readStringOrNull(offsets[6]);
   object.sectionId = reader.readString(offsets[7]);
+  object.tag = reader.readString(offsets[8]);
   return object;
 }
 
@@ -187,7 +186,7 @@ P _sectionEntityDeserializeProp<P>(
     case 0:
       return (reader.readString(offset)) as P;
     case 1:
-      return (reader.readStringOrNull(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 2:
       return (reader.readString(offset)) as P;
     case 3:
@@ -199,6 +198,8 @@ P _sectionEntityDeserializeProp<P>(
     case 6:
       return (reader.readStringOrNull(offset)) as P;
     case 7:
+      return (reader.readString(offset)) as P;
+    case 8:
       return (reader.readString(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -849,25 +850,7 @@ extension SectionEntityQueryFilter
   }
 
   QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
-  emojiIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNull(property: r'emoji'),
-      );
-    });
-  }
-
-  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
-  emojiIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNotNull(property: r'emoji'),
-      );
-    });
-  }
-
-  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
-  emojiEqualTo(String? value, {bool caseSensitive = true}) {
+  emojiEqualTo(String value, {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(
         FilterCondition.equalTo(
@@ -881,7 +864,7 @@ extension SectionEntityQueryFilter
 
   QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
   emojiGreaterThan(
-    String? value, {
+    String value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -899,7 +882,7 @@ extension SectionEntityQueryFilter
 
   QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
   emojiLessThan(
-    String? value, {
+    String value, {
     bool include = false,
     bool caseSensitive = true,
   }) {
@@ -917,8 +900,8 @@ extension SectionEntityQueryFilter
 
   QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
   emojiBetween(
-    String? lower,
-    String? upper, {
+    String lower,
+    String upper, {
     bool includeLower = true,
     bool includeUpper = true,
     bool caseSensitive = true,
@@ -1845,6 +1828,153 @@ extension SectionEntityQueryFilter
       );
     });
   }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition> tagEqualTo(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(
+          property: r'tag',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  tagGreaterThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'tag',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition> tagLessThan(
+    String value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'tag',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition> tagBetween(
+    String lower,
+    String upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'tag',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  tagStartsWith(String value, {bool caseSensitive = true}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.startsWith(
+          property: r'tag',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition> tagEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.endsWith(
+          property: r'tag',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition> tagContains(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.contains(
+          property: r'tag',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition> tagMatches(
+    String pattern, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.matches(
+          property: r'tag',
+          wildcard: pattern,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  tagIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'tag', value: ''),
+      );
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterFilterCondition>
+  tagIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(property: r'tag', value: ''),
+      );
+    });
+  }
 }
 
 extension SectionEntityQueryObject
@@ -1950,6 +2080,18 @@ extension SectionEntityQuerySortBy
   sortBySectionIdDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'sectionId', Sort.desc);
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> sortByTag() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'tag', Sort.asc);
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> sortByTagDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'tag', Sort.desc);
     });
   }
 }
@@ -2065,6 +2207,18 @@ extension SectionEntityQuerySortThenBy
       return query.addSortBy(r'sectionId', Sort.desc);
     });
   }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> thenByTag() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'tag', Sort.asc);
+    });
+  }
+
+  QueryBuilder<SectionEntity, SectionEntity, QAfterSortBy> thenByTagDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'tag', Sort.desc);
+    });
+  }
 }
 
 extension SectionEntityQueryWhereDistinct
@@ -2130,6 +2284,14 @@ extension SectionEntityQueryWhereDistinct
       return query.addDistinctBy(r'sectionId', caseSensitive: caseSensitive);
     });
   }
+
+  QueryBuilder<SectionEntity, SectionEntity, QDistinct> distinctByTag({
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'tag', caseSensitive: caseSensitive);
+    });
+  }
 }
 
 extension SectionEntityQueryProperty
@@ -2146,7 +2308,7 @@ extension SectionEntityQueryProperty
     });
   }
 
-  QueryBuilder<SectionEntity, String?, QQueryOperations> emojiProperty() {
+  QueryBuilder<SectionEntity, String, QQueryOperations> emojiProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'emoji');
     });
@@ -2185,6 +2347,12 @@ extension SectionEntityQueryProperty
   QueryBuilder<SectionEntity, String, QQueryOperations> sectionIdProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'sectionId');
+    });
+  }
+
+  QueryBuilder<SectionEntity, String, QQueryOperations> tagProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'tag');
     });
   }
 }
