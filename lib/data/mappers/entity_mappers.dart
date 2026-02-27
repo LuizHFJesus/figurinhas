@@ -1,3 +1,4 @@
+import 'package:sticker_manager_wc22/data/entities/album_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/album_stats_state_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/group_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/section_entity.dart';
@@ -5,6 +6,7 @@ import 'package:sticker_manager_wc22/data/entities/section_stats_state_entity.da
 import 'package:sticker_manager_wc22/data/entities/sticker_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/sticker_state_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/user_album_entity.dart';
+import 'package:sticker_manager_wc22/domain/models/album.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/group.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
@@ -22,6 +24,11 @@ class EntityMappers {
     displayName: e.displayName,
     isFoil: e.isFoil,
     order: e.order,
+  );
+
+  static Album toAlbum(AlbumEntity e) => Album(
+    albumId: e.albumId,
+    edition: e.edition,
   );
 
   static Group toGroup(GroupEntity e) => Group(

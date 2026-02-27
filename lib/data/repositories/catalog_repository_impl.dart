@@ -7,6 +7,7 @@ import 'package:sticker_manager_wc22/data/entities/group_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/section_entity.dart';
 import 'package:sticker_manager_wc22/data/entities/sticker_entity.dart';
 import 'package:sticker_manager_wc22/data/mappers/entity_mappers.dart';
+import 'package:sticker_manager_wc22/domain/models/album.dart';
 import 'package:sticker_manager_wc22/domain/models/group.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
@@ -18,7 +19,7 @@ class CatalogRepositoryImpl implements CatalogRepository {
   CatalogRepositoryImpl(this._local);
 
   @override
-  Future<void> importCatalogFromJsonString(String json) async {
+  Future<Album> importCatalogFromJsonString(String json) async {
     final decoded = jsonDecode(json) as Map<String, dynamic>;
 
     final albumId = decoded['id'] as String;
@@ -131,6 +132,14 @@ class CatalogRepositoryImpl implements CatalogRepository {
       sections: sections,
       stickers: stickers,
     );
+
+    return EntityMappers.toAlbum(album);
+  }
+
+  @override
+  Future<Album?> getAlbum(String albumId) async {
+    final e = await _local.getAlbum(albumId);
+    return e == null ? null : EntityMappers.toAlbum(e);
   }
 
   @override

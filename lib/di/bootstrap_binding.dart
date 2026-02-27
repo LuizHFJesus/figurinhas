@@ -6,6 +6,7 @@ import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_local_profile_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
@@ -18,11 +19,21 @@ class BootstrapBinding extends Bindings {
       fenix: true,
     );
     Get.lazyPut(
-      () => GetActiveUserAlbumUseCase(Get.find<UserAlbumRepository>()),
+      () => CreateUserAlbumUseCase(Get.find<UserAlbumRepository>()),
       fenix: true,
     );
     Get.lazyPut(
-      () => CreateUserAlbumUseCase(Get.find<UserAlbumRepository>()),
+      () => EnsureDefaultUserAlbumUsecase(
+        Get.find<CatalogRepository>(),
+        Get.find<CreateUserAlbumUseCase>(),
+      ),
+      fenix: true,
+    );
+    Get.lazyPut(
+      () => GetActiveUserAlbumUseCase(
+        Get.find<UserAlbumRepository>(),
+        Get.find<EnsureDefaultUserAlbumUsecase>(),
+      ),
       fenix: true,
     );
 
@@ -35,10 +46,8 @@ class BootstrapBinding extends Bindings {
 
     Get.lazyPut(
       () => BootstrapService(
-        Get.find<CatalogRepository>(),
         Get.find<EnsureLocalProfileUseCase>(),
         Get.find<GetActiveUserAlbumUseCase>(),
-        Get.find<CreateUserAlbumUseCase>(),
         Get.find<ActiveAlbumService>(),
       ),
       fenix: true,
