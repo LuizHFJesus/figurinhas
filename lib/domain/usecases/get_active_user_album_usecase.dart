@@ -1,13 +1,17 @@
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
+import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 
 class GetActiveUserAlbumUseCase {
   final UserAlbumRepository _repo;
+  final EnsureDefaultUserAlbumUsecase _ensureDefaultUserAlbum;
 
-  GetActiveUserAlbumUseCase(this._repo);
+  GetActiveUserAlbumUseCase(this._repo, this._ensureDefaultUserAlbum);
 
-  Future<UserAlbum> call(String profileId) =>
-      _repo.getActiveUserAlbum(profileId);
+  Future<UserAlbum> call(String profileId) async {
+    final activeAlbum = await _repo.getActiveUserAlbum(profileId);
+    return activeAlbum ?? await _ensureDefaultUserAlbum(profileId);
+  }
 
   Stream<UserAlbum> watch(String profileId) =>
       _repo.watchActiveUserAlbum(profileId);

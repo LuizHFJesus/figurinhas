@@ -1,9 +1,12 @@
+import 'package:sticker_manager_wc22/domain/models/album.dart';
 import 'package:sticker_manager_wc22/domain/models/group.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
 
 abstract class CatalogRepository {
-  Future<void> importCatalogFromJsonString(String json);
+  Future<Album> importCatalogFromJsonString(String json);
+
+  Future<Album?> getAlbum(String albumId);
 
   Future<List<Group>> getGroups(String albumId);
 

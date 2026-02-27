@@ -47,12 +47,9 @@ class UserAlbumRepositoryImpl implements UserAlbumRepository {
   }
 
   @override
-  Future<UserAlbum> getActiveUserAlbum(String profileId) async {
+  Future<UserAlbum?> getActiveUserAlbum(String profileId) async {
     final e = await _local.getActiveUserAlbum(profileId);
-    if (e == null) {
-      throw StateError('No active UserAlbum for profileId=$profileId');
-    }
-    return EntityMappers.toUserAlbum(e);
+    return e == null ? null : EntityMappers.toUserAlbum(e);
   }
 
   @override

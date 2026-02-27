@@ -10,7 +10,7 @@ abstract class UserAlbumRepository {
 
   Future<List<UserAlbum>> listUserAlbums(String profileId);
 
-  Future<UserAlbum> getActiveUserAlbum(String profileId);
+  Future<UserAlbum?> getActiveUserAlbum(String profileId);
 
   Stream<UserAlbum> watchActiveUserAlbum(String profileId);
 

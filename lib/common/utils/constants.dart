@@ -7,4 +7,7 @@ class AppConstants {
     end: Alignment.bottomRight,
     colors: [AppPalette.brand, AppPalette.brandDark],
   );
+
+  static const defaultAlbumId = '2022FWC';
+  static const defaultAlbumJson = 'assets/data/2022fwc-data.json';
 }
