@@ -15,12 +15,17 @@ class GenerateShareStickersTextUseCase {
     required String albumName,
     required StickerFilter filter,
   }) async {
+    final album = await _catalog.getAlbum(albumId);
     final groups = await _catalog.getGroups(albumId);
     final allStickers = await _catalog.getAllStickers(albumId);
     final quantities = await _states.getAllQuantitiesForUserAlbum(userAlbumId);
 
     final buffer = StringBuffer();
+    if (album != null && album.edition != albumName) {
+      buffer.writeln('📚 ${'share_lbl_edition'.tr}: ${album.edition}');
+    }
     buffer.writeln('📕 ${'share_lbl_album'.tr}: $albumName\n');
+
 
     if (filter == StickerFilter.missing) {
       buffer.writeln('📌 ${'share_missing'.tr}\n');
