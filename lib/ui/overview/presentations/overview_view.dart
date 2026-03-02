@@ -37,6 +37,19 @@ class OverviewView extends GetView<OverviewController> {
       ),
 
       actions: [
+        Obx(() {
+          final showSearchButton = controller.isSearchMinimized.value;
+          return AnimatedOpacity(
+            opacity: showSearchButton ? 1 : 0,
+            duration: const Duration(milliseconds: 200),
+            child: showSearchButton
+                ? IconButton(
+                    icon: SvgIcon('search', color: lightColorScheme.onPrimary),
+                    onPressed: controller.focusSearch,
+                  )
+                : const SizedBox.shrink(),
+          );
+        }),
         IconButton(
           icon: SvgIcon('share', color: lightColorScheme.onPrimary),
           padding: EdgeInsets.zero,
@@ -60,13 +73,33 @@ class OverviewView extends GetView<OverviewController> {
       header: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SearchTextField(
-            controller: controller.searchController,
-            focusNode: controller.searchFocus,
-            onChanged: controller.updateSearch,
-            onCleaned: controller.cleanSearch,
+          Obx(() {
+            final isVisible = !controller.isSearchMinimized.value;
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.easeInOut,
+              height: isVisible ? 56 : 0,
+              child: AnimatedOpacity(
+                duration: const Duration(milliseconds: 200),
+                opacity: isVisible ? 1 : 0,
+                child: SearchTextField(
+                  controller: controller.searchController,
+                  focusNode: controller.searchFocus,
+                  onChanged: controller.updateSearch,
+                  onCleaned: controller.cleanSearch,
+                ),
+              ),
+            );
+          }),
+          Obx(
+            () {
+              final isVisible = !controller.isSearchMinimized.value;
+              return AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                height: isVisible ? 16 : 0,
+              );
+            },
           ),
-          const SizedBox(height: 16),
           Obx(
             () => StickerFilterChipsBar(
               selected: controller.currentFilter.value,
@@ -78,6 +111,7 @@ class OverviewView extends GetView<OverviewController> {
       ),
 
       body: CustomScrollView(
+        controller: controller.scrollController,
         slivers: [
           Obx(() {
             if (controller.isLoading.value) {
