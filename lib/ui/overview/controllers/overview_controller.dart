@@ -51,6 +51,7 @@ class OverviewController extends GetxController {
   // Scroll & UI
   final ScrollController scrollController = ScrollController();
   final RxBool isSearchMinimized = false.obs;
+  final RxBool showScrollToTop = false.obs;
 
   // Raw data (stable)
   final List<Section> _allSections = [];
@@ -104,7 +105,12 @@ class OverviewController extends GetxController {
   }
 
   void _onScroll() {
-    if (searchQuery.isNotEmpty || scrollController.offset <= 0) {
+    final offset = scrollController.offset;
+    final showFab = offset > 500;
+
+    if (showScrollToTop.value != showFab) showScrollToTop.value = showFab;
+
+    if (searchQuery.isNotEmpty || offset <= 0) {
       if (isSearchMinimized.value) isSearchMinimized.value = false;
       return;
     }
@@ -320,5 +326,15 @@ class OverviewController extends GetxController {
   Future<void> showShareOptions(BuildContext context) async {
     if (activeAlbum.value == null) return;
     await _shareCoordinator.showShareOptions(context, activeAlbum.value!);
+  }
+
+  Future<void> scrollToTop() async {
+    await scrollController.animateTo(
+      0,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeInOut,
+    );
+
+    isSearchMinimized.value = false;
   }
 }

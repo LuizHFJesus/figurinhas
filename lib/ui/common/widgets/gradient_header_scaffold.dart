@@ -9,6 +9,7 @@ class GradientHeaderScaffold extends StatefulWidget {
   final List<Widget>? actions;
   final Widget progressCard;
   final Widget body;
+  final Widget? floatingActionButton;
 
   final Widget? header;
   final Gradient? gradient;
@@ -26,6 +27,7 @@ class GradientHeaderScaffold extends StatefulWidget {
     this.leading,
     this.actions,
     this.gradient,
+    this.floatingActionButton,
     this.cardOverlapFraction = 0.5,
     this.horizontalPadding = 24,
     this.verticalPadding = 20,
@@ -67,6 +69,7 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
+        floatingActionButton: widget.floatingActionButton,
         body: Stack(
           children: [
             Positioned(

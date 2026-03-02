@@ -22,7 +22,9 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     final lightColorScheme = AppColorSchemes.light;
-    final textTheme = Theme.of(context).textTheme;
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    final textTheme = theme.textTheme;
 
     return GradientHeaderScaffold(
       title: Text(
@@ -53,7 +55,21 @@ class HomeView extends GetView<HomeController> {
         },
       ),
 
+      floatingActionButton: Obx(
+        () => AnimatedScale(
+          scale: controller.showScrollToTop.value ? 1.0 : 0.0,
+          duration: const Duration(milliseconds: 200),
+          child: FloatingActionButton(
+            mini: true,
+            backgroundColor: colorScheme.primary,
+            onPressed: controller.scrollToTop,
+            child: SvgIcon('chevron-up', color: colorScheme.onPrimary),
+          ),
+        ),
+      ),
+
       body: CustomScrollView(
+        controller: controller.scrollController,
         slivers: [
           SliverToBoxAdapter(
             child: GridView.count(
