@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
+import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/search_text_field.dart';
@@ -68,6 +69,19 @@ class OverviewView extends GetView<OverviewController> {
             progress: albumStats?.progress ?? 0.0,
           );
         },
+      ),
+
+      floatingActionButton: Obx(
+        () => AnimatedScale(
+          scale: controller.showScrollToTop.value ? 1.0 : 0.0,
+          duration: const Duration(milliseconds: 200),
+          child: FloatingActionButton(
+            mini: true,
+            backgroundColor: colorScheme.primary,
+            onPressed: controller.scrollToTop,
+            child: SvgIcon('chevron-up', color: colorScheme.onPrimary),
+          ),
+        ),
       ),
 
       header: Column(

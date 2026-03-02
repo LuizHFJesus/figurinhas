@@ -26,6 +26,10 @@ class HomeController extends GetxController {
   Rx<UserAlbum?> get activeAlbum => _activeAlbumService.activeAlbum;
   Rx<AlbumStats?> get albumStats => _activeAlbumService.albumStats;
 
+  // Scroll & UI
+  final ScrollController scrollController = ScrollController();
+  final RxBool showScrollToTop = false.obs;
+
   // Data
   final RxList<GroupSections> catalogStructure = <GroupSections>[].obs;
 
@@ -37,12 +41,26 @@ class HomeController extends GetxController {
     this._getSections,
     this._shareCoordinator,
     this._activeAlbumService,
-      );
+  );
 
   @override
   Future<void> onInit() async {
     super.onInit();
+    scrollController.addListener(_onScroll);
     await _loadData();
+  }
+
+  @override
+  void onClose() {
+    scrollController.dispose();
+    super.onClose();
+  }
+
+  void _onScroll() {
+    final offset = scrollController.offset;
+    final showFab = offset > 500;
+
+    if (showScrollToTop.value != showFab) showScrollToTop.value = showFab;
   }
 
   Future<void> _loadData() async {
@@ -80,5 +98,13 @@ class HomeController extends GetxController {
   Future<void> showShareOptions(BuildContext context) async {
     if (activeAlbum.value == null) return;
     await _shareCoordinator.showShareOptions(context, activeAlbum.value!);
+  }
+
+  Future<void> scrollToTop() async {
+    await scrollController.animateTo(
+      0,
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeInOut,
+    );
   }
 }
