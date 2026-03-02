@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/common/utils/text_normalizer.dart';
@@ -47,6 +48,10 @@ class OverviewController extends GetxController {
   final RxString searchQuery = ''.obs;
   final Rx<StickerFilter> currentFilter = StickerFilter.all.obs;
 
+  // Scroll & UI
+  final ScrollController scrollController = ScrollController();
+  final RxBool isSearchMinimized = false.obs;
+
   // Raw data (stable)
   final List<Section> _allSections = [];
   final List<Sticker> _allStickers = [];
@@ -83,6 +88,8 @@ class OverviewController extends GetxController {
 
     ever(currentFilter, (_) => _rebuildVisibleSections());
 
+    scrollController.addListener(_onScroll);
+
     await _loadData();
   }
 
@@ -92,7 +99,20 @@ class OverviewController extends GetxController {
     qtyStore.dispose();
     searchController.dispose();
     searchFocus.dispose();
+    scrollController.dispose();
     super.onClose();
+  }
+
+  void _onScroll() {
+    if (searchQuery.isNotEmpty || scrollController.offset <= 0) {
+      if (isSearchMinimized.value) isSearchMinimized.value = false;
+      return;
+    }
+
+    final direction = scrollController.position.userScrollDirection;
+    if (direction == ScrollDirection.reverse) {
+      if (!isSearchMinimized.value) isSearchMinimized.value = true;
+    }
   }
 
   Future<void> _loadData() async {
@@ -251,9 +271,15 @@ class OverviewController extends GetxController {
 
   // Actions
 
-  void focusSearch() => searchFocus.requestFocus();
+  void focusSearch() {
+    isSearchMinimized.value = false;
+    searchFocus.requestFocus();
+  }
 
-  Future<void> updateSearch(String value) async => searchQuery.value = value;
+  Future<void> updateSearch(String value) async {
+    searchQuery.value = value;
+    if (value.isNotEmpty) isSearchMinimized.value = false;
+  }
 
   Future<void> cleanSearch() async {
     searchController.clear();
