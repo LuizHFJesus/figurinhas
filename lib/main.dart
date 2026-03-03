@@ -12,6 +12,11 @@ import 'package:sticker_manager_wc22/data/services/bootstrap_service.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await MobileAds.instance.initialize();
+  await MobileAds.instance.updateRequestConfiguration(
+    RequestConfiguration(
+      testDeviceIds: ['EA2E26836B6693FDE2B8F54C9B332AAB'],
+    ),
+  );
 
   final isar = await openIsar();
   Get.put<Isar>(isar, permanent: true);
