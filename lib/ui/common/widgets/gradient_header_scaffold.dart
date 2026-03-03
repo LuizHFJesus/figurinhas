@@ -10,6 +10,7 @@ class GradientHeaderScaffold extends StatefulWidget {
   final Widget progressCard;
   final Widget body;
   final Widget? floatingActionButton;
+  final List<Widget>? persistentFooterButtons;
 
   final Widget? header;
   final Gradient? gradient;
@@ -28,6 +29,7 @@ class GradientHeaderScaffold extends StatefulWidget {
     this.actions,
     this.gradient,
     this.floatingActionButton,
+    this.persistentFooterButtons,
     this.cardOverlapFraction = 0.5,
     this.horizontalPadding = 24,
     this.verticalPadding = 20,
@@ -140,6 +142,8 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
             ),
           ],
         ),
+        persistentFooterAlignment: AlignmentDirectional.center,
+        persistentFooterButtons: widget.persistentFooterButtons,
       ),
     );
   }
