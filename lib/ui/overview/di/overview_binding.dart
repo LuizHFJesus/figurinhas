@@ -13,6 +13,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.da
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
@@ -62,6 +63,8 @@ class OverviewBinding extends Bindings {
       );
     }
 
+    Get.create(LoadBannerAdUseCase.new);
+
     // Controller
     Get.put(
       OverviewController(
@@ -74,6 +77,7 @@ class OverviewBinding extends Bindings {
         Get.find<IncrementStickerQuantityUseCase>(),
         Get.find<ShareCoordinator>(),
         Get.find<ActiveAlbumService>(),
+        Get.find<LoadBannerAdUseCase>(),
       ),
     );
   }

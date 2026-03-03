@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:sticker_manager_wc22/common/utils/text_normalizer.dart';
+import 'package:sticker_manager_wc22/core/ads/ad_unit_ids.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
@@ -18,6 +20,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.da
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
+import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/overview/models/overview_view_model.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
@@ -33,6 +36,7 @@ class OverviewController extends GetxController {
   final IncrementStickerQuantityUseCase _incrementSticker;
   final ShareCoordinator _shareCoordinator;
   final ActiveAlbumService _activeAlbumService;
+  final LoadBannerAdUseCase _loadBannerUseCase;
 
   // Subscriptions
   StreamSubscription<List<StickerState>>? _statesSub;
@@ -40,7 +44,9 @@ class OverviewController extends GetxController {
   // State
   final RxBool isLoading = true.obs;
   final RxBool isSearching = false.obs;
+
   Rx<UserAlbum?> get activeAlbum => _activeAlbumService.activeAlbum;
+
   Rx<AlbumStats?> get albumStats => _activeAlbumService.albumStats;
 
   // Filters
@@ -65,6 +71,11 @@ class OverviewController extends GetxController {
   // Output
   final RxList<OverviewSection> visibleSections = <OverviewSection>[].obs;
 
+  // Ad
+  RxBool get isBannerReady => _loadBannerUseCase.isBannerReady;
+
+  BannerAd? get bannerAd => _loadBannerUseCase.bannerAd;
+
   OverviewController(
     this._profileRepo,
     this._getActiveAlbum,
@@ -75,6 +86,7 @@ class OverviewController extends GetxController {
     this._incrementSticker,
     this._shareCoordinator,
     this._activeAlbumService,
+    this._loadBannerUseCase,
   );
 
   @override
@@ -101,6 +113,7 @@ class OverviewController extends GetxController {
     searchController.dispose();
     searchFocus.dispose();
     scrollController.dispose();
+    _loadBannerUseCase.dispose();
     super.onClose();
   }
 
@@ -166,6 +179,8 @@ class OverviewController extends GetxController {
               await _applyQtyChange(code: s.code, newQty: s.quantity);
             }
           });
+
+      await _loadBannerUseCase.call(adUnitId: AdUnitIds.overviewBanner);
     } finally {
       isLoading.value = false;
     }

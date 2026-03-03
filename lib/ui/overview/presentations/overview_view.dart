@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
+import 'package:sticker_manager_wc22/ui/ads/widgets/banner_ad_widget.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/search_text_field.dart';
@@ -177,6 +178,18 @@ class OverviewView extends GetView<OverviewController> {
           const SliverPadding(padding: EdgeInsets.only(bottom: 80)),
         ],
       ),
+
+      persistentFooterButtons: [
+        SafeArea(
+          bottom: false,
+          child: Obx(
+            () => BannerAdWidget(
+              bannerAd: controller.bannerAd,
+              isBannerReady: controller.isBannerReady.value,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
