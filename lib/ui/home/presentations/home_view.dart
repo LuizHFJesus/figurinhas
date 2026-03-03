@@ -6,6 +6,7 @@ import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
 import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
+import 'package:sticker_manager_wc22/ui/ads/widgets/banner_ad_widget.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/action_button.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
@@ -144,6 +145,18 @@ class HomeView extends GetView<HomeController> {
           const SliverToBoxAdapter(child: SizedBox(height: 80)),
         ],
       ),
+
+      persistentFooterButtons: [
+        SafeArea(
+          bottom: false,
+          child: Obx(
+            () => BannerAdWidget(
+              bannerAd: controller.bannerAd,
+              isBannerReady: controller.isBannerReady.value,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

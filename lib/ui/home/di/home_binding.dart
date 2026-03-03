@@ -13,6 +13,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_album_groups_usecase.da
 import 'package:sticker_manager_wc22/domain/usecases/get_sections_by_group_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
@@ -53,6 +54,8 @@ class HomeBinding extends Bindings {
       fenix: true,
     );
 
+    Get.create(LoadBannerAdUseCase.new);
+
     Get.put(
       HomeController(
         Get.find<UserProfileRepository>(),
@@ -62,6 +65,7 @@ class HomeBinding extends Bindings {
         Get.find<GetSectionsByGroupUseCase>(),
         Get.find<ShareCoordinator>(),
         Get.find<ActiveAlbumService>(),
+        Get.find<LoadBannerAdUseCase>(),
       ),
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:sticker_manager_wc22/core/ads/ad_unit_ids.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
@@ -9,6 +11,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_album_groups_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_sections_by_group_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/models/group_sections.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 
@@ -21,14 +24,19 @@ class HomeController extends GetxController {
   final GetSectionsByGroupUseCase _getSections;
   final ShareCoordinator _shareCoordinator;
   final ActiveAlbumService _activeAlbumService;
+  final LoadBannerAdUseCase _loadBannerUseCase;
 
   // State
   Rx<UserAlbum?> get activeAlbum => _activeAlbumService.activeAlbum;
   Rx<AlbumStats?> get albumStats => _activeAlbumService.albumStats;
 
-  // Scroll & UI
+  // Scroll
   final ScrollController scrollController = ScrollController();
   final RxBool showScrollToTop = false.obs;
+
+  // Ad
+  RxBool get isBannerReady => _loadBannerUseCase.isBannerReady;
+  BannerAd? get bannerAd => _loadBannerUseCase.bannerAd;
 
   // Data
   final RxList<GroupSections> catalogStructure = <GroupSections>[].obs;
@@ -41,6 +49,7 @@ class HomeController extends GetxController {
     this._getSections,
     this._shareCoordinator,
     this._activeAlbumService,
+    this._loadBannerUseCase,
   );
 
   @override
@@ -53,14 +62,8 @@ class HomeController extends GetxController {
   @override
   void onClose() {
     scrollController.dispose();
+    _loadBannerUseCase.dispose();
     super.onClose();
-  }
-
-  void _onScroll() {
-    final offset = scrollController.offset;
-    final showFab = offset > 500;
-
-    if (showScrollToTop.value != showFab) showScrollToTop.value = showFab;
   }
 
   Future<void> _loadData() async {
@@ -83,6 +86,7 @@ class HomeController extends GetxController {
     );
 
     catalogStructure.assignAll(viewModels);
+    await _loadBannerUseCase.call(adUnitId: AdUnitIds.homeBanner);
   }
 
   Stream<SectionStats> watchSectionStat(String sectionId) {
@@ -106,5 +110,12 @@ class HomeController extends GetxController {
       duration: const Duration(milliseconds: 400),
       curve: Curves.easeInOut,
     );
+  }
+
+  void _onScroll() {
+    final offset = scrollController.offset;
+    final showFab = offset > 500;
+
+    if (showScrollToTop.value != showFab) showScrollToTop.value = showFab;
   }
 }
