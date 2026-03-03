@@ -10,6 +10,7 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/section/controllers/section_controller.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 
@@ -43,6 +44,8 @@ class SectionBinding extends Bindings {
       ),
     );
 
+    Get.create(LoadBannerAdUseCase.new);
+
     // Controller
     Get.delete<SectionController>(force: true);
     Get.put(
@@ -54,6 +57,7 @@ class SectionBinding extends Bindings {
         Get.find<WatchSectionStatsUseCase>(),
         Get.find<StickerStateRepository>(),
         Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<LoadBannerAdUseCase>(),
         sectionId: sectionId,
         sectionArgs: sectionArgs,
       ),
