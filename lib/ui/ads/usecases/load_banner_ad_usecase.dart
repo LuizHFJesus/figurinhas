@@ -1,7 +1,7 @@
-import 'dart:ui';
-
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:sticker_manager_wc22/core/ads/ad_unit_ids.dart';
 
 class LoadBannerAdUseCase {
   final RxBool isBannerReady = false.obs;
@@ -25,7 +25,7 @@ class LoadBannerAdUseCase {
   }) async {
     final banner = BannerAd(
       size: AdSize.banner,
-      adUnitId: adUnitId,
+      adUnitId: kDebugMode ? AdUnitIds.androidTestBanner : adUnitId,
       request: const AdRequest(),
       listener: BannerAdListener(
         onAdLoaded: (_) => onLoaded(),
@@ -37,7 +37,6 @@ class LoadBannerAdUseCase {
     );
 
     await banner.load();
-
     return banner;
   }
 }
