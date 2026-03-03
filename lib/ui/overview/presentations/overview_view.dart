@@ -72,19 +72,6 @@ class OverviewView extends GetView<OverviewController> {
         },
       ),
 
-      floatingActionButton: Obx(
-        () => AnimatedScale(
-          scale: controller.showScrollToTop.value ? 1.0 : 0.0,
-          duration: const Duration(milliseconds: 200),
-          child: FloatingActionButton(
-            mini: true,
-            backgroundColor: colorScheme.primary,
-            onPressed: controller.scrollToTop,
-            child: SvgIcon('chevron-up', color: colorScheme.onPrimary),
-          ),
-        ),
-      ),
-
       header: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -177,6 +164,20 @@ class OverviewView extends GetView<OverviewController> {
 
           const SliverPadding(padding: EdgeInsets.only(bottom: 80)),
         ],
+      ),
+
+      floatingActionButton: Obx(
+        () => AnimatedScale(
+          scale: controller.showScrollToTop.value ? 1.0 : 0.0,
+          duration: const Duration(milliseconds: 200),
+          child: FloatingActionButton(
+            heroTag: 'OVERVIEW_FAB',
+            mini: true,
+            backgroundColor: colorScheme.primary,
+            onPressed: controller.scrollToTop,
+            child: SvgIcon('chevron-up', color: colorScheme.onPrimary),
+          ),
+        ),
       ),
 
       persistentFooterButtons: [
