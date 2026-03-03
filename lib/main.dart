@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:isar_community/isar.dart';
 import 'package:sticker_manager_wc22/common/di/initial_binding.dart';
 import 'package:sticker_manager_wc22/common/di/isar_module.dart';
@@ -10,6 +11,7 @@ import 'package:sticker_manager_wc22/data/services/bootstrap_service.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
 
   final isar = await openIsar();
   Get.put<Isar>(isar, permanent: true);
