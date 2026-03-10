@@ -13,7 +13,7 @@ extension GetStickerEntityCollection on Isar {
   IsarCollection<StickerEntity> get stickerEntitys => this.collection();
 }
 
-const StickerEntitySchema = CollectionSchema(
+const CollectionSchema<StickerEntity> StickerEntitySchema = CollectionSchema(
   name: r'StickerEntity',
   id: 4610870309375816144,
   properties: {

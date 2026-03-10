@@ -13,7 +13,7 @@ extension GetSectionEntityCollection on Isar {
   IsarCollection<SectionEntity> get sectionEntitys => this.collection();
 }
 
-const SectionEntitySchema = CollectionSchema(
+const CollectionSchema<SectionEntity> SectionEntitySchema = CollectionSchema(
   name: r'SectionEntity',
   id: 7420051759404344004,
   properties: {

@@ -14,126 +14,127 @@ extension GetAlbumStatsStateEntityCollection on Isar {
       this.collection();
 }
 
-const AlbumStatsStateEntitySchema = CollectionSchema(
-  name: r'AlbumStatsStateEntity',
-  id: 7980389159053678466,
-  properties: {
-    r'albumStatsId': PropertySchema(
-      id: 0,
-      name: r'albumStatsId',
-      type: IsarType.string,
-    ),
-    r'deletedAt': PropertySchema(
-      id: 1,
-      name: r'deletedAt',
-      type: IsarType.dateTime,
-    ),
-    r'duplicateStickers': PropertySchema(
-      id: 2,
-      name: r'duplicateStickers',
-      type: IsarType.long,
-    ),
-    r'missingFoils': PropertySchema(
-      id: 3,
-      name: r'missingFoils',
-      type: IsarType.long,
-    ),
-    r'missingStickers': PropertySchema(
-      id: 4,
-      name: r'missingStickers',
-      type: IsarType.long,
-    ),
-    r'obtainedFoils': PropertySchema(
-      id: 5,
-      name: r'obtainedFoils',
-      type: IsarType.long,
-    ),
-    r'obtainedStickers': PropertySchema(
-      id: 6,
-      name: r'obtainedStickers',
-      type: IsarType.long,
-    ),
-    r'progress': PropertySchema(
-      id: 7,
-      name: r'progress',
-      type: IsarType.double,
-    ),
-    r'totalFoils': PropertySchema(
-      id: 8,
-      name: r'totalFoils',
-      type: IsarType.long,
-    ),
-    r'totalStickers': PropertySchema(
-      id: 9,
-      name: r'totalStickers',
-      type: IsarType.long,
-    ),
-    r'updatedAt': PropertySchema(
-      id: 10,
-      name: r'updatedAt',
-      type: IsarType.dateTime,
-    ),
-    r'userAlbumId': PropertySchema(
-      id: 11,
-      name: r'userAlbumId',
-      type: IsarType.string,
-    ),
-  },
-
-  estimateSize: _albumStatsStateEntityEstimateSize,
-  serialize: _albumStatsStateEntitySerialize,
-  deserialize: _albumStatsStateEntityDeserialize,
-  deserializeProp: _albumStatsStateEntityDeserializeProp,
-  idName: r'isarId',
-  indexes: {
-    r'albumStatsId': IndexSchema(
-      id: -5472862288367415757,
-      name: r'albumStatsId',
-      unique: true,
-      replace: true,
-      properties: [
-        IndexPropertySchema(
+const CollectionSchema<AlbumStatsStateEntity> AlbumStatsStateEntitySchema =
+    CollectionSchema(
+      name: r'AlbumStatsStateEntity',
+      id: 7980389159053678466,
+      properties: {
+        r'albumStatsId': PropertySchema(
+          id: 0,
           name: r'albumStatsId',
-          type: IndexType.hash,
-          caseSensitive: true,
+          type: IsarType.string,
         ),
-      ],
-    ),
-    r'userAlbumId': IndexSchema(
-      id: -2946282351176265397,
-      name: r'userAlbumId',
-      unique: false,
-      replace: false,
-      properties: [
-        IndexPropertySchema(
-          name: r'userAlbumId',
-          type: IndexType.hash,
-          caseSensitive: true,
+        r'deletedAt': PropertySchema(
+          id: 1,
+          name: r'deletedAt',
+          type: IsarType.dateTime,
         ),
-      ],
-    ),
-    r'updatedAt': IndexSchema(
-      id: -6238191080293565125,
-      name: r'updatedAt',
-      unique: false,
-      replace: false,
-      properties: [
-        IndexPropertySchema(
+        r'duplicateStickers': PropertySchema(
+          id: 2,
+          name: r'duplicateStickers',
+          type: IsarType.long,
+        ),
+        r'missingFoils': PropertySchema(
+          id: 3,
+          name: r'missingFoils',
+          type: IsarType.long,
+        ),
+        r'missingStickers': PropertySchema(
+          id: 4,
+          name: r'missingStickers',
+          type: IsarType.long,
+        ),
+        r'obtainedFoils': PropertySchema(
+          id: 5,
+          name: r'obtainedFoils',
+          type: IsarType.long,
+        ),
+        r'obtainedStickers': PropertySchema(
+          id: 6,
+          name: r'obtainedStickers',
+          type: IsarType.long,
+        ),
+        r'progress': PropertySchema(
+          id: 7,
+          name: r'progress',
+          type: IsarType.double,
+        ),
+        r'totalFoils': PropertySchema(
+          id: 8,
+          name: r'totalFoils',
+          type: IsarType.long,
+        ),
+        r'totalStickers': PropertySchema(
+          id: 9,
+          name: r'totalStickers',
+          type: IsarType.long,
+        ),
+        r'updatedAt': PropertySchema(
+          id: 10,
           name: r'updatedAt',
-          type: IndexType.value,
-          caseSensitive: false,
+          type: IsarType.dateTime,
         ),
-      ],
-    ),
-  },
-  links: {},
-  embeddedSchemas: {},
+        r'userAlbumId': PropertySchema(
+          id: 11,
+          name: r'userAlbumId',
+          type: IsarType.string,
+        ),
+      },
 
-  getId: _albumStatsStateEntityGetId,
-  getLinks: _albumStatsStateEntityGetLinks,
-  attach: _albumStatsStateEntityAttach,
-  version: '3.3.0',
-);
+      estimateSize: _albumStatsStateEntityEstimateSize,
+      serialize: _albumStatsStateEntitySerialize,
+      deserialize: _albumStatsStateEntityDeserialize,
+      deserializeProp: _albumStatsStateEntityDeserializeProp,
+      idName: r'isarId',
+      indexes: {
+        r'albumStatsId': IndexSchema(
+          id: -5472862288367415757,
+          name: r'albumStatsId',
+          unique: true,
+          replace: true,
+          properties: [
+            IndexPropertySchema(
+              name: r'albumStatsId',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+        r'userAlbumId': IndexSchema(
+          id: -2946282351176265397,
+          name: r'userAlbumId',
+          unique: false,
+          replace: false,
+          properties: [
+            IndexPropertySchema(
+              name: r'userAlbumId',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+        r'updatedAt': IndexSchema(
+          id: -6238191080293565125,
+          name: r'updatedAt',
+          unique: false,
+          replace: false,
+          properties: [
+            IndexPropertySchema(
+              name: r'updatedAt',
+              type: IndexType.value,
+              caseSensitive: false,
+            ),
+          ],
+        ),
+      },
+      links: {},
+      embeddedSchemas: {},
+
+      getId: _albumStatsStateEntityGetId,
+      getLinks: _albumStatsStateEntityGetLinks,
+      attach: _albumStatsStateEntityAttach,
+      version: '3.3.0',
+    );
 
 int _albumStatsStateEntityEstimateSize(
   AlbumStatsStateEntity object,

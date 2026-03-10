@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sticker_manager_wc22/ui/common/widgets/sticker_grid_item.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/sticker_grid_item.dart';
 
 class StickersSliverGrid extends StatelessWidget {
   final List<Sticker> stickers;

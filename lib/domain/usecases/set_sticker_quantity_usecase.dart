@@ -1,5 +1,5 @@
-import '../repositories/sticker_state_repository.dart';
-import '../../data/services/isar_stats_updater.dart';
+import 'package:sticker_manager_wc22/data/services/isar_stats_updater.dart';
+import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
 
 class SetStickerQuantityUseCase {
   final StickerStateRepository _states;
