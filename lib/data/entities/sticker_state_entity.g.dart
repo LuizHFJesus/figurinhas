@@ -14,7 +14,8 @@ extension GetStickerStateEntityCollection on Isar {
       this.collection();
 }
 
-const StickerStateEntitySchema = CollectionSchema(
+const CollectionSchema<StickerStateEntity>
+StickerStateEntitySchema = CollectionSchema(
   name: r'StickerStateEntity',
   id: 6680143280154914328,
   properties: {

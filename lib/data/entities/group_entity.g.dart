@@ -13,7 +13,7 @@ extension GetGroupEntityCollection on Isar {
   IsarCollection<GroupEntity> get groupEntitys => this.collection();
 }
 
-const GroupEntitySchema = CollectionSchema(
+const CollectionSchema<GroupEntity> GroupEntitySchema = CollectionSchema(
   name: r'GroupEntity',
   id: -2259619910335975057,
   properties: {

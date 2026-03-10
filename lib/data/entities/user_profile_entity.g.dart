@@ -13,78 +13,79 @@ extension GetUserProfileEntityCollection on Isar {
   IsarCollection<UserProfileEntity> get userProfileEntitys => this.collection();
 }
 
-const UserProfileEntitySchema = CollectionSchema(
-  name: r'UserProfileEntity',
-  id: -588086384777568406,
-  properties: {
-    r'createdAt': PropertySchema(
-      id: 0,
-      name: r'createdAt',
-      type: IsarType.dateTime,
-    ),
-    r'displayName': PropertySchema(
-      id: 1,
-      name: r'displayName',
-      type: IsarType.string,
-    ),
-    r'profileId': PropertySchema(
-      id: 2,
-      name: r'profileId',
-      type: IsarType.string,
-    ),
-    r'remoteUid': PropertySchema(
-      id: 3,
-      name: r'remoteUid',
-      type: IsarType.string,
-    ),
-    r'updatedAt': PropertySchema(
-      id: 4,
-      name: r'updatedAt',
-      type: IsarType.dateTime,
-    ),
-  },
-
-  estimateSize: _userProfileEntityEstimateSize,
-  serialize: _userProfileEntitySerialize,
-  deserialize: _userProfileEntityDeserialize,
-  deserializeProp: _userProfileEntityDeserializeProp,
-  idName: r'isarId',
-  indexes: {
-    r'profileId': IndexSchema(
-      id: 6052971939042612300,
-      name: r'profileId',
-      unique: true,
-      replace: true,
-      properties: [
-        IndexPropertySchema(
+const CollectionSchema<UserProfileEntity> UserProfileEntitySchema =
+    CollectionSchema(
+      name: r'UserProfileEntity',
+      id: -588086384777568406,
+      properties: {
+        r'createdAt': PropertySchema(
+          id: 0,
+          name: r'createdAt',
+          type: IsarType.dateTime,
+        ),
+        r'displayName': PropertySchema(
+          id: 1,
+          name: r'displayName',
+          type: IsarType.string,
+        ),
+        r'profileId': PropertySchema(
+          id: 2,
           name: r'profileId',
-          type: IndexType.hash,
-          caseSensitive: true,
+          type: IsarType.string,
         ),
-      ],
-    ),
-    r'remoteUid': IndexSchema(
-      id: -3390609444462227290,
-      name: r'remoteUid',
-      unique: false,
-      replace: false,
-      properties: [
-        IndexPropertySchema(
+        r'remoteUid': PropertySchema(
+          id: 3,
           name: r'remoteUid',
-          type: IndexType.hash,
-          caseSensitive: true,
+          type: IsarType.string,
         ),
-      ],
-    ),
-  },
-  links: {},
-  embeddedSchemas: {},
+        r'updatedAt': PropertySchema(
+          id: 4,
+          name: r'updatedAt',
+          type: IsarType.dateTime,
+        ),
+      },
 
-  getId: _userProfileEntityGetId,
-  getLinks: _userProfileEntityGetLinks,
-  attach: _userProfileEntityAttach,
-  version: '3.3.0',
-);
+      estimateSize: _userProfileEntityEstimateSize,
+      serialize: _userProfileEntitySerialize,
+      deserialize: _userProfileEntityDeserialize,
+      deserializeProp: _userProfileEntityDeserializeProp,
+      idName: r'isarId',
+      indexes: {
+        r'profileId': IndexSchema(
+          id: 6052971939042612300,
+          name: r'profileId',
+          unique: true,
+          replace: true,
+          properties: [
+            IndexPropertySchema(
+              name: r'profileId',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+        r'remoteUid': IndexSchema(
+          id: -3390609444462227290,
+          name: r'remoteUid',
+          unique: false,
+          replace: false,
+          properties: [
+            IndexPropertySchema(
+              name: r'remoteUid',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+      },
+      links: {},
+      embeddedSchemas: {},
+
+      getId: _userProfileEntityGetId,
+      getLinks: _userProfileEntityGetLinks,
+      attach: _userProfileEntityAttach,
+      version: '3.3.0',
+    );
 
 int _userProfileEntityEstimateSize(
   UserProfileEntity object,

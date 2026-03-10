@@ -14,129 +14,130 @@ extension GetSectionStatsStateEntityCollection on Isar {
       this.collection();
 }
 
-const SectionStatsStateEntitySchema = CollectionSchema(
-  name: r'SectionStatsStateEntity',
-  id: 5082960561785476839,
-  properties: {
-    r'deletedAt': PropertySchema(
-      id: 0,
-      name: r'deletedAt',
-      type: IsarType.dateTime,
-    ),
-    r'duplicateStickers': PropertySchema(
-      id: 1,
-      name: r'duplicateStickers',
-      type: IsarType.long,
-    ),
-    r'missingStickers': PropertySchema(
-      id: 2,
-      name: r'missingStickers',
-      type: IsarType.long,
-    ),
-    r'obtainedStickers': PropertySchema(
-      id: 3,
-      name: r'obtainedStickers',
-      type: IsarType.long,
-    ),
-    r'progress': PropertySchema(
-      id: 4,
-      name: r'progress',
-      type: IsarType.double,
-    ),
-    r'sectionId': PropertySchema(
-      id: 5,
-      name: r'sectionId',
-      type: IsarType.string,
-    ),
-    r'sectionStatsId': PropertySchema(
-      id: 6,
-      name: r'sectionStatsId',
-      type: IsarType.string,
-    ),
-    r'totalStickers': PropertySchema(
-      id: 7,
-      name: r'totalStickers',
-      type: IsarType.long,
-    ),
-    r'updatedAt': PropertySchema(
-      id: 8,
-      name: r'updatedAt',
-      type: IsarType.dateTime,
-    ),
-    r'userAlbumId': PropertySchema(
-      id: 9,
-      name: r'userAlbumId',
-      type: IsarType.string,
-    ),
-  },
-
-  estimateSize: _sectionStatsStateEntityEstimateSize,
-  serialize: _sectionStatsStateEntitySerialize,
-  deserialize: _sectionStatsStateEntityDeserialize,
-  deserializeProp: _sectionStatsStateEntityDeserializeProp,
-  idName: r'isarId',
-  indexes: {
-    r'sectionStatsId': IndexSchema(
-      id: 54518000586826680,
-      name: r'sectionStatsId',
-      unique: true,
-      replace: true,
-      properties: [
-        IndexPropertySchema(
-          name: r'sectionStatsId',
-          type: IndexType.hash,
-          caseSensitive: true,
+const CollectionSchema<SectionStatsStateEntity> SectionStatsStateEntitySchema =
+    CollectionSchema(
+      name: r'SectionStatsStateEntity',
+      id: 5082960561785476839,
+      properties: {
+        r'deletedAt': PropertySchema(
+          id: 0,
+          name: r'deletedAt',
+          type: IsarType.dateTime,
         ),
-      ],
-    ),
-    r'userAlbumId': IndexSchema(
-      id: -2946282351176265397,
-      name: r'userAlbumId',
-      unique: false,
-      replace: false,
-      properties: [
-        IndexPropertySchema(
-          name: r'userAlbumId',
-          type: IndexType.hash,
-          caseSensitive: true,
+        r'duplicateStickers': PropertySchema(
+          id: 1,
+          name: r'duplicateStickers',
+          type: IsarType.long,
         ),
-      ],
-    ),
-    r'sectionId': IndexSchema(
-      id: 2871565378294445407,
-      name: r'sectionId',
-      unique: false,
-      replace: false,
-      properties: [
-        IndexPropertySchema(
+        r'missingStickers': PropertySchema(
+          id: 2,
+          name: r'missingStickers',
+          type: IsarType.long,
+        ),
+        r'obtainedStickers': PropertySchema(
+          id: 3,
+          name: r'obtainedStickers',
+          type: IsarType.long,
+        ),
+        r'progress': PropertySchema(
+          id: 4,
+          name: r'progress',
+          type: IsarType.double,
+        ),
+        r'sectionId': PropertySchema(
+          id: 5,
           name: r'sectionId',
-          type: IndexType.hash,
-          caseSensitive: true,
+          type: IsarType.string,
         ),
-      ],
-    ),
-    r'updatedAt': IndexSchema(
-      id: -6238191080293565125,
-      name: r'updatedAt',
-      unique: false,
-      replace: false,
-      properties: [
-        IndexPropertySchema(
+        r'sectionStatsId': PropertySchema(
+          id: 6,
+          name: r'sectionStatsId',
+          type: IsarType.string,
+        ),
+        r'totalStickers': PropertySchema(
+          id: 7,
+          name: r'totalStickers',
+          type: IsarType.long,
+        ),
+        r'updatedAt': PropertySchema(
+          id: 8,
           name: r'updatedAt',
-          type: IndexType.value,
-          caseSensitive: false,
+          type: IsarType.dateTime,
         ),
-      ],
-    ),
-  },
-  links: {},
-  embeddedSchemas: {},
+        r'userAlbumId': PropertySchema(
+          id: 9,
+          name: r'userAlbumId',
+          type: IsarType.string,
+        ),
+      },
 
-  getId: _sectionStatsStateEntityGetId,
-  getLinks: _sectionStatsStateEntityGetLinks,
-  attach: _sectionStatsStateEntityAttach,
-  version: '3.3.0',
-);
+      estimateSize: _sectionStatsStateEntityEstimateSize,
+      serialize: _sectionStatsStateEntitySerialize,
+      deserialize: _sectionStatsStateEntityDeserialize,
+      deserializeProp: _sectionStatsStateEntityDeserializeProp,
+      idName: r'isarId',
+      indexes: {
+        r'sectionStatsId': IndexSchema(
+          id: 54518000586826680,
+          name: r'sectionStatsId',
+          unique: true,
+          replace: true,
+          properties: [
+            IndexPropertySchema(
+              name: r'sectionStatsId',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+        r'userAlbumId': IndexSchema(
+          id: -2946282351176265397,
+          name: r'userAlbumId',
+          unique: false,
+          replace: false,
+          properties: [
+            IndexPropertySchema(
+              name: r'userAlbumId',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+        r'sectionId': IndexSchema(
+          id: 2871565378294445407,
+          name: r'sectionId',
+          unique: false,
+          replace: false,
+          properties: [
+            IndexPropertySchema(
+              name: r'sectionId',
+              type: IndexType.hash,
+              caseSensitive: true,
+            ),
+          ],
+        ),
+        r'updatedAt': IndexSchema(
+          id: -6238191080293565125,
+          name: r'updatedAt',
+          unique: false,
+          replace: false,
+          properties: [
+            IndexPropertySchema(
+              name: r'updatedAt',
+              type: IndexType.value,
+              caseSensitive: false,
+            ),
+          ],
+        ),
+      },
+      links: {},
+      embeddedSchemas: {},
+
+      getId: _sectionStatsStateEntityGetId,
+      getLinks: _sectionStatsStateEntityGetLinks,
+      attach: _sectionStatsStateEntityAttach,
+      version: '3.3.0',
+    );
 
 int _sectionStatsStateEntityEstimateSize(
   SectionStatsStateEntity object,

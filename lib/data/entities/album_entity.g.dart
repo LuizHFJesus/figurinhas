@@ -13,7 +13,7 @@ extension GetAlbumEntityCollection on Isar {
   IsarCollection<AlbumEntity> get albumEntitys => this.collection();
 }
 
-const AlbumEntitySchema = CollectionSchema(
+const CollectionSchema<AlbumEntity> AlbumEntitySchema = CollectionSchema(
   name: r'AlbumEntity',
   id: 5722830199791071764,
   properties: {
