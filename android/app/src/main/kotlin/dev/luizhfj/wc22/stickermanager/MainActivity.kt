@@ -1,4 +1,4 @@
-package dev.luizhfj.wc26.sticker_manager_wc22
+package dev.luizhfj.wc22.stickermanager
 
 import io.flutter.embedding.android.FlutterActivity
 
