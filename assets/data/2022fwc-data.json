@@ -1,6 +1,6 @@
 {
   "id": "2022FWC",
-  "edition": "2022 FIFA World Cup",
+  "edition": "2022 World Cup",
   "groups": [
     {
       "id": "OTHERS",
@@ -120,9 +120,9 @@
           ]
         },
         {
-          "id": "FIFA_MUSEUM",
-          "name": "FIFA Museum",
-          "icon": "ic_fifa_museum",
+          "id": "MUSEUM",
+          "name": "Museum",
+          "icon": "ic_museum",
           "emoji": "🏆",
           "tag": "FWC",
           "stickers": [
