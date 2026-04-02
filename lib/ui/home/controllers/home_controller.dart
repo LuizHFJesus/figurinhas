@@ -8,8 +8,7 @@ import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
-import 'package:sticker_manager_wc22/domain/usecases/get_album_groups_usecase.dart';
-import 'package:sticker_manager_wc22/domain/usecases/get_sections_by_group_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/get_all_groups_and_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/models/group_sections.dart';
@@ -20,8 +19,7 @@ class HomeController extends GetxController {
   final UserProfileRepository _profileRepo;
   final GetActiveUserAlbumUseCase _getActiveAlbum;
   final WatchSectionStatsUseCase _watchSectionStats;
-  final GetAlbumGroupsUseCase _getGroups;
-  final GetSectionsByGroupUseCase _getSections;
+  final GetAllGroupsAndSectionsUseCase _getAllGroupsAndSections;
   final ShareCoordinator _shareCoordinator;
   final ActiveAlbumService _activeAlbumService;
   final LoadBannerAdUseCase _loadBannerUseCase;
@@ -45,8 +43,7 @@ class HomeController extends GetxController {
     this._profileRepo,
     this._getActiveAlbum,
     this._watchSectionStats,
-    this._getGroups,
-    this._getSections,
+    this._getAllGroupsAndSections,
     this._shareCoordinator,
     this._activeAlbumService,
     this._loadBannerUseCase,
@@ -73,19 +70,11 @@ class HomeController extends GetxController {
       _activeAlbumService.setActiveAlbum(album);
     }
 
-    final groups = await _getGroups(activeAlbum.value!.albumId);
-
-    final viewModels = await Future.wait(
-      groups.map((group) async {
-        final sections = await _getSections(
-          albumId: activeAlbum.value!.albumId,
-          groupId: group.groupId,
-        );
-        return GroupSections(group: group, sections: sections);
-      }),
+    final viewModels = await _getAllGroupsAndSections(
+      activeAlbum.value!.albumId,
     );
-
     catalogStructure.assignAll(viewModels);
+
     await _loadBannerUseCase.call(adUnitId: AdUnitIds.homeBanner);
   }
 

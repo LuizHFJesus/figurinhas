@@ -20,6 +20,8 @@ abstract class CatalogLocalDataSource {
     required String groupId,
   });
 
+  Future<List<SectionEntity>> getAllSections(String albumId);
+
   Future<SectionEntity?> getSectionById({
     required String albumId,
     required String sectionId,

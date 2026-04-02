@@ -6,19 +6,7 @@ class GetAllSectionsUseCase {
 
   GetAllSectionsUseCase(this._repo);
 
-  Future<List<Section>> call(String albumId) async {
-    final groups = await _repo.getGroups(albumId);
-    final results = await Future.wait(
-      groups.map(
-        (g) => _repo.getSectionsByGroup(
-          albumId: albumId,
-          groupId: g.groupId,
-        ),
-      ),
-    );
-
-    final allSections = <Section>[];
-    results.forEach(allSections.addAll);
-    return allSections;
+  Future<List<Section>> call(String albumId) {
+    return _repo.getAllSections(albumId);
   }
 }
