@@ -12,11 +12,9 @@ const Map<String, String> ptBR = {
   'nav_home': 'Início',
   'nav_overview': 'Visão Geral',
   'nav_repeated': 'Repetidas',
+  'nav_stats': 'Estatísticas',
 
   'home_my_stickers': 'Minhas Figurinhas',
-  'home_search': 'Pesquisar',
-  'home_stats': 'Estatísticas',
-  'home_share': 'Compartilhar',
   'home_summary': 'Sumário',
 
   // Progress

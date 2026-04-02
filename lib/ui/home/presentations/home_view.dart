@@ -7,15 +7,12 @@ import 'package:sticker_manager_wc22/core/theme/palette.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
 import 'package:sticker_manager_wc22/ui/ads/widgets/banner_ad_widget.dart';
-import 'package:sticker_manager_wc22/ui/common/widgets/action_button.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
-import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 import 'package:sticker_manager_wc22/ui/section/widgets/section_icon.dart';
-import 'package:sticker_manager_wc22/ui/stats/models/stats_route_args.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -44,6 +41,15 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
 
+      actions: [
+        IconButton(
+          icon: SvgIcon('share', color: lightColorScheme.onPrimary),
+          padding: EdgeInsets.zero,
+          visualDensity: VisualDensity.compact,
+          onPressed: () => controller.showShareOptions(context),
+        ),
+      ],
+
       progressCard: Obx(
         () {
           final albumStats = controller.albumStats.value;
@@ -59,51 +65,8 @@ class HomeView extends GetView<HomeController> {
       body: CustomScrollView(
         controller: controller.scrollController,
         slivers: [
-          SliverToBoxAdapter(
-            child: GridView.count(
-              crossAxisCount: 3,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 4),
-              mainAxisSpacing: 8,
-              crossAxisSpacing: 8,
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              children: [
-                ActionButton(
-                  icon: 'search',
-                  label: 'home_search'.tr,
-                  onTap: () async {
-                    StatefulNavigationShell.of(context).goBranch(1);
-                    Future.delayed(const Duration(milliseconds: 300), () {
-                      if (Get.isRegistered<OverviewController>()) {
-                        Get.find<OverviewController>().focusSearch();
-                      }
-                    });
-                  },
-                ),
-                ActionButton(
-                  icon: 'bar-chart-vertical',
-                  label: 'home_stats'.tr,
-                  onTap: () async {
-                    await context.push(
-                      AppRoutes.stats,
-                      extra: StatsRouteArgs(
-                        album: controller.activeAlbum.value,
-                        stats: controller.albumStats.value,
-                      ),
-                    );
-                  },
-                ),
-                ActionButton(
-                  icon: 'share',
-                  label: 'home_share'.tr,
-                  onTap: () => controller.showShareOptions(context),
-                ),
-              ],
-            ),
-          ),
-
           SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            padding: const EdgeInsets.only(left: 24, right: 24, bottom: 16),
             sliver: SliverList(
               delegate: SliverChildListDelegate.fixed([
                 Text('home_summary'.tr, style: textTheme.headlineSmall),

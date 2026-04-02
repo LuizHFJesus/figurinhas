@@ -56,6 +56,14 @@ class DashboardShell extends StatelessWidget {
               label: 'nav_home'.tr,
             ),
             NavigationDestination(
+              icon: SvgIcon('bar-chart-vertical', color: colorScheme.outline),
+              selectedIcon: SvgIcon(
+                'bar-chart-vertical',
+                color: colorScheme.primary,
+              ),
+              label: 'nav_stats'.tr,
+            ),
+            NavigationDestination(
               icon: SvgIcon('stack-vertical', color: colorScheme.outline),
               selectedIcon: SvgIcon(
                 'stack-vertical',

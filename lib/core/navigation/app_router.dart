@@ -33,6 +33,15 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRouteWithBinding(
+                path: AppRoutes.stats,
+                builder: (context, state) => const StatsView(),
+                bindingBuilder: StatsBinding.new,
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRouteWithBinding(
                 path: AppRoutes.overview,
                 builder: (context, state) => const OverviewView(),
                 bindingBuilder: OverviewBinding.new,
@@ -57,13 +66,6 @@ class AppRouter {
         path: AppRoutes.section,
         builder: (context, state) => const SectionView(),
         bindingBuilder: SectionBinding.new,
-        useTransition: true,
-      ),
-
-      GoRouteWithBinding(
-        path: AppRoutes.stats,
-        builder: (context, state) => const StatsView(),
-        bindingBuilder: StatsBinding.new,
         useTransition: true,
       ),
     ],
