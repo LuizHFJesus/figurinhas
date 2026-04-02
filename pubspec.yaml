@@ -68,7 +68,7 @@ flutter:
   assets:
     - assets/data/
     - assets/icons/
-    - assets/flags/coca_cola.svg
+    - assets/flags/coca-cola.svg
     - assets/flags/ar.svg
     - assets/flags/au.svg
     - assets/flags/be.svg
