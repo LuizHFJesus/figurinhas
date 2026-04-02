@@ -75,16 +75,23 @@ class ProgressCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
-                LinearProgressIndicator(
-                  value: progress,
-                  minHeight: 3,
-                  borderRadius: BorderRadius.circular(15),
-                  backgroundColor: colorScheme.inverseSurface.withValues(
-                    alpha: 0.1,
-                  ),
-                  valueColor: const AlwaysStoppedAnimation(
-                    AppPalette.successGreen,
-                  ),
+                TweenAnimationBuilder<double>(
+                  tween: Tween<double>(begin: 0, end: progress),
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeInOut,
+                  builder: (context, value, _) {
+                    return LinearProgressIndicator(
+                      value: value,
+                      minHeight: 3,
+                      borderRadius: BorderRadius.circular(15),
+                      backgroundColor: colorScheme.inverseSurface.withValues(
+                        alpha: 0.1,
+                      ),
+                      valueColor: const AlwaysStoppedAnimation(
+                        AppPalette.successGreen,
+                      ),
+                    );
+                  },
                 ),
                 const SizedBox(height: 8),
                 Align(
