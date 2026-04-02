@@ -161,6 +161,12 @@ class CatalogRepositoryImpl implements CatalogRepository {
   }
 
   @override
+  Future<List<Section>> getAllSections(String albumId) async {
+    final list = await _local.getAllSections(albumId);
+    return list.map(EntityMappers.toSection).toList(growable: false);
+  }
+
+  @override
   Future<Section> getSectionById({
     required String albumId,
     required String sectionId,

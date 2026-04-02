@@ -57,6 +57,15 @@ class IsarCatalogLocalDataSource implements CatalogLocalDataSource {
   }
 
   @override
+  Future<List<SectionEntity>> getAllSections(String albumId) {
+    return _isar.sectionEntitys
+        .filter()
+        .albumIdEqualTo(albumId)
+        .sortByOrder()
+        .findAll();
+  }
+
+  @override
   Future<SectionEntity?> getSectionById({
     required String albumId,
     required String sectionId,

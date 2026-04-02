@@ -15,6 +15,8 @@ abstract class CatalogRepository {
     required String groupId,
   });
 
+  Future<List<Section>> getAllSections(String albumId);
+
   Future<Section> getSectionById({
     required String albumId,
     required String sectionId,
