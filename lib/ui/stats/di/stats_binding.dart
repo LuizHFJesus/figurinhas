@@ -7,6 +7,8 @@ import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_u
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
+import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
+import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/stats/controllers/stats_controller.dart';
 import 'package:sticker_manager_wc22/ui/stats/models/stats_route_args.dart';
 
@@ -30,6 +32,15 @@ class StatsBinding extends Bindings {
       );
     }
 
+    if (!Get.isRegistered<ShareCoordinator>()) {
+      Get.lazyPut(
+        () => ShareCoordinator(
+          Get.find<GenerateShareStickersTextUseCase>(),
+        ),
+        fenix: true,
+      );
+    }
+
     Get.create(LoadBannerAdUseCase.new);
 
     Get.put(
@@ -38,6 +49,7 @@ class StatsBinding extends Bindings {
         Get.find<GetActiveUserAlbumUseCase>(),
         Get.find<WatchAlbumStatsUseCase>(),
         Get.find<LoadBannerAdUseCase>(),
+        Get.find<ShareCoordinator>(),
         args: args,
       ),
     );
