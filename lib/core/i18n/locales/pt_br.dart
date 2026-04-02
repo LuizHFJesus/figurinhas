@@ -54,5 +54,5 @@ const Map<String, String> ptBR = {
   'share_lbl_album': 'Álbum',
   'share_lbl_edition': 'Edição',
   'share_organize_your_stickers': 'Organize suas figurinhas',
-  'share_app_link': 'https://app.stickermanager.com',
+  'share_app_link': 'https://play.google.com/store/apps/details?id=dev.luizhfj.wc22.stickermanager',
 };
