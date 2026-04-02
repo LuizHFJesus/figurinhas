@@ -186,7 +186,7 @@
         {
           "id": "COCA_COLA",
           "name": "Coca-Cola",
-          "icon": "coca_cola",
+          "icon": "coca-cola",
           "emoji": "🥤",
           "tag": "C",
           "stickers": [
