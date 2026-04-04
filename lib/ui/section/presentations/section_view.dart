@@ -27,12 +27,17 @@ class SectionView extends GetView<SectionController> {
       ),
 
       title: Obx(
-        () => Text(
-          controller.section.value?.name ?? '',
+        () {
+          final name = controller.section.value?.name ?? '';
+          final tag = controller.section.value?.tag ?? '';
+
+          return Text(
+          '$tag - $name',
           style: textTheme.headlineSmall?.copyWith(
             color: lightColorScheme.onPrimary,
           ),
-        ),
+        );
+        },
       ),
 
       subtitle: Obx(
