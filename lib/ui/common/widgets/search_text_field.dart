@@ -45,6 +45,11 @@ class SearchTextField extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 borderSide: BorderSide.none,
               ),
+              prefixIcon: IconButton(
+                onPressed: onCleaned,
+                icon: const SvgIcon('search'),
+                color: colorScheme.outline,
+              ),
               suffixIcon: hasText
                   ? IconButton(
                       onPressed: onCleaned,
