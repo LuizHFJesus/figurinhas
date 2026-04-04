@@ -4,13 +4,18 @@ import 'package:share_plus/share_plus.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker_filter.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/ui/share/models/share_option_type.dart';
+import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stats_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/share/widgets/share_bottom_sheet.dart';
 
 class ShareCoordinator {
   final GenerateShareStickersTextUseCase _generateShareText;
+  final GenerateShareStatsTextUseCase _generateShareStats;
 
-  ShareCoordinator(this._generateShareText);
+  ShareCoordinator(
+    this._generateShareText,
+    this._generateShareStats,
+  );
 
   Future<void> showShareOptions(BuildContext context, UserAlbum album) async {
     final scaffoldContext = Scaffold.of(context).context;
@@ -31,6 +36,9 @@ class ShareCoordinator {
     UserAlbum album,
   ) async {
     switch (option) {
+      case ShareOptionType.albumStats:
+        await _shareStats(album);
+
       case ShareOptionType.missingStickers:
         await _shareStickers(
           album,
@@ -45,9 +53,6 @@ class ShareCoordinator {
 
       case ShareOptionType.shareApp:
         await _shareApp();
-
-      case ShareOptionType.albumStats:
-        break;
     }
   }
 
@@ -60,6 +65,18 @@ class ShareCoordinator {
       userAlbumId: album.userAlbumId,
       albumName: album.name,
       filter: filter,
+    );
+
+    if (text.trim().isNotEmpty) {
+      await SharePlus.instance.share(ShareParams(text: text));
+    }
+  }
+
+  Future<void> _shareStats(UserAlbum album) async {
+    final text = await _generateShareStats.call(
+      albumId: album.albumId,
+      userAlbumId: album.userAlbumId,
+      albumName: album.name,
     );
 
     if (text.trim().isNotEmpty) {
