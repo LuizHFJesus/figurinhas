@@ -33,7 +33,7 @@ class OverviewSectionItem extends StatelessWidget {
                 SectionIcon(size: 36, icon: data.section.icon),
                 const SizedBox(width: 16),
                 Text(
-                  data.section.name,
+                  '${data.section.tag} - ${data.section.name}',
                   style: textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w600
                   ),

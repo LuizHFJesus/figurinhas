@@ -98,7 +98,7 @@ class _SectionTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        section.name,
+                        '${section.tag} - ${section.name}',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: textTheme.titleMedium?.copyWith(
