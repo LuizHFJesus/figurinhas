@@ -79,7 +79,7 @@ class GenerateShareStickersTextUseCase {
       if (groupHasStickers) buffer.writeln();
     }
 
-    buffer.writeln('📲 share_app_link'.tr);
+    buffer.writeln('📲 ${'share_app_link'.tr}');
 
     return buffer.toString();
   }

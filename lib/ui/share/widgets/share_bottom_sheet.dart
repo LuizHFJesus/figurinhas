@@ -13,6 +13,14 @@ class ShareBottomSheet extends StatelessWidget {
       title: 'share_title'.tr,
       options: [
         BottomSheetTile(
+          icon: 'bar-chart-vertical',
+          label: 'share_stats'.tr,
+          onTap: () => Navigator.pop(
+            context,
+            ShareOptionType.albumStats,
+          ),
+        ),
+        BottomSheetTile(
           icon: 'repeated',
           label: 'share_missing'.tr,
           onTap: () => Navigator.pop(

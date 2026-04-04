@@ -14,6 +14,7 @@ import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase
 import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
+import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stats_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
 
 class HomeBinding extends Bindings {
@@ -40,16 +41,31 @@ class HomeBinding extends Bindings {
       );
     }
 
-    Get.lazyPut(
-      () => GenerateShareStickersTextUseCase(
-        Get.find<CatalogRepository>(),
-        Get.find<StickerStateRepository>(),
-      ),
-      fenix: true,
-    );
+    if (!Get.isRegistered<GenerateShareStickersTextUseCase>()) {
+      Get.lazyPut(
+        () => GenerateShareStickersTextUseCase(
+          Get.find<CatalogRepository>(),
+          Get.find<StickerStateRepository>(),
+        ),
+        fenix: true,
+      );
+    }
+
+    if (!Get.isRegistered<GenerateShareStatsTextUseCase>()) {
+      Get.lazyPut(
+        () => GenerateShareStatsTextUseCase(
+          Get.find<CatalogRepository>(),
+          Get.find<StatsRepository>(),
+        ),
+        fenix: true,
+      );
+    }
 
     Get.lazyPut(
-      () => ShareCoordinator(Get.find<GenerateShareStickersTextUseCase>()),
+      () => ShareCoordinator(
+        Get.find<GenerateShareStickersTextUseCase>(),
+        Get.find<GenerateShareStatsTextUseCase>(),
+      ),
       fenix: true,
     );
 

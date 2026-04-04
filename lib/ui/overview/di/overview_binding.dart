@@ -16,6 +16,7 @@ import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.d
 import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
+import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stats_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
 
 class OverviewBinding extends Bindings {
@@ -55,10 +56,23 @@ class OverviewBinding extends Bindings {
         fenix: true,
       );
     }
+    
+    if (!Get.isRegistered<GenerateShareStatsTextUseCase>()) {
+      Get.lazyPut(
+        () => GenerateShareStatsTextUseCase(
+          Get.find<CatalogRepository>(),
+          Get.find<StatsRepository>(),
+        ),
+        fenix: true,
+      );
+    }
 
     if (!Get.isRegistered<ShareCoordinator>()) {
       Get.lazyPut(
-        () => ShareCoordinator(Get.find<GenerateShareStickersTextUseCase>()),
+        () => ShareCoordinator(
+          Get.find<GenerateShareStickersTextUseCase>(),
+          Get.find<GenerateShareStatsTextUseCase>(),
+        ),
         fenix: true,
       );
     }
