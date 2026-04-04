@@ -28,6 +28,14 @@ class ShareBottomSheet extends StatelessWidget {
             ShareOptionType.repeatedStickers,
           ),
         ),
+        BottomSheetTile(
+          icon: 'sharing',
+          label: 'share_app'.tr,
+          onTap: () => Navigator.pop(
+            context,
+            ShareOptionType.shareApp,
+          ),
+        ),
       ],
     );
   }

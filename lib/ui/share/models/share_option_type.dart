@@ -1,6 +1,6 @@
 enum ShareOptionType {
+  albumStats,
   missingStickers,
   repeatedStickers,
-  albumStats,
   shareApp,
 }
