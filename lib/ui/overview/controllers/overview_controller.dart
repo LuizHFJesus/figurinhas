@@ -11,9 +11,7 @@ import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker_filter.dart';
-import 'package:sticker_manager_wc22/domain/models/sticker_state.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
-import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
@@ -32,14 +30,10 @@ class OverviewController extends GetxController {
   final GetAllSectionsUseCase _getAllSections;
   final GetAllStickersUseCase _getAllStickers;
   final SearchSectionsUseCase _searchSections;
-  final StickerStateRepository _stateRepo;
   final IncrementStickerQuantityUseCase _incrementSticker;
   final ShareCoordinator _shareCoordinator;
   final ActiveAlbumService _activeAlbumService;
   final LoadBannerAdUseCase _loadBannerUseCase;
-
-  // Subscriptions
-  StreamSubscription<List<StickerState>>? _statesSub;
 
   // State
   final RxBool isLoading = true.obs;
@@ -63,9 +57,8 @@ class OverviewController extends GetxController {
   final List<Section> _allSections = [];
   final List<Sticker> _allStickers = [];
   final Map<String, List<Sticker>> _stickersBySection = {};
-  final Map<String, int> _quantities = {};
 
-  final StickerQtyStore qtyStore = StickerQtyStore();
+  StickerQtyStore get qtyStore => _activeAlbumService.qtyStore;
   final FocusNode searchFocus = FocusNode();
 
   // Output
@@ -82,7 +75,6 @@ class OverviewController extends GetxController {
     this._getAllSections,
     this._getAllStickers,
     this._searchSections,
-    this._stateRepo,
     this._incrementSticker,
     this._shareCoordinator,
     this._activeAlbumService,
@@ -96,7 +88,6 @@ class OverviewController extends GetxController {
     debounce(
       searchQuery,
       (_) => _rebuildVisibleSections(),
-      time: const Duration(milliseconds: 250),
     );
 
     ever(currentFilter, (_) => _rebuildVisibleSections());
@@ -108,8 +99,6 @@ class OverviewController extends GetxController {
 
   @override
   Future<void> onClose() async {
-    await _statesSub?.cancel();
-    qtyStore.dispose();
     searchController.dispose();
     searchFocus.dispose();
     scrollController.dispose();
@@ -148,7 +137,6 @@ class OverviewController extends GetxController {
       final results = await Future.wait([
         _getAllSections(album.albumId),
         _getAllStickers(album.albumId),
-        _stateRepo.getAllQuantitiesForUserAlbum(album.userAlbumId),
       ]);
 
       _allSections
@@ -159,26 +147,9 @@ class OverviewController extends GetxController {
         ..clear()
         ..addAll(results[1] as List<Sticker>);
 
-      final initialQuantities = results[2] as Map<String, int>;
-      _quantities
-        ..clear()
-        ..addAll(initialQuantities);
-
       _buildSectionIndex();
 
-      for (final st in _allStickers) {
-        qtyStore.set(st.code, _quantities[st.code] ?? 0);
-      }
-
       await _rebuildVisibleSections();
-
-      _statesSub = _stateRepo
-          .watchAllStatesForUserAlbum(album.userAlbumId)
-          .listen((states) async {
-            for (final s in states) {
-              await _applyQtyChange(code: s.code, newQty: s.quantity);
-            }
-          });
 
       await _loadBannerUseCase.call(adUnitId: AdUnitIds.overviewBanner);
     } finally {
@@ -251,7 +222,7 @@ class OverviewController extends GetxController {
 
       final visible = <Sticker>[];
       for (final st in stickers) {
-        final qty = _quantities[st.code] ?? 0;
+        final qty = _activeAlbumService.quantityOf(st.code);
 
         if (!_matchesFilter(qty)) continue;
         // if (!_matchesQuery(
@@ -271,23 +242,6 @@ class OverviewController extends GetxController {
     }
 
     visibleSections.assignAll(result);
-  }
-
-  Future<void> _applyQtyChange({
-    required String code,
-    required int newQty,
-  }) async {
-    final oldQty = _quantities[code] ?? 0;
-    if (oldQty == newQty) return;
-
-    _quantities[code] = newQty;
-    qtyStore.set(code, newQty);
-
-    if (currentFilter.value == StickerFilter.all) return;
-
-    if (_matchesFilter(oldQty) != _matchesFilter(newQty)) {
-      await _rebuildVisibleSections();
-    }
   }
 
   // Actions
@@ -310,6 +264,7 @@ class OverviewController extends GetxController {
   Future<void> setFilter(StickerFilter filter) async {
     if (currentFilter.value == filter) return;
     currentFilter.value = filter;
+    await _rebuildVisibleSections();
   }
 
   Future<void> onStickerTap(Sticker sticker) async {
@@ -327,7 +282,7 @@ class OverviewController extends GetxController {
     final album = activeAlbum.value;
     if (album == null) return;
 
-    final current = _quantities[sticker.code] ?? 0;
+    final current = _activeAlbumService.quantityOf(sticker.code);
     if (current <= 0) return;
 
     await _incrementSticker(

@@ -73,7 +73,6 @@ class OverviewBinding extends Bindings {
         Get.find<GetAllSectionsUseCase>(),
         Get.find<GetAllStickersUseCase>(),
         Get.find<SearchSectionsUseCase>(),
-        Get.find<StickerStateRepository>(),
         Get.find<IncrementStickerQuantityUseCase>(),
         Get.find<ShareCoordinator>(),
         Get.find<ActiveAlbumService>(),

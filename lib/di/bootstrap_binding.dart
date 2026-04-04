@@ -3,6 +3,7 @@ import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/data/services/bootstrap_service.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
+import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.dart';
@@ -40,7 +41,10 @@ class BootstrapBinding extends Bindings {
     Get.lazyPut(() => WatchAlbumStatsUseCase(Get.find<StatsRepository>()));
 
     Get.put(
-      ActiveAlbumService(Get.find<WatchAlbumStatsUseCase>()),
+      ActiveAlbumService(
+        Get.find<WatchAlbumStatsUseCase>(),
+        Get.find<StickerStateRepository>(),
+      ),
       permanent: true,
     );
 
