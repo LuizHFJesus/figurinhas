@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker_filter.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
@@ -32,25 +33,25 @@ class ShareCoordinator {
     switch (option) {
       case ShareOptionType.missingStickers:
         await _shareStickers(
-          context,
           album,
           StickerFilter.missing,
         );
 
       case ShareOptionType.repeatedStickers:
         await _shareStickers(
-          context,
           album,
           StickerFilter.repeated,
         );
 
-      case ShareOptionType.albumStats:
       case ShareOptionType.shareApp:
+        await _shareApp();
+
+      case ShareOptionType.albumStats:
+        break;
     }
   }
 
   Future<void> _shareStickers(
-    BuildContext context,
     UserAlbum album,
     StickerFilter filter,
   ) async {
@@ -61,6 +62,13 @@ class ShareCoordinator {
       filter: filter,
     );
 
+    if (text.trim().isNotEmpty) {
+      await SharePlus.instance.share(ShareParams(text: text));
+    }
+  }
+
+  Future<void> _shareApp() async {
+    final text = '📲 ${'share_app_link'.tr}';
     if (text.trim().isNotEmpty) {
       await SharePlus.instance.share(ShareParams(text: text));
     }
