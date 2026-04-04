@@ -61,7 +61,6 @@ class IsarCatalogLocalDataSource implements CatalogLocalDataSource {
     return _isar.sectionEntitys
         .filter()
         .albumIdEqualTo(albumId)
-        .sortByOrder()
         .findAll();
   }
 
@@ -83,7 +82,6 @@ class IsarCatalogLocalDataSource implements CatalogLocalDataSource {
     final sections = await _isar.sectionEntitys
         .filter()
         .albumIdEqualTo(albumId)
-        .sortByOrder()
         .findAll();
     return sections.map((e) => e.sectionId).toList(growable: false);
   }
