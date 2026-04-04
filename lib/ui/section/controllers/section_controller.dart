@@ -131,10 +131,6 @@ class SectionController extends GetxController {
       albumId: album.albumId,
       code: sticker.code,
     );
-
-    if (currentFilter.value != StickerFilter.all) {
-      Future.delayed(const Duration(milliseconds: 50), _rebuildVisibleStickers);
-    }
   }
 
   Future<void> onStickerLongPress(Sticker sticker) async {
@@ -150,13 +146,6 @@ class SectionController extends GetxController {
       code: sticker.code,
       delta: -1,
     );
-    
-    if (currentFilter.value != StickerFilter.all) {
-       Future.delayed(
-         const Duration(milliseconds: 50), 
-         _rebuildVisibleStickers
-       );
-    }
   }
 
   int quantityOf(String code) => _activeAlbumService.quantityOf(code);
