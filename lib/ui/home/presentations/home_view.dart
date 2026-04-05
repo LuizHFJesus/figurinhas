@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sticker_manager_wc22/core/ads/ad_unit_ids.dart';
 import 'package:sticker_manager_wc22/core/theme/color_schemes.dart';
-import 'package:sticker_manager_wc22/ui/ads/widgets/banner_ad_widget.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/gradient_header_scaffold.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/progress_card.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
@@ -98,17 +98,7 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
 
-      persistentFooterButtons: [
-        SafeArea(
-          bottom: false,
-          child: Obx(
-            () => BannerAdWidget(
-              bannerAd: controller.bannerAd,
-              isBannerReady: controller.isBannerReady.value,
-            ),
-          ),
-        ),
-      ],
+      bannerAdUnitId: AdUnitIds.homeBanner,
     );
   }
 }

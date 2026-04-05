@@ -1,7 +1,5 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:sticker_manager_wc22/core/ads/ad_unit_ids.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
@@ -14,7 +12,6 @@ import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_useca
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
-import 'package:sticker_manager_wc22/ui/ads/usecases/load_banner_ad_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 
@@ -27,7 +24,6 @@ class SectionController extends GetxController {
   final WatchSectionStatsUseCase _watchStats;
   final IncrementStickerQuantityUseCase _incrementSticker;
   final ActiveAlbumService _activeAlbumService;
-  final LoadBannerAdUseCase _loadBannerUseCase;
 
   // Parameters
   final String sectionId;
@@ -46,10 +42,6 @@ class SectionController extends GetxController {
 
   StreamSubscription<SectionStats>? _sectionStatsSubscription;
 
-  // Ad
-  RxBool get isBannerReady => _loadBannerUseCase.isBannerReady;
-  BannerAd? get bannerAd => _loadBannerUseCase.bannerAd;
-
   SectionController(
     this._profileRepo,
     this._catalogRepo,
@@ -57,8 +49,7 @@ class SectionController extends GetxController {
     this._getStickers,
     this._watchStats,
     this._incrementSticker,
-    this._activeAlbumService,
-    this._loadBannerUseCase, {
+    this._activeAlbumService, {
     required this.sectionId,
     required this.sectionArgs,
   });
@@ -81,7 +72,6 @@ class SectionController extends GetxController {
   @override
   Future<void> onClose() async {
     await _sectionStatsSubscription?.cancel();
-    _loadBannerUseCase.dispose();
     super.onClose();
   }
 
@@ -111,7 +101,6 @@ class SectionController extends GetxController {
     _rebuildVisibleStickers();
 
     await _listenSectionStats(album);
-    await _loadBannerUseCase.call(adUnitId: AdUnitIds.sectionBanner);
   }
 
   // Actions
