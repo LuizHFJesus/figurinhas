@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sticker_manager_wc22/common/utils/constants.dart';
+import 'package:sticker_manager_wc22/ui/ads/widgets/banner_ad_widget.dart';
 
 class GradientHeaderScaffold extends StatefulWidget {
   final Widget title;
@@ -10,7 +11,7 @@ class GradientHeaderScaffold extends StatefulWidget {
   final Widget progressCard;
   final Widget body;
   final Widget? floatingActionButton;
-  final List<Widget>? persistentFooterButtons;
+  final String? bannerAdUnitId;
 
   final Widget? header;
   final Gradient? gradient;
@@ -29,7 +30,7 @@ class GradientHeaderScaffold extends StatefulWidget {
     this.actions,
     this.gradient,
     this.floatingActionButton,
-    this.persistentFooterButtons,
+    this.bannerAdUnitId,
     this.cardOverlapFraction = 0.5,
     this.horizontalPadding = 24,
     this.verticalPadding = 20,
@@ -71,7 +72,10 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-        floatingActionButton: widget.floatingActionButton,
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(bottom: 70),
+          child: widget.floatingActionButton,
+        ),
         body: Stack(
           children: [
             Positioned(
@@ -138,12 +142,20 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                     child: widget.body,
                   ),
                 ),
+
+                const SizedBox(height: 70),
               ],
             ),
+
+            if (widget.bannerAdUnitId != null)
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: SafeArea(
+                  child: BannerAdWidget(adUnitId: widget.bannerAdUnitId!),
+                ),
+              ),
           ],
         ),
-        persistentFooterAlignment: AlignmentDirectional.center,
-        persistentFooterButtons: widget.persistentFooterButtons,
       ),
     );
   }
