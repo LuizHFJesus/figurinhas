@@ -14,6 +14,16 @@ class StickerQtyStore {
     if (n.value != value) n.value = value;
   }
 
+  void resetOthers(Set<String> keepCodes) {
+    for (final entry in _notifiers.entries) {
+      if (!keepCodes.contains(entry.key)) {
+        if (entry.value.value != 0) {
+          entry.value.value = 0;
+        }
+      }
+    }
+  }
+
   void dispose() {
     for (final n in _notifiers.values) {
       n.dispose();

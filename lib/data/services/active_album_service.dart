@@ -17,17 +17,18 @@ class ActiveAlbumService extends GetxService {
 
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
   final Rx<AlbumStats?> albumStats = Rx<AlbumStats?>(null);
-  
+
   // Sticker States
   final StickerQtyStore qtyStore = StickerQtyStore();
   StreamSubscription<List<StickerState>>? _stickersState;
 
   int quantityOf(String code) => qtyStore.get(code);
+
   ValueListenable<int> listenableOf(String code) => qtyStore.listenableOf(code);
 
   @override
   void onClose() {
-    _stickersState?.cancel();
+    unawaited(_stickersState?.cancel());
     qtyStore.dispose();
     super.onClose();
   }
@@ -35,22 +36,24 @@ class ActiveAlbumService extends GetxService {
   void setActiveAlbum(UserAlbum album) {
     activeAlbum.value = album;
     _watchStats(album);
-    _watchStickers(album);
+    unawaited(_watchStickers(album));
   }
 
   void _watchStats(UserAlbum album) {
     _watchAlbumStats
         .watch(userAlbumId: album.userAlbumId, albumId: album.albumId)
         .listen((stats) {
-      albumStats.value = stats;
-    });
+          albumStats.value = stats;
+        });
   }
 
   Future<void> _watchStickers(UserAlbum album) async {
     // Initial Load
-    final initialQuantities = await _stateRepository.getAllQuantitiesForUserAlbum(album.userAlbumId);
-    
-    for(final e in initialQuantities.entries) {
+    final initialQuantities = await _stateRepository
+        .getAllQuantitiesForUserAlbum(album.userAlbumId);
+
+    qtyStore.resetOthers(initialQuantities.keys.toSet());
+    for (final e in initialQuantities.entries) {
       qtyStore.set(e.key, e.value);
     }
 
@@ -59,9 +62,12 @@ class ActiveAlbumService extends GetxService {
     _stickersState = _stateRepository
         .watchAllStatesForUserAlbum(album.userAlbumId)
         .listen((states) {
-      for (final s in states) {
-        qtyStore.set(s.code, s.quantity);
-      }
-    });
+          final activeCodes = <String>{};
+          for (final s in states) {
+            activeCodes.add(s.code);
+            qtyStore.set(s.code, s.quantity);
+          }
+          qtyStore.resetOthers(activeCodes);
+        });
   }
 }
