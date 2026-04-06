@@ -121,6 +121,16 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
         .userAlbumIdEqualTo(userAlbumId)
         .watch(fireImmediately: true);
   }
+  
+  @override
+  Future<void> deleteAllStickerStates(String userAlbumId) async {
+    await _isar.writeTxn(() async {
+      await _isar.stickerStateEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .deleteAll();
+    });
+  }
 
   @override
   Future<AlbumStatsStateEntity?> getAlbumStats(String userAlbumId) {
@@ -167,6 +177,43 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
   Future<void> upsertSectionStats(SectionStatsStateEntity e) async {
     await _isar.writeTxn(() async {
       await _isar.sectionStatsStateEntitys.put(e);
+    });
+  }
+
+  @override
+  Future<void> resetAllStats(String userAlbumId) async {
+    await _isar.writeTxn(() async {
+      // Find and update album stats
+      final albumStats = await _isar.albumStatsStateEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .findAll();
+      
+      for (final e in albumStats) {
+        e.obtainedStickers = 0;
+        e.missingStickers = e.totalStickers;
+        e.duplicateStickers = 0;
+        e.obtainedFoils = 0;
+        e.missingFoils = e.totalFoils;
+        e.progress = 0.0;
+        e.updatedAt = DateTime.now();
+        await _isar.albumStatsStateEntitys.put(e);
+      }
+
+      // Find and update section stats
+      final sectionStats = await _isar.sectionStatsStateEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .findAll();
+
+      for (final e in sectionStats) {
+        e.obtainedStickers = 0;
+        e.missingStickers = e.totalStickers;
+        e.duplicateStickers = 0;
+        e.progress = 0.0;
+        e.updatedAt = DateTime.now();
+        await _isar.sectionStatsStateEntitys.put(e);
+      }
     });
   }
 }

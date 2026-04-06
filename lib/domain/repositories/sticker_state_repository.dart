@@ -16,4 +16,6 @@ abstract class StickerStateRepository {
   Future<Map<String, int>> getAllQuantitiesForUserAlbum(String userAlbumId);
 
   Stream<List<StickerState>> watchAllStatesForUserAlbum(String userAlbumId);
+
+  Future<void> clearUserAlbumStates(String userAlbumId);
 }

@@ -8,6 +8,7 @@ import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_groups_and_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/home/models/group_sections.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 
@@ -18,6 +19,7 @@ class HomeController extends GetxController {
   final WatchSectionStatsUseCase _watchSectionStats;
   final GetAllGroupsAndSectionsUseCase _getAllGroupsAndSections;
   final ShareCoordinator _shareCoordinator;
+  final MoreOptionsCoordinator _moreOptionsCoordinator;
   final ActiveAlbumService _activeAlbumService;
 
   // State
@@ -37,6 +39,7 @@ class HomeController extends GetxController {
     this._watchSectionStats,
     this._getAllGroupsAndSections,
     this._shareCoordinator,
+    this._moreOptionsCoordinator,
     this._activeAlbumService,
   );
 
@@ -79,6 +82,11 @@ class HomeController extends GetxController {
   Future<void> showShareOptions(BuildContext context) async {
     if (activeAlbum.value == null) return;
     await _shareCoordinator.showShareOptions(context, activeAlbum.value!);
+  }
+
+  Future<void> showMoreOptions(BuildContext context) async {
+    if (activeAlbum.value == null) return;
+    await _moreOptionsCoordinator.showMoreOptions(context, activeAlbum.value!);
   }
 
   Future<void> scrollToTop() async {

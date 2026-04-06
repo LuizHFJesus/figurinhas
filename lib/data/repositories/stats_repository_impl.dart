@@ -136,6 +136,11 @@ class StatsRepositoryImpl implements StatsRepository {
     });
   }
 
+  @override
+  Future<void> resetUserAlbumStats(String userAlbumId) async {
+    await _local.resetAllStats(userAlbumId);
+  }
+
   // --- Internal update helpers used by Data StatsUpdater ---
   Future<void> putAlbumStats(AlbumStatsStateEntity e) =>
       _local.upsertAlbumStats(e);
