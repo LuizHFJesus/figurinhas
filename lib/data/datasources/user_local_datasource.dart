@@ -30,6 +30,8 @@ abstract class UserLocalDataSource {
   Future<List<StickerStateEntity>> getAllStickerStates(String userAlbumId);
 
   Stream<List<StickerStateEntity>> watchAllStickerStates(String userAlbumId);
+  
+  Future<void> deleteAllStickerStates(String userAlbumId);
 
   // Stats (read/write)
   Future<AlbumStatsStateEntity?> getAlbumStats(String userAlbumId);
@@ -43,4 +45,6 @@ abstract class UserLocalDataSource {
   Stream<SectionStatsStateEntity?> watchSectionStats(String sectionStatsId);
 
   Future<void> upsertSectionStats(SectionStatsStateEntity e);
+
+  Future<void> resetAllStats(String userAlbumId);
 }

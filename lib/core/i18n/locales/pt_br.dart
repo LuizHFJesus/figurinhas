@@ -53,4 +53,12 @@ const Map<String, String> ptBR = {
   'share_lbl_album': 'Álbum',
   'share_lbl_edition': 'Edição',
   'app_link': 'https://play.google.com/store/apps/details?id=dev.luizhfj.wc22.stickermanager',
+  
+  // More Options
+  'more_options_title': 'Mais Opções',
+  'more_options_clear_album': 'Limpar álbum',
+  'more_options_clear_album_title': 'Limpar álbum?',
+  'more_options_clear_album_desc': 'Esta ação apagará todas as figurinhas marcadas e não poderá ser desfeita.',
+  'more_options_album_cleared': 'Álbum limpo com sucesso!',
+  'cancel': 'Cancelar',
 };

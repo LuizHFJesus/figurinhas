@@ -6,12 +6,14 @@ import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
+import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_groups_and_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stats_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
@@ -68,6 +70,21 @@ class HomeBinding extends Bindings {
       fenix: true,
     );
 
+    if (!Get.isRegistered<ClearAlbumUseCase>()) {
+      Get.lazyPut(
+        () => ClearAlbumUseCase(
+          Get.find<StickerStateRepository>(),
+          Get.find<StatsRepository>(),
+        ),
+        fenix: true,
+      );
+    }
+
+    Get.lazyPut(
+      () => MoreOptionsCoordinator(Get.find<ClearAlbumUseCase>()),
+      fenix: true,
+    );
+
     Get.put(
       HomeController(
         Get.find<UserProfileRepository>(),
@@ -75,6 +92,7 @@ class HomeBinding extends Bindings {
         Get.find<WatchSectionStatsUseCase>(),
         Get.find<GetAllGroupsAndSectionsUseCase>(),
         Get.find<ShareCoordinator>(),
+        Get.find<MoreOptionsCoordinator>(),
         Get.find<ActiveAlbumService>(),
       ),
     );

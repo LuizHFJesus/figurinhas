@@ -70,4 +70,9 @@ class StickerStateRepositoryImpl implements StickerStateRepository {
       return list.map(EntityMappers.toStickerState).toList(growable: false);
     });
   }
+
+  @override
+  Future<void> clearUserAlbumStates(String userAlbumId) async {
+    await _local.deleteAllStickerStates(userAlbumId);
+  }
 }
