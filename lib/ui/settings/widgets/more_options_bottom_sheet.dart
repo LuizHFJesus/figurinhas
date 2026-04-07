@@ -20,6 +20,14 @@ class MoreOptionsBottomSheet extends StatelessWidget {
             MoreOptionType.clearAlbum,
           ),
         ),
+        BottomSheetTile(
+          icon: 'check-circle',
+          label: 'more_options_fill_album'.tr,
+          onTap: () => Navigator.pop(
+            context,
+            MoreOptionType.fillAlbum,
+          ),
+        ),
       ],
     );
   }

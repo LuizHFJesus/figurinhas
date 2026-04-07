@@ -75,4 +75,9 @@ class StickerStateRepositoryImpl implements StickerStateRepository {
   Future<void> clearUserAlbumStates(String userAlbumId) async {
     await _local.deleteAllStickerStates(userAlbumId);
   }
+
+  @override
+  Future<void> fillUserAlbumStates(String userAlbumId, List<String> allCodes) async {
+    await _local.fillAllStickerStates(userAlbumId, allCodes);
+  }
 }

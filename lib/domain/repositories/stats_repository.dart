@@ -29,4 +29,6 @@ abstract class StatsRepository {
   });
 
   Future<void> resetUserAlbumStats(String userAlbumId);
+
+  Future<void> fillUserAlbumStats(String userAlbumId);
 }

@@ -133,6 +133,45 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
   }
 
   @override
+  Future<void> fillAllStickerStates(
+    String userAlbumId,
+    List<String> allCodes,
+  ) async {
+    final now = DateTime.now();
+    await _isar.writeTxn(() async {
+      final existingStates = await _isar.stickerStateEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .findAll();
+
+      final existingMap = {for (final e in existingStates) e.code: e};
+      final toPut = <StickerStateEntity>[];
+
+      for (final code in allCodes) {
+        var state = existingMap[code];
+
+        if (state == null) {
+          state = StickerStateEntity()
+            ..stateId = '$userAlbumId:$code'
+            ..userAlbumId = userAlbumId
+            ..code = code
+            ..quantity = 1
+            ..wanted = false
+            ..forTrade = false
+            ..updatedAt = now;
+          toPut.add(state);
+        } else if (state.quantity == 0) {
+          state.quantity = 1;
+          state.updatedAt = now;
+          toPut.add(state);
+        }
+      }
+
+      if (toPut.isNotEmpty) await _isar.stickerStateEntitys.putAll(toPut);
+    });
+  }
+
+  @override
   Future<AlbumStatsStateEntity?> getAlbumStats(String userAlbumId) {
     return _isar.albumStatsStateEntitys
         .filter()
@@ -211,6 +250,39 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
         e.missingStickers = e.totalStickers;
         e.duplicateStickers = 0;
         e.progress = 0.0;
+        e.updatedAt = DateTime.now();
+        await _isar.sectionStatsStateEntitys.put(e);
+      }
+    });
+  }
+
+  @override
+  Future<void> fillAllStats(String userAlbumId) async {
+    await _isar.writeTxn(() async {
+      final albumStats = await _isar.albumStatsStateEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .findAll();
+
+      for (final e in albumStats) {
+        e.obtainedStickers = e.totalStickers;
+        e.missingStickers = 0;
+        e.obtainedFoils = e.totalFoils;
+        e.missingFoils = 0;
+        e.progress = 1.0;
+        e.updatedAt = DateTime.now();
+        await _isar.albumStatsStateEntitys.put(e);
+      }
+
+      final sectionStats = await _isar.sectionStatsStateEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .findAll();
+
+      for (final e in sectionStats) {
+        e.obtainedStickers = e.totalStickers;
+        e.missingStickers = 0;
+        e.progress = 1.0;
         e.updatedAt = DateTime.now();
         await _isar.sectionStatsStateEntitys.put(e);
       }

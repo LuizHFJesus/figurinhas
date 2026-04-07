@@ -8,6 +8,7 @@ import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.d
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_groups_and_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
@@ -80,8 +81,22 @@ class HomeBinding extends Bindings {
       );
     }
 
+    if (!Get.isRegistered<FillAlbumUseCase>()) {
+      Get.lazyPut(
+        () => FillAlbumUseCase(
+          Get.find<StickerStateRepository>(),
+          Get.find<StatsRepository>(),
+          Get.find<CatalogRepository>(),
+        ),
+        fenix: true,
+      );
+    }
+
     Get.lazyPut(
-      () => MoreOptionsCoordinator(Get.find<ClearAlbumUseCase>()),
+      () => MoreOptionsCoordinator(
+        Get.find<ClearAlbumUseCase>(),
+        Get.find<FillAlbumUseCase>(),
+      ),
       fenix: true,
     );
 

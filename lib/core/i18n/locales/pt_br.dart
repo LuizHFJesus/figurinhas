@@ -60,5 +60,9 @@ const Map<String, String> ptBR = {
   'more_options_clear_album_title': 'Limpar álbum?',
   'more_options_clear_album_desc': 'Esta ação apagará todas as figurinhas marcadas e não poderá ser desfeita.',
   'more_options_album_cleared': 'Álbum limpo com sucesso!',
+  'more_options_fill_album': 'Completar álbum',
+  'more_options_fill_album_title': 'Completar álbum?',
+  'more_options_fill_album_desc': 'Esta ação marcará todas as figurinhas não marcadas e não poderá ser desfeita.',
+  'more_options_album_filled': 'Álbum completado com sucesso!',
   'cancel': 'Cancelar',
 };
