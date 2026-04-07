@@ -18,4 +18,6 @@ abstract class StickerStateRepository {
   Stream<List<StickerState>> watchAllStatesForUserAlbum(String userAlbumId);
 
   Future<void> clearUserAlbumStates(String userAlbumId);
+
+  Future<void> fillUserAlbumStates(String userAlbumId, List<String> allCodes);
 }

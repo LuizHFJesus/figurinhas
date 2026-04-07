@@ -33,6 +33,8 @@ abstract class UserLocalDataSource {
   
   Future<void> deleteAllStickerStates(String userAlbumId);
 
+  Future<void> fillAllStickerStates(String userAlbumId, List<String> allCodes);
+
   // Stats (read/write)
   Future<AlbumStatsStateEntity?> getAlbumStats(String userAlbumId);
 
@@ -47,4 +49,6 @@ abstract class UserLocalDataSource {
   Future<void> upsertSectionStats(SectionStatsStateEntity e);
 
   Future<void> resetAllStats(String userAlbumId);
+
+  Future<void> fillAllStats(String userAlbumId);
 }
