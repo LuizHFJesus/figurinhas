@@ -142,8 +142,6 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                     child: widget.body,
                   ),
                 ),
-
-                const SizedBox(height: 70),
               ],
             ),
 
