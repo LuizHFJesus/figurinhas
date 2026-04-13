@@ -28,6 +28,14 @@ class MoreOptionsBottomSheet extends StatelessWidget {
             MoreOptionType.fillAlbum,
           ),
         ),
+        BottomSheetTile(
+          icon: 'clipboard',
+          label: 'more_options_rate_app'.tr,
+          onTap: () => Navigator.pop(
+            context,
+            MoreOptionType.rateApp,
+          ),
+        ),
       ],
     );
   }
