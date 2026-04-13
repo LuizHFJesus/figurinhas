@@ -7,10 +7,12 @@ import 'package:sticker_manager_wc22/ui/common/widgets/dialog/dialog_action.dart
 import 'package:sticker_manager_wc22/ui/common/widgets/dialog/text_alert_dialog.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/show_snack_bar.dart';
 import 'package:sticker_manager_wc22/ui/settings/widgets/more_options_bottom_sheet.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 enum MoreOptionType {
   clearAlbum,
   fillAlbum,
+  rateApp,
 }
 
 class MoreOptionsCoordinator {
@@ -42,6 +44,8 @@ class MoreOptionsCoordinator {
         await _clearAlbum(context, album);
       case MoreOptionType.fillAlbum:
         await _fillAlbum(context, album);
+      case MoreOptionType.rateApp:
+        await _rateApp();
     }
   }
 
@@ -104,6 +108,13 @@ class MoreOptionsCoordinator {
             type: AppSnackBarType.success
         );
       }
+    }
+  }
+
+  Future<void> _rateApp() async {
+    final url = 'app_link'.tr;
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url, mode: LaunchMode.externalApplication);
     }
   }
 }
