@@ -18,6 +18,7 @@ import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/overview/models/overview_view_model.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 
 class OverviewController extends GetxController {
@@ -26,6 +27,7 @@ class OverviewController extends GetxController {
   final GetActiveUserAlbumUseCase _getActiveAlbum;
   final GetAllSectionsUseCase _getAllSections;
   final GetAllStickersUseCase _getAllStickers;
+  final MoreOptionsCoordinator _moreOptionsCoordinator;
   final SearchSectionsUseCase _searchSections;
   final IncrementStickerQuantityUseCase _incrementSticker;
   final ShareCoordinator _shareCoordinator;
@@ -65,6 +67,7 @@ class OverviewController extends GetxController {
     this._getActiveAlbum,
     this._getAllSections,
     this._getAllStickers,
+    this._moreOptionsCoordinator,
     this._searchSections,
     this._incrementSticker,
     this._shareCoordinator,
@@ -283,6 +286,11 @@ class OverviewController extends GetxController {
   Future<void> showShareOptions(BuildContext context) async {
     if (activeAlbum.value == null) return;
     await _shareCoordinator.showShareOptions(context, activeAlbum.value!);
+  }
+
+  Future<void> showMoreOptions(BuildContext context) async {
+    if (activeAlbum.value == null) return;
+    await _moreOptionsCoordinator.showMoreOptions(context, activeAlbum.value!);
   }
 
   Future<void> scrollToTop() async {
