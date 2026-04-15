@@ -46,6 +46,7 @@ class OverviewView extends GetView<OverviewController> {
             child: showSearchButton
                 ? IconButton(
                     icon: SvgIcon('search', color: lightColorScheme.onPrimary),
+                    visualDensity: VisualDensity.compact,
                     onPressed: controller.focusSearch,
                   )
                 : const SizedBox.shrink(),
