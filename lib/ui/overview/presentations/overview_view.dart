@@ -57,6 +57,12 @@ class OverviewView extends GetView<OverviewController> {
           visualDensity: VisualDensity.compact,
           onPressed: () => controller.showShareOptions(context),
         ),
+        IconButton(
+          icon: SvgIcon('more-vertical', color: lightColorScheme.onPrimary),
+          padding: EdgeInsets.zero,
+          visualDensity: VisualDensity.compact,
+          onPressed: () => controller.showMoreOptions(context),
+        ),
       ],
 
       progressCard: Obx(

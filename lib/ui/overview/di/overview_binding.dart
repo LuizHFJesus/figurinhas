@@ -7,6 +7,8 @@ import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
+import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
@@ -14,6 +16,7 @@ import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stats_text_usecase.dart';
 import 'package:sticker_manager_wc22/ui/share/usecases/generate_share_stickers_text_usecase.dart';
@@ -76,6 +79,16 @@ class OverviewBinding extends Bindings {
       );
     }
 
+    if (!Get.isRegistered<MoreOptionsCoordinator>()) {
+      Get.lazyPut(
+        () => MoreOptionsCoordinator(
+          Get.find<ClearAlbumUseCase>(),
+          Get.find<FillAlbumUseCase>(),
+        ),
+        fenix: true,
+      );
+    }
+
     // Controller
     Get.put(
       OverviewController(
@@ -83,6 +96,7 @@ class OverviewBinding extends Bindings {
         Get.find<GetActiveUserAlbumUseCase>(),
         Get.find<GetAllSectionsUseCase>(),
         Get.find<GetAllStickersUseCase>(),
+        Get.find<MoreOptionsCoordinator>(),
         Get.find<SearchSectionsUseCase>(),
         Get.find<IncrementStickerQuantityUseCase>(),
         Get.find<ShareCoordinator>(),
