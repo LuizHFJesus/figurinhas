@@ -5,6 +5,7 @@ import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/stats/models/stats_route_args.dart';
 
@@ -13,6 +14,7 @@ class StatsController extends GetxController {
   final GetActiveUserAlbumUseCase _getActiveAlbum;
   final WatchAlbumStatsUseCase _watchAlbumStats;
   final ShareCoordinator _shareCoordinator;
+  final MoreOptionsCoordinator _moreOptionsCoordinator;
 
   final StatsRouteArgs? args;
 
@@ -23,7 +25,8 @@ class StatsController extends GetxController {
     this._profileRepo,
     this._getActiveAlbum,
     this._watchAlbumStats,
-    this._shareCoordinator, {
+    this._shareCoordinator,
+    this._moreOptionsCoordinator, {
     required this.args,
   });
 
@@ -33,6 +36,11 @@ class StatsController extends GetxController {
     album.value = args?.album;
     stats.value = args?.stats;
     await _loadStats();
+  }
+
+  Future<void> showMoreOptions(BuildContext context) async {
+    if (album.value == null) return;
+    await _moreOptionsCoordinator.showMoreOptions(context, album.value!);
   }
 
   Future<void> showShareOptions(BuildContext context) async {
