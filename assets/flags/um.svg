@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-um" viewBox="0 0 512 512">
+  <path fill="#bd3d44" d="M0 0h512v512H0"/>
+  <path stroke="#fff" stroke-width="40" d="M0 58h512M0 137h512M0 216h512M0 295h512M0 374h512M0 453h512"/>
+  <path fill="#192f5d" d="M0 0h390v275H0z"/>
+  <g fill="#fff" transform="translate(0,-15)">
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(17.5,27.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(82.5,27.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(147.5,27.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(212.5,27.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(277.5,27.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(342.5,27.5)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(50,55)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(115,55)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(180,55)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(245,55)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(310,55)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(17.5,82.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(82.5,82.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(147.5,82.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(212.5,82.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(277.5,82.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(342.5,82.5)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(50,110)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(115,110)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(180,110)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(245,110)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(310,110)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(17.5,137.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(82.5,137.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(147.5,137.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(212.5,137.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(277.5,137.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(342.5,137.5)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(50,165)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(115,165)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(180,165)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(245,165)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(310,165)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(17.5,192.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(82.5,192.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(147.5,192.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(212.5,192.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(277.5,192.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(342.5,192.5)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(50,220)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(115,220)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(180,220)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(245,220)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(310,220)"/>
+
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(17.5,247.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(82.5,247.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(147.5,247.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(212.5,247.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(277.5,247.5)"/>
+    <polygon points="15,0 24.3,28.6 0,11 30,11 5.7,28.6" transform="translate(342.5,247.5)"/>
+  </g>
+</svg>

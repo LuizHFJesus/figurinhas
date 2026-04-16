@@ -3,10 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
   static final TextTheme textTheme = GoogleFonts.rajdhaniTextTheme().copyWith(
+    headlineMedium: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
     headlineSmall: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
     titleLarge: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
     titleMedium: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-    titleSmall: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+    titleSmall: const TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
     bodyLarge: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
     bodyMedium: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
     bodySmall:  const TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
