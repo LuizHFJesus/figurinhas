@@ -92,7 +92,7 @@ class CatalogRepositoryImpl implements CatalogRepository {
         for (final st in (sm['stickers'] as List<dynamic>)) {
           final stm = st as Map<String, dynamic>;
           final code = stm['code'] as String;
-          final displayName = stm['displayName'] as String;
+          final displayName = stm['displayName'] as String? ?? '';
           final isFoil = (stm['isFoil'] as bool?) ?? false;
 
           final stickerSearch = TextNormalizer.buildSearchText([

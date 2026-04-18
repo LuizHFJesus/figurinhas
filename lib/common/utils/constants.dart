@@ -8,6 +8,6 @@ class AppConstants {
     colors: [AppPalette.brand, AppPalette.brandDark],
   );
 
-  static const defaultAlbumId = '2022FWC';
-  static const defaultAlbumJson = 'assets/data/2022fwc-data.json';
+  static const defaultAlbumId = '2026FWC';
+  static const defaultAlbumJson = 'assets/data/2026fwc-data.json';
 }
