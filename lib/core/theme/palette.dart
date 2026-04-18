@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 class AppPalette {
-  static const brand = Color(0xFF9E0C36);
-  static const brandDark = Color(0xFF22010A);
+  static const brand = Color(0xFF1A1A1A);
+  static const brandDark = Color(0xFF000000);
   static const successGreen = Color(0xFF54A174);
   static const successGreenDark = Color(0xFF7EDFA8);
   static const accentGold = Color(0xFFFFC244);
