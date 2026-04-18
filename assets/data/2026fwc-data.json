@@ -1,0 +1,4534 @@
+{
+  "id": "2026FWC",
+  "edition": "2026 World Cup",
+  "version": "0",
+  "groups": [
+    {
+      "id": "OTHERS",
+      "name": "Others",
+      "sections": [
+        {
+          "id": "SPECIALS",
+          "name": "Specials",
+          "icon": "ic_specials",
+          "emoji": "⭐",
+          "tag": "FWC",
+          "stickers": [
+            {
+              "code": "00",
+              "isFoil": true
+            },
+            {
+              "code": "FWC1",
+              "isFoil": false
+            },
+            {
+              "code": "FWC2",
+              "isFoil": true
+            },
+            {
+              "code": "FWC3",
+              "isFoil": true
+            },
+            {
+              "code": "FWC4",
+              "isFoil": true
+            },
+            {
+              "code": "FWC5",
+              "isFoil": true
+            },
+            {
+              "code": "FWC6",
+              "isFoil": true
+            },
+            {
+              "code": "FWC7",
+              "isFoil": true
+            },
+            {
+              "code": "FWC8",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "MUSEUM",
+          "name": "Museum",
+          "icon": "ic_museum",
+          "emoji": "🏆",
+          "tag": "FWC",
+          "stickers": [
+            {
+              "code": "FWC9",
+              "isFoil": true
+            },
+            {
+              "code": "FWC10",
+              "isFoil": true
+            },
+            {
+              "code": "FWC11",
+              "isFoil": true
+            },
+            {
+              "code": "FWC12",
+              "isFoil": true
+            },
+            {
+              "code": "FWC13",
+              "isFoil": true
+            },
+            {
+              "code": "FWC14",
+              "isFoil": true
+            },
+            {
+              "code": "FWC15",
+              "isFoil": true
+            },
+            {
+              "code": "FWC16",
+              "isFoil": true
+            },
+            {
+              "code": "FWC17",
+              "isFoil": true
+            },
+            {
+              "code": "FWC18",
+              "isFoil": true
+            },
+            {
+              "code": "FWC19",
+              "isFoil": true
+            }
+          ]
+        },
+        {
+          "id": "COCA_COLA",
+          "name": "Coca-Cola",
+          "icon": "coca-cola",
+          "emoji": "🥤",
+          "tag": "CC",
+          "stickers": [
+            {
+              "code": "CC1",
+              "displayName": "Lamine Yamal",
+              "isFoil": false
+            },
+            {
+              "code": "CC2",
+              "displayName": "Joshua Kimmich",
+              "isFoil": false
+            },
+            {
+              "code": "CC3",
+              "displayName": "Harry Kane",
+              "isFoil": false
+            },
+            {
+              "code": "CC4",
+              "displayName": "Santiago Giménez",
+              "isFoil": false
+            },
+            {
+              "code": "CC5",
+              "displayName": "Joško Gvardiol",
+              "isFoil": false
+            },
+            {
+              "code": "CC6",
+              "displayName": "Federico Valverde",
+              "isFoil": false
+            },
+            {
+              "code": "CC7",
+              "displayName": "Jefferson Lerma",
+              "isFoil": false
+            },
+            {
+              "code": "CC8",
+              "displayName": "Enner Valencia",
+              "isFoil": false
+            },
+            {
+              "code": "CC9",
+              "displayName": "Gabriel Magalhães",
+              "isFoil": false
+            },
+            {
+              "code": "CC10",
+              "displayName": "Virgil van Dijk",
+              "isFoil": false
+            },
+            {
+              "code": "CC11",
+              "displayName": "Alphonso Davies",
+              "isFoil": false
+            },
+            {
+              "code": "CC12",
+              "displayName": "Emiliano Martínez",
+              "isFoil": false
+            },
+            {
+              "code": "CC13",
+              "displayName": "Raúl Jiménez",
+              "isFoil": false
+            },
+            {
+              "code": "CC14",
+              "displayName": "Lautaro Martínez",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_A",
+      "name": "Group A",
+      "sections": [
+        {
+          "id": "MEXICO",
+          "name": "Mexico",
+          "icon": "mx",
+          "emoji": "🇲🇽",
+          "tag": "MEX",
+          "stickers": [
+            {
+              "code": "MEX1",
+              "isFoil": true
+            },
+            {
+              "code": "MEX2",
+              "isFoil": false
+            },
+            {
+              "code": "MEX3",
+              "isFoil": false
+            },
+            {
+              "code": "MEX4",
+              "isFoil": false
+            },
+            {
+              "code": "MEX5",
+              "isFoil": false
+            },
+            {
+              "code": "MEX6",
+              "isFoil": false
+            },
+            {
+              "code": "MEX7",
+              "isFoil": false
+            },
+            {
+              "code": "MEX8",
+              "isFoil": false
+            },
+            {
+              "code": "MEX9",
+              "isFoil": false
+            },
+            {
+              "code": "MEX10",
+              "isFoil": false
+            },
+            {
+              "code": "MEX11",
+              "isFoil": false
+            },
+            {
+              "code": "MEX12",
+              "isFoil": false
+            },
+            {
+              "code": "MEX13",
+              "isFoil": false
+            },
+            {
+              "code": "MEX14",
+              "isFoil": false
+            },
+            {
+              "code": "MEX15",
+              "isFoil": false
+            },
+            {
+              "code": "MEX16",
+              "isFoil": false
+            },
+            {
+              "code": "MEX17",
+              "isFoil": false
+            },
+            {
+              "code": "MEX18",
+              "isFoil": false
+            },
+            {
+              "code": "MEX19",
+              "isFoil": false
+            },
+            {
+              "code": "MEX20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SOUTH_AFRICA",
+          "name": "South Africa",
+          "icon": "za",
+          "emoji": "🇿🇦",
+          "tag": "RSA",
+          "stickers": [
+            {
+              "code": "RSA1",
+              "isFoil": true
+            },
+            {
+              "code": "RSA2",
+              "isFoil": false
+            },
+            {
+              "code": "RSA3",
+              "isFoil": false
+            },
+            {
+              "code": "RSA4",
+              "isFoil": false
+            },
+            {
+              "code": "RSA5",
+              "isFoil": false
+            },
+            {
+              "code": "RSA6",
+              "isFoil": false
+            },
+            {
+              "code": "RSA7",
+              "isFoil": false
+            },
+            {
+              "code": "RSA8",
+              "isFoil": false
+            },
+            {
+              "code": "RSA9",
+              "isFoil": false
+            },
+            {
+              "code": "RSA10",
+              "isFoil": false
+            },
+            {
+              "code": "RSA11",
+              "isFoil": false
+            },
+            {
+              "code": "RSA12",
+              "isFoil": false
+            },
+            {
+              "code": "RSA13",
+              "isFoil": false
+            },
+            {
+              "code": "RSA14",
+              "isFoil": false
+            },
+            {
+              "code": "RSA15",
+              "isFoil": false
+            },
+            {
+              "code": "RSA16",
+              "isFoil": false
+            },
+            {
+              "code": "RSA17",
+              "isFoil": false
+            },
+            {
+              "code": "RSA18",
+              "isFoil": false
+            },
+            {
+              "code": "RSA19",
+              "isFoil": false
+            },
+            {
+              "code": "RSA20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SOUTH_KOREA",
+          "name": "South Korea",
+          "icon": "kr",
+          "emoji": "🇰🇷",
+          "tag": "KOR",
+          "stickers": [
+            {
+              "code": "KOR1",
+              "isFoil": true
+            },
+            {
+              "code": "KOR2",
+              "isFoil": false
+            },
+            {
+              "code": "KOR3",
+              "isFoil": false
+            },
+            {
+              "code": "KOR4",
+              "isFoil": false
+            },
+            {
+              "code": "KOR5",
+              "isFoil": false
+            },
+            {
+              "code": "KOR6",
+              "isFoil": false
+            },
+            {
+              "code": "KOR7",
+              "isFoil": false
+            },
+            {
+              "code": "KOR8",
+              "isFoil": false
+            },
+            {
+              "code": "KOR9",
+              "isFoil": false
+            },
+            {
+              "code": "KOR10",
+              "isFoil": false
+            },
+            {
+              "code": "KOR11",
+              "isFoil": false
+            },
+            {
+              "code": "KOR12",
+              "isFoil": false
+            },
+            {
+              "code": "KOR13",
+              "isFoil": false
+            },
+            {
+              "code": "KOR14",
+              "isFoil": false
+            },
+            {
+              "code": "KOR15",
+              "isFoil": false
+            },
+            {
+              "code": "KOR16",
+              "isFoil": false
+            },
+            {
+              "code": "KOR17",
+              "isFoil": false
+            },
+            {
+              "code": "KOR18",
+              "isFoil": false
+            },
+            {
+              "code": "KOR19",
+              "isFoil": false
+            },
+            {
+              "code": "KOR20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "CZECH_REPUBLIC",
+          "name": "Czech Republic",
+          "icon": "cz",
+          "emoji": "🇨🇿",
+          "tag": "CZE",
+          "stickers": [
+            {
+              "code": "CZE1",
+              "isFoil": true
+            },
+            {
+              "code": "CZE2",
+              "isFoil": false
+            },
+            {
+              "code": "CZE3",
+              "isFoil": false
+            },
+            {
+              "code": "CZE4",
+              "isFoil": false
+            },
+            {
+              "code": "CZE5",
+              "isFoil": false
+            },
+            {
+              "code": "CZE6",
+              "isFoil": false
+            },
+            {
+              "code": "CZE7",
+              "isFoil": false
+            },
+            {
+              "code": "CZE8",
+              "isFoil": false
+            },
+            {
+              "code": "CZE9",
+              "isFoil": false
+            },
+            {
+              "code": "CZE10",
+              "isFoil": false
+            },
+            {
+              "code": "CZE11",
+              "isFoil": false
+            },
+            {
+              "code": "CZE12",
+              "isFoil": false
+            },
+            {
+              "code": "CZE13",
+              "isFoil": false
+            },
+            {
+              "code": "CZE14",
+              "isFoil": false
+            },
+            {
+              "code": "CZE15",
+              "isFoil": false
+            },
+            {
+              "code": "CZE16",
+              "isFoil": false
+            },
+            {
+              "code": "CZE17",
+              "isFoil": false
+            },
+            {
+              "code": "CZE18",
+              "isFoil": false
+            },
+            {
+              "code": "CZE19",
+              "isFoil": false
+            },
+            {
+              "code": "CZE20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_B",
+      "name": "Group B",
+      "sections": [
+        {
+          "id": "CANADA",
+          "name": "Canada",
+          "icon": "ca",
+          "emoji": "🇨🇦",
+          "tag": "CAN",
+          "stickers": [
+            {
+              "code": "CAN1",
+              "isFoil": true
+            },
+            {
+              "code": "CAN2",
+              "isFoil": false
+            },
+            {
+              "code": "CAN3",
+              "isFoil": false
+            },
+            {
+              "code": "CAN4",
+              "isFoil": false
+            },
+            {
+              "code": "CAN5",
+              "isFoil": false
+            },
+            {
+              "code": "CAN6",
+              "isFoil": false
+            },
+            {
+              "code": "CAN7",
+              "isFoil": false
+            },
+            {
+              "code": "CAN8",
+              "isFoil": false
+            },
+            {
+              "code": "CAN9",
+              "isFoil": false
+            },
+            {
+              "code": "CAN10",
+              "isFoil": false
+            },
+            {
+              "code": "CAN11",
+              "isFoil": false
+            },
+            {
+              "code": "CAN12",
+              "isFoil": false
+            },
+            {
+              "code": "CAN13",
+              "isFoil": false
+            },
+            {
+              "code": "CAN14",
+              "isFoil": false
+            },
+            {
+              "code": "CAN15",
+              "isFoil": false
+            },
+            {
+              "code": "CAN16",
+              "isFoil": false
+            },
+            {
+              "code": "CAN17",
+              "isFoil": false
+            },
+            {
+              "code": "CAN18",
+              "isFoil": false
+            },
+            {
+              "code": "CAN19",
+              "isFoil": false
+            },
+            {
+              "code": "CAN20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "BOSNIA",
+          "name": "Bosnia and Herzegovina",
+          "icon": "ba",
+          "emoji": "🇧🇦",
+          "tag": "BIH",
+          "stickers": [
+            {
+              "code": "BIH1",
+              "isFoil": true
+            },
+            {
+              "code": "BIH2",
+              "isFoil": false
+            },
+            {
+              "code": "BIH3",
+              "isFoil": false
+            },
+            {
+              "code": "BIH4",
+              "isFoil": false
+            },
+            {
+              "code": "BIH5",
+              "isFoil": false
+            },
+            {
+              "code": "BIH6",
+              "isFoil": false
+            },
+            {
+              "code": "BIH7",
+              "isFoil": false
+            },
+            {
+              "code": "BIH8",
+              "isFoil": false
+            },
+            {
+              "code": "BIH9",
+              "isFoil": false
+            },
+            {
+              "code": "BIH10",
+              "isFoil": false
+            },
+            {
+              "code": "BIH11",
+              "isFoil": false
+            },
+            {
+              "code": "BIH12",
+              "isFoil": false
+            },
+            {
+              "code": "BIH13",
+              "isFoil": false
+            },
+            {
+              "code": "BIH14",
+              "isFoil": false
+            },
+            {
+              "code": "BIH15",
+              "isFoil": false
+            },
+            {
+              "code": "BIH16",
+              "isFoil": false
+            },
+            {
+              "code": "BIH17",
+              "isFoil": false
+            },
+            {
+              "code": "BIH18",
+              "isFoil": false
+            },
+            {
+              "code": "BIH19",
+              "isFoil": false
+            },
+            {
+              "code": "BIH20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "QATAR",
+          "name": "Qatar",
+          "icon": "qa",
+          "emoji": "🇶🇦",
+          "tag": "QAT",
+          "stickers": [
+            {
+              "code": "QAT1",
+              "isFoil": true
+            },
+            {
+              "code": "QAT2",
+              "isFoil": false
+            },
+            {
+              "code": "QAT3",
+              "isFoil": false
+            },
+            {
+              "code": "QAT4",
+              "isFoil": false
+            },
+            {
+              "code": "QAT5",
+              "isFoil": false
+            },
+            {
+              "code": "QAT6",
+              "isFoil": false
+            },
+            {
+              "code": "QAT7",
+              "isFoil": false
+            },
+            {
+              "code": "QAT8",
+              "isFoil": false
+            },
+            {
+              "code": "QAT9",
+              "isFoil": false
+            },
+            {
+              "code": "QAT10",
+              "isFoil": false
+            },
+            {
+              "code": "QAT11",
+              "isFoil": false
+            },
+            {
+              "code": "QAT12",
+              "isFoil": false
+            },
+            {
+              "code": "QAT13",
+              "isFoil": false
+            },
+            {
+              "code": "QAT14",
+              "isFoil": false
+            },
+            {
+              "code": "QAT15",
+              "isFoil": false
+            },
+            {
+              "code": "QAT16",
+              "isFoil": false
+            },
+            {
+              "code": "QAT17",
+              "isFoil": false
+            },
+            {
+              "code": "QAT18",
+              "isFoil": false
+            },
+            {
+              "code": "QAT19",
+              "isFoil": false
+            },
+            {
+              "code": "QAT20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SWITZERLAND",
+          "name": "Switzerland",
+          "icon": "ch",
+          "emoji": "🇨🇭",
+          "tag": "SUI",
+          "stickers": [
+            {
+              "code": "SUI1",
+              "isFoil": true
+            },
+            {
+              "code": "SUI2",
+              "isFoil": false
+            },
+            {
+              "code": "SUI3",
+              "isFoil": false
+            },
+            {
+              "code": "SUI4",
+              "isFoil": false
+            },
+            {
+              "code": "SUI5",
+              "isFoil": false
+            },
+            {
+              "code": "SUI6",
+              "isFoil": false
+            },
+            {
+              "code": "SUI7",
+              "isFoil": false
+            },
+            {
+              "code": "SUI8",
+              "isFoil": false
+            },
+            {
+              "code": "SUI9",
+              "isFoil": false
+            },
+            {
+              "code": "SUI10",
+              "isFoil": false
+            },
+            {
+              "code": "SUI11",
+              "isFoil": false
+            },
+            {
+              "code": "SUI12",
+              "isFoil": false
+            },
+            {
+              "code": "SUI13",
+              "isFoil": false
+            },
+            {
+              "code": "SUI14",
+              "isFoil": false
+            },
+            {
+              "code": "SUI15",
+              "isFoil": false
+            },
+            {
+              "code": "SUI16",
+              "isFoil": false
+            },
+            {
+              "code": "SUI17",
+              "isFoil": false
+            },
+            {
+              "code": "SUI18",
+              "isFoil": false
+            },
+            {
+              "code": "SUI19",
+              "isFoil": false
+            },
+            {
+              "code": "SUI20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_C",
+      "name": "Group C",
+      "sections": [
+        {
+          "id": "BRAZIL",
+          "name": "Brazil",
+          "icon": "br",
+          "emoji": "🇧🇷",
+          "tag": "BRA",
+          "stickers": [
+            {
+              "code": "BRA1",
+              "isFoil": true
+            },
+            {
+              "code": "BRA2",
+              "isFoil": false
+            },
+            {
+              "code": "BRA3",
+              "isFoil": false
+            },
+            {
+              "code": "BRA4",
+              "isFoil": false
+            },
+            {
+              "code": "BRA5",
+              "isFoil": false
+            },
+            {
+              "code": "BRA6",
+              "isFoil": false
+            },
+            {
+              "code": "BRA7",
+              "isFoil": false
+            },
+            {
+              "code": "BRA8",
+              "isFoil": false
+            },
+            {
+              "code": "BRA9",
+              "isFoil": false
+            },
+            {
+              "code": "BRA10",
+              "isFoil": false
+            },
+            {
+              "code": "BRA11",
+              "isFoil": false
+            },
+            {
+              "code": "BRA12",
+              "isFoil": false
+            },
+            {
+              "code": "BRA13",
+              "isFoil": false
+            },
+            {
+              "code": "BRA14",
+              "isFoil": false
+            },
+            {
+              "code": "BRA15",
+              "isFoil": false
+            },
+            {
+              "code": "BRA16",
+              "isFoil": false
+            },
+            {
+              "code": "BRA17",
+              "isFoil": false
+            },
+            {
+              "code": "BRA18",
+              "isFoil": false
+            },
+            {
+              "code": "BRA19",
+              "isFoil": false
+            },
+            {
+              "code": "BRA20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "MOROCCO",
+          "name": "Morocco",
+          "icon": "ma",
+          "emoji": "🇲🇦",
+          "tag": "MAR",
+          "stickers": [
+            {
+              "code": "MAR1",
+              "isFoil": true
+            },
+            {
+              "code": "MAR2",
+              "isFoil": false
+            },
+            {
+              "code": "MAR3",
+              "isFoil": false
+            },
+            {
+              "code": "MAR4",
+              "isFoil": false
+            },
+            {
+              "code": "MAR5",
+              "isFoil": false
+            },
+            {
+              "code": "MAR6",
+              "isFoil": false
+            },
+            {
+              "code": "MAR7",
+              "isFoil": false
+            },
+            {
+              "code": "MAR8",
+              "isFoil": false
+            },
+            {
+              "code": "MAR9",
+              "isFoil": false
+            },
+            {
+              "code": "MAR10",
+              "isFoil": false
+            },
+            {
+              "code": "MAR11",
+              "isFoil": false
+            },
+            {
+              "code": "MAR12",
+              "isFoil": false
+            },
+            {
+              "code": "MAR13",
+              "isFoil": false
+            },
+            {
+              "code": "MAR14",
+              "isFoil": false
+            },
+            {
+              "code": "MAR15",
+              "isFoil": false
+            },
+            {
+              "code": "MAR16",
+              "isFoil": false
+            },
+            {
+              "code": "MAR17",
+              "isFoil": false
+            },
+            {
+              "code": "MAR18",
+              "isFoil": false
+            },
+            {
+              "code": "MAR19",
+              "isFoil": false
+            },
+            {
+              "code": "MAR20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "HAITI",
+          "name": "Haiti",
+          "icon": "ht",
+          "emoji": "🇭🇹",
+          "tag": "HAI",
+          "stickers": [
+            {
+              "code": "HAI1",
+              "isFoil": true
+            },
+            {
+              "code": "HAI2",
+              "isFoil": false
+            },
+            {
+              "code": "HAI3",
+              "isFoil": false
+            },
+            {
+              "code": "HAI4",
+              "isFoil": false
+            },
+            {
+              "code": "HAI5",
+              "isFoil": false
+            },
+            {
+              "code": "HAI6",
+              "isFoil": false
+            },
+            {
+              "code": "HAI7",
+              "isFoil": false
+            },
+            {
+              "code": "HAI8",
+              "isFoil": false
+            },
+            {
+              "code": "HAI9",
+              "isFoil": false
+            },
+            {
+              "code": "HAI10",
+              "isFoil": false
+            },
+            {
+              "code": "HAI11",
+              "isFoil": false
+            },
+            {
+              "code": "HAI12",
+              "isFoil": false
+            },
+            {
+              "code": "HAI13",
+              "isFoil": false
+            },
+            {
+              "code": "HAI14",
+              "isFoil": false
+            },
+            {
+              "code": "HAI15",
+              "isFoil": false
+            },
+            {
+              "code": "HAI16",
+              "isFoil": false
+            },
+            {
+              "code": "HAI17",
+              "isFoil": false
+            },
+            {
+              "code": "HAI18",
+              "isFoil": false
+            },
+            {
+              "code": "HAI19",
+              "isFoil": false
+            },
+            {
+              "code": "HAI20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SCOTLAND",
+          "name": "Scotland",
+          "icon": "gb-sct",
+          "emoji": "🏴",
+          "tag": "SCO",
+          "stickers": [
+            {
+              "code": "SCO1",
+              "isFoil": true
+            },
+            {
+              "code": "SCO2",
+              "isFoil": false
+            },
+            {
+              "code": "SCO3",
+              "isFoil": false
+            },
+            {
+              "code": "SCO4",
+              "isFoil": false
+            },
+            {
+              "code": "SCO5",
+              "isFoil": false
+            },
+            {
+              "code": "SCO6",
+              "isFoil": false
+            },
+            {
+              "code": "SCO7",
+              "isFoil": false
+            },
+            {
+              "code": "SCO8",
+              "isFoil": false
+            },
+            {
+              "code": "SCO9",
+              "isFoil": false
+            },
+            {
+              "code": "SCO10",
+              "isFoil": false
+            },
+            {
+              "code": "SCO11",
+              "isFoil": false
+            },
+            {
+              "code": "SCO12",
+              "isFoil": false
+            },
+            {
+              "code": "SCO13",
+              "isFoil": false
+            },
+            {
+              "code": "SCO14",
+              "isFoil": false
+            },
+            {
+              "code": "SCO15",
+              "isFoil": false
+            },
+            {
+              "code": "SCO16",
+              "isFoil": false
+            },
+            {
+              "code": "SCO17",
+              "isFoil": false
+            },
+            {
+              "code": "SCO18",
+              "isFoil": false
+            },
+            {
+              "code": "SCO19",
+              "isFoil": false
+            },
+            {
+              "code": "SCO20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_D",
+      "name": "Group D",
+      "sections": [
+        {
+          "id": "USA",
+          "name": "USA",
+          "icon": "us",
+          "emoji": "🇺🇸",
+          "tag": "USA",
+          "stickers": [
+            {
+              "code": "USA1",
+              "isFoil": true
+            },
+            {
+              "code": "USA2",
+              "isFoil": false
+            },
+            {
+              "code": "USA3",
+              "isFoil": false
+            },
+            {
+              "code": "USA4",
+              "isFoil": false
+            },
+            {
+              "code": "USA5",
+              "isFoil": false
+            },
+            {
+              "code": "USA6",
+              "isFoil": false
+            },
+            {
+              "code": "USA7",
+              "isFoil": false
+            },
+            {
+              "code": "USA8",
+              "isFoil": false
+            },
+            {
+              "code": "USA9",
+              "isFoil": false
+            },
+            {
+              "code": "USA10",
+              "isFoil": false
+            },
+            {
+              "code": "USA11",
+              "isFoil": false
+            },
+            {
+              "code": "USA12",
+              "isFoil": false
+            },
+            {
+              "code": "USA13",
+              "isFoil": false
+            },
+            {
+              "code": "USA14",
+              "isFoil": false
+            },
+            {
+              "code": "USA15",
+              "isFoil": false
+            },
+            {
+              "code": "USA16",
+              "isFoil": false
+            },
+            {
+              "code": "USA17",
+              "isFoil": false
+            },
+            {
+              "code": "USA18",
+              "isFoil": false
+            },
+            {
+              "code": "USA19",
+              "isFoil": false
+            },
+            {
+              "code": "USA20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "PARAGUAY",
+          "name": "Paraguay",
+          "icon": "py",
+          "emoji": "🇵🇾",
+          "tag": "PAR",
+          "stickers": [
+            {
+              "code": "PAR1",
+              "isFoil": true
+            },
+            {
+              "code": "PAR2",
+              "isFoil": false
+            },
+            {
+              "code": "PAR3",
+              "isFoil": false
+            },
+            {
+              "code": "PAR4",
+              "isFoil": false
+            },
+            {
+              "code": "PAR5",
+              "isFoil": false
+            },
+            {
+              "code": "PAR6",
+              "isFoil": false
+            },
+            {
+              "code": "PAR7",
+              "isFoil": false
+            },
+            {
+              "code": "PAR8",
+              "isFoil": false
+            },
+            {
+              "code": "PAR9",
+              "isFoil": false
+            },
+            {
+              "code": "PAR10",
+              "isFoil": false
+            },
+            {
+              "code": "PAR11",
+              "isFoil": false
+            },
+            {
+              "code": "PAR12",
+              "isFoil": false
+            },
+            {
+              "code": "PAR13",
+              "isFoil": false
+            },
+            {
+              "code": "PAR14",
+              "isFoil": false
+            },
+            {
+              "code": "PAR15",
+              "isFoil": false
+            },
+            {
+              "code": "PAR16",
+              "isFoil": false
+            },
+            {
+              "code": "PAR17",
+              "isFoil": false
+            },
+            {
+              "code": "PAR18",
+              "isFoil": false
+            },
+            {
+              "code": "PAR19",
+              "isFoil": false
+            },
+            {
+              "code": "PAR20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "AUSTRALIA",
+          "name": "Australia",
+          "icon": "au",
+          "emoji": "🇦🇺",
+          "tag": "AUS",
+          "stickers": [
+            {
+              "code": "AUS1",
+              "isFoil": true
+            },
+            {
+              "code": "AUS2",
+              "isFoil": false
+            },
+            {
+              "code": "AUS3",
+              "isFoil": false
+            },
+            {
+              "code": "AUS4",
+              "isFoil": false
+            },
+            {
+              "code": "AUS5",
+              "isFoil": false
+            },
+            {
+              "code": "AUS6",
+              "isFoil": false
+            },
+            {
+              "code": "AUS7",
+              "isFoil": false
+            },
+            {
+              "code": "AUS8",
+              "isFoil": false
+            },
+            {
+              "code": "AUS9",
+              "isFoil": false
+            },
+            {
+              "code": "AUS10",
+              "isFoil": false
+            },
+            {
+              "code": "AUS11",
+              "isFoil": false
+            },
+            {
+              "code": "AUS12",
+              "isFoil": false
+            },
+            {
+              "code": "AUS13",
+              "isFoil": false
+            },
+            {
+              "code": "AUS14",
+              "isFoil": false
+            },
+            {
+              "code": "AUS15",
+              "isFoil": false
+            },
+            {
+              "code": "AUS16",
+              "isFoil": false
+            },
+            {
+              "code": "AUS17",
+              "isFoil": false
+            },
+            {
+              "code": "AUS18",
+              "isFoil": false
+            },
+            {
+              "code": "AUS19",
+              "isFoil": false
+            },
+            {
+              "code": "AUS20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "TURKEY",
+          "name": "Turkey",
+          "icon": "tr",
+          "emoji": "🇹🇷",
+          "tag": "TUR",
+          "stickers": [
+            {
+              "code": "TUR1",
+              "isFoil": true
+            },
+            {
+              "code": "TUR2",
+              "isFoil": false
+            },
+            {
+              "code": "TUR3",
+              "isFoil": false
+            },
+            {
+              "code": "TUR4",
+              "isFoil": false
+            },
+            {
+              "code": "TUR5",
+              "isFoil": false
+            },
+            {
+              "code": "TUR6",
+              "isFoil": false
+            },
+            {
+              "code": "TUR7",
+              "isFoil": false
+            },
+            {
+              "code": "TUR8",
+              "isFoil": false
+            },
+            {
+              "code": "TUR9",
+              "isFoil": false
+            },
+            {
+              "code": "TUR10",
+              "isFoil": false
+            },
+            {
+              "code": "TUR11",
+              "isFoil": false
+            },
+            {
+              "code": "TUR12",
+              "isFoil": false
+            },
+            {
+              "code": "TUR13",
+              "isFoil": false
+            },
+            {
+              "code": "TUR14",
+              "isFoil": false
+            },
+            {
+              "code": "TUR15",
+              "isFoil": false
+            },
+            {
+              "code": "TUR16",
+              "isFoil": false
+            },
+            {
+              "code": "TUR17",
+              "isFoil": false
+            },
+            {
+              "code": "TUR18",
+              "isFoil": false
+            },
+            {
+              "code": "TUR19",
+              "isFoil": false
+            },
+            {
+              "code": "TUR20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_E",
+      "name": "Group E",
+      "sections": [
+        {
+          "id": "GERMANY",
+          "name": "Germany",
+          "icon": "de",
+          "emoji": "🇩🇪",
+          "tag": "GER",
+          "stickers": [
+            {
+              "code": "GER1",
+              "isFoil": true
+            },
+            {
+              "code": "GER2",
+              "isFoil": false
+            },
+            {
+              "code": "GER3",
+              "isFoil": false
+            },
+            {
+              "code": "GER4",
+              "isFoil": false
+            },
+            {
+              "code": "GER5",
+              "isFoil": false
+            },
+            {
+              "code": "GER6",
+              "isFoil": false
+            },
+            {
+              "code": "GER7",
+              "isFoil": false
+            },
+            {
+              "code": "GER8",
+              "isFoil": false
+            },
+            {
+              "code": "GER9",
+              "isFoil": false
+            },
+            {
+              "code": "GER10",
+              "isFoil": false
+            },
+            {
+              "code": "GER11",
+              "isFoil": false
+            },
+            {
+              "code": "GER12",
+              "isFoil": false
+            },
+            {
+              "code": "GER13",
+              "isFoil": false
+            },
+            {
+              "code": "GER14",
+              "isFoil": false
+            },
+            {
+              "code": "GER15",
+              "isFoil": false
+            },
+            {
+              "code": "GER16",
+              "isFoil": false
+            },
+            {
+              "code": "GER17",
+              "isFoil": false
+            },
+            {
+              "code": "GER18",
+              "isFoil": false
+            },
+            {
+              "code": "GER19",
+              "isFoil": false
+            },
+            {
+              "code": "GER20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "CURACAO",
+          "name": "Curaçao",
+          "icon": "cw",
+          "emoji": "🇨🇼",
+          "tag": "CUW",
+          "stickers": [
+            {
+              "code": "CUW1",
+              "isFoil": true
+            },
+            {
+              "code": "CUW2",
+              "isFoil": false
+            },
+            {
+              "code": "CUW3",
+              "isFoil": false
+            },
+            {
+              "code": "CUW4",
+              "isFoil": false
+            },
+            {
+              "code": "CUW5",
+              "isFoil": false
+            },
+            {
+              "code": "CUW6",
+              "isFoil": false
+            },
+            {
+              "code": "CUW7",
+              "isFoil": false
+            },
+            {
+              "code": "CUW8",
+              "isFoil": false
+            },
+            {
+              "code": "CUW9",
+              "isFoil": false
+            },
+            {
+              "code": "CUW10",
+              "isFoil": false
+            },
+            {
+              "code": "CUW11",
+              "isFoil": false
+            },
+            {
+              "code": "CUW12",
+              "isFoil": false
+            },
+            {
+              "code": "CUW13",
+              "isFoil": false
+            },
+            {
+              "code": "CUW14",
+              "isFoil": false
+            },
+            {
+              "code": "CUW15",
+              "isFoil": false
+            },
+            {
+              "code": "CUW16",
+              "isFoil": false
+            },
+            {
+              "code": "CUW17",
+              "isFoil": false
+            },
+            {
+              "code": "CUW18",
+              "isFoil": false
+            },
+            {
+              "code": "CUW19",
+              "isFoil": false
+            },
+            {
+              "code": "CUW20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "IVORY_COAST",
+          "name": "Ivory Coast",
+          "icon": "ci",
+          "emoji": "🇨🇮",
+          "tag": "CIV",
+          "stickers": [
+            {
+              "code": "CIV1",
+              "isFoil": true
+            },
+            {
+              "code": "CIV2",
+              "isFoil": false
+            },
+            {
+              "code": "CIV3",
+              "isFoil": false
+            },
+            {
+              "code": "CIV4",
+              "isFoil": false
+            },
+            {
+              "code": "CIV5",
+              "isFoil": false
+            },
+            {
+              "code": "CIV6",
+              "isFoil": false
+            },
+            {
+              "code": "CIV7",
+              "isFoil": false
+            },
+            {
+              "code": "CIV8",
+              "isFoil": false
+            },
+            {
+              "code": "CIV9",
+              "isFoil": false
+            },
+            {
+              "code": "CIV10",
+              "isFoil": false
+            },
+            {
+              "code": "CIV11",
+              "isFoil": false
+            },
+            {
+              "code": "CIV12",
+              "isFoil": false
+            },
+            {
+              "code": "CIV13",
+              "isFoil": false
+            },
+            {
+              "code": "CIV14",
+              "isFoil": false
+            },
+            {
+              "code": "CIV15",
+              "isFoil": false
+            },
+            {
+              "code": "CIV16",
+              "isFoil": false
+            },
+            {
+              "code": "CIV17",
+              "isFoil": false
+            },
+            {
+              "code": "CIV18",
+              "isFoil": false
+            },
+            {
+              "code": "CIV19",
+              "isFoil": false
+            },
+            {
+              "code": "CIV20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "ECUADOR",
+          "name": "Ecuador",
+          "icon": "ec",
+          "emoji": "🇪🇨",
+          "tag": "ECU",
+          "stickers": [
+            {
+              "code": "ECU1",
+              "isFoil": true
+            },
+            {
+              "code": "ECU2",
+              "isFoil": false
+            },
+            {
+              "code": "ECU3",
+              "isFoil": false
+            },
+            {
+              "code": "ECU4",
+              "isFoil": false
+            },
+            {
+              "code": "ECU5",
+              "isFoil": false
+            },
+            {
+              "code": "ECU6",
+              "isFoil": false
+            },
+            {
+              "code": "ECU7",
+              "isFoil": false
+            },
+            {
+              "code": "ECU8",
+              "isFoil": false
+            },
+            {
+              "code": "ECU9",
+              "isFoil": false
+            },
+            {
+              "code": "ECU10",
+              "isFoil": false
+            },
+            {
+              "code": "ECU11",
+              "isFoil": false
+            },
+            {
+              "code": "ECU12",
+              "isFoil": false
+            },
+            {
+              "code": "ECU13",
+              "isFoil": false
+            },
+            {
+              "code": "ECU14",
+              "isFoil": false
+            },
+            {
+              "code": "ECU15",
+              "isFoil": false
+            },
+            {
+              "code": "ECU16",
+              "isFoil": false
+            },
+            {
+              "code": "ECU17",
+              "isFoil": false
+            },
+            {
+              "code": "ECU18",
+              "isFoil": false
+            },
+            {
+              "code": "ECU19",
+              "isFoil": false
+            },
+            {
+              "code": "ECU20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_F",
+      "name": "Group F",
+      "sections": [
+        {
+          "id": "NETHERLANDS",
+          "name": "Netherlands",
+          "icon": "nl",
+          "emoji": "🇳🇱",
+          "tag": "NED",
+          "stickers": [
+            {
+              "code": "NED1",
+              "isFoil": true
+            },
+            {
+              "code": "NED2",
+              "isFoil": false
+            },
+            {
+              "code": "NED3",
+              "isFoil": false
+            },
+            {
+              "code": "NED4",
+              "isFoil": false
+            },
+            {
+              "code": "NED5",
+              "isFoil": false
+            },
+            {
+              "code": "NED6",
+              "isFoil": false
+            },
+            {
+              "code": "NED7",
+              "isFoil": false
+            },
+            {
+              "code": "NED8",
+              "isFoil": false
+            },
+            {
+              "code": "NED9",
+              "isFoil": false
+            },
+            {
+              "code": "NED10",
+              "isFoil": false
+            },
+            {
+              "code": "NED11",
+              "isFoil": false
+            },
+            {
+              "code": "NED12",
+              "isFoil": false
+            },
+            {
+              "code": "NED13",
+              "isFoil": false
+            },
+            {
+              "code": "NED14",
+              "isFoil": false
+            },
+            {
+              "code": "NED15",
+              "isFoil": false
+            },
+            {
+              "code": "NED16",
+              "isFoil": false
+            },
+            {
+              "code": "NED17",
+              "isFoil": false
+            },
+            {
+              "code": "NED18",
+              "isFoil": false
+            },
+            {
+              "code": "NED19",
+              "isFoil": false
+            },
+            {
+              "code": "NED20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "JAPAN",
+          "name": "Japan",
+          "icon": "jp",
+          "emoji": "🇯🇵",
+          "tag": "JPN",
+          "stickers": [
+            {
+              "code": "JPN1",
+              "isFoil": true
+            },
+            {
+              "code": "JPN2",
+              "isFoil": false
+            },
+            {
+              "code": "JPN3",
+              "isFoil": false
+            },
+            {
+              "code": "JPN4",
+              "isFoil": false
+            },
+            {
+              "code": "JPN5",
+              "isFoil": false
+            },
+            {
+              "code": "JPN6",
+              "isFoil": false
+            },
+            {
+              "code": "JPN7",
+              "isFoil": false
+            },
+            {
+              "code": "JPN8",
+              "isFoil": false
+            },
+            {
+              "code": "JPN9",
+              "isFoil": false
+            },
+            {
+              "code": "JPN10",
+              "isFoil": false
+            },
+            {
+              "code": "JPN11",
+              "isFoil": false
+            },
+            {
+              "code": "JPN12",
+              "isFoil": false
+            },
+            {
+              "code": "JPN13",
+              "isFoil": false
+            },
+            {
+              "code": "JPN14",
+              "isFoil": false
+            },
+            {
+              "code": "JPN15",
+              "isFoil": false
+            },
+            {
+              "code": "JPN16",
+              "isFoil": false
+            },
+            {
+              "code": "JPN17",
+              "isFoil": false
+            },
+            {
+              "code": "JPN18",
+              "isFoil": false
+            },
+            {
+              "code": "JPN19",
+              "isFoil": false
+            },
+            {
+              "code": "JPN20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SWEDEN",
+          "name": "Sweden",
+          "icon": "se",
+          "emoji": "🇸🇪",
+          "tag": "SWE",
+          "stickers": [
+            {
+              "code": "SWE1",
+              "isFoil": true
+            },
+            {
+              "code": "SWE2",
+              "isFoil": false
+            },
+            {
+              "code": "SWE3",
+              "isFoil": false
+            },
+            {
+              "code": "SWE4",
+              "isFoil": false
+            },
+            {
+              "code": "SWE5",
+              "isFoil": false
+            },
+            {
+              "code": "SWE6",
+              "isFoil": false
+            },
+            {
+              "code": "SWE7",
+              "isFoil": false
+            },
+            {
+              "code": "SWE8",
+              "isFoil": false
+            },
+            {
+              "code": "SWE9",
+              "isFoil": false
+            },
+            {
+              "code": "SWE10",
+              "isFoil": false
+            },
+            {
+              "code": "SWE11",
+              "isFoil": false
+            },
+            {
+              "code": "SWE12",
+              "isFoil": false
+            },
+            {
+              "code": "SWE13",
+              "isFoil": false
+            },
+            {
+              "code": "SWE14",
+              "isFoil": false
+            },
+            {
+              "code": "SWE15",
+              "isFoil": false
+            },
+            {
+              "code": "SWE16",
+              "isFoil": false
+            },
+            {
+              "code": "SWE17",
+              "isFoil": false
+            },
+            {
+              "code": "SWE18",
+              "isFoil": false
+            },
+            {
+              "code": "SWE19",
+              "isFoil": false
+            },
+            {
+              "code": "SWE20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "TUNISIA",
+          "name": "Tunisia",
+          "icon": "tn",
+          "emoji": "🇹🇳",
+          "tag": "TUN",
+          "stickers": [
+            {
+              "code": "TUN1",
+              "isFoil": true
+            },
+            {
+              "code": "TUN2",
+              "isFoil": false
+            },
+            {
+              "code": "TUN3",
+              "isFoil": false
+            },
+            {
+              "code": "TUN4",
+              "isFoil": false
+            },
+            {
+              "code": "TUN5",
+              "isFoil": false
+            },
+            {
+              "code": "TUN6",
+              "isFoil": false
+            },
+            {
+              "code": "TUN7",
+              "isFoil": false
+            },
+            {
+              "code": "TUN8",
+              "isFoil": false
+            },
+            {
+              "code": "TUN9",
+              "isFoil": false
+            },
+            {
+              "code": "TUN10",
+              "isFoil": false
+            },
+            {
+              "code": "TUN11",
+              "isFoil": false
+            },
+            {
+              "code": "TUN12",
+              "isFoil": false
+            },
+            {
+              "code": "TUN13",
+              "isFoil": false
+            },
+            {
+              "code": "TUN14",
+              "isFoil": false
+            },
+            {
+              "code": "TUN15",
+              "isFoil": false
+            },
+            {
+              "code": "TUN16",
+              "isFoil": false
+            },
+            {
+              "code": "TUN17",
+              "isFoil": false
+            },
+            {
+              "code": "TUN18",
+              "isFoil": false
+            },
+            {
+              "code": "TUN19",
+              "isFoil": false
+            },
+            {
+              "code": "TUN20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_G",
+      "name": "Group G",
+      "sections": [
+        {
+          "id": "BELGIUM",
+          "name": "Belgium",
+          "icon": "be",
+          "emoji": "🇧🇪",
+          "tag": "BEL",
+          "stickers": [
+            {
+              "code": "BEL1",
+              "isFoil": true
+            },
+            {
+              "code": "BEL2",
+              "isFoil": false
+            },
+            {
+              "code": "BEL3",
+              "isFoil": false
+            },
+            {
+              "code": "BEL4",
+              "isFoil": false
+            },
+            {
+              "code": "BEL5",
+              "isFoil": false
+            },
+            {
+              "code": "BEL6",
+              "isFoil": false
+            },
+            {
+              "code": "BEL7",
+              "isFoil": false
+            },
+            {
+              "code": "BEL8",
+              "isFoil": false
+            },
+            {
+              "code": "BEL9",
+              "isFoil": false
+            },
+            {
+              "code": "BEL10",
+              "isFoil": false
+            },
+            {
+              "code": "BEL11",
+              "isFoil": false
+            },
+            {
+              "code": "BEL12",
+              "isFoil": false
+            },
+            {
+              "code": "BEL13",
+              "isFoil": false
+            },
+            {
+              "code": "BEL14",
+              "isFoil": false
+            },
+            {
+              "code": "BEL15",
+              "isFoil": false
+            },
+            {
+              "code": "BEL16",
+              "isFoil": false
+            },
+            {
+              "code": "BEL17",
+              "isFoil": false
+            },
+            {
+              "code": "BEL18",
+              "isFoil": false
+            },
+            {
+              "code": "BEL19",
+              "isFoil": false
+            },
+            {
+              "code": "BEL20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "EGYPT",
+          "name": "Egypt",
+          "icon": "eg",
+          "emoji": "🇪🇬",
+          "tag": "EGY",
+          "stickers": [
+            {
+              "code": "EGY1",
+              "isFoil": true
+            },
+            {
+              "code": "EGY2",
+              "isFoil": false
+            },
+            {
+              "code": "EGY3",
+              "isFoil": false
+            },
+            {
+              "code": "EGY4",
+              "isFoil": false
+            },
+            {
+              "code": "EGY5",
+              "isFoil": false
+            },
+            {
+              "code": "EGY6",
+              "isFoil": false
+            },
+            {
+              "code": "EGY7",
+              "isFoil": false
+            },
+            {
+              "code": "EGY8",
+              "isFoil": false
+            },
+            {
+              "code": "EGY9",
+              "isFoil": false
+            },
+            {
+              "code": "EGY10",
+              "isFoil": false
+            },
+            {
+              "code": "EGY11",
+              "isFoil": false
+            },
+            {
+              "code": "EGY12",
+              "isFoil": false
+            },
+            {
+              "code": "EGY13",
+              "isFoil": false
+            },
+            {
+              "code": "EGY14",
+              "isFoil": false
+            },
+            {
+              "code": "EGY15",
+              "isFoil": false
+            },
+            {
+              "code": "EGY16",
+              "isFoil": false
+            },
+            {
+              "code": "EGY17",
+              "isFoil": false
+            },
+            {
+              "code": "EGY18",
+              "isFoil": false
+            },
+            {
+              "code": "EGY19",
+              "isFoil": false
+            },
+            {
+              "code": "EGY20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "IRAN",
+          "name": "Iran",
+          "icon": "ir",
+          "emoji": "🇮🇷",
+          "tag": "IRN",
+          "stickers": [
+            {
+              "code": "IRN1",
+              "isFoil": true
+            },
+            {
+              "code": "IRN2",
+              "isFoil": false
+            },
+            {
+              "code": "IRN3",
+              "isFoil": false
+            },
+            {
+              "code": "IRN4",
+              "isFoil": false
+            },
+            {
+              "code": "IRN5",
+              "isFoil": false
+            },
+            {
+              "code": "IRN6",
+              "isFoil": false
+            },
+            {
+              "code": "IRN7",
+              "isFoil": false
+            },
+            {
+              "code": "IRN8",
+              "isFoil": false
+            },
+            {
+              "code": "IRN9",
+              "isFoil": false
+            },
+            {
+              "code": "IRN10",
+              "isFoil": false
+            },
+            {
+              "code": "IRN11",
+              "isFoil": false
+            },
+            {
+              "code": "IRN12",
+              "isFoil": false
+            },
+            {
+              "code": "IRN13",
+              "isFoil": false
+            },
+            {
+              "code": "IRN14",
+              "isFoil": false
+            },
+            {
+              "code": "IRN15",
+              "isFoil": false
+            },
+            {
+              "code": "IRN16",
+              "isFoil": false
+            },
+            {
+              "code": "IRN17",
+              "isFoil": false
+            },
+            {
+              "code": "IRN18",
+              "isFoil": false
+            },
+            {
+              "code": "IRN19",
+              "isFoil": false
+            },
+            {
+              "code": "IRN20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "NEW_ZEALAND",
+          "name": "New Zealand",
+          "icon": "nz",
+          "emoji": "🇳🇿",
+          "tag": "NZL",
+          "stickers": [
+            {
+              "code": "NZL1",
+              "isFoil": true
+            },
+            {
+              "code": "NZL2",
+              "isFoil": false
+            },
+            {
+              "code": "NZL3",
+              "isFoil": false
+            },
+            {
+              "code": "NZL4",
+              "isFoil": false
+            },
+            {
+              "code": "NZL5",
+              "isFoil": false
+            },
+            {
+              "code": "NZL6",
+              "isFoil": false
+            },
+            {
+              "code": "NZL7",
+              "isFoil": false
+            },
+            {
+              "code": "NZL8",
+              "isFoil": false
+            },
+            {
+              "code": "NZL9",
+              "isFoil": false
+            },
+            {
+              "code": "NZL10",
+              "isFoil": false
+            },
+            {
+              "code": "NZL11",
+              "isFoil": false
+            },
+            {
+              "code": "NZL12",
+              "isFoil": false
+            },
+            {
+              "code": "NZL13",
+              "isFoil": false
+            },
+            {
+              "code": "NZL14",
+              "isFoil": false
+            },
+            {
+              "code": "NZL15",
+              "isFoil": false
+            },
+            {
+              "code": "NZL16",
+              "isFoil": false
+            },
+            {
+              "code": "NZL17",
+              "isFoil": false
+            },
+            {
+              "code": "NZL18",
+              "isFoil": false
+            },
+            {
+              "code": "NZL19",
+              "isFoil": false
+            },
+            {
+              "code": "NZL20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_H",
+      "name": "Group H",
+      "sections": [
+        {
+          "id": "SPAIN",
+          "name": "Spain",
+          "icon": "es",
+          "emoji": "🇪🇸",
+          "tag": "ESP",
+          "stickers": [
+            {
+              "code": "ESP1",
+              "isFoil": true
+            },
+            {
+              "code": "ESP2",
+              "isFoil": false
+            },
+            {
+              "code": "ESP3",
+              "isFoil": false
+            },
+            {
+              "code": "ESP4",
+              "isFoil": false
+            },
+            {
+              "code": "ESP5",
+              "isFoil": false
+            },
+            {
+              "code": "ESP6",
+              "isFoil": false
+            },
+            {
+              "code": "ESP7",
+              "isFoil": false
+            },
+            {
+              "code": "ESP8",
+              "isFoil": false
+            },
+            {
+              "code": "ESP9",
+              "isFoil": false
+            },
+            {
+              "code": "ESP10",
+              "isFoil": false
+            },
+            {
+              "code": "ESP11",
+              "isFoil": false
+            },
+            {
+              "code": "ESP12",
+              "isFoil": false
+            },
+            {
+              "code": "ESP13",
+              "isFoil": false
+            },
+            {
+              "code": "ESP14",
+              "isFoil": false
+            },
+            {
+              "code": "ESP15",
+              "isFoil": false
+            },
+            {
+              "code": "ESP16",
+              "isFoil": false
+            },
+            {
+              "code": "ESP17",
+              "isFoil": false
+            },
+            {
+              "code": "ESP18",
+              "isFoil": false
+            },
+            {
+              "code": "ESP19",
+              "isFoil": false
+            },
+            {
+              "code": "ESP20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "CAPE_VERDE",
+          "name": "Cape Verde",
+          "icon": "cv",
+          "emoji": "🇨🇻",
+          "tag": "CPV",
+          "stickers": [
+            {
+              "code": "CPV1",
+              "isFoil": true
+            },
+            {
+              "code": "CPV2",
+              "isFoil": false
+            },
+            {
+              "code": "CPV3",
+              "isFoil": false
+            },
+            {
+              "code": "CPV4",
+              "isFoil": false
+            },
+            {
+              "code": "CPV5",
+              "isFoil": false
+            },
+            {
+              "code": "CPV6",
+              "isFoil": false
+            },
+            {
+              "code": "CPV7",
+              "isFoil": false
+            },
+            {
+              "code": "CPV8",
+              "isFoil": false
+            },
+            {
+              "code": "CPV9",
+              "isFoil": false
+            },
+            {
+              "code": "CPV10",
+              "isFoil": false
+            },
+            {
+              "code": "CPV11",
+              "isFoil": false
+            },
+            {
+              "code": "CPV12",
+              "isFoil": false
+            },
+            {
+              "code": "CPV13",
+              "isFoil": false
+            },
+            {
+              "code": "CPV14",
+              "isFoil": false
+            },
+            {
+              "code": "CPV15",
+              "isFoil": false
+            },
+            {
+              "code": "CPV16",
+              "isFoil": false
+            },
+            {
+              "code": "CPV17",
+              "isFoil": false
+            },
+            {
+              "code": "CPV18",
+              "isFoil": false
+            },
+            {
+              "code": "CPV19",
+              "isFoil": false
+            },
+            {
+              "code": "CPV20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SAUDI_ARABIA",
+          "name": "Saudi Arabia",
+          "icon": "sa",
+          "emoji": "🇸🇦",
+          "tag": "KSA",
+          "stickers": [
+            {
+              "code": "KSA1",
+              "isFoil": true
+            },
+            {
+              "code": "KSA2",
+              "isFoil": false
+            },
+            {
+              "code": "KSA3",
+              "isFoil": false
+            },
+            {
+              "code": "KSA4",
+              "isFoil": false
+            },
+            {
+              "code": "KSA5",
+              "isFoil": false
+            },
+            {
+              "code": "KSA6",
+              "isFoil": false
+            },
+            {
+              "code": "KSA7",
+              "isFoil": false
+            },
+            {
+              "code": "KSA8",
+              "isFoil": false
+            },
+            {
+              "code": "KSA9",
+              "isFoil": false
+            },
+            {
+              "code": "KSA10",
+              "isFoil": false
+            },
+            {
+              "code": "KSA11",
+              "isFoil": false
+            },
+            {
+              "code": "KSA12",
+              "isFoil": false
+            },
+            {
+              "code": "KSA13",
+              "isFoil": false
+            },
+            {
+              "code": "KSA14",
+              "isFoil": false
+            },
+            {
+              "code": "KSA15",
+              "isFoil": false
+            },
+            {
+              "code": "KSA16",
+              "isFoil": false
+            },
+            {
+              "code": "KSA17",
+              "isFoil": false
+            },
+            {
+              "code": "KSA18",
+              "isFoil": false
+            },
+            {
+              "code": "KSA19",
+              "isFoil": false
+            },
+            {
+              "code": "KSA20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "URUGUAY",
+          "name": "Uruguay",
+          "icon": "uy",
+          "emoji": "🇺🇾",
+          "tag": "URU",
+          "stickers": [
+            {
+              "code": "URU1",
+              "isFoil": true
+            },
+            {
+              "code": "URU2",
+              "isFoil": false
+            },
+            {
+              "code": "URU3",
+              "isFoil": false
+            },
+            {
+              "code": "URU4",
+              "isFoil": false
+            },
+            {
+              "code": "URU5",
+              "isFoil": false
+            },
+            {
+              "code": "URU6",
+              "isFoil": false
+            },
+            {
+              "code": "URU7",
+              "isFoil": false
+            },
+            {
+              "code": "URU8",
+              "isFoil": false
+            },
+            {
+              "code": "URU9",
+              "isFoil": false
+            },
+            {
+              "code": "URU10",
+              "isFoil": false
+            },
+            {
+              "code": "URU11",
+              "isFoil": false
+            },
+            {
+              "code": "URU12",
+              "isFoil": false
+            },
+            {
+              "code": "URU13",
+              "isFoil": false
+            },
+            {
+              "code": "URU14",
+              "isFoil": false
+            },
+            {
+              "code": "URU15",
+              "isFoil": false
+            },
+            {
+              "code": "URU16",
+              "isFoil": false
+            },
+            {
+              "code": "URU17",
+              "isFoil": false
+            },
+            {
+              "code": "URU18",
+              "isFoil": false
+            },
+            {
+              "code": "URU19",
+              "isFoil": false
+            },
+            {
+              "code": "URU20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_I",
+      "name": "Group I",
+      "sections": [
+        {
+          "id": "FRANCE",
+          "name": "France",
+          "icon": "fr",
+          "emoji": "🇫🇷",
+          "tag": "FRA",
+          "stickers": [
+            {
+              "code": "FRA1",
+              "isFoil": true
+            },
+            {
+              "code": "FRA2",
+              "isFoil": false
+            },
+            {
+              "code": "FRA3",
+              "isFoil": false
+            },
+            {
+              "code": "FRA4",
+              "isFoil": false
+            },
+            {
+              "code": "FRA5",
+              "isFoil": false
+            },
+            {
+              "code": "FRA6",
+              "isFoil": false
+            },
+            {
+              "code": "FRA7",
+              "isFoil": false
+            },
+            {
+              "code": "FRA8",
+              "isFoil": false
+            },
+            {
+              "code": "FRA9",
+              "isFoil": false
+            },
+            {
+              "code": "FRA10",
+              "isFoil": false
+            },
+            {
+              "code": "FRA11",
+              "isFoil": false
+            },
+            {
+              "code": "FRA12",
+              "isFoil": false
+            },
+            {
+              "code": "FRA13",
+              "isFoil": false
+            },
+            {
+              "code": "FRA14",
+              "isFoil": false
+            },
+            {
+              "code": "FRA15",
+              "isFoil": false
+            },
+            {
+              "code": "FRA16",
+              "isFoil": false
+            },
+            {
+              "code": "FRA17",
+              "isFoil": false
+            },
+            {
+              "code": "FRA18",
+              "isFoil": false
+            },
+            {
+              "code": "FRA19",
+              "isFoil": false
+            },
+            {
+              "code": "FRA20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "SENEGAL",
+          "name": "Senegal",
+          "icon": "sn",
+          "emoji": "🇸🇳",
+          "tag": "SEN",
+          "stickers": [
+            {
+              "code": "SEN1",
+              "isFoil": true
+            },
+            {
+              "code": "SEN2",
+              "isFoil": false
+            },
+            {
+              "code": "SEN3",
+              "isFoil": false
+            },
+            {
+              "code": "SEN4",
+              "isFoil": false
+            },
+            {
+              "code": "SEN5",
+              "isFoil": false
+            },
+            {
+              "code": "SEN6",
+              "isFoil": false
+            },
+            {
+              "code": "SEN7",
+              "isFoil": false
+            },
+            {
+              "code": "SEN8",
+              "isFoil": false
+            },
+            {
+              "code": "SEN9",
+              "isFoil": false
+            },
+            {
+              "code": "SEN10",
+              "isFoil": false
+            },
+            {
+              "code": "SEN11",
+              "isFoil": false
+            },
+            {
+              "code": "SEN12",
+              "isFoil": false
+            },
+            {
+              "code": "SEN13",
+              "isFoil": false
+            },
+            {
+              "code": "SEN14",
+              "isFoil": false
+            },
+            {
+              "code": "SEN15",
+              "isFoil": false
+            },
+            {
+              "code": "SEN16",
+              "isFoil": false
+            },
+            {
+              "code": "SEN17",
+              "isFoil": false
+            },
+            {
+              "code": "SEN18",
+              "isFoil": false
+            },
+            {
+              "code": "SEN19",
+              "isFoil": false
+            },
+            {
+              "code": "SEN20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "IRAQ",
+          "name": "Iraq",
+          "icon": "iq",
+          "emoji": "🇮🇶",
+          "tag": "IRQ",
+          "stickers": [
+            {
+              "code": "IRQ1",
+              "isFoil": true
+            },
+            {
+              "code": "IRQ2",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ3",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ4",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ5",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ6",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ7",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ8",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ9",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ10",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ11",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ12",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ13",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ14",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ15",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ16",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ17",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ18",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ19",
+              "isFoil": false
+            },
+            {
+              "code": "IRQ20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "NORWAY",
+          "name": "Norway",
+          "icon": "no",
+          "emoji": "🇳🇴",
+          "tag": "NOR",
+          "stickers": [
+            {
+              "code": "NOR1",
+              "isFoil": true
+            },
+            {
+              "code": "NOR2",
+              "isFoil": false
+            },
+            {
+              "code": "NOR3",
+              "isFoil": false
+            },
+            {
+              "code": "NOR4",
+              "isFoil": false
+            },
+            {
+              "code": "NOR5",
+              "isFoil": false
+            },
+            {
+              "code": "NOR6",
+              "isFoil": false
+            },
+            {
+              "code": "NOR7",
+              "isFoil": false
+            },
+            {
+              "code": "NOR8",
+              "isFoil": false
+            },
+            {
+              "code": "NOR9",
+              "isFoil": false
+            },
+            {
+              "code": "NOR10",
+              "isFoil": false
+            },
+            {
+              "code": "NOR11",
+              "isFoil": false
+            },
+            {
+              "code": "NOR12",
+              "isFoil": false
+            },
+            {
+              "code": "NOR13",
+              "isFoil": false
+            },
+            {
+              "code": "NOR14",
+              "isFoil": false
+            },
+            {
+              "code": "NOR15",
+              "isFoil": false
+            },
+            {
+              "code": "NOR16",
+              "isFoil": false
+            },
+            {
+              "code": "NOR17",
+              "isFoil": false
+            },
+            {
+              "code": "NOR18",
+              "isFoil": false
+            },
+            {
+              "code": "NOR19",
+              "isFoil": false
+            },
+            {
+              "code": "NOR20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_J",
+      "name": "Group J",
+      "sections": [
+        {
+          "id": "ARGENTINA",
+          "name": "Argentina",
+          "icon": "ar",
+          "emoji": "🇦🇷",
+          "tag": "ARG",
+          "stickers": [
+            {
+              "code": "ARG1",
+              "isFoil": true
+            },
+            {
+              "code": "ARG2",
+              "isFoil": false
+            },
+            {
+              "code": "ARG3",
+              "isFoil": false
+            },
+            {
+              "code": "ARG4",
+              "isFoil": false
+            },
+            {
+              "code": "ARG5",
+              "isFoil": false
+            },
+            {
+              "code": "ARG6",
+              "isFoil": false
+            },
+            {
+              "code": "ARG7",
+              "isFoil": false
+            },
+            {
+              "code": "ARG8",
+              "isFoil": false
+            },
+            {
+              "code": "ARG9",
+              "isFoil": false
+            },
+            {
+              "code": "ARG10",
+              "isFoil": false
+            },
+            {
+              "code": "ARG11",
+              "isFoil": false
+            },
+            {
+              "code": "ARG12",
+              "isFoil": false
+            },
+            {
+              "code": "ARG13",
+              "isFoil": false
+            },
+            {
+              "code": "ARG14",
+              "isFoil": false
+            },
+            {
+              "code": "ARG15",
+              "isFoil": false
+            },
+            {
+              "code": "ARG16",
+              "isFoil": false
+            },
+            {
+              "code": "ARG17",
+              "isFoil": false
+            },
+            {
+              "code": "ARG18",
+              "isFoil": false
+            },
+            {
+              "code": "ARG19",
+              "isFoil": false
+            },
+            {
+              "code": "ARG20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "ALGERIA",
+          "name": "Algeria",
+          "icon": "dz",
+          "emoji": "🇩🇿",
+          "tag": "ALG",
+          "stickers": [
+            {
+              "code": "ALG1",
+              "isFoil": true
+            },
+            {
+              "code": "ALG2",
+              "isFoil": false
+            },
+            {
+              "code": "ALG3",
+              "isFoil": false
+            },
+            {
+              "code": "ALG4",
+              "isFoil": false
+            },
+            {
+              "code": "ALG5",
+              "isFoil": false
+            },
+            {
+              "code": "ALG6",
+              "isFoil": false
+            },
+            {
+              "code": "ALG7",
+              "isFoil": false
+            },
+            {
+              "code": "ALG8",
+              "isFoil": false
+            },
+            {
+              "code": "ALG9",
+              "isFoil": false
+            },
+            {
+              "code": "ALG10",
+              "isFoil": false
+            },
+            {
+              "code": "ALG11",
+              "isFoil": false
+            },
+            {
+              "code": "ALG12",
+              "isFoil": false
+            },
+            {
+              "code": "ALG13",
+              "isFoil": false
+            },
+            {
+              "code": "ALG14",
+              "isFoil": false
+            },
+            {
+              "code": "ALG15",
+              "isFoil": false
+            },
+            {
+              "code": "ALG16",
+              "isFoil": false
+            },
+            {
+              "code": "ALG17",
+              "isFoil": false
+            },
+            {
+              "code": "ALG18",
+              "isFoil": false
+            },
+            {
+              "code": "ALG19",
+              "isFoil": false
+            },
+            {
+              "code": "ALG20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "AUSTRIA",
+          "name": "Austria",
+          "icon": "at",
+          "emoji": "🇦🇹",
+          "tag": "AUT",
+          "stickers": [
+            {
+              "code": "AUT1",
+              "isFoil": true
+            },
+            {
+              "code": "AUT2",
+              "isFoil": false
+            },
+            {
+              "code": "AUT3",
+              "isFoil": false
+            },
+            {
+              "code": "AUT4",
+              "isFoil": false
+            },
+            {
+              "code": "AUT5",
+              "isFoil": false
+            },
+            {
+              "code": "AUT6",
+              "isFoil": false
+            },
+            {
+              "code": "AUT7",
+              "isFoil": false
+            },
+            {
+              "code": "AUT8",
+              "isFoil": false
+            },
+            {
+              "code": "AUT9",
+              "isFoil": false
+            },
+            {
+              "code": "AUT10",
+              "isFoil": false
+            },
+            {
+              "code": "AUT11",
+              "isFoil": false
+            },
+            {
+              "code": "AUT12",
+              "isFoil": false
+            },
+            {
+              "code": "AUT13",
+              "isFoil": false
+            },
+            {
+              "code": "AUT14",
+              "isFoil": false
+            },
+            {
+              "code": "AUT15",
+              "isFoil": false
+            },
+            {
+              "code": "AUT16",
+              "isFoil": false
+            },
+            {
+              "code": "AUT17",
+              "isFoil": false
+            },
+            {
+              "code": "AUT18",
+              "isFoil": false
+            },
+            {
+              "code": "AUT19",
+              "isFoil": false
+            },
+            {
+              "code": "AUT20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "JORDAN",
+          "name": "Jordan",
+          "icon": "jo",
+          "emoji": "🇯🇴",
+          "tag": "JOR",
+          "stickers": [
+            {
+              "code": "JOR1",
+              "isFoil": true
+            },
+            {
+              "code": "JOR2",
+              "isFoil": false
+            },
+            {
+              "code": "JOR3",
+              "isFoil": false
+            },
+            {
+              "code": "JOR4",
+              "isFoil": false
+            },
+            {
+              "code": "JOR5",
+              "isFoil": false
+            },
+            {
+              "code": "JOR6",
+              "isFoil": false
+            },
+            {
+              "code": "JOR7",
+              "isFoil": false
+            },
+            {
+              "code": "JOR8",
+              "isFoil": false
+            },
+            {
+              "code": "JOR9",
+              "isFoil": false
+            },
+            {
+              "code": "JOR10",
+              "isFoil": false
+            },
+            {
+              "code": "JOR11",
+              "isFoil": false
+            },
+            {
+              "code": "JOR12",
+              "isFoil": false
+            },
+            {
+              "code": "JOR13",
+              "isFoil": false
+            },
+            {
+              "code": "JOR14",
+              "isFoil": false
+            },
+            {
+              "code": "JOR15",
+              "isFoil": false
+            },
+            {
+              "code": "JOR16",
+              "isFoil": false
+            },
+            {
+              "code": "JOR17",
+              "isFoil": false
+            },
+            {
+              "code": "JOR18",
+              "isFoil": false
+            },
+            {
+              "code": "JOR19",
+              "isFoil": false
+            },
+            {
+              "code": "JOR20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_K",
+      "name": "Group K",
+      "sections": [
+        {
+          "id": "PORTUGAL",
+          "name": "Portugal",
+          "icon": "pt",
+          "emoji": "🇵🇹",
+          "tag": "POR",
+          "stickers": [
+            {
+              "code": "POR1",
+              "isFoil": true
+            },
+            {
+              "code": "POR2",
+              "isFoil": false
+            },
+            {
+              "code": "POR3",
+              "isFoil": false
+            },
+            {
+              "code": "POR4",
+              "isFoil": false
+            },
+            {
+              "code": "POR5",
+              "isFoil": false
+            },
+            {
+              "code": "POR6",
+              "isFoil": false
+            },
+            {
+              "code": "POR7",
+              "isFoil": false
+            },
+            {
+              "code": "POR8",
+              "isFoil": false
+            },
+            {
+              "code": "POR9",
+              "isFoil": false
+            },
+            {
+              "code": "POR10",
+              "isFoil": false
+            },
+            {
+              "code": "POR11",
+              "isFoil": false
+            },
+            {
+              "code": "POR12",
+              "isFoil": false
+            },
+            {
+              "code": "POR13",
+              "isFoil": false
+            },
+            {
+              "code": "POR14",
+              "isFoil": false
+            },
+            {
+              "code": "POR15",
+              "isFoil": false
+            },
+            {
+              "code": "POR16",
+              "isFoil": false
+            },
+            {
+              "code": "POR17",
+              "isFoil": false
+            },
+            {
+              "code": "POR18",
+              "isFoil": false
+            },
+            {
+              "code": "POR19",
+              "isFoil": false
+            },
+            {
+              "code": "POR20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "DR_CONGO",
+          "name": "DR Congo",
+          "icon": "cd",
+          "emoji": "🇨🇩",
+          "tag": "COD",
+          "stickers": [
+            {
+              "code": "COD1",
+              "isFoil": true
+            },
+            {
+              "code": "COD2",
+              "isFoil": false
+            },
+            {
+              "code": "COD3",
+              "isFoil": false
+            },
+            {
+              "code": "COD4",
+              "isFoil": false
+            },
+            {
+              "code": "COD5",
+              "isFoil": false
+            },
+            {
+              "code": "COD6",
+              "isFoil": false
+            },
+            {
+              "code": "COD7",
+              "isFoil": false
+            },
+            {
+              "code": "COD8",
+              "isFoil": false
+            },
+            {
+              "code": "COD9",
+              "isFoil": false
+            },
+            {
+              "code": "COD10",
+              "isFoil": false
+            },
+            {
+              "code": "COD11",
+              "isFoil": false
+            },
+            {
+              "code": "COD12",
+              "isFoil": false
+            },
+            {
+              "code": "COD13",
+              "isFoil": false
+            },
+            {
+              "code": "COD14",
+              "isFoil": false
+            },
+            {
+              "code": "COD15",
+              "isFoil": false
+            },
+            {
+              "code": "COD16",
+              "isFoil": false
+            },
+            {
+              "code": "COD17",
+              "isFoil": false
+            },
+            {
+              "code": "COD18",
+              "isFoil": false
+            },
+            {
+              "code": "COD19",
+              "isFoil": false
+            },
+            {
+              "code": "COD20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "UZBEKISTAN",
+          "name": "Uzbekistan",
+          "icon": "uz",
+          "emoji": "🇺🇿",
+          "tag": "UZB",
+          "stickers": [
+            {
+              "code": "UZB1",
+              "isFoil": true
+            },
+            {
+              "code": "UZB2",
+              "isFoil": false
+            },
+            {
+              "code": "UZB3",
+              "isFoil": false
+            },
+            {
+              "code": "UZB4",
+              "isFoil": false
+            },
+            {
+              "code": "UZB5",
+              "isFoil": false
+            },
+            {
+              "code": "UZB6",
+              "isFoil": false
+            },
+            {
+              "code": "UZB7",
+              "isFoil": false
+            },
+            {
+              "code": "UZB8",
+              "isFoil": false
+            },
+            {
+              "code": "UZB9",
+              "isFoil": false
+            },
+            {
+              "code": "UZB10",
+              "isFoil": false
+            },
+            {
+              "code": "UZB11",
+              "isFoil": false
+            },
+            {
+              "code": "UZB12",
+              "isFoil": false
+            },
+            {
+              "code": "UZB13",
+              "isFoil": false
+            },
+            {
+              "code": "UZB14",
+              "isFoil": false
+            },
+            {
+              "code": "UZB15",
+              "isFoil": false
+            },
+            {
+              "code": "UZB16",
+              "isFoil": false
+            },
+            {
+              "code": "UZB17",
+              "isFoil": false
+            },
+            {
+              "code": "UZB18",
+              "isFoil": false
+            },
+            {
+              "code": "UZB19",
+              "isFoil": false
+            },
+            {
+              "code": "UZB20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "COLOMBIA",
+          "name": "Colombia",
+          "icon": "co",
+          "emoji": "🇨🇴",
+          "tag": "COL",
+          "stickers": [
+            {
+              "code": "COL1",
+              "isFoil": true
+            },
+            {
+              "code": "COL2",
+              "isFoil": false
+            },
+            {
+              "code": "COL3",
+              "isFoil": false
+            },
+            {
+              "code": "COL4",
+              "isFoil": false
+            },
+            {
+              "code": "COL5",
+              "isFoil": false
+            },
+            {
+              "code": "COL6",
+              "isFoil": false
+            },
+            {
+              "code": "COL7",
+              "isFoil": false
+            },
+            {
+              "code": "COL8",
+              "isFoil": false
+            },
+            {
+              "code": "COL9",
+              "isFoil": false
+            },
+            {
+              "code": "COL10",
+              "isFoil": false
+            },
+            {
+              "code": "COL11",
+              "isFoil": false
+            },
+            {
+              "code": "COL12",
+              "isFoil": false
+            },
+            {
+              "code": "COL13",
+              "isFoil": false
+            },
+            {
+              "code": "COL14",
+              "isFoil": false
+            },
+            {
+              "code": "COL15",
+              "isFoil": false
+            },
+            {
+              "code": "COL16",
+              "isFoil": false
+            },
+            {
+              "code": "COL17",
+              "isFoil": false
+            },
+            {
+              "code": "COL18",
+              "isFoil": false
+            },
+            {
+              "code": "COL19",
+              "isFoil": false
+            },
+            {
+              "code": "COL20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GROUP_L",
+      "name": "Group L",
+      "sections": [
+        {
+          "id": "ENGLAND",
+          "name": "England",
+          "icon": "gb-eng",
+          "emoji": "🏴",
+          "tag": "ENG",
+          "stickers": [
+            {
+              "code": "ENG1",
+              "isFoil": true
+            },
+            {
+              "code": "ENG2",
+              "isFoil": false
+            },
+            {
+              "code": "ENG3",
+              "isFoil": false
+            },
+            {
+              "code": "ENG4",
+              "isFoil": false
+            },
+            {
+              "code": "ENG5",
+              "isFoil": false
+            },
+            {
+              "code": "ENG6",
+              "isFoil": false
+            },
+            {
+              "code": "ENG7",
+              "isFoil": false
+            },
+            {
+              "code": "ENG8",
+              "isFoil": false
+            },
+            {
+              "code": "ENG9",
+              "isFoil": false
+            },
+            {
+              "code": "ENG10",
+              "isFoil": false
+            },
+            {
+              "code": "ENG11",
+              "isFoil": false
+            },
+            {
+              "code": "ENG12",
+              "isFoil": false
+            },
+            {
+              "code": "ENG13",
+              "isFoil": false
+            },
+            {
+              "code": "ENG14",
+              "isFoil": false
+            },
+            {
+              "code": "ENG15",
+              "isFoil": false
+            },
+            {
+              "code": "ENG16",
+              "isFoil": false
+            },
+            {
+              "code": "ENG17",
+              "isFoil": false
+            },
+            {
+              "code": "ENG18",
+              "isFoil": false
+            },
+            {
+              "code": "ENG19",
+              "isFoil": false
+            },
+            {
+              "code": "ENG20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "CROATIA",
+          "name": "Croatia",
+          "icon": "hr",
+          "emoji": "🇭🇷",
+          "tag": "CRO",
+          "stickers": [
+            {
+              "code": "CRO1",
+              "isFoil": true
+            },
+            {
+              "code": "CRO2",
+              "isFoil": false
+            },
+            {
+              "code": "CRO3",
+              "isFoil": false
+            },
+            {
+              "code": "CRO4",
+              "isFoil": false
+            },
+            {
+              "code": "CRO5",
+              "isFoil": false
+            },
+            {
+              "code": "CRO6",
+              "isFoil": false
+            },
+            {
+              "code": "CRO7",
+              "isFoil": false
+            },
+            {
+              "code": "CRO8",
+              "isFoil": false
+            },
+            {
+              "code": "CRO9",
+              "isFoil": false
+            },
+            {
+              "code": "CRO10",
+              "isFoil": false
+            },
+            {
+              "code": "CRO11",
+              "isFoil": false
+            },
+            {
+              "code": "CRO12",
+              "isFoil": false
+            },
+            {
+              "code": "CRO13",
+              "isFoil": false
+            },
+            {
+              "code": "CRO14",
+              "isFoil": false
+            },
+            {
+              "code": "CRO15",
+              "isFoil": false
+            },
+            {
+              "code": "CRO16",
+              "isFoil": false
+            },
+            {
+              "code": "CRO17",
+              "isFoil": false
+            },
+            {
+              "code": "CRO18",
+              "isFoil": false
+            },
+            {
+              "code": "CRO19",
+              "isFoil": false
+            },
+            {
+              "code": "CRO20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "GHANA",
+          "name": "Ghana",
+          "icon": "gh",
+          "emoji": "🇬🇭",
+          "tag": "GHA",
+          "stickers": [
+            {
+              "code": "GHA1",
+              "isFoil": true
+            },
+            {
+              "code": "GHA2",
+              "isFoil": false
+            },
+            {
+              "code": "GHA3",
+              "isFoil": false
+            },
+            {
+              "code": "GHA4",
+              "isFoil": false
+            },
+            {
+              "code": "GHA5",
+              "isFoil": false
+            },
+            {
+              "code": "GHA6",
+              "isFoil": false
+            },
+            {
+              "code": "GHA7",
+              "isFoil": false
+            },
+            {
+              "code": "GHA8",
+              "isFoil": false
+            },
+            {
+              "code": "GHA9",
+              "isFoil": false
+            },
+            {
+              "code": "GHA10",
+              "isFoil": false
+            },
+            {
+              "code": "GHA11",
+              "isFoil": false
+            },
+            {
+              "code": "GHA12",
+              "isFoil": false
+            },
+            {
+              "code": "GHA13",
+              "isFoil": false
+            },
+            {
+              "code": "GHA14",
+              "isFoil": false
+            },
+            {
+              "code": "GHA15",
+              "isFoil": false
+            },
+            {
+              "code": "GHA16",
+              "isFoil": false
+            },
+            {
+              "code": "GHA17",
+              "isFoil": false
+            },
+            {
+              "code": "GHA18",
+              "isFoil": false
+            },
+            {
+              "code": "GHA19",
+              "isFoil": false
+            },
+            {
+              "code": "GHA20",
+              "isFoil": false
+            }
+          ]
+        },
+        {
+          "id": "PANAMA",
+          "name": "Panama",
+          "icon": "pa",
+          "emoji": "🇵🇦",
+          "tag": "PAN",
+          "stickers": [
+            {
+              "code": "PAN1",
+              "isFoil": true
+            },
+            {
+              "code": "PAN2",
+              "isFoil": false
+            },
+            {
+              "code": "PAN3",
+              "isFoil": false
+            },
+            {
+              "code": "PAN4",
+              "isFoil": false
+            },
+            {
+              "code": "PAN5",
+              "isFoil": false
+            },
+            {
+              "code": "PAN6",
+              "isFoil": false
+            },
+            {
+              "code": "PAN7",
+              "isFoil": false
+            },
+            {
+              "code": "PAN8",
+              "isFoil": false
+            },
+            {
+              "code": "PAN9",
+              "isFoil": false
+            },
+            {
+              "code": "PAN10",
+              "isFoil": false
+            },
+            {
+              "code": "PAN11",
+              "isFoil": false
+            },
+            {
+              "code": "PAN12",
+              "isFoil": false
+            },
+            {
+              "code": "PAN13",
+              "isFoil": false
+            },
+            {
+              "code": "PAN14",
+              "isFoil": false
+            },
+            {
+              "code": "PAN15",
+              "isFoil": false
+            },
+            {
+              "code": "PAN16",
+              "isFoil": false
+            },
+            {
+              "code": "PAN17",
+              "isFoil": false
+            },
+            {
+              "code": "PAN18",
+              "isFoil": false
+            },
+            {
+              "code": "PAN19",
+              "isFoil": false
+            },
+            {
+              "code": "PAN20",
+              "isFoil": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
