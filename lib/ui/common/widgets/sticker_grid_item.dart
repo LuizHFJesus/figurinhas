@@ -85,20 +85,22 @@ class StickerGridItem extends StatelessWidget {
                 fontWeight: fontWeightCode,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              child: Text(
-                sticker.displayName,
-                textAlign: TextAlign.center,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: textTheme.labelSmall?.copyWith(
-                  fontSize: 8,
-                  color: textColor,
-                  fontWeight: fontWeightName,
+
+            if (sticker.displayName.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: Text(
+                  sticker.displayName,
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: textTheme.labelSmall?.copyWith(
+                    fontSize: 8,
+                    color: textColor,
+                    fontWeight: fontWeightName,
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),
