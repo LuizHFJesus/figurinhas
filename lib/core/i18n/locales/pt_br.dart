@@ -52,7 +52,7 @@ const Map<String, String> ptBR = {
   'share_loading': 'Gerando lista...',
   'share_lbl_album': 'Álbum',
   'share_lbl_edition': 'Edição',
-  'app_link': 'https://play.google.com/store/apps/details?id=dev.luizhfj.wc22.stickermanager',
+  'app_link': 'https://play.google.com/store/apps/details?id=dev.luizhfj.figurinhas',
   
   // More Options
   'more_options_title': 'Mais Opções',
