@@ -168,7 +168,7 @@ class OverviewView extends GetView<OverviewController> {
             );
           }),
 
-          const SliverPadding(padding: EdgeInsets.only(bottom: 80)),
+          const SliverPadding(padding: EdgeInsets.only(bottom: 150)),
         ],
       ),
 

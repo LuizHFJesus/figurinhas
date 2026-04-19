@@ -86,7 +86,7 @@ class HomeView extends GetView<HomeController> {
             );
           }),
 
-          const SliverToBoxAdapter(child: SizedBox(height: 80)),
+          const SliverToBoxAdapter(child: SizedBox(height: 170)),
         ],
       ),
 
