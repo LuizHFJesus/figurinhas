@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "0",
+  "version": "1",
   "groups": [
     {
       "id": "OTHERS",
@@ -16,38 +16,47 @@
           "stickers": [
             {
               "code": "00",
+              "displayName": "Panini Logo",
               "isFoil": true
             },
             {
               "code": "FWC1",
+              "displayName": "Official Emblem  1/2",
               "isFoil": false
             },
             {
               "code": "FWC2",
+              "displayName": "Official Emblem  2/2",
               "isFoil": true
             },
             {
               "code": "FWC3",
+              "displayName": "Official Mascots",
               "isFoil": true
             },
             {
               "code": "FWC4",
+              "displayName": "Official Slogan",
               "isFoil": true
             },
             {
               "code": "FWC5",
+              "displayName": "Official Ball",
               "isFoil": true
             },
             {
               "code": "FWC6",
+              "displayName": "Canada Emblem",
               "isFoil": true
             },
             {
               "code": "FWC7",
+              "displayName": "Mexico Emblem",
               "isFoil": true
             },
             {
               "code": "FWC8",
+              "displayName": "USA Emblem",
               "isFoil": false
             }
           ]
