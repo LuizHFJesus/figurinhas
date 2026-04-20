@@ -18,17 +18,9 @@ const CollectionSchema<AlbumEntity> AlbumEntitySchema = CollectionSchema(
   id: 5722830199791071764,
   properties: {
     r'albumId': PropertySchema(id: 0, name: r'albumId', type: IsarType.string),
-    r'catalogHash': PropertySchema(
-      id: 1,
-      name: r'catalogHash',
-      type: IsarType.string,
-    ),
-    r'catalogVersion': PropertySchema(
-      id: 2,
-      name: r'catalogVersion',
-      type: IsarType.long,
-    ),
-    r'edition': PropertySchema(id: 3, name: r'edition', type: IsarType.string),
+    r'edition': PropertySchema(id: 1, name: r'edition', type: IsarType.string),
+    r'hash': PropertySchema(id: 2, name: r'hash', type: IsarType.string),
+    r'version': PropertySchema(id: 3, name: r'version', type: IsarType.long),
   },
 
   estimateSize: _albumEntityEstimateSize,
@@ -67,13 +59,13 @@ int _albumEntityEstimateSize(
 ) {
   var bytesCount = offsets.last;
   bytesCount += 3 + object.albumId.length * 3;
+  bytesCount += 3 + object.edition.length * 3;
   {
-    final value = object.catalogHash;
+    final value = object.hash;
     if (value != null) {
       bytesCount += 3 + value.length * 3;
     }
   }
-  bytesCount += 3 + object.edition.length * 3;
   return bytesCount;
 }
 
@@ -84,9 +76,9 @@ void _albumEntitySerialize(
   Map<Type, List<int>> allOffsets,
 ) {
   writer.writeString(offsets[0], object.albumId);
-  writer.writeString(offsets[1], object.catalogHash);
-  writer.writeLong(offsets[2], object.catalogVersion);
-  writer.writeString(offsets[3], object.edition);
+  writer.writeString(offsets[1], object.edition);
+  writer.writeString(offsets[2], object.hash);
+  writer.writeLong(offsets[3], object.version);
 }
 
 AlbumEntity _albumEntityDeserialize(
@@ -97,10 +89,10 @@ AlbumEntity _albumEntityDeserialize(
 ) {
   final object = AlbumEntity();
   object.albumId = reader.readString(offsets[0]);
-  object.catalogHash = reader.readStringOrNull(offsets[1]);
-  object.catalogVersion = reader.readLongOrNull(offsets[2]);
-  object.edition = reader.readString(offsets[3]);
+  object.edition = reader.readString(offsets[1]);
+  object.hash = reader.readStringOrNull(offsets[2]);
   object.isarId = id;
+  object.version = reader.readLongOrNull(offsets[3]);
   return object;
 }
 
@@ -114,11 +106,11 @@ P _albumEntityDeserializeProp<P>(
     case 0:
       return (reader.readString(offset)) as P;
     case 1:
-      return (reader.readStringOrNull(offset)) as P;
-    case 2:
-      return (reader.readLongOrNull(offset)) as P;
-    case 3:
       return (reader.readString(offset)) as P;
+    case 2:
+      return (reader.readStringOrNull(offset)) as P;
+    case 3:
+      return (reader.readLongOrNull(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
   }
@@ -486,238 +478,6 @@ extension AlbumEntityQueryFilter
     });
   }
 
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNull(property: r'catalogHash'),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNotNull(property: r'catalogHash'),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashEqualTo(String? value, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.equalTo(
-          property: r'catalogHash',
-          value: value,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashGreaterThan(
-    String? value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.greaterThan(
-          include: include,
-          property: r'catalogHash',
-          value: value,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashLessThan(
-    String? value, {
-    bool include = false,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.lessThan(
-          include: include,
-          property: r'catalogHash',
-          value: value,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashBetween(
-    String? lower,
-    String? upper, {
-    bool includeLower = true,
-    bool includeUpper = true,
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.between(
-          property: r'catalogHash',
-          lower: lower,
-          includeLower: includeLower,
-          upper: upper,
-          includeUpper: includeUpper,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashStartsWith(String value, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.startsWith(
-          property: r'catalogHash',
-          value: value,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashEndsWith(String value, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.endsWith(
-          property: r'catalogHash',
-          value: value,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashContains(String value, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.contains(
-          property: r'catalogHash',
-          value: value,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashMatches(String pattern, {bool caseSensitive = true}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.matches(
-          property: r'catalogHash',
-          wildcard: pattern,
-          caseSensitive: caseSensitive,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashIsEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.equalTo(property: r'catalogHash', value: ''),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogHashIsNotEmpty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.greaterThan(property: r'catalogHash', value: ''),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogVersionIsNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNull(property: r'catalogVersion'),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogVersionIsNotNull() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        const FilterCondition.isNotNull(property: r'catalogVersion'),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogVersionEqualTo(int? value) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.equalTo(property: r'catalogVersion', value: value),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogVersionGreaterThan(int? value, {bool include = false}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.greaterThan(
-          include: include,
-          property: r'catalogVersion',
-          value: value,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogVersionLessThan(int? value, {bool include = false}) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.lessThan(
-          include: include,
-          property: r'catalogVersion',
-          value: value,
-        ),
-      );
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
-  catalogVersionBetween(
-    int? lower,
-    int? upper, {
-    bool includeLower = true,
-    bool includeUpper = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addFilterCondition(
-        FilterCondition.between(
-          property: r'catalogVersion',
-          lower: lower,
-          includeLower: includeLower,
-          upper: upper,
-          includeUpper: includeUpper,
-        ),
-      );
-    });
-  }
-
   QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> editionEqualTo(
     String value, {
     bool caseSensitive = true,
@@ -865,6 +625,170 @@ extension AlbumEntityQueryFilter
     });
   }
 
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        const FilterCondition.isNull(property: r'hash'),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
+  hashIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        const FilterCondition.isNotNull(property: r'hash'),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashEqualTo(
+    String? value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(
+          property: r'hash',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashGreaterThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'hash',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashLessThan(
+    String? value, {
+    bool include = false,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'hash',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashBetween(
+    String? lower,
+    String? upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'hash',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashStartsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.startsWith(
+          property: r'hash',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashEndsWith(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.endsWith(
+          property: r'hash',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashContains(
+    String value, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.contains(
+          property: r'hash',
+          value: value,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashMatches(
+    String pattern, {
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.matches(
+          property: r'hash',
+          wildcard: pattern,
+          caseSensitive: caseSensitive,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> hashIsEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'hash', value: ''),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
+  hashIsNotEmpty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(property: r'hash', value: ''),
+      );
+    });
+  }
+
   QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> isarIdEqualTo(
     Id value,
   ) {
@@ -921,6 +845,81 @@ extension AlbumEntityQueryFilter
       );
     });
   }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
+  versionIsNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        const FilterCondition.isNull(property: r'version'),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
+  versionIsNotNull() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        const FilterCondition.isNotNull(property: r'version'),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> versionEqualTo(
+    int? value,
+  ) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'version', value: value),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition>
+  versionGreaterThan(int? value, {bool include = false}) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.greaterThan(
+          include: include,
+          property: r'version',
+          value: value,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> versionLessThan(
+    int? value, {
+    bool include = false,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.lessThan(
+          include: include,
+          property: r'version',
+          value: value,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterFilterCondition> versionBetween(
+    int? lower,
+    int? upper, {
+    bool includeLower = true,
+    bool includeUpper = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.between(
+          property: r'version',
+          lower: lower,
+          includeLower: includeLower,
+          upper: upper,
+          includeUpper: includeUpper,
+        ),
+      );
+    });
+  }
 }
 
 extension AlbumEntityQueryObject
@@ -943,31 +942,6 @@ extension AlbumEntityQuerySortBy
     });
   }
 
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByCatalogHash() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogHash', Sort.asc);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByCatalogHashDesc() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogHash', Sort.desc);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByCatalogVersion() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogVersion', Sort.asc);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy>
-  sortByCatalogVersionDesc() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogVersion', Sort.desc);
-    });
-  }
-
   QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByEdition() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'edition', Sort.asc);
@@ -977,6 +951,30 @@ extension AlbumEntityQuerySortBy
   QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByEditionDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'edition', Sort.desc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByHash() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hash', Sort.asc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByHashDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hash', Sort.desc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByVersion() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'version', Sort.asc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> sortByVersionDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'version', Sort.desc);
     });
   }
 }
@@ -995,31 +993,6 @@ extension AlbumEntityQuerySortThenBy
     });
   }
 
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByCatalogHash() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogHash', Sort.asc);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByCatalogHashDesc() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogHash', Sort.desc);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByCatalogVersion() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogVersion', Sort.asc);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy>
-  thenByCatalogVersionDesc() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addSortBy(r'catalogVersion', Sort.desc);
-    });
-  }
-
   QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByEdition() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'edition', Sort.asc);
@@ -1029,6 +1002,18 @@ extension AlbumEntityQuerySortThenBy
   QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByEditionDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'edition', Sort.desc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByHash() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hash', Sort.asc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByHashDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hash', Sort.desc);
     });
   }
 
@@ -1043,6 +1028,18 @@ extension AlbumEntityQuerySortThenBy
       return query.addSortBy(r'isarId', Sort.desc);
     });
   }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByVersion() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'version', Sort.asc);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QAfterSortBy> thenByVersionDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'version', Sort.desc);
+    });
+  }
 }
 
 extension AlbumEntityQueryWhereDistinct
@@ -1055,25 +1052,25 @@ extension AlbumEntityQueryWhereDistinct
     });
   }
 
-  QueryBuilder<AlbumEntity, AlbumEntity, QDistinct> distinctByCatalogHash({
-    bool caseSensitive = true,
-  }) {
-    return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'catalogHash', caseSensitive: caseSensitive);
-    });
-  }
-
-  QueryBuilder<AlbumEntity, AlbumEntity, QDistinct> distinctByCatalogVersion() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addDistinctBy(r'catalogVersion');
-    });
-  }
-
   QueryBuilder<AlbumEntity, AlbumEntity, QDistinct> distinctByEdition({
     bool caseSensitive = true,
   }) {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'edition', caseSensitive: caseSensitive);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QDistinct> distinctByHash({
+    bool caseSensitive = true,
+  }) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'hash', caseSensitive: caseSensitive);
+    });
+  }
+
+  QueryBuilder<AlbumEntity, AlbumEntity, QDistinct> distinctByVersion() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'version');
     });
   }
 }
@@ -1092,21 +1089,21 @@ extension AlbumEntityQueryProperty
     });
   }
 
-  QueryBuilder<AlbumEntity, String?, QQueryOperations> catalogHashProperty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'catalogHash');
-    });
-  }
-
-  QueryBuilder<AlbumEntity, int?, QQueryOperations> catalogVersionProperty() {
-    return QueryBuilder.apply(this, (query) {
-      return query.addPropertyName(r'catalogVersion');
-    });
-  }
-
   QueryBuilder<AlbumEntity, String, QQueryOperations> editionProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'edition');
+    });
+  }
+
+  QueryBuilder<AlbumEntity, String?, QQueryOperations> hashProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'hash');
+    });
+  }
+
+  QueryBuilder<AlbumEntity, int?, QQueryOperations> versionProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'version');
     });
   }
 }

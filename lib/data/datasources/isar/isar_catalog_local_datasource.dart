@@ -19,6 +19,22 @@ class IsarCatalogLocalDataSource implements CatalogLocalDataSource {
   }) async {
     await _isar.writeTxn(() async {
       await _isar.albumEntitys.put(album);
+
+      await _isar.groupEntitys
+          .filter()
+          .albumIdEqualTo(album.albumId)
+          .deleteAll();
+          
+      await _isar.sectionEntitys
+          .filter()
+          .albumIdEqualTo(album.albumId)
+          .deleteAll();
+          
+      await _isar.stickerEntitys
+          .filter()
+          .albumIdEqualTo(album.albumId)
+          .deleteAll();
+
       await _isar.groupEntitys.putAll(groups);
       await _isar.sectionEntitys.putAll(sections);
       await _isar.stickerEntitys.putAll(stickers);

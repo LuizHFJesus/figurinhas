@@ -24,10 +24,14 @@ class CatalogRepositoryImpl implements CatalogRepository {
 
     final albumId = decoded['id'] as String;
     final edition = decoded['edition'] as String;
+    final hash = decoded['hash'] as String?;
+    final version = decoded['version'] as String?;
 
     final album = AlbumEntity()
       ..albumId = albumId
-      ..edition = edition;
+      ..edition = edition
+      ..hash = hash
+      ..version = version != null ? int.parse(version) : null;
 
     final groups = <GroupEntity>[];
     final sections = <SectionEntity>[];

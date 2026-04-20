@@ -6,10 +6,10 @@ class AlbumEntity {
   Id isarId = Isar.autoIncrement;
 
   @Index(unique: true, replace: true)
-  late String albumId; // "2022FWC"
+  late String albumId;
 
   late String edition;
 
-  String? catalogHash;
-  int? catalogVersion;
+  String? hash;
+  int? version;
 }

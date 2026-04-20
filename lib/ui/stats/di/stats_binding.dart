@@ -5,9 +5,11 @@ import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/update_catalog_if_needed_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
@@ -26,6 +28,25 @@ class StatsBinding extends Bindings {
     final args = state.extra as StatsRouteArgs?;
 
     Get.lazyPut(() => WatchAlbumStatsUseCase(Get.find<StatsRepository>()));
+
+    if (!Get.isRegistered<UpdateCatalogIfNeededUseCase>()) {
+      Get.lazyPut(
+        () => UpdateCatalogIfNeededUseCase(Get.find<CatalogRepository>()),
+        fenix: true,
+      );
+    }
+    
+    if (!Get.isRegistered<EnsureDefaultUserAlbumUsecase>()) {
+      Get.lazyPut(
+        () => EnsureDefaultUserAlbumUsecase(
+          Get.find<CatalogRepository>(),
+          Get.find<CreateUserAlbumUseCase>(),
+          Get.find<UpdateCatalogIfNeededUseCase>(),
+        ),
+        fenix: true,
+      );
+    }
+
     if (!Get.isRegistered<GetActiveUserAlbumUseCase>()) {
       Get.lazyPut(
         () => GetActiveUserAlbumUseCase(

@@ -29,6 +29,7 @@ class EntityMappers {
   static Album toAlbum(AlbumEntity e) => Album(
     albumId: e.albumId,
     edition: e.edition,
+    version: e.version,
   );
 
   static Group toGroup(GroupEntity e) => Group(
