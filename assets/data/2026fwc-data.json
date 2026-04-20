@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "1",
+  "version": "2",
   "groups": [
     {
       "id": "OTHERS",
@@ -70,46 +70,57 @@
           "stickers": [
             {
               "code": "FWC9",
+              "displayName": "Italy 1934",
               "isFoil": true
             },
             {
               "code": "FWC10",
+              "displayName": "Uruguay 1950",
               "isFoil": true
             },
             {
               "code": "FWC11",
+              "displayName": "West Germany 1954",
               "isFoil": true
             },
             {
               "code": "FWC12",
+              "displayName": "Brazil 1962",
               "isFoil": true
             },
             {
               "code": "FWC13",
+              "displayName": "West Germany 1974",
               "isFoil": true
             },
             {
               "code": "FWC14",
+              "displayName": "Argentina 1986",
               "isFoil": true
             },
             {
               "code": "FWC15",
+              "displayName": "Brazil 1994",
               "isFoil": true
             },
             {
               "code": "FWC16",
+              "displayName": "Brazil 2002",
               "isFoil": true
             },
             {
               "code": "FWC17",
+              "displayName": "Italy 2006",
               "isFoil": true
             },
             {
               "code": "FWC18",
+              "displayName": "Germany 2014",
               "isFoil": true
             },
             {
               "code": "FWC19",
+              "displayName": "Argentina 2022",
               "isFoil": true
             }
           ]
