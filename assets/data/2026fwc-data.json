@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "2",
+  "version": "3",
   "groups": [
     {
       "id": "OTHERS",
@@ -22,7 +22,7 @@
             {
               "code": "FWC1",
               "displayName": "Official Emblem  1/2",
-              "isFoil": false
+              "isFoil": true
             },
             {
               "code": "FWC2",
@@ -57,7 +57,7 @@
             {
               "code": "FWC8",
               "displayName": "USA Emblem",
-              "isFoil": false
+              "isFoil": true
             }
           ]
         },
