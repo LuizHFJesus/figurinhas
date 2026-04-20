@@ -80,6 +80,7 @@ class OverviewView extends GetView<OverviewController> {
 
       header: Column(
         mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Obx(() {
             final isVisible = !controller.isSearchMinimized.value;
