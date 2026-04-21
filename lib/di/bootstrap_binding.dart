@@ -10,6 +10,8 @@ import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.d
 import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_local_profile_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/update_catalog_if_needed_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 
@@ -18,6 +20,14 @@ class BootstrapBinding extends Bindings {
   void dependencies() {
     Get.lazyPut(
       () => EnsureLocalProfileUseCase(Get.find<UserProfileRepository>()),
+      fenix: true,
+    );
+    Get.lazyPut(
+      () => HasSeenHowItWorksUseCase(Get.find<UserProfileRepository>()),
+      fenix: true,
+    );
+    Get.lazyPut(
+      () => SetHasSeenHowItWorksUseCase(Get.find<UserProfileRepository>()),
       fenix: true,
     );
     Get.lazyPut(

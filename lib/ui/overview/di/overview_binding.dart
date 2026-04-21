@@ -12,8 +12,10 @@ import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
@@ -99,6 +101,8 @@ class OverviewBinding extends Bindings {
         Get.find<MoreOptionsCoordinator>(),
         Get.find<SearchSectionsUseCase>(),
         Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<HasSeenHowItWorksUseCase>(),
+        Get.find<SetHasSeenHowItWorksUseCase>(),
         Get.find<ShareCoordinator>(),
         Get.find<ActiveAlbumService>(),
       ),

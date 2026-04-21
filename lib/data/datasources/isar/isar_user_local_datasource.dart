@@ -32,6 +32,34 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
   }
 
   @override
+  Future<bool> hasSeenHowItWorksOnStickerClick(String profileId) async {
+    final profile = await _isar.userProfileEntitys
+        .filter()
+        .profileIdEqualTo(profileId)
+        .findFirst();
+    return profile?.hasSeenHowItWorksOnStickerClick ?? false;
+  }
+
+  @override
+  Future<void> setHasSeenHowItWorksOnStickerClick(
+    String profileId,
+    bool value,
+  ) async {
+    await _isar.writeTxn(() async {
+      final profile = await _isar.userProfileEntitys
+          .filter()
+          .profileIdEqualTo(profileId)
+          .findFirst();
+
+      if (profile != null) {
+        profile.hasSeenHowItWorksOnStickerClick = value;
+        profile.updatedAt = DateTime.now();
+        await _isar.userProfileEntitys.put(profile);
+      }
+    });
+  }
+
+  @override
   Future<UserAlbumEntity> createUserAlbum(UserAlbumEntity e) async {
     await _isar.writeTxn(() async {
       await _isar.userAlbumEntitys.put(e);

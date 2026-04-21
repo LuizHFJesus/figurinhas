@@ -28,18 +28,23 @@ const CollectionSchema<UserProfileEntity> UserProfileEntitySchema =
           name: r'displayName',
           type: IsarType.string,
         ),
-        r'profileId': PropertySchema(
+        r'hasSeenHowItWorksOnStickerClick': PropertySchema(
           id: 2,
+          name: r'hasSeenHowItWorksOnStickerClick',
+          type: IsarType.bool,
+        ),
+        r'profileId': PropertySchema(
+          id: 3,
           name: r'profileId',
           type: IsarType.string,
         ),
         r'remoteUid': PropertySchema(
-          id: 3,
+          id: 4,
           name: r'remoteUid',
           type: IsarType.string,
         ),
         r'updatedAt': PropertySchema(
-          id: 4,
+          id: 5,
           name: r'updatedAt',
           type: IsarType.dateTime,
         ),
@@ -117,9 +122,10 @@ void _userProfileEntitySerialize(
 ) {
   writer.writeDateTime(offsets[0], object.createdAt);
   writer.writeString(offsets[1], object.displayName);
-  writer.writeString(offsets[2], object.profileId);
-  writer.writeString(offsets[3], object.remoteUid);
-  writer.writeDateTime(offsets[4], object.updatedAt);
+  writer.writeBool(offsets[2], object.hasSeenHowItWorksOnStickerClick);
+  writer.writeString(offsets[3], object.profileId);
+  writer.writeString(offsets[4], object.remoteUid);
+  writer.writeDateTime(offsets[5], object.updatedAt);
 }
 
 UserProfileEntity _userProfileEntityDeserialize(
@@ -131,10 +137,11 @@ UserProfileEntity _userProfileEntityDeserialize(
   final object = UserProfileEntity();
   object.createdAt = reader.readDateTime(offsets[0]);
   object.displayName = reader.readStringOrNull(offsets[1]);
+  object.hasSeenHowItWorksOnStickerClick = reader.readBool(offsets[2]);
   object.isarId = id;
-  object.profileId = reader.readString(offsets[2]);
-  object.remoteUid = reader.readStringOrNull(offsets[3]);
-  object.updatedAt = reader.readDateTime(offsets[4]);
+  object.profileId = reader.readString(offsets[3]);
+  object.remoteUid = reader.readStringOrNull(offsets[4]);
+  object.updatedAt = reader.readDateTime(offsets[5]);
   return object;
 }
 
@@ -150,10 +157,12 @@ P _userProfileEntityDeserializeProp<P>(
     case 1:
       return (reader.readStringOrNull(offset)) as P;
     case 2:
-      return (reader.readString(offset)) as P;
+      return (reader.readBool(offset)) as P;
     case 3:
-      return (reader.readStringOrNull(offset)) as P;
+      return (reader.readString(offset)) as P;
     case 4:
+      return (reader.readStringOrNull(offset)) as P;
+    case 5:
       return (reader.readDateTime(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -662,6 +671,18 @@ extension UserProfileEntityQueryFilter
   }
 
   QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterFilterCondition>
+  hasSeenHowItWorksOnStickerClickEqualTo(bool value) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(
+          property: r'hasSeenHowItWorksOnStickerClick',
+          value: value,
+        ),
+      );
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterFilterCondition>
   isarIdEqualTo(Id value) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(
@@ -1109,6 +1130,20 @@ extension UserProfileEntityQuerySortBy
   }
 
   QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  sortByHasSeenHowItWorksOnStickerClick() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hasSeenHowItWorksOnStickerClick', Sort.asc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  sortByHasSeenHowItWorksOnStickerClickDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hasSeenHowItWorksOnStickerClick', Sort.desc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
   sortByProfileId() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'profileId', Sort.asc);
@@ -1178,6 +1213,20 @@ extension UserProfileEntityQuerySortThenBy
   thenByDisplayNameDesc() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'displayName', Sort.desc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  thenByHasSeenHowItWorksOnStickerClick() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hasSeenHowItWorksOnStickerClick', Sort.asc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  thenByHasSeenHowItWorksOnStickerClickDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'hasSeenHowItWorksOnStickerClick', Sort.desc);
     });
   }
 
@@ -1255,6 +1304,13 @@ extension UserProfileEntityQueryWhereDistinct
   }
 
   QueryBuilder<UserProfileEntity, UserProfileEntity, QDistinct>
+  distinctByHasSeenHowItWorksOnStickerClick() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'hasSeenHowItWorksOnStickerClick');
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QDistinct>
   distinctByProfileId({bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'profileId', caseSensitive: caseSensitive);
@@ -1295,6 +1351,13 @@ extension UserProfileEntityQueryProperty
   displayNameProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'displayName');
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, bool, QQueryOperations>
+  hasSeenHowItWorksOnStickerClickProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'hasSeenHowItWorksOnStickerClick');
     });
   }
 

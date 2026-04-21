@@ -10,10 +10,14 @@ import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
+import 'package:flutter/widgets.dart';
 
 class SectionController extends GetxController {
   // Dependencies
@@ -23,6 +27,9 @@ class SectionController extends GetxController {
   final GetStickersBySectionUseCase _getStickers;
   final WatchSectionStatsUseCase _watchStats;
   final IncrementStickerQuantityUseCase _incrementSticker;
+  final HasSeenHowItWorksUseCase _hasSeenHowItWorks;
+  final SetHasSeenHowItWorksUseCase _setHasSeenHowItWorks;
+  final MoreOptionsCoordinator _moreOptionsCoordinator;
   final ActiveAlbumService _activeAlbumService;
 
   // Parameters
@@ -49,6 +56,9 @@ class SectionController extends GetxController {
     this._getStickers,
     this._watchStats,
     this._incrementSticker,
+    this._hasSeenHowItWorks,
+    this._setHasSeenHowItWorks,
+    this._moreOptionsCoordinator,
     this._activeAlbumService, {
     required this.sectionId,
     required this.sectionArgs,
@@ -111,9 +121,19 @@ class SectionController extends GetxController {
     _rebuildVisibleStickers();
   }
 
-  Future<void> onStickerTap(Sticker sticker) async {
+  Future<void> onStickerTap(BuildContext context, Sticker sticker) async {
     final album = activeAlbum.value;
     if (album == null) return;
+
+    final profileId = await _profileRepo.ensureLocalProfileId();
+    final hasSeen = await _hasSeenHowItWorks(profileId);
+
+    if (!hasSeen) {
+      if (context.mounted) {
+        await _moreOptionsCoordinator.showHowItWorks(context);
+        await _setHasSeenHowItWorks(profileId, true);
+      }
+    }
 
     await _incrementSticker(
       userAlbumId: album.userAlbumId,

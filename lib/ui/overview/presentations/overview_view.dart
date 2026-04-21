@@ -162,7 +162,7 @@ class OverviewView extends GetView<OverviewController> {
                   OverviewSectionItem(
                     data: sectionData,
                     quantityListenableOf: controller.qtyStore.listenableOf,
-                    onTap: (s) => controller.onStickerTap(s),
+                    onTap: (s) => controller.onStickerTap(context, s),
                     onLongPress: (s) => controller.onStickerLongPress(s),
                   ),
               ],

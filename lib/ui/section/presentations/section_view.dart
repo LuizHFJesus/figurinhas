@@ -81,7 +81,7 @@ class SectionView extends GetView<SectionController> {
             return StickersSliverGrid(
               stickers: stickers,
               quantityListenableOf: controller.stickerQtyStore.listenableOf,
-              onTap: controller.onStickerTap,
+              onTap: (s) => controller.onStickerTap(context, s),
               onLongPress: controller.onStickerLongPress,
             );
           }),

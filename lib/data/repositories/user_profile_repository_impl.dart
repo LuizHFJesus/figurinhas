@@ -10,4 +10,14 @@ class UserProfileRepositoryImpl implements UserProfileRepository {
     final p = await _local.ensureLocalProfile();
     return p.profileId;
   }
+
+  @override
+  Future<bool> hasSeenHowItWorksOnStickerClick(String profileId) {
+    return _local.hasSeenHowItWorksOnStickerClick(profileId);
+  }
+
+  @override
+  Future<void> setHasSeenHowItWorksOnStickerClick(String profileId, bool value) {
+    return _local.setHasSeenHowItWorksOnStickerClick(profileId, value);
+  }
 }

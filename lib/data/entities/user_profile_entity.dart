@@ -13,6 +13,8 @@ class UserProfileEntity {
 
   String? displayName;
 
+  bool hasSeenHowItWorksOnStickerClick = false;
+
   late DateTime createdAt;
   late DateTime updatedAt;
 }

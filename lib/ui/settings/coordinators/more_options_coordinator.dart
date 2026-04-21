@@ -43,7 +43,7 @@ class MoreOptionsCoordinator {
   ) async {
     switch (option) {
       case MoreOptionType.howItWorks:
-        await _showHowItWorks(context);
+        await showHowItWorks(context);
       case MoreOptionType.clearAlbum:
         await _clearAlbum(context, album);
       case MoreOptionType.fillAlbum:
@@ -53,7 +53,7 @@ class MoreOptionsCoordinator {
     }
   }
 
-  Future<void> _showHowItWorks(BuildContext context) async {
+  Future<void> showHowItWorks(BuildContext context) async {
     await showDialog<void>(
       context: context,
       builder: (ctx) => const HowItWorksDialog(),

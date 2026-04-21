@@ -9,9 +9,12 @@ import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repositor
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/section/controllers/section_controller.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 
 class SectionBinding extends Bindings {
@@ -54,6 +57,9 @@ class SectionBinding extends Bindings {
         Get.find<GetStickersBySectionUseCase>(),
         Get.find<WatchSectionStatsUseCase>(),
         Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<HasSeenHowItWorksUseCase>(),
+        Get.find<SetHasSeenHowItWorksUseCase>(),
+        Get.find<MoreOptionsCoordinator>(),
         Get.find<ActiveAlbumService>(),
         sectionId: sectionId,
         sectionArgs: sectionArgs,
