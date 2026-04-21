@@ -138,17 +138,16 @@ class StickerGridItem extends StatelessWidget {
               right: -4,
               top: -8,
               child: DecoratedBox(
-                decoration: const BoxDecoration(
-                  color: AppPalette.brand,
+                decoration: BoxDecoration(
+                  color: colorScheme.primary,
                   shape: BoxShape.circle,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(6),
                   child: Text(
                     '${quantity - 1}',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
+                    style: textTheme.labelSmall?.copyWith(
+                      color: colorScheme.onPrimary,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
