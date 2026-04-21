@@ -13,6 +13,14 @@ class MoreOptionsBottomSheet extends StatelessWidget {
       title: 'more_options_title'.tr,
       options: [
         BottomSheetTile(
+          icon: 'help',
+          label: 'more_options_how_it_works'.tr,
+          onTap: () => Navigator.pop(
+            context,
+            MoreOptionType.howItWorks,
+          ),
+        ),
+        BottomSheetTile(
           icon: 'trash',
           label: 'more_options_clear_album'.tr,
           onTap: () => Navigator.pop(

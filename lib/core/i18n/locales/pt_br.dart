@@ -56,6 +56,7 @@ const Map<String, String> ptBR = {
   
   // More Options
   'more_options_title': 'Mais Opções',
+  'more_options_how_it_works': 'Como funciona?',
   'more_options_clear_album': 'Limpar álbum',
   'more_options_clear_album_title': 'Limpar álbum?',
   'more_options_clear_album_desc': 'Esta ação apagará todas as figurinhas marcadas e não poderá ser desfeita.',
@@ -66,4 +67,11 @@ const Map<String, String> ptBR = {
   'more_options_album_filled': 'Álbum completado com sucesso!',
   'more_options_rate_app': 'Avaliar app',
   'cancel': 'Cancelar',
+  'close': 'Fechar',
+  
+  // How it works
+  'how_it_works_title': 'Como funciona?',
+  'how_it_works_select': 'Toque para marcar como obtida',
+  'how_it_works_duplicate': 'Toque novamente para adicionar repetidas',
+  'how_it_works_unselect': 'Segure pressionado para desmarcar',
 };

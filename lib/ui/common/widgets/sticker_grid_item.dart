@@ -172,3 +172,36 @@ class StickerGridItem extends StatelessWidget {
     );
   }
 }
+
+class DummyStickerGridItem extends StatelessWidget {
+  final String code;
+  final String displayName;
+  final bool isFoil;
+  final int quantity;
+
+  const DummyStickerGridItem({
+    required this.code,
+    required this.isFoil,
+    required this.quantity,
+    this.displayName = '',
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return StickerGridItem(
+      sticker: Sticker(
+        code: code,
+        albumId: '',
+        groupId: '',
+        sectionId: '',
+        displayName: displayName,
+        isFoil: isFoil,
+        order: 0,
+      ),
+      quantity: quantity,
+      onTap: () {},
+      onLongPress: () {},
+    );
+  }
+}

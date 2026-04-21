@@ -6,10 +6,12 @@ import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/dialog/dialog_action.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/dialog/text_alert_dialog.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/show_snack_bar.dart';
+import 'package:sticker_manager_wc22/ui/settings/widgets/how_it_works_dialog.dart';
 import 'package:sticker_manager_wc22/ui/settings/widgets/more_options_bottom_sheet.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 enum MoreOptionType {
+  howItWorks,
   clearAlbum,
   fillAlbum,
   rateApp,
@@ -40,6 +42,8 @@ class MoreOptionsCoordinator {
     UserAlbum album,
   ) async {
     switch (option) {
+      case MoreOptionType.howItWorks:
+        await _showHowItWorks(context);
       case MoreOptionType.clearAlbum:
         await _clearAlbum(context, album);
       case MoreOptionType.fillAlbum:
@@ -47,6 +51,13 @@ class MoreOptionsCoordinator {
       case MoreOptionType.rateApp:
         await _rateApp();
     }
+  }
+
+  Future<void> _showHowItWorks(BuildContext context) async {
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => const HowItWorksDialog(),
+    );
   }
 
   Future<void> _clearAlbum(BuildContext context, UserAlbum album) async {
