@@ -82,7 +82,7 @@ class SectionView extends GetView<SectionController> {
               stickers: stickers,
               quantityListenableOf: controller.stickerQtyStore.listenableOf,
               onTap: (s) => controller.onStickerTap(context, s),
-              onLongPress: controller.onStickerLongPress,
+              onLongPress: (s) => controller.onStickerLongPress(context, s),
             );
           }),
 

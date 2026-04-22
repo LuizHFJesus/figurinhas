@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
@@ -13,11 +14,12 @@ import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_use
 import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/dialog/sticker_quantity_dialog.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
 import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
-import 'package:flutter/widgets.dart';
 
 class SectionController extends GetxController {
   // Dependencies
@@ -27,6 +29,7 @@ class SectionController extends GetxController {
   final GetStickersBySectionUseCase _getStickers;
   final WatchSectionStatsUseCase _watchStats;
   final IncrementStickerQuantityUseCase _incrementSticker;
+  final SetStickerQuantityUseCase _setStickerQuantity;
   final HasSeenHowItWorksUseCase _hasSeenHowItWorks;
   final SetHasSeenHowItWorksUseCase _setHasSeenHowItWorks;
   final MoreOptionsCoordinator _moreOptionsCoordinator;
@@ -56,6 +59,7 @@ class SectionController extends GetxController {
     this._getStickers,
     this._watchStats,
     this._incrementSticker,
+    this._setStickerQuantity,
     this._hasSeenHowItWorks,
     this._setHasSeenHowItWorks,
     this._moreOptionsCoordinator,
@@ -142,12 +146,32 @@ class SectionController extends GetxController {
     );
   }
 
-  Future<void> onStickerLongPress(Sticker sticker) async {
+  Future<void> onStickerLongPress(BuildContext context, Sticker sticker) async {
     final album = activeAlbum.value;
     if (album == null) return;
 
     final current = quantityOf(sticker.code);
     if (current <= 0) return;
+
+    if (current >= 3) {
+      final newQty = await showDialog<int?>(
+        context: context,
+        builder: (_) => StickerQuantityDialog(
+          sticker: sticker,
+          initialQuantity: current,
+        ),
+      );
+
+      if (newQty != null && newQty != current) {
+        await _setStickerQuantity(
+          userAlbumId: album.userAlbumId,
+          albumId: album.albumId,
+          code: sticker.code,
+          quantity: newQty,
+        );
+      }
+      return;
+    }
 
     await _incrementSticker(
       userAlbumId: album.userAlbumId,

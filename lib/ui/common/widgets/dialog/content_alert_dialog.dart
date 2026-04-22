@@ -53,13 +53,13 @@ class ContentAlertDialog extends StatelessWidget {
           children: [
             PrimaryButton(
               label: primaryAction.label,
-              onPressed: () => Navigator.pop(context, true),
+              onPressed: primaryAction.onPressed,
             ),
             if (secondaryAction != null) ...[
               const SizedBox(height: 8),
               OutlineButton(
                 label: secondaryAction!.label,
-                onPressed: () => Navigator.pop(context, false),
+                onPressed: secondaryAction!.onPressed,
               ),
             ],
           ],

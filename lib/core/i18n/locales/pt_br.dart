@@ -66,6 +66,7 @@ const Map<String, String> ptBR = {
   'more_options_fill_album_desc': 'Esta ação marcará todas as figurinhas não marcadas e não poderá ser desfeita.',
   'more_options_album_filled': 'Álbum completado com sucesso!',
   'more_options_rate_app': 'Avaliar app',
+  'confirm': 'Confirmar',
   'cancel': 'Cancelar',
   'close': 'Fechar',
   
@@ -74,4 +75,8 @@ const Map<String, String> ptBR = {
   'how_it_works_select': 'Toque para marcar como obtida',
   'how_it_works_duplicate': 'Toque novamente para adicionar repetidas',
   'how_it_works_unselect': 'Segure pressionado para desmarcar',
+
+  // Sticker Quantity
+  'sticker_quantity_title': 'Editar figurinha',
+  'sticker_quantity_description': 'Ajuste a quantidade que você tem da figurinha ',
 };
