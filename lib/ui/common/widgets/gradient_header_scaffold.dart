@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/common/utils/constants.dart';
+import 'package:sticker_manager_wc22/data/services/purchase_service.dart';
 import 'package:sticker_manager_wc22/ui/ads/widgets/banner_ad_widget.dart';
 
 class GradientHeaderScaffold extends StatefulWidget {
@@ -146,12 +148,18 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
             ),
 
             if (widget.bannerAdUnitId != null)
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: SafeArea(
-                  child: BannerAdWidget(adUnitId: widget.bannerAdUnitId!),
-                ),
-              ),
+              Obx(() {
+                final isAdsRemoved =
+                    Get.find<PurchaseService>().adsRemoved.value;
+                if (isAdsRemoved) return const SizedBox.shrink();
+
+                return Align(
+                  alignment: Alignment.bottomCenter,
+                  child: SafeArea(
+                    child: BannerAdWidget(adUnitId: widget.bannerAdUnitId!),
+                  ),
+                );
+              }),
           ],
         ),
       ),

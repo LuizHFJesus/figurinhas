@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sticker_manager_wc22/ui/common/widgets/bottom_sheet_tile.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/svg_icon.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   final String title;
-  final List<BottomSheetTile> options;
+  final List<Widget?> options;
 
   const CustomBottomSheet({
     required this.title,

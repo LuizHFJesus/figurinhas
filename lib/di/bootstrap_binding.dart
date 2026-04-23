@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/data/services/bootstrap_service.dart';
+import 'package:sticker_manager_wc22/data/services/purchase_service.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
@@ -61,6 +62,11 @@ class BootstrapBinding extends Bindings {
         Get.find<WatchAlbumStatsUseCase>(),
         Get.find<StickerStateRepository>(),
       ),
+      permanent: true,
+    );
+
+    Get.put(
+      PurchaseService(Get.find<UserProfileRepository>()),
       permanent: true,
     );
 

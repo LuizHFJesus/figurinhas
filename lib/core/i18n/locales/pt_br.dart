@@ -65,6 +65,8 @@ const Map<String, String> ptBR = {
   'more_options_fill_album_title': 'Completar álbum?',
   'more_options_fill_album_desc': 'Esta ação marcará todas as figurinhas não marcadas e não poderá ser desfeita.',
   'more_options_album_filled': 'Álbum completado com sucesso!',
+  'more_options_remove_ads': 'Remover anúncios',
+  'more_options_restore_purchases': 'Restaurar compras',
   'more_options_rate_app': 'Avaliar app',
   'confirm': 'Confirmar',
   'cancel': 'Cancelar',

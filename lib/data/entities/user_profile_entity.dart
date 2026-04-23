@@ -15,6 +15,8 @@ class UserProfileEntity {
 
   bool hasSeenHowItWorksOnStickerClick = false;
 
+  bool adsRemoved = false;
+
   late DateTime createdAt;
   late DateTime updatedAt;
 }

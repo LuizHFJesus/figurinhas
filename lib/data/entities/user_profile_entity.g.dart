@@ -18,33 +18,38 @@ const CollectionSchema<UserProfileEntity> UserProfileEntitySchema =
       name: r'UserProfileEntity',
       id: -588086384777568406,
       properties: {
-        r'createdAt': PropertySchema(
+        r'adsRemoved': PropertySchema(
           id: 0,
+          name: r'adsRemoved',
+          type: IsarType.bool,
+        ),
+        r'createdAt': PropertySchema(
+          id: 1,
           name: r'createdAt',
           type: IsarType.dateTime,
         ),
         r'displayName': PropertySchema(
-          id: 1,
+          id: 2,
           name: r'displayName',
           type: IsarType.string,
         ),
         r'hasSeenHowItWorksOnStickerClick': PropertySchema(
-          id: 2,
+          id: 3,
           name: r'hasSeenHowItWorksOnStickerClick',
           type: IsarType.bool,
         ),
         r'profileId': PropertySchema(
-          id: 3,
+          id: 4,
           name: r'profileId',
           type: IsarType.string,
         ),
         r'remoteUid': PropertySchema(
-          id: 4,
+          id: 5,
           name: r'remoteUid',
           type: IsarType.string,
         ),
         r'updatedAt': PropertySchema(
-          id: 5,
+          id: 6,
           name: r'updatedAt',
           type: IsarType.dateTime,
         ),
@@ -120,12 +125,13 @@ void _userProfileEntitySerialize(
   List<int> offsets,
   Map<Type, List<int>> allOffsets,
 ) {
-  writer.writeDateTime(offsets[0], object.createdAt);
-  writer.writeString(offsets[1], object.displayName);
-  writer.writeBool(offsets[2], object.hasSeenHowItWorksOnStickerClick);
-  writer.writeString(offsets[3], object.profileId);
-  writer.writeString(offsets[4], object.remoteUid);
-  writer.writeDateTime(offsets[5], object.updatedAt);
+  writer.writeBool(offsets[0], object.adsRemoved);
+  writer.writeDateTime(offsets[1], object.createdAt);
+  writer.writeString(offsets[2], object.displayName);
+  writer.writeBool(offsets[3], object.hasSeenHowItWorksOnStickerClick);
+  writer.writeString(offsets[4], object.profileId);
+  writer.writeString(offsets[5], object.remoteUid);
+  writer.writeDateTime(offsets[6], object.updatedAt);
 }
 
 UserProfileEntity _userProfileEntityDeserialize(
@@ -135,13 +141,14 @@ UserProfileEntity _userProfileEntityDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = UserProfileEntity();
-  object.createdAt = reader.readDateTime(offsets[0]);
-  object.displayName = reader.readStringOrNull(offsets[1]);
-  object.hasSeenHowItWorksOnStickerClick = reader.readBool(offsets[2]);
+  object.adsRemoved = reader.readBool(offsets[0]);
+  object.createdAt = reader.readDateTime(offsets[1]);
+  object.displayName = reader.readStringOrNull(offsets[2]);
+  object.hasSeenHowItWorksOnStickerClick = reader.readBool(offsets[3]);
   object.isarId = id;
-  object.profileId = reader.readString(offsets[3]);
-  object.remoteUid = reader.readStringOrNull(offsets[4]);
-  object.updatedAt = reader.readDateTime(offsets[5]);
+  object.profileId = reader.readString(offsets[4]);
+  object.remoteUid = reader.readStringOrNull(offsets[5]);
+  object.updatedAt = reader.readDateTime(offsets[6]);
   return object;
 }
 
@@ -153,16 +160,18 @@ P _userProfileEntityDeserializeProp<P>(
 ) {
   switch (propertyId) {
     case 0:
-      return (reader.readDateTime(offset)) as P;
-    case 1:
-      return (reader.readStringOrNull(offset)) as P;
-    case 2:
       return (reader.readBool(offset)) as P;
-    case 3:
-      return (reader.readString(offset)) as P;
-    case 4:
+    case 1:
+      return (reader.readDateTime(offset)) as P;
+    case 2:
       return (reader.readStringOrNull(offset)) as P;
+    case 3:
+      return (reader.readBool(offset)) as P;
+    case 4:
+      return (reader.readString(offset)) as P;
     case 5:
+      return (reader.readStringOrNull(offset)) as P;
+    case 6:
       return (reader.readDateTime(offset)) as P;
     default:
       throw IsarError('Unknown property with id $propertyId');
@@ -456,6 +465,15 @@ extension UserProfileEntityQueryWhere
 
 extension UserProfileEntityQueryFilter
     on QueryBuilder<UserProfileEntity, UserProfileEntity, QFilterCondition> {
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterFilterCondition>
+  adsRemovedEqualTo(bool value) {
+    return QueryBuilder.apply(this, (query) {
+      return query.addFilterCondition(
+        FilterCondition.equalTo(property: r'adsRemoved', value: value),
+      );
+    });
+  }
+
   QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterFilterCondition>
   createdAtEqualTo(DateTime value) {
     return QueryBuilder.apply(this, (query) {
@@ -1102,6 +1120,20 @@ extension UserProfileEntityQueryLinks
 extension UserProfileEntityQuerySortBy
     on QueryBuilder<UserProfileEntity, UserProfileEntity, QSortBy> {
   QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  sortByAdsRemoved() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'adsRemoved', Sort.asc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  sortByAdsRemovedDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'adsRemoved', Sort.desc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
   sortByCreatedAt() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'createdAt', Sort.asc);
@@ -1188,6 +1220,20 @@ extension UserProfileEntityQuerySortBy
 
 extension UserProfileEntityQuerySortThenBy
     on QueryBuilder<UserProfileEntity, UserProfileEntity, QSortThenBy> {
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  thenByAdsRemoved() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'adsRemoved', Sort.asc);
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
+  thenByAdsRemovedDesc() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addSortBy(r'adsRemoved', Sort.desc);
+    });
+  }
+
   QueryBuilder<UserProfileEntity, UserProfileEntity, QAfterSortBy>
   thenByCreatedAt() {
     return QueryBuilder.apply(this, (query) {
@@ -1290,6 +1336,13 @@ extension UserProfileEntityQuerySortThenBy
 extension UserProfileEntityQueryWhereDistinct
     on QueryBuilder<UserProfileEntity, UserProfileEntity, QDistinct> {
   QueryBuilder<UserProfileEntity, UserProfileEntity, QDistinct>
+  distinctByAdsRemoved() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addDistinctBy(r'adsRemoved');
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, UserProfileEntity, QDistinct>
   distinctByCreatedAt() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'createdAt');
@@ -1337,6 +1390,12 @@ extension UserProfileEntityQueryProperty
   QueryBuilder<UserProfileEntity, int, QQueryOperations> isarIdProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'isarId');
+    });
+  }
+
+  QueryBuilder<UserProfileEntity, bool, QQueryOperations> adsRemovedProperty() {
+    return QueryBuilder.apply(this, (query) {
+      return query.addPropertyName(r'adsRemoved');
     });
   }
 

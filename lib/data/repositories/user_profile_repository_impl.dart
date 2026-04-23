@@ -20,4 +20,14 @@ class UserProfileRepositoryImpl implements UserProfileRepository {
   Future<void> setHasSeenHowItWorksOnStickerClick(String profileId, bool value) {
     return _local.setHasSeenHowItWorksOnStickerClick(profileId, value);
   }
+
+  @override
+  Future<bool> isAdsRemoved(String profileId) {
+    return _local.isAdsRemoved(profileId);
+  }
+
+  @override
+  Future<void> setAdsRemoved(String profileId, {required bool value}) {
+    return _local.setAdsRemoved(profileId, value: value);
+  }
 }

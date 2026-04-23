@@ -60,6 +60,31 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
   }
 
   @override
+  Future<bool> isAdsRemoved(String profileId) async {
+    final profile = await _isar.userProfileEntitys
+        .filter()
+        .profileIdEqualTo(profileId)
+        .findFirst();
+    return profile?.adsRemoved ?? false;
+  }
+
+  @override
+  Future<void> setAdsRemoved(String profileId, {required bool value}) async {
+    await _isar.writeTxn(() async {
+      final profile = await _isar.userProfileEntitys
+          .filter()
+          .profileIdEqualTo(profileId)
+          .findFirst();
+
+      if (profile != null) {
+        profile.adsRemoved = value;
+        profile.updatedAt = DateTime.now();
+        await _isar.userProfileEntitys.put(profile);
+      }
+    });
+  }
+
+  @override
   Future<UserAlbumEntity> createUserAlbum(UserAlbumEntity e) async {
     await _isar.writeTxn(() async {
       await _isar.userAlbumEntitys.put(e);

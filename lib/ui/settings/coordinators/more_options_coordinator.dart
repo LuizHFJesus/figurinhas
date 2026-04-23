@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sticker_manager_wc22/data/services/purchase_service.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
@@ -15,6 +16,8 @@ enum MoreOptionType {
   clearAlbum,
   fillAlbum,
   rateApp,
+  removeAds,
+  restorePurchases,
 }
 
 class MoreOptionsCoordinator {
@@ -50,7 +53,21 @@ class MoreOptionsCoordinator {
         await _fillAlbum(context, album);
       case MoreOptionType.rateApp:
         await _rateApp();
+      case MoreOptionType.removeAds:
+        await _removeAds();
+      case MoreOptionType.restorePurchases:
+        await _restorePurchases();
     }
+  }
+
+  Future<void> _removeAds() async {
+    final purchaseService = Get.find<PurchaseService>();
+    await purchaseService.buyRemoveAds();
+  }
+
+  Future<void> _restorePurchases() async {
+    final purchaseService = Get.find<PurchaseService>();
+    await purchaseService.restorePurchases();
   }
 
   Future<void> showHowItWorks(BuildContext context) async {
