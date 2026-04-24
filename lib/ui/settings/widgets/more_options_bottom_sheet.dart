@@ -10,68 +10,59 @@ class MoreOptionsBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBottomSheet(
-      title: 'more_options_title'.tr,
-      options: [
-        BottomSheetTile(
-          icon: 'help',
-          label: 'more_options_how_it_works'.tr,
-          onTap: () => Navigator.pop(
-            context,
-            MoreOptionType.howItWorks,
-          ),
-        ),
-        BottomSheetTile(
-          icon: 'trash',
-          label: 'more_options_clear_album'.tr,
-          onTap: () => Navigator.pop(
-            context,
-            MoreOptionType.clearAlbum,
-          ),
-        ),
-        BottomSheetTile(
-          icon: 'check-circle',
-          label: 'more_options_fill_album'.tr,
-          onTap: () => Navigator.pop(
-            context,
-            MoreOptionType.fillAlbum,
-          ),
-        ),
-        BottomSheetTile(
-          icon: 'clipboard',
-          label: 'more_options_rate_app'.tr,
-          onTap: () => Navigator.pop(
-            context,
-            MoreOptionType.rateApp,
-          ),
-        ),
-        Obx(() {
-          final isAdsRemoved = Get.find<PurchaseService>().adsRemoved.value;
-          if (isAdsRemoved) return const SizedBox.shrink();
+    return Obx(() {
+      final isAdsRemoved = Get.find<PurchaseService>().adsRemoved.value;
 
-          return BottomSheetTile(
-            icon: 'ad-off',
-            label: 'more_options_remove_ads'.tr,
+      return CustomBottomSheet(
+        title: 'more_options_title'.tr,
+        options: [
+          BottomSheetTile(
+            icon: 'help',
+            label: 'more_options_how_it_works'.tr,
             onTap: () => Navigator.pop(
               context,
-              MoreOptionType.removeAds,
+              MoreOptionType.howItWorks,
             ),
-          );
-        }),
-        Obx(() {
-          final isAdsRemoved = Get.find<PurchaseService>().adsRemoved.value;
-          if (!isAdsRemoved) return const SizedBox.shrink();
-
-          return BottomSheetTile(
-            icon: 'restore-purchase',
-            label: 'more_options_restore_purchases'.tr,
+          ),
+          BottomSheetTile(
+            icon: 'trash',
+            label: 'more_options_clear_album'.tr,
             onTap: () => Navigator.pop(
               context,
-              MoreOptionType.restorePurchases,
+              MoreOptionType.clearAlbum,
             ),
-          );
-        }),
-      ],
-    );
+          ),
+          BottomSheetTile(
+            icon: 'check-circle',
+            label: 'more_options_fill_album'.tr,
+            onTap: () => Navigator.pop(
+              context,
+              MoreOptionType.fillAlbum,
+            ),
+          ),
+          BottomSheetTile(
+            icon: 'clipboard',
+            label: 'more_options_rate_app'.tr,
+            onTap: () => Navigator.pop(
+              context,
+              MoreOptionType.rateApp,
+            ),
+          ),
+          if (!isAdsRemoved)
+            BottomSheetTile(
+              icon: 'ad-off',
+              label: 'more_options_remove_ads'.tr,
+              onTap: () => Navigator.pop(context, MoreOptionType.removeAds),
+            ),
+          if (isAdsRemoved)
+            BottomSheetTile(
+              icon: 'restore-purchase',
+              label: 'more_options_restore_purchases'.tr,
+              onTap: () =>
+                  Navigator.pop(context, MoreOptionType.restorePurchases),
+            ),
+        ],
+      );
+    });
   }
 }
