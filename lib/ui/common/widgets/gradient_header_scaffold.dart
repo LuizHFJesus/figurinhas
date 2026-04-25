@@ -74,10 +74,7 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.only(bottom: 70),
-          child: widget.floatingActionButton,
-        ),
+        floatingActionButton: widget.floatingActionButton,
         body: Stack(
           children: [
             Positioned(
@@ -89,6 +86,7 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                 decoration: BoxDecoration(gradient: gradient),
               ),
             ),
+
             Column(
               children: [
                 Padding(
@@ -146,22 +144,18 @@ class _GradientHeaderScaffoldState extends State<GradientHeaderScaffold> {
                 ),
               ],
             ),
+          ],
+        ),
 
-            if (widget.bannerAdUnitId != null)
-              Obx(() {
+        bottomNavigationBar: (widget.bannerAdUnitId != null)
+            ? Obx(() {
                 final isAdsRemoved =
                     Get.find<PurchaseService>().adsRemoved.value;
                 if (isAdsRemoved) return const SizedBox.shrink();
 
-                return Align(
-                  alignment: Alignment.bottomCenter,
-                  child: SafeArea(
-                    child: BannerAdWidget(adUnitId: widget.bannerAdUnitId!),
-                  ),
-                );
-              }),
-          ],
-        ),
+                return BannerAdWidget(adUnitId: widget.bannerAdUnitId!);
+              })
+            : null,
       ),
     );
   }
