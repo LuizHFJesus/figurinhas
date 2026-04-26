@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "3",
+  "version": "4",
   "groups": [
     {
       "id": "OTHERS",
@@ -219,82 +219,102 @@
           "stickers": [
             {
               "code": "MEX1",
+              "displayName":"Emblem",
               "isFoil": true
             },
             {
               "code": "MEX2",
+              "displayName": "Luis Malagón",
               "isFoil": false
             },
             {
               "code": "MEX3",
+              "displayName": "Johan Vasquez",
               "isFoil": false
             },
             {
               "code": "MEX4",
+              "displayName": "Jorge Sánchez",
               "isFoil": false
             },
             {
               "code": "MEX5",
+              "displayName": "Cesar Montes",
               "isFoil": false
             },
             {
               "code": "MEX6",
+              "displayName": "Jesus Gallardo",
               "isFoil": false
             },
             {
               "code": "MEX7",
+              "displayName": "Israel Reyes",
               "isFoil": false
             },
             {
               "code": "MEX8",
+              "displayName": "Diego Lainez",
               "isFoil": false
             },
             {
               "code": "MEX9",
+              "displayName": "Carlos Rodriguez",
               "isFoil": false
             },
             {
               "code": "MEX10",
+              "displayName": "Edson Alvarez",
               "isFoil": false
             },
             {
               "code": "MEX11",
+              "displayName": "Orbelin Pineda",
               "isFoil": false
             },
             {
               "code": "MEX12",
+              "displayName": "Marcel Ruiz",
               "isFoil": false
             },
             {
               "code": "MEX13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "MEX14",
+              "displayName": "Érick Sánchez",
               "isFoil": false
             },
             {
               "code": "MEX15",
+              "displayName": "Hirving Lozano",
               "isFoil": false
             },
             {
               "code": "MEX16",
+              "displayName": "Santiago Giménez",
               "isFoil": false
             },
             {
               "code": "MEX17",
+              "displayName": "Raúl Jiménez",
               "isFoil": false
             },
             {
               "code": "MEX18",
+              "displayName": "Alexis Vega",
               "isFoil": false
             },
             {
               "code": "MEX19",
+              "displayName": "Roberto Alvarado",
               "isFoil": false
             },
             {
               "code": "MEX20",
+              "displayName": "Cesar Huerta",
               "isFoil": false
             }
           ]
