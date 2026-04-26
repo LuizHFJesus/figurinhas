@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "7",
+  "version": "8",
   "groups": [
     {
       "id": "OTHERS",
@@ -661,82 +661,102 @@
           "stickers": [
             {
               "code": "CAN1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "CAN2",
+              "displayName": "Dayne St.Clair",
               "isFoil": false
             },
             {
               "code": "CAN3",
+              "displayName": "Alphonso Davies",
               "isFoil": false
             },
             {
               "code": "CAN4",
+              "displayName": "Alistair Johnston",
               "isFoil": false
             },
             {
               "code": "CAN5",
+              "displayName": "Samuel Adekugbe",
               "isFoil": false
             },
             {
               "code": "CAN6",
+              "displayName": "Riche Larvea",
               "isFoil": false
             },
             {
               "code": "CAN7",
+              "displayName": "Derek Cornelius",
               "isFoil": false
             },
             {
               "code": "CAN8",
+              "displayName": "Moïse Bombito",
               "isFoil": false
             },
             {
               "code": "CAN9",
+              "displayName": "Kamal Miller",
               "isFoil": false
             },
             {
               "code": "CAN10",
+              "displayName": "Stephen Eustáquio",
               "isFoil": false
             },
             {
               "code": "CAN11",
+              "displayName": "Ismaël Koné",
               "isFoil": false
             },
             {
               "code": "CAN12",
+              "displayName": "Jonathan Osorio",
               "isFoil": false
             },
             {
               "code": "CAN13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CAN14",
+              "displayName": "Jacob Shaffelburg",
               "isFoil": false
             },
             {
               "code": "CAN15",
+              "displayName": "Mathieu Choinière",
               "isFoil": false
             },
             {
               "code": "CAN16",
+              "displayName": "Niko Sigur",
               "isFoil": false
             },
             {
               "code": "CAN17",
+              "displayName": "Tajon Buchanan",
               "isFoil": false
             },
             {
               "code": "CAN18",
+              "displayName": "Liam Millar",
               "isFoil": false
             },
             {
               "code": "CAN19",
+              "displayName": "Cyle Larin",
               "isFoil": false
             },
             {
               "code": "CAN20",
+              "displayName": "Jonathan David",
               "isFoil": false
             }
           ]
