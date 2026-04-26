@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "9",
+  "version": "10",
   "groups": [
     {
       "id": "OTHERS",
@@ -879,82 +879,102 @@
           "stickers": [
             {
               "code": "QAT1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "QAT2",
+              "displayName": "Meshaal Barsham",
               "isFoil": false
             },
             {
               "code": "QAT3",
+              "displayName": "Sultan Albrake",
               "isFoil": false
             },
             {
               "code": "QAT4",
+              "displayName": "Lucas Mendes",
               "isFoil": false
             },
             {
               "code": "QAT5",
+              "displayName": "Homam Ahmed",
               "isFoil": false
             },
             {
               "code": "QAT6",
+              "displayName": "Boualem Khoukhi",
               "isFoil": false
             },
             {
               "code": "QAT7",
+              "displayName": "Pedro Miguel",
               "isFoil": false
             },
             {
               "code": "QAT8",
+              "displayName": "Tarek Salman",
               "isFoil": false
             },
             {
               "code": "QAT9",
+              "displayName": "Mohamed Al-Mannai",
               "isFoil": false
             },
             {
               "code": "QAT10",
+              "displayName": "Karim Boudiaf",
               "isFoil": false
             },
             {
               "code": "QAT11",
+              "displayName": "Assim Madibo",
               "isFoil": false
             },
             {
               "code": "QAT12",
+              "displayName": "Ahmed Fatehi",
               "isFoil": false
             },
             {
               "code": "QAT13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "QAT14",
+              "displayName": "Mohammed Waad",
               "isFoil": false
             },
             {
               "code": "QAT15",
+              "displayName": "Abdulaziz Hatem",
               "isFoil": false
             },
             {
               "code": "QAT16",
+              "displayName": "Hassan Al-Haydos",
               "isFoil": false
             },
             {
               "code": "QAT17",
+              "displayName": "Edmilson Junior",
               "isFoil": false
             },
             {
               "code": "QAT18",
+              "displayName": "Akram Hassan Afif",
               "isFoil": false
             },
             {
               "code": "QAT19",
+              "displayName": "Ahmed Al Ganehi",
               "isFoil": false
             },
             {
               "code": "QAT20",
+              "displayName": "Almoez Ali",
               "isFoil": false
             }
           ]
