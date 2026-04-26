@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "5",
+  "version": "6",
   "groups": [
     {
       "id": "OTHERS",
@@ -437,82 +437,102 @@
           "stickers": [
             {
               "code": "KOR1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "KOR2",
+              "displayName": "Hyeon-woo Jo",
               "isFoil": false
             },
             {
               "code": "KOR3",
+              "displayName": "Seung-Gyu Kim",
               "isFoil": false
             },
             {
               "code": "KOR4",
+              "displayName": "Min-jae Kim",
               "isFoil": false
             },
             {
               "code": "KOR5",
+              "displayName": "Yu-min Cho",
               "isFoil": false
             },
             {
               "code": "KOR6",
+              "displayName": "Young-woo Seol",
               "isFoil": false
             },
             {
               "code": "KOR7",
+              "displayName": "Han-beom Lee",
               "isFoil": false
             },
             {
               "code": "KOR8",
+              "displayName": "Tae-seok Lee",
               "isFoil": false
             },
             {
               "code": "KOR9",
+              "displayName": "Myung-jae Lee",
               "isFoil": false
             },
             {
               "code": "KOR10",
+              "displayName": "Jae-sung Lee",
               "isFoil": false
             },
             {
               "code": "KOR11",
+              "displayName": "In-beom Hwang",
               "isFoil": false
             },
             {
               "code": "KOR12",
+              "displayName": "Kang-in Lee",
               "isFoil": false
             },
             {
               "code": "KOR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "KOR14",
+              "displayName": "Seung-ho Paik",
               "isFoil": false
             },
             {
               "code": "KOR15",
+              "displayName": "Jens Castrop",
               "isFoil": false
             },
             {
               "code": "KOR16",
+              "displayName": "Dongg-yeong Le",
               "isFoil": false
             },
             {
               "code": "KOR17",
+              "displayName": "Gue-sung Cho",
               "isFoil": false
             },
             {
               "code": "KOR18",
+              "displayName": "Heung-min Son",
               "isFoil": false
             },
             {
               "code": "KOR19",
+              "displayName": "Hee-chan Hwang",
               "isFoil": false
             },
             {
               "code": "KOR20",
+              "displayName": "Hyeon-Gyu Oh",
               "isFoil": false
             }
           ]
