@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "4",
+  "version": "5",
   "groups": [
     {
       "id": "OTHERS",
@@ -328,82 +328,102 @@
           "stickers": [
             {
               "code": "RSA1",
+              "displayName":"Emblem",
               "isFoil": true
             },
             {
               "code": "RSA2",
+              "displayName": "Ronwen Williams",
               "isFoil": false
             },
             {
               "code": "RSA3",
+              "displayName": "Sipho Chaine",
               "isFoil": false
             },
             {
               "code": "RSA4",
+              "displayName": "Aubrey Modiba",
               "isFoil": false
             },
             {
               "code": "RSA5",
+              "displayName": "Samukele Kabini",
               "isFoil": false
             },
             {
               "code": "RSA6",
+              "displayName": "Mbekezeli Mbokazi",
               "isFoil": false
             },
             {
               "code": "RSA7",
+              "displayName": "Khulumani Ndamane",
               "isFoil": false
             },
             {
               "code": "RSA8",
+              "displayName": "Siyabonga Ngezana",
               "isFoil": false
             },
             {
               "code": "RSA9",
+              "displayName": "Khuliso Mudau",
               "isFoil": false
             },
             {
               "code": "RSA10",
+              "displayName": "Nkosinathi Sibisi",
               "isFoil": false
             },
             {
               "code": "RSA11",
+              "displayName": "Teboho Mokoena",
               "isFoil": false
             },
             {
               "code": "RSA12",
+              "displayName": "Thalente Mbatha",
               "isFoil": false
             },
             {
               "code": "RSA13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "RSA14",
+              "displayName": "Bathasi Aubaas",
               "isFoil": false
             },
             {
               "code": "RSA15",
+              "displayName": "Yaya Sithole",
               "isFoil": false
             },
             {
               "code": "RSA16",
+              "displayName": "Sipho Mbule",
               "isFoil": false
             },
             {
               "code": "RSA17",
+              "displayName": "Lyle Foster",
               "isFoil": false
             },
             {
               "code": "RSA18",
+              "displayName": "Iqraam Rayners",
               "isFoil": false
             },
             {
               "code": "RSA19",
+              "displayName": "Mohau Nkota",
               "isFoil": false
             },
             {
               "code": "RSA20",
+              "displayName": "Oswin Appollis",
               "isFoil": false
             }
           ]
