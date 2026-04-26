@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "8",
+  "version": "9",
   "groups": [
     {
       "id": "OTHERS",
@@ -770,82 +770,102 @@
           "stickers": [
             {
               "code": "BIH1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "BIH2",
+              "displayName": "Nikola Vasilj",
               "isFoil": false
             },
             {
               "code": "BIH3",
+              "displayName": "Amer Dedic",
               "isFoil": false
             },
             {
               "code": "BIH4",
+              "displayName": "Sead Kolasinac",
               "isFoil": false
             },
             {
               "code": "BIH5",
+              "displayName": "Tarik Muharemovic",
               "isFoil": false
             },
             {
               "code": "BIH6",
+              "displayName": "Nihad Mujakic",
               "isFoil": false
             },
             {
               "code": "BIH7",
+              "displayName": "Nikola Katic",
               "isFoil": false
             },
             {
               "code": "BIH8",
+              "displayName": "Amir Hadziahmetovic",
               "isFoil": false
             },
             {
               "code": "BIH9",
+              "displayName": "Benjamin Tahirovic",
               "isFoil": false
             },
             {
               "code": "BIH10",
+              "displayName": "Armin Gigovic",
               "isFoil": false
             },
             {
               "code": "BIH11",
+              "displayName": "Ivan Sunjic",
               "isFoil": false
             },
             {
               "code": "BIH12",
+              "displayName": "Ivan Basic",
               "isFoil": false
             },
             {
               "code": "BIH13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "BIH14",
+              "displayName": "Dzenis Burnic",
               "isFoil": false
             },
             {
               "code": "BIH15",
+              "displayName": "Esmir Bajraktarevic",
               "isFoil": false
             },
             {
               "code": "BIH16",
+              "displayName": "Amar Memic",
               "isFoil": false
             },
             {
               "code": "BIH17",
+              "displayName": "Ermedin Demirovic",
               "isFoil": false
             },
             {
               "code": "BIH18",
+              "displayName": "Edin Dzeko",
               "isFoil": false
             },
             {
               "code": "BIH19",
+              "displayName": "Samed Bazdar",
               "isFoil": false
             },
             {
               "code": "BIH20",
+              "displayName": "Haris Tabakovic",
               "isFoil": false
             }
           ]
