@@ -62,32 +62,37 @@ class HomeView extends GetView<HomeController> {
         },
       ),
 
-      body: CustomScrollView(
+      body: Scrollbar(
         controller: controller.scrollController,
-        slivers: [
-          SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            sliver: SliverList(
-              delegate: SliverChildListDelegate.fixed([
-                Text('home_summary'.tr, style: textTheme.headlineSmall),
-              ]),
+        interactive: true,
+        radius: const Radius.circular(8),
+        child: CustomScrollView(
+          controller: controller.scrollController,
+          slivers: [
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              sliver: SliverList(
+                delegate: SliverChildListDelegate.fixed([
+                  Text('home_summary'.tr, style: textTheme.headlineSmall),
+                ]),
+              ),
             ),
-          ),
 
-          Obx(() {
-            return SliverMainAxisGroup(
-              slivers: controller.catalogStructure.map((groupData) {
-                return GroupBlock(
-                  title: groupData.group.name,
-                  sections: groupData.sections,
-                  controller: controller,
-                );
-              }).toList(),
-            );
-          }),
+            Obx(() {
+              return SliverMainAxisGroup(
+                slivers: controller.catalogStructure.map((groupData) {
+                  return GroupBlock(
+                    title: groupData.group.name,
+                    sections: groupData.sections,
+                    controller: controller,
+                  );
+                }).toList(),
+              );
+            }),
 
-          const SliverToBoxAdapter(child: SizedBox(height: 170)),
-        ],
+            const SliverToBoxAdapter(child: SizedBox(height: 170)),
+          ],
+        ),
       ),
 
       floatingActionButton: Obx(

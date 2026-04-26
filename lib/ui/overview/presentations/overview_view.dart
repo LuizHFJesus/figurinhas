@@ -119,59 +119,64 @@ class OverviewView extends GetView<OverviewController> {
         ],
       ),
 
-      body: CustomScrollView(
+      body: Scrollbar(
         controller: controller.scrollController,
-        slivers: [
-          Obx(() {
-            if (controller.isLoading.value) {
-              return const SliverFillRemaining(
-                child: Center(child: CircularProgressIndicator()),
-              );
-            }
-
-            if (controller.visibleSections.isEmpty) {
-              return SliverFillRemaining(
-                child: Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.symmetric(horizontal: 48),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgIcon(
-                        'repeated',
-                        size: 64,
-                        color: colorScheme.outline,
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'empty_search'.tr,
-                        style: textTheme.titleMedium?.copyWith(
+        interactive: true,
+        radius: const Radius.circular(8),
+        child: CustomScrollView(
+          controller: controller.scrollController,
+          slivers: [
+            Obx(() {
+              if (controller.isLoading.value) {
+                return const SliverFillRemaining(
+                  child: Center(child: CircularProgressIndicator()),
+                );
+              }
+        
+              if (controller.visibleSections.isEmpty) {
+                return SliverFillRemaining(
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: const EdgeInsets.symmetric(horizontal: 48),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgIcon(
+                          'repeated',
+                          size: 64,
                           color: colorScheme.outline,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                        const SizedBox(height: 16),
+                        Text(
+                          'empty_search'.tr,
+                          style: textTheme.titleMedium?.copyWith(
+                            color: colorScheme.outline,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                );
+              }
+        
+              return SliverMainAxisGroup(
+                slivers: [
+                  for (final sectionData in controller.visibleSections)
+                    OverviewSectionItem(
+                      data: sectionData,
+                      quantityListenableOf: controller.qtyStore.listenableOf,
+                      onTap: (s) => controller.onStickerTap(context, s),
+                      onLongPress: (s) =>
+                          controller.onStickerLongPress(context, s),
+                    ),
+                ],
               );
-            }
-
-            return SliverMainAxisGroup(
-              slivers: [
-                for (final sectionData in controller.visibleSections)
-                  OverviewSectionItem(
-                    data: sectionData,
-                    quantityListenableOf: controller.qtyStore.listenableOf,
-                    onTap: (s) => controller.onStickerTap(context, s),
-                    onLongPress: (s) =>
-                        controller.onStickerLongPress(context, s),
-                  ),
-              ],
-            );
-          }),
-
-          const SliverPadding(padding: EdgeInsets.only(bottom: 150)),
-        ],
+            }),
+        
+            const SliverPadding(padding: EdgeInsets.only(bottom: 150)),
+          ],
+        ),
       ),
 
       floatingActionButton: Obx(
