@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "10",
+  "version": "11",
   "groups": [
     {
       "id": "OTHERS",
@@ -988,82 +988,102 @@
           "stickers": [
             {
               "code": "SUI1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "SUI2",
+              "displayName": "Gregor Kobel",
               "isFoil": false
             },
             {
               "code": "SUI3",
+              "displayName": "Yvon Mvogo",
               "isFoil": false
             },
             {
               "code": "SUI4",
+              "displayName": "Manuel Akanji",
               "isFoil": false
             },
             {
               "code": "SUI5",
+              "displayName": "Ricardo Rodriguez",
               "isFoil": false
             },
             {
               "code": "SUI6",
+              "displayName": "Nico Elvedi",
               "isFoil": false
             },
             {
               "code": "SUI7",
+              "displayName": "Aurèle Amenda",
               "isFoil": false
             },
             {
               "code": "SUI8",
+              "displayName": "Silvan Widmer",
               "isFoil": false
             },
             {
               "code": "SUI9",
+              "displayName": "Granit Xhaka",
               "isFoil": false
             },
             {
               "code": "SUI10",
+              "displayName": "Denis Zakaria",
               "isFoil": false
             },
             {
               "code": "SUI11",
+              "displayName": "Remo Freuler",
               "isFoil": false
             },
             {
               "code": "SUI12",
+              "displayName": "Fabian Rieder",
               "isFoil": false
             },
             {
               "code": "SUI13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SUI14",
+              "displayName": "Ardon Jashari",
               "isFoil": false
             },
             {
               "code": "SUI15",
+              "displayName": "Johan Manzambi",
               "isFoil": false
             },
             {
               "code": "SUI16",
+              "displayName": "Michel Aebischer",
               "isFoil": false
             },
             {
               "code": "SUI17",
+              "displayName": "Breel Embolo",
               "isFoil": false
             },
             {
               "code": "SUI18",
+              "displayName": "Ruben Vargas",
               "isFoil": false
             },
             {
               "code": "SUI19",
+              "displayName": "Dan Ndoye",
               "isFoil": false
             },
             {
               "code": "SUI20",
+              "displayName": "Zeki Amdouni",
               "isFoil": false
             }
           ]
