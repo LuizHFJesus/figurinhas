@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "6",
+  "version": "7",
   "groups": [
     {
       "id": "OTHERS",
@@ -546,82 +546,102 @@
           "stickers": [
             {
               "code": "CZE1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "CZE2",
+              "displayName": "Matej Kovar",
               "isFoil": false
             },
             {
               "code": "CZE3",
+              "displayName": "Jindrich Stanek",
               "isFoil": false
             },
             {
               "code": "CZE4",
+              "displayName": "Ladislav Krejci",
               "isFoil": false
             },
             {
               "code": "CZE5",
+              "displayName": "Vladimir Coufal",
               "isFoil": false
             },
             {
               "code": "CZE6",
+              "displayName": "Jaroslav Zeleny",
               "isFoil": false
             },
             {
               "code": "CZE7",
+              "displayName": "Tomas Holes",
               "isFoil": false
             },
             {
               "code": "CZE8",
+              "displayName": "David Zima",
               "isFoil": false
             },
             {
               "code": "CZE9",
+              "displayName": "Michal Sadilek",
               "isFoil": false
             },
             {
               "code": "CZE10",
+              "displayName": "Lukas Provod",
               "isFoil": false
             },
             {
               "code": "CZE11",
+              "displayName": "Lukas Cerv",
               "isFoil": false
             },
             {
               "code": "CZE12",
+              "displayName": "Tomas Soucek",
               "isFoil": false
             },
             {
               "code": "CZE13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CZE14",
+              "displayName": "Pavel Sulc",
               "isFoil": false
             },
             {
               "code": "CZE15",
+              "displayName": "Matej Vydra",
               "isFoil": false
             },
             {
               "code": "CZE16",
+              "displayName": "Vasil Kusej",
               "isFoil": false
             },
             {
               "code": "CZE17",
+              "displayName": "Tomas Chory",
               "isFoil": false
             },
             {
               "code": "CZE18",
+              "displayName": "Vacilav Cerny",
               "isFoil": false
             },
             {
               "code": "CZE19",
+              "displayName": "Adam Hlozek",
               "isFoil": false
             },
             {
               "code": "CZE20",
+              "displayName": "Patrik Schick",
               "isFoil": false
             }
           ]
