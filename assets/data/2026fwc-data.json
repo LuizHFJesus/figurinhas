@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "13",
+  "version": "14",
   "groups": [
     {
       "id": "OTHERS",
@@ -1321,82 +1321,102 @@
           "stickers": [
             {
               "code": "HAI1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "HAI2",
+              "displayName": "Johny Placide",
               "isFoil": false
             },
             {
               "code": "HAI3",
+              "displayName": "Carlens Arcus",
               "isFoil": false
             },
             {
               "code": "HAI4",
+              "displayName": "Martin Expérience",
               "isFoil": false
             },
             {
               "code": "HAI5",
+              "displayName": "Jean-Kevin Duverne",
               "isFoil": false
             },
             {
               "code": "HAI6",
+              "displayName": "Ricardo Adé",
               "isFoil": false
             },
             {
               "code": "HAI7",
+              "displayName": "Duke Lacroix",
               "isFoil": false
             },
             {
               "code": "HAI8",
+              "displayName": "Garven Metusala",
               "isFoil": false
             },
             {
               "code": "HAI9",
+              "displayName": "Hannes Delcroix",
               "isFoil": false
             },
             {
               "code": "HAI10",
+              "displayName": "Leverton Pierre",
               "isFoil": false
             },
             {
               "code": "HAI11",
+              "displayName": "Danley Jean Jacques",
               "isFoil": false
             },
             {
               "code": "HAI12",
+              "displayName": "Jean-Ricner Bellegarde",
               "isFoil": false
             },
             {
               "code": "HAI13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "HAI14",
+              "displayName": "Christopher Attys",
               "isFoil": false
             },
             {
               "code": "HAI15",
+              "displayName": "Derrick Etienne Jr.",
               "isFoil": false
             },
             {
               "code": "HAI16",
+              "displayName": "Josue Casimir",
               "isFoil": false
             },
             {
               "code": "HAI17",
+              "displayName": "Ruben Providence",
               "isFoil": false
             },
             {
               "code": "HAI18",
+              "displayName": "Duckens Nazon",
               "isFoil": false
             },
             {
               "code": "HAI19",
+              "displayName": "Louicius Deedson",
               "isFoil": false
             },
             {
               "code": "HAI20",
+              "displayName": "Frantzdy Pierrot",
               "isFoil": false
             }
           ]
