@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "14",
+  "version": "15",
   "groups": [
     {
       "id": "OTHERS",
@@ -1430,82 +1430,102 @@
           "stickers": [
             {
               "code": "SCO1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "SCO2",
+              "displayName": "Angus Gunn",
               "isFoil": false
             },
             {
               "code": "SCO3",
+              "displayName": "Jack Hendry",
               "isFoil": false
             },
             {
               "code": "SCO4",
+              "displayName": "Kieran Tierney",
               "isFoil": false
             },
             {
               "code": "SCO5",
+              "displayName": "Aaron Hickey",
               "isFoil": false
             },
             {
               "code": "SCO6",
+              "displayName": "Andrew Robertson",
               "isFoil": false
             },
             {
               "code": "SCO7",
+              "displayName": "Scott McKenna",
               "isFoil": false
             },
             {
               "code": "SCO8",
+              "displayName": "John Souttar",
               "isFoil": false
             },
             {
               "code": "SCO9",
+              "displayName": "Anthony Ralston",
               "isFoil": false
             },
             {
               "code": "SCO10",
+              "displayName": "Grant Hanley",
               "isFoil": false
             },
             {
               "code": "SCO11",
+              "displayName": "Scott McTominay",
               "isFoil": false
             },
             {
               "code": "SCO12",
+              "displayName": "Billy Gilmour",
               "isFoil": false
             },
             {
               "code": "SCO13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SCO14",
+              "displayName": "Lewis Ferguson",
               "isFoil": false
             },
             {
               "code": "SCO15",
+              "displayName": "Ryan Christie",
               "isFoil": false
             },
             {
               "code": "SCO16",
+              "displayName": "Kenny McLean",
               "isFoil": false
             },
             {
               "code": "SCO17",
+              "displayName": "John McGinn",
               "isFoil": false
             },
             {
               "code": "SCO18",
+              "displayName": "Lyndon Dykes",
               "isFoil": false
             },
             {
               "code": "SCO19",
+              "displayName": "Che Adams",
               "isFoil": false
             },
             {
               "code": "SCO20",
+              "displayName": "Ben Gannon-Doak",
               "isFoil": false
             }
           ]
