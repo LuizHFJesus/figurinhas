@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "12",
+  "version": "13",
   "groups": [
     {
       "id": "OTHERS",
@@ -1212,82 +1212,102 @@
           "stickers": [
             {
               "code": "MAR1",
+              "displayName":"Emblem",
               "isFoil": true
             },
             {
               "code": "MAR2",
+              "displayName": "Yassine Bounou",
               "isFoil": false
             },
             {
               "code": "MAR3",
+              "displayName": "Munir El Kajoui (Morrocco)",
               "isFoil": false
             },
             {
               "code": "MAR4",
+              "displayName": "Achraf Hakimi",
               "isFoil": false
             },
             {
               "code": "MAR5",
+              "displayName": "Noussair Mazraoui",
               "isFoil": false
             },
             {
               "code": "MAR6",
+              "displayName": "Nayef Aguerd",
               "isFoil": false
             },
             {
               "code": "MAR7",
+              "displayName": "Roman Saiss",
               "isFoil": false
             },
             {
               "code": "MAR8",
+              "displayName": "Jawad El Yamio",
               "isFoil": false
             },
             {
               "code": "MAR9",
+              "displayName": "Adam Masina",
               "isFoil": false
             },
             {
               "code": "MAR10",
+              "displayName": "Sofyan Amrabat",
               "isFoil": false
             },
             {
               "code": "MAR11",
+              "displayName": "Azzedine Ounahi (Morrocco)",
               "isFoil": false
             },
             {
               "code": "MAR12",
+              "displayName": "Eliesse Ben Seghir",
               "isFoil": false
             },
             {
               "code": "MAR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "MAR14",
+              "displayName": "Bilal El Khannouss",
               "isFoil": false
             },
             {
               "code": "MAR15",
+              "displayName": "Ismael Saibari",
               "isFoil": false
             },
             {
               "code": "MAR16",
+              "displayName": "Youssef En-Nesyri",
               "isFoil": false
             },
             {
               "code": "MAR17",
+              "displayName": "Abde Ezzalzouli",
               "isFoil": false
             },
             {
               "code": "MAR18",
+              "displayName": "Soufiane Rahimi",
               "isFoil": false
             },
             {
               "code": "MAR19",
+              "displayName": "Brahim Diaz",
               "isFoil": false
             },
             {
               "code": "MAR20",
+              "displayName": "Ayoub El Kaabi",
               "isFoil": false
             }
           ]
