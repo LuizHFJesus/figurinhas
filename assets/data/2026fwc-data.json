@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "11",
+  "version": "12",
   "groups": [
     {
       "id": "OTHERS",
@@ -1103,82 +1103,102 @@
           "stickers": [
             {
               "code": "BRA1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "BRA2",
+              "displayName": "Alisson",
               "isFoil": false
             },
             {
               "code": "BRA3",
+              "displayName": "Bento",
               "isFoil": false
             },
             {
               "code": "BRA4",
+              "displayName": "Marquinhos",
               "isFoil": false
             },
             {
               "code": "BRA5",
+              "displayName": "Éder Militão",
               "isFoil": false
             },
             {
               "code": "BRA6",
+              "displayName": "Gabriel Magalhães",
               "isFoil": false
             },
             {
               "code": "BRA7",
+              "displayName": "Danilo",
               "isFoil": false
             },
             {
               "code": "BRA8",
+              "displayName": "Wesley",
               "isFoil": false
             },
             {
               "code": "BRA9",
+              "displayName": "Lucas Paquetá",
               "isFoil": false
             },
             {
               "code": "BRA10",
+              "displayName": "Casemiro",
               "isFoil": false
             },
             {
               "code": "BRA11",
+              "displayName": "Bruno Guimarães",
               "isFoil": false
             },
             {
               "code": "BRA12",
+              "displayName": "Luiz Henrique",
               "isFoil": false
             },
             {
               "code": "BRA13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "BRA14",
+              "displayName": "Vinicius Júnior",
               "isFoil": false
             },
             {
               "code": "BRA15",
+              "displayName": "Rodrygo",
               "isFoil": false
             },
             {
               "code": "BRA16",
+              "displayName": "João Pedro",
               "isFoil": false
             },
             {
               "code": "BRA17",
+              "displayName": "Matheus Cunha",
               "isFoil": false
             },
             {
               "code": "BRA18",
+              "displayName": "Gabriel Martinelli",
               "isFoil": false
             },
             {
               "code": "BRA19",
+              "displayName": "Raphinha",
               "isFoil": false
             },
             {
               "code": "BRA20",
+              "displayName": "Estévão",
               "isFoil": false
             }
           ]
