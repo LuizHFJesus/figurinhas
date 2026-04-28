@@ -1763,82 +1763,102 @@
           "stickers": [
             {
               "code": "AUS1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "AUS2",
+              "displayName": "Mathew Ryan",
               "isFoil": false
             },
             {
               "code": "AUS3",
+              "displayName": "Joe Gauci",
               "isFoil": false
             },
             {
               "code": "AUS4",
+              "displayName": "Harry Souttar",
               "isFoil": false
             },
             {
               "code": "AUS5",
+              "displayName": "Alessandro Circati",
               "isFoil": false
             },
             {
               "code": "AUS6",
+              "displayName": "Jordan Bos",
               "isFoil": false
             },
             {
               "code": "AUS7",
+              "displayName": "Aziz Behich",
               "isFoil": false
             },
             {
               "code": "AUS8",
+              "displayName": "Cameron Burgess",
               "isFoil": false
             },
             {
               "code": "AUS9",
+              "displayName": "Lewis Miller",
               "isFoil": false
             },
             {
               "code": "AUS10",
+              "displayName": "Milos Degenek",
               "isFoil": false
             },
             {
               "code": "AUS11",
+              "displayName": "Jackson Irvine",
               "isFoil": false
             },
             {
               "code": "AUS12",
+              "displayName": "Riley McGree",
               "isFoil": false
             },
             {
               "code": "AUS13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "AUS14",
+              "displayName": "Aiden O'Neill",
               "isFoil": false
             },
             {
               "code": "AUS15",
+              "displayName": "Connor Metcalfe",
               "isFoil": false
             },
             {
               "code": "AUS16",
+              "displayName": "Patrick Yazbek",
               "isFoil": false
             },
             {
               "code": "AUS17",
+              "displayName": "Craig Goodwin",
               "isFoil": false
             },
             {
               "code": "AUS18",
+              "displayName": "Kusini Vengi",
               "isFoil": false
             },
             {
               "code": "AUS19",
+              "displayName": "Nestory Irankunda",
               "isFoil": false
             },
             {
               "code": "AUS20",
+              "displayName": "Mohamed Touré",
               "isFoil": false
             }
           ]
