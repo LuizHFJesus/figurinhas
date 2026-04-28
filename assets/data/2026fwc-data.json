@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "15",
+  "version": "16",
   "groups": [
     {
       "id": "OTHERS",
@@ -1545,82 +1545,102 @@
           "stickers": [
             {
               "code": "USA1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "USA2",
+              "displayName": "Math Freese",
               "isFoil": false
             },
             {
               "code": "USA3",
+              "displayName": "Chris Richards",
               "isFoil": false
             },
             {
               "code": "USA4",
+              "displayName": "Tim Ream",
               "isFoil": false
             },
             {
               "code": "USA5",
+              "displayName": "Mark McKenzie",
               "isFoil": false
             },
             {
               "code": "USA6",
+              "displayName": "Alex Freeman",
               "isFoil": false
             },
             {
               "code": "USA7",
+              "displayName": "Antonee Robinson",
               "isFoil": false
             },
             {
               "code": "USA8",
+              "displayName": "Tyler Adams",
               "isFoil": false
             },
             {
               "code": "USA9",
+              "displayName": "Tanner Tessmann",
               "isFoil": false
             },
             {
               "code": "USA10",
+              "displayName": "Weston McKenny",
               "isFoil": false
             },
             {
               "code": "USA11",
+              "displayName": "Christian Roldan",
               "isFoil": false
             },
             {
               "code": "USA12",
+              "displayName": "Timothy Weah",
               "isFoil": false
             },
             {
               "code": "USA13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "USA14",
+              "displayName": "Diego Luna",
               "isFoil": false
             },
             {
               "code": "USA15",
+              "displayName": "Malim Tillman",
               "isFoil": false
             },
             {
               "code": "USA16",
+              "displayName": "Christian Pulisic",
               "isFoil": false
             },
             {
               "code": "USA17",
+              "displayName": "Brenden Aaronson",
               "isFoil": false
             },
             {
               "code": "USA18",
+              "displayName": "Ricardo Pepi",
               "isFoil": false
             },
             {
               "code": "USA19",
+              "displayName": "Haji Wright",
               "isFoil": false
             },
             {
               "code": "USA20",
+              "displayName": "Folarin Balogun",
               "isFoil": false
             }
           ]
