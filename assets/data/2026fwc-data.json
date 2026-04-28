@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "17",
+  "version": "18",
   "groups": [
     {
       "id": "OTHERS",
@@ -1872,82 +1872,102 @@
           "stickers": [
             {
               "code": "TUR1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "TUR2",
+              "displayName": "Ugurcan Cakir",
               "isFoil": false
             },
             {
               "code": "TUR3",
+              "displayName": "Mert Muldur",
               "isFoil": false
             },
             {
               "code": "TUR4",
+              "displayName": "Zeki Celik",
               "isFoil": false
             },
             {
               "code": "TUR5",
+              "displayName": "Abdulkerim Bardakci",
               "isFoil": false
             },
             {
               "code": "TUR6",
+              "displayName": "Caglar Soyunku",
               "isFoil": false
             },
             {
               "code": "TUR7",
+              "displayName": "Merih Demiral",
               "isFoil": false
             },
             {
               "code": "TUR8",
+              "displayName": "Ferdi Kadioglu",
               "isFoil": false
             },
             {
               "code": "TUR9",
+              "displayName": "Kaan Ayhan",
               "isFoil": false
             },
             {
               "code": "TUR10",
+              "displayName": "Ismail Yuksek",
               "isFoil": false
             },
             {
               "code": "TUR11",
+              "displayName": "Hakan Calhanoglu",
               "isFoil": false
             },
             {
               "code": "TUR12",
+              "displayName": "Orkun Kokcu",
               "isFoil": false
             },
             {
               "code": "TUR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "TUR14",
+              "displayName": "Arda Guler",
               "isFoil": false
             },
             {
               "code": "TUR15",
+              "displayName": "Irfan Can Kahvecu",
               "isFoil": false
             },
             {
               "code": "TUR16",
+              "displayName": "Yunus Akgun",
               "isFoil": false
             },
             {
               "code": "TUR17",
+              "displayName": "Can Uzun",
               "isFoil": false
             },
             {
               "code": "TUR18",
+              "displayName": "Baris Alper Yilmaz",
               "isFoil": false
             },
             {
               "code": "TUR19",
+              "displayName": "Kerem Akturkoglu",
               "isFoil": false
             },
             {
               "code": "TUR20",
+              "displayName": "Kenan Yildiz",
               "isFoil": false
             }
           ]
