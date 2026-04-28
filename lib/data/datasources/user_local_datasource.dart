@@ -30,6 +30,11 @@ abstract class UserLocalDataSource {
     required String userAlbumId,
   });
 
+  Future<void> updateUserAlbumName({
+    required String userAlbumId,
+    required String newName,
+  });
+
   // StickerState
   Future<StickerStateEntity?> getStickerState(String stateId);
 

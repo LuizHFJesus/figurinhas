@@ -6,20 +6,28 @@ import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/sticker_state.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
+import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
 
 class ActiveAlbumService extends GetxService {
+  final UserAlbumRepository _albumRepository;
   final WatchAlbumStatsUseCase _watchAlbumStats;
   final StickerStateRepository _stateRepository;
 
-  ActiveAlbumService(this._watchAlbumStats, this._stateRepository);
+  ActiveAlbumService(
+    this._albumRepository,
+    this._watchAlbumStats,
+    this._stateRepository,
+  );
 
   final Rx<UserAlbum?> activeAlbum = Rx<UserAlbum?>(null);
   final Rx<AlbumStats?> albumStats = Rx<AlbumStats?>(null);
 
   // Sticker States
   final StickerQtyStore qtyStore = StickerQtyStore();
+  StreamSubscription<UserAlbum>? _albumSubscription;
+  StreamSubscription<AlbumStats>? _statsSubscription;
   StreamSubscription<List<StickerState>>? _stickersState;
 
   int quantityOf(String code) => qtyStore.get(code);
@@ -28,23 +36,36 @@ class ActiveAlbumService extends GetxService {
 
   @override
   void onClose() {
+    unawaited(_albumSubscription?.cancel());
+    unawaited(_statsSubscription?.cancel());
     unawaited(_stickersState?.cancel());
     qtyStore.dispose();
     super.onClose();
   }
 
   void setActiveAlbum(UserAlbum album) {
-    activeAlbum.value = album;
-    _watchStats(album);
-    unawaited(_watchStickers(album));
+    _albumSubscription?.cancel();
+    _albumSubscription = _albumRepository
+        .watchActiveUserAlbum(album.profileId)
+        .listen((updatedAlbum) {
+          final isNewAlbum =
+              activeAlbum.value?.userAlbumId != updatedAlbum.userAlbumId;
+          activeAlbum.value = updatedAlbum;
+
+          if (isNewAlbum || albumStats.value == null || _stickersState == null) {
+            _watchStats(updatedAlbum);
+            unawaited(_watchStickers(updatedAlbum));
+          }
+        });
   }
 
   void _watchStats(UserAlbum album) {
-    _watchAlbumStats
+    _statsSubscription?.cancel();
+    _statsSubscription = _watchAlbumStats
         .watch(userAlbumId: album.userAlbumId, albumId: album.albumId)
         .listen((stats) {
-          albumStats.value = stats;
-        });
+      albumStats.value = stats;
+    });
   }
 
   Future<void> _watchStickers(UserAlbum album) async {

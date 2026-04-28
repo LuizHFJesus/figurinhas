@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
@@ -15,51 +16,57 @@ class StatsController extends GetxController {
   final WatchAlbumStatsUseCase _watchAlbumStats;
   final ShareCoordinator _shareCoordinator;
   final MoreOptionsCoordinator _moreOptionsCoordinator;
+  final ActiveAlbumService _activeAlbumService;
 
   final StatsRouteArgs? args;
 
-  final Rx<UserAlbum?> album = Rx<UserAlbum?>(null);
-  final Rx<AlbumStats?> stats = Rx<AlbumStats?>(null);
+  Rx<UserAlbum?> get album => _activeAlbumService.activeAlbum;
+  Rx<AlbumStats?> get stats => _activeAlbumService.albumStats;
 
   StatsController(
     this._profileRepo,
     this._getActiveAlbum,
     this._watchAlbumStats,
     this._shareCoordinator,
-    this._moreOptionsCoordinator, {
+    this._moreOptionsCoordinator,
+    this._activeAlbumService, {
     required this.args,
   });
 
   @override
   Future<void> onInit() async {
     super.onInit();
-    album.value = args?.album;
-    stats.value = args?.stats;
-    await _loadStats();
+
+    if (args?.album != null && album.value == null) {
+      _activeAlbumService.setActiveAlbum(args!.album!);
+    }
+
+    if (args?.stats != null && stats.value == null) {
+      stats.value = args!.stats;
+    }
+
+    await _loadData();
   }
 
   Future<void> showMoreOptions(BuildContext context) async {
-    if (album.value == null) return;
-    await _moreOptionsCoordinator.showMoreOptions(context, album.value!);
+    final currentAlbum = album.value;
+    if (currentAlbum == null) return;
+    await _moreOptionsCoordinator.showMoreOptions(context, currentAlbum);
   }
 
   Future<void> showShareOptions(BuildContext context) async {
-    if (album.value == null) return;
-    await _shareCoordinator.showShareOptions(context, album.value!);
+    final currentAlbum = album.value;
+    if (currentAlbum == null) return;
+    await _shareCoordinator.showShareOptions(context, currentAlbum);
   }
 
-  Future<void> _loadStats() async {
-    final profileId =
-        args?.album?.profileId ?? await _profileRepo.ensureLocalProfileId();
-
-    final currentAlbum = album.value ?? await _getActiveAlbum(profileId);
-    album.value = currentAlbum;
-
-    _watchAlbumStats
-        .watch(
-          userAlbumId: currentAlbum.userAlbumId,
-          albumId: currentAlbum.albumId,
-        )
-        .listen((s) => stats.value = s);
+  Future<void> _loadData() async {
+    if (album.value == null) {
+      final profileId = await _profileRepo.ensureLocalProfileId();
+      final currentAlbum = await _getActiveAlbum(profileId);
+      if (currentAlbum != null) {
+        _activeAlbumService.setActiveAlbum(currentAlbum);
+      }
+    }
   }
 }

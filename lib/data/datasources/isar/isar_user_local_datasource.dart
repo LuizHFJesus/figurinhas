@@ -145,6 +145,25 @@ class IsarUserLocalDataSource implements UserLocalDataSource {
   }
 
   @override
+  Future<void> updateUserAlbumName({
+    required String userAlbumId,
+    required String newName,
+  }) async {
+    await _isar.writeTxn(() async {
+      final e = await _isar.userAlbumEntitys
+          .filter()
+          .userAlbumIdEqualTo(userAlbumId)
+          .findFirst();
+
+      if (e != null) {
+        e.name = newName;
+        e.updatedAt = DateTime.now();
+        await _isar.userAlbumEntitys.put(e);
+      }
+    });
+  }
+
+  @override
   Future<StickerStateEntity?> getStickerState(String stateId) {
     return _isar.stickerStateEntitys
         .filter()

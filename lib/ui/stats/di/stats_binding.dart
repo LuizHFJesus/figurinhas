@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
@@ -9,6 +10,7 @@ import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.d
 import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/rename_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/update_catalog_if_needed_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
@@ -77,9 +79,17 @@ class StatsBinding extends Bindings {
       );
     }
 
+    if (!Get.isRegistered<RenameUserAlbumUseCase>()) {
+      Get.lazyPut(
+        () => RenameUserAlbumUseCase(Get.find<UserAlbumRepository>()),
+        fenix: true,
+      );
+    }
+
     if (!Get.isRegistered<MoreOptionsCoordinator>()) {
       Get.lazyPut(
         () => MoreOptionsCoordinator(
+          Get.find<RenameUserAlbumUseCase>(),
           Get.find<ClearAlbumUseCase>(),
           Get.find<FillAlbumUseCase>(),
         ),
@@ -94,6 +104,7 @@ class StatsBinding extends Bindings {
         Get.find<WatchAlbumStatsUseCase>(),
         Get.find<ShareCoordinator>(),
         Get.find<MoreOptionsCoordinator>(),
+        Get.find<ActiveAlbumService>(),
         args: args,
       ),
     );

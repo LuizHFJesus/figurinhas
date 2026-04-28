@@ -57,6 +57,10 @@ const Map<String, String> ptBR = {
   // More Options
   'more_options_title': 'Mais Opções',
   'more_options_how_it_works': 'Como funciona?',
+  'more_options_rename_album': 'Renomear álbum',
+  'more_options_rename_album_title': 'Renomear álbum',
+  'more_options_rename_album_hint': 'Nome do álbum',
+  'more_options_album_renamed': 'Álbum renomeado com sucesso!',
   'more_options_clear_album': 'Limpar álbum',
   'more_options_clear_album_title': 'Limpar álbum?',
   'more_options_clear_album_desc': 'Esta ação apagará todas as figurinhas marcadas e não poderá ser desfeita.',

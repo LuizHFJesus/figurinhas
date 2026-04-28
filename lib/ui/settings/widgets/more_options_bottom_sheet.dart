@@ -25,6 +25,14 @@ class MoreOptionsBottomSheet extends StatelessWidget {
             ),
           ),
           BottomSheetTile(
+            icon: 'pencil',
+            label: 'more_options_rename_album'.tr,
+            onTap: () => Navigator.pop(
+              context,
+              MoreOptionType.renameAlbum,
+            ),
+          ),
+          BottomSheetTile(
             icon: 'trash',
             label: 'more_options_clear_album'.tr,
             onTap: () => Navigator.pop(

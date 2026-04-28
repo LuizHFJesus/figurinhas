@@ -6,17 +6,21 @@ import 'package:sticker_manager_wc22/data/services/isar_stats_updater.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
+import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
+import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/rename_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/set_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/section/controllers/section_controller.dart';
-import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 
 class SectionBinding extends Bindings {
   final GoRouterState state;
@@ -53,6 +57,45 @@ class SectionBinding extends Bindings {
         Get.find<IsarStatsUpdater>(),
       ),
     );
+
+    if (!Get.isRegistered<ClearAlbumUseCase>()) {
+      Get.lazyPut(
+        () => ClearAlbumUseCase(
+          Get.find<StickerStateRepository>(),
+          Get.find<StatsRepository>(),
+        ),
+        fenix: true,
+      );
+    }
+
+    if (!Get.isRegistered<FillAlbumUseCase>()) {
+      Get.lazyPut(
+        () => FillAlbumUseCase(
+          Get.find<StickerStateRepository>(),
+          Get.find<StatsRepository>(),
+          Get.find<CatalogRepository>(),
+        ),
+        fenix: true,
+      );
+    }
+
+    if (!Get.isRegistered<RenameUserAlbumUseCase>()) {
+      Get.lazyPut(
+        () => RenameUserAlbumUseCase(Get.find<UserAlbumRepository>()),
+        fenix: true,
+      );
+    }
+
+    if (!Get.isRegistered<MoreOptionsCoordinator>()) {
+      Get.lazyPut(
+        () => MoreOptionsCoordinator(
+          Get.find<RenameUserAlbumUseCase>(),
+          Get.find<ClearAlbumUseCase>(),
+          Get.find<FillAlbumUseCase>(),
+        ),
+        fenix: true,
+      );
+    }
 
     // Controller
     Get.delete<SectionController>(force: true);

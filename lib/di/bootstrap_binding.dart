@@ -59,6 +59,7 @@ class BootstrapBinding extends Bindings {
 
     Get.put(
       ActiveAlbumService(
+        Get.find<UserAlbumRepository>(),
         Get.find<WatchAlbumStatsUseCase>(),
         Get.find<StickerStateRepository>(),
       ),

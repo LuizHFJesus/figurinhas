@@ -4,15 +4,18 @@ import 'package:sticker_manager_wc22/data/services/purchase_service.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/rename_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/dialog/dialog_action.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/dialog/text_alert_dialog.dart';
 import 'package:sticker_manager_wc22/ui/common/widgets/show_snack_bar.dart';
 import 'package:sticker_manager_wc22/ui/settings/widgets/how_it_works_dialog.dart';
 import 'package:sticker_manager_wc22/ui/settings/widgets/more_options_bottom_sheet.dart';
+import 'package:sticker_manager_wc22/ui/settings/widgets/rename_album_dialog.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 enum MoreOptionType {
   howItWorks,
+  renameAlbum,
   clearAlbum,
   fillAlbum,
   rateApp,
@@ -21,10 +24,15 @@ enum MoreOptionType {
 }
 
 class MoreOptionsCoordinator {
+  final RenameUserAlbumUseCase _renameUserAlbumUseCase;
   final ClearAlbumUseCase _clearAlbumUseCase;
   final FillAlbumUseCase _fillAlbumUseCase;
 
-  MoreOptionsCoordinator(this._clearAlbumUseCase, this._fillAlbumUseCase);
+  MoreOptionsCoordinator(
+    this._renameUserAlbumUseCase,
+    this._clearAlbumUseCase,
+    this._fillAlbumUseCase,
+  );
 
   Future<void> showMoreOptions(BuildContext context, UserAlbum album) async {
     final scaffoldContext = Scaffold.of(context).context;
@@ -47,6 +55,8 @@ class MoreOptionsCoordinator {
     switch (option) {
       case MoreOptionType.howItWorks:
         await showHowItWorks(context);
+      case MoreOptionType.renameAlbum:
+        await _renameAlbum(context, album);
       case MoreOptionType.clearAlbum:
         await _clearAlbum(context, album);
       case MoreOptionType.fillAlbum:
@@ -57,6 +67,27 @@ class MoreOptionsCoordinator {
         await _removeAds();
       case MoreOptionType.restorePurchases:
         await _restorePurchases();
+    }
+  }
+
+  Future<void> _renameAlbum(BuildContext context, UserAlbum album) async {
+    final newName = await showDialog<String>(
+      context: context,
+      builder: (ctx) => RenameAlbumDialog(initialName: album.name),
+    );
+
+    if (newName != null && newName.isNotEmpty && newName != album.name) {
+      await _renameUserAlbumUseCase.call(
+        userAlbumId: album.userAlbumId,
+        newName: newName,
+      );
+      if (context.mounted) {
+        showSnackBar(
+          context,
+          message: 'more_options_album_renamed'.tr,
+          type: AppSnackBarType.success,
+        );
+      }
     }
   }
 
