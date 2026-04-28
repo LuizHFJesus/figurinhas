@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "16",
+  "version": "17",
   "groups": [
     {
       "id": "OTHERS",
@@ -1654,82 +1654,102 @@
           "stickers": [
             {
               "code": "PAR1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "PAR2",
+              "displayName": "Roberto Fernandez",
               "isFoil": false
             },
             {
               "code": "PAR3",
+              "displayName": "Orlando Gill",
               "isFoil": false
             },
             {
               "code": "PAR4",
+              "displayName": "Gustavo Gomez",
               "isFoil": false
             },
             {
               "code": "PAR5",
+              "displayName": "Fabián Balbuena",
               "isFoil": false
             },
             {
               "code": "PAR6",
+              "displayName": "Juan José Cáceres",
               "isFoil": false
             },
             {
               "code": "PAR7",
+              "displayName": "Omar Alderete",
               "isFoil": false
             },
             {
               "code": "PAR8",
+              "displayName": "Junior Alonso",
               "isFoil": false
             },
             {
               "code": "PAR9",
+              "displayName": "Mathías Villasanti",
               "isFoil": false
             },
             {
               "code": "PAR10",
+              "displayName": "Diego Gomez",
               "isFoil": false
             },
             {
               "code": "PAR11",
+              "displayName": "Damián Bobadilla",
               "isFoil": false
             },
             {
               "code": "PAR12",
+              "displayName": "Andres Cubas",
               "isFoil": false
             },
             {
               "code": "PAR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "PAR14",
+              "displayName": "Matias Galarza Fonda",
               "isFoil": false
             },
             {
               "code": "PAR15",
+              "displayName": "Julio Enciso",
               "isFoil": false
             },
             {
               "code": "PAR16",
+              "displayName": "Alejandro Romero Gamarra",
               "isFoil": false
             },
             {
               "code": "PAR17",
+              "displayName": "Miguel Almirón",
               "isFoil": false
             },
             {
               "code": "PAR18",
+              "displayName": "Ramon Sosa",
               "isFoil": false
             },
             {
               "code": "PAR19",
+              "displayName": "Angel Romero",
               "isFoil": false
             },
             {
               "code": "PAR20",
+              "displayName": "Antonio Sanabria",
               "isFoil": false
             }
           ]
