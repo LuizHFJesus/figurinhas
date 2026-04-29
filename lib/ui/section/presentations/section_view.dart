@@ -63,19 +63,18 @@ class SectionView extends GetView<SectionController> {
         },
       ),
 
+      header: Padding(
+        padding: const EdgeInsets.only(bottom: 16),
+        child: Obx(
+          () => StickerFilterChipsBar(
+            selected: controller.currentFilter.value,
+            onChanged: controller.setFilter,
+          ),
+        ),
+      ),
+
       body: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
-            child: Obx(
-              () => StickerFilterChipsBar(
-                selected: controller.currentFilter.value,
-                onChanged: controller.setFilter,
-              ),
-            ),
-          ),
-
-          const SliverPadding(padding: EdgeInsets.only(bottom: 16)),
-
           Obx(() {
             final stickers = controller.visibleStickers.toList(growable: false);
             return StickersSliverGrid(
