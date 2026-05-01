@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "21",
+  "version": "22",
   "groups": [
     {
       "id": "OTHERS",
@@ -4308,82 +4308,102 @@
           "stickers": [
             {
               "code": "COD1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "COD2",
+              "displayName": "Lionel Mpasi",
               "isFoil": false
             },
             {
               "code": "COD3",
+              "displayName": "Aaron Wan-Bissaka",
               "isFoil": false
             },
             {
               "code": "COD4",
+              "displayName": "Axel Tuanzebe",
               "isFoil": false
             },
             {
               "code": "COD5",
+              "displayName": "Arthur Masuaku",
               "isFoil": false
             },
             {
               "code": "COD6",
+              "displayName": "Chancel Mbemba",
               "isFoil": false
             },
             {
               "code": "COD7",
+              "displayName": "Joris Kayembe",
               "isFoil": false
             },
             {
               "code": "COD8",
+              "displayName": "Charles Pickel",
               "isFoil": false
             },
             {
               "code": "COD9",
+              "displayName": "Ngal'ayel Mukau",
               "isFoil": false
             },
             {
               "code": "COD10",
+              "displayName": "Edo Kayembe",
               "isFoil": false
             },
             {
               "code": "COD11",
+              "displayName": "Samuel Moutoussamy",
               "isFoil": false
             },
             {
               "code": "COD12",
+              "displayName": "Noah Sadiki",
               "isFoil": false
             },
             {
               "code": "COD13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "COD14",
+              "displayName": "Théo Bongonda",
               "isFoil": false
             },
             {
               "code": "COD15",
+              "displayName": "Meschak Elia",
               "isFoil": false
             },
             {
               "code": "COD16",
+              "displayName": "Yoane Wissa",
               "isFoil": false
             },
             {
               "code": "COD17",
+              "displayName": "Brian Cipenga",
               "isFoil": false
             },
             {
               "code": "COD18",
+              "displayName": "Fiston Mayele",
               "isFoil": false
             },
             {
               "code": "COD19",
+              "displayName": "Cédric Bakambu",
               "isFoil": false
             },
             {
               "code": "COD20",
+              "displayName": "Nathanaël Mbuku",
               "isFoil": false
             }
           ]
