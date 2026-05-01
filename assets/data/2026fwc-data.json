@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "19",
+  "version": "20",
   "groups": [
     {
       "id": "OTHERS",
@@ -2096,82 +2096,102 @@
           "stickers": [
             {
               "code": "CUW1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "CUW2",
+              "displayName": "Eloy Room",
               "isFoil": false
             },
             {
               "code": "CUW3",
+              "displayName": "Armando Obispo",
               "isFoil": false
             },
             {
               "code": "CUW4",
+              "displayName": "Sherel Floranus",
               "isFoil": false
             },
             {
               "code": "CUW5",
+              "displayName": "Jurien Gaari",
               "isFoil": false
             },
             {
               "code": "CUW6",
+              "displayName": "Joshua Brenet",
               "isFoil": false
             },
             {
               "code": "CUW7",
+              "displayName": "Roshon Van Eijma",
               "isFoil": false
             },
             {
               "code": "CUW8",
+              "displayName": "Shurandy Sambo",
               "isFoil": false
             },
             {
               "code": "CUW9",
+              "displayName": "Livano Comenencia",
               "isFoil": false
             },
             {
               "code": "CUW10",
+              "displayName": "Godfried Roemeratoe",
               "isFoil": false
             },
             {
               "code": "CUW11",
+              "displayName": "Juninho Bacuna",
               "isFoil": false
             },
             {
               "code": "CUW12",
+              "displayName": "Leandro Bacuna",
               "isFoil": false
             },
             {
               "code": "CUW13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CUW14",
+              "displayName": "Tahith Chong",
               "isFoil": false
             },
             {
               "code": "CUW15",
+              "displayName": "Kenji Gorre",
               "isFoil": false
             },
             {
               "code": "CUW16",
+              "displayName": "Jearl Margaritha",
               "isFoil": false
             },
             {
               "code": "CUW17",
+              "displayName": "Jurgen Locadia",
               "isFoil": false
             },
             {
               "code": "CUW18",
+              "displayName": "Jeremy Antonisse",
               "isFoil": false
             },
             {
               "code": "CUW19",
+              "displayName": "Gervane Kastaneer",
               "isFoil": false
             },
             {
               "code": "CUW20",
+              "displayName": "Sontje Hansen",
               "isFoil": false
             }
           ]
