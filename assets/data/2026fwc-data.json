@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "18",
+  "version": "19",
   "groups": [
     {
       "id": "OTHERS",
@@ -1987,82 +1987,102 @@
           "stickers": [
             {
               "code": "GER1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "GER2",
+              "displayName": "Marc-André ter Stegen",
               "isFoil": false
             },
             {
               "code": "GER3",
+              "displayName": "Jonathan Tah",
               "isFoil": false
             },
             {
               "code": "GER4",
+              "displayName": "David Raum",
               "isFoil": false
             },
             {
               "code": "GER5",
+              "displayName": "Nico Schlotterbeck",
               "isFoil": false
             },
             {
               "code": "GER6",
+              "displayName": "Antonio Rüdiger",
               "isFoil": false
             },
             {
               "code": "GER7",
+              "displayName": "Waldemar Anton",
               "isFoil": false
             },
             {
               "code": "GER8",
+              "displayName": "Ridle Baku",
               "isFoil": false
             },
             {
               "code": "GER9",
+              "displayName": "Maximilian Mittelstadt",
               "isFoil": false
             },
             {
               "code": "GER10",
+              "displayName": "Joshua Kimmich",
               "isFoil": false
             },
             {
               "code": "GER11",
+              "displayName": "Florian Wirtz",
               "isFoil": false
             },
             {
               "code": "GER12",
+              "displayName": "Felix Nmecha",
               "isFoil": false
             },
             {
               "code": "GER13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "GER14",
+              "displayName": "Leon Goretzka",
               "isFoil": false
             },
             {
               "code": "GER15",
+              "displayName": "Jamal Musiala",
               "isFoil": false
             },
             {
               "code": "GER16",
+              "displayName": "Serge Gnabry",
               "isFoil": false
             },
             {
               "code": "GER17",
+              "displayName": "Kai Havertz",
               "isFoil": false
             },
             {
               "code": "GER18",
+              "displayName": "Leroy Sane",
               "isFoil": false
             },
             {
               "code": "GER19",
+              "displayName": "Karim Adeyemi",
               "isFoil": false
             },
             {
               "code": "GER20",
+              "displayName": "Nick Woltemade",
               "isFoil": false
             }
           ]
