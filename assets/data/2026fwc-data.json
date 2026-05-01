@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "20",
+  "version": "21",
   "groups": [
     {
       "id": "OTHERS",
@@ -2205,82 +2205,102 @@
           "stickers": [
             {
               "code": "CIV1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "CIV2",
+              "displayName": "Yahia Fofana",
               "isFoil": false
             },
             {
               "code": "CIV3",
+              "displayName": "Ghislain Konan",
               "isFoil": false
             },
             {
               "code": "CIV4",
+              "displayName": "Wilfried Singo",
               "isFoil": false
             },
             {
               "code": "CIV5",
+              "displayName": "Odilon Kossounou",
               "isFoil": false
             },
             {
               "code": "CIV6",
+              "displayName": "Evan Ndicka",
               "isFoil": false
             },
             {
               "code": "CIV7",
+              "displayName": "Willy Boly",
               "isFoil": false
             },
             {
               "code": "CIV8",
+              "displayName": "Emmanuel Agbadou",
               "isFoil": false
             },
             {
               "code": "CIV9",
+              "displayName": "Ousmane Diomande",
               "isFoil": false
             },
             {
               "code": "CIV10",
+              "displayName": "Franck Kessie",
               "isFoil": false
             },
             {
               "code": "CIV11",
+              "displayName": "Seko Fofana",
               "isFoil": false
             },
             {
               "code": "CIV12",
+              "displayName": "Ibrahim Sangare",
               "isFoil": false
             },
             {
               "code": "CIV13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CIV14",
+              "displayName": "Jean-Philippe Gbamin",
               "isFoil": false
             },
             {
               "code": "CIV15",
+              "displayName": "Amad Diallo",
               "isFoil": false
             },
             {
               "code": "CIV16",
+              "displayName": "Sébastien Haller",
               "isFoil": false
             },
             {
               "code": "CIV17",
+              "displayName": "Simon Adringa",
               "isFoil": false
             },
             {
               "code": "CIV18",
+              "displayName": "Yan Diomande",
               "isFoil": false
             },
             {
               "code": "CIV19",
+              "displayName": "Evann Guessand",
               "isFoil": false
             },
             {
               "code": "CIV20",
+              "displayName": "Oumar Diakite",
               "isFoil": false
             }
           ]
