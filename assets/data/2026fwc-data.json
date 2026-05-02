@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "22",
+  "version": "23",
   "groups": [
     {
       "id": "OTHERS",
@@ -4417,82 +4417,102 @@
           "stickers": [
             {
               "code": "UZB1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "UZB2",
+              "displayName": "Utkir Yusupov",
               "isFoil": false
             },
             {
               "code": "UZB3",
+              "displayName": "Farrukh Savfiev",
               "isFoil": false
             },
             {
               "code": "UZB4",
+              "displayName": "Sherzod Nasrullaev",
               "isFoil": false
             },
             {
               "code": "UZB5",
+              "displayName": "Umar Eshmurodov",
               "isFoil": false
             },
             {
               "code": "UZB6",
+              "displayName": "Husniddin Aliqulov",
               "isFoil": false
             },
             {
               "code": "UZB7",
+              "displayName": "Rustamjon Ashurmatov",
               "isFoil": false
             },
             {
               "code": "UZB8",
+              "displayName": "Khojiakbar Alijonov",
               "isFoil": false
             },
             {
               "code": "UZB9",
+              "displayName": "Abdukodir Khusanov",
               "isFoil": false
             },
             {
               "code": "UZB10",
+              "displayName": "Odiljon Hamrobekov",
               "isFoil": false
             },
             {
               "code": "UZB11",
+              "displayName": "Otabek Shukurov",
               "isFoil": false
             },
             {
               "code": "UZB12",
+              "displayName": "Jamshid Iskanderov",
               "isFoil": false
             },
             {
               "code": "UZB13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "UZB14",
+              "displayName": "Azizbek Turgunboev",
               "isFoil": false
             },
             {
               "code": "UZB15",
+              "displayName": "Khojimat Erkinov",
               "isFoil": false
             },
             {
               "code": "UZB16",
+              "displayName": "Eldor Shomurodov",
               "isFoil": false
             },
             {
               "code": "UZB17",
+              "displayName": "Oston Urunov",
               "isFoil": false
             },
             {
               "code": "UZB18",
+              "displayName": "Jaloliddin Masharipov",
               "isFoil": false
             },
             {
               "code": "UZB19",
+              "displayName": "Igor Sergeev",
               "isFoil": false
             },
             {
               "code": "UZB20",
+              "displayName": "Abbosbek Fayzullaev",
               "isFoil": false
             }
           ]
