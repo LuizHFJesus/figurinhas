@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "23",
+  "version": "24",
   "groups": [
     {
       "id": "OTHERS",
@@ -4526,82 +4526,102 @@
           "stickers": [
             {
               "code": "COL1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "COL2",
+              "displayName": "Camilo Vargas",
               "isFoil": false
             },
             {
               "code": "COL3",
+              "displayName": "David Ospina",
               "isFoil": false
             },
             {
               "code": "COL4",
+              "displayName": "Dávinson Sánchez",
               "isFoil": false
             },
             {
               "code": "COL5",
+              "displayName": "Yerry Mina",
               "isFoil": false
             },
             {
               "code": "COL6",
+              "displayName": "Daniel Munoz",
               "isFoil": false
             },
             {
               "code": "COL7",
+              "displayName": "Johan Mojica",
               "isFoil": false
             },
             {
               "code": "COL8",
+              "displayName": "Jhon Lucumí",
               "isFoil": false
             },
             {
               "code": "COL9",
+              "displayName": "Santiago Arias",
               "isFoil": false
             },
             {
               "code": "COL10",
+              "displayName": "Jefferson Lerma",
               "isFoil": false
             },
             {
               "code": "COL11",
+              "displayName": "Kevin Castaño",
               "isFoil": false
             },
             {
               "code": "COL12",
+              "displayName": "Richard Rios",
               "isFoil": false
             },
             {
               "code": "COL13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "COL14",
+              "displayName": "James Rodriguez",
               "isFoil": false
             },
             {
               "code": "COL15",
+              "displayName": "Juan Fernando Quintero",
               "isFoil": false
             },
             {
               "code": "COL16",
+              "displayName": "Jorge Carrascal",
               "isFoil": false
             },
             {
               "code": "COL17",
+              "displayName": "Jon Arias",
               "isFoil": false
             },
             {
               "code": "COL18",
+              "displayName": "Jhon Cordova",
               "isFoil": false
             },
             {
               "code": "COL19",
+              "displayName": "Luis Suarez",
               "isFoil": false
             },
             {
               "code": "COL20",
+              "displayName": "Luis Diaz",
               "isFoil": false
             }
           ]
