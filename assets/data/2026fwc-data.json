@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "25",
+  "version": "26",
   "groups": [
     {
       "id": "OTHERS",
@@ -2314,82 +2314,102 @@
           "stickers": [
             {
               "code": "ECU1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "ECU2",
+              "displayName": "Hernán Galíndez",
               "isFoil": false
             },
             {
               "code": "ECU3",
+              "displayName": "Gonzalo Valle",
               "isFoil": false
             },
             {
               "code": "ECU4",
+              "displayName": "Piero Hincapié",
               "isFoil": false
             },
             {
               "code": "ECU5",
+              "displayName": "Pervis Estupiñán",
               "isFoil": false
             },
             {
               "code": "ECU6",
+              "displayName": "Willian Pacho",
               "isFoil": false
             },
             {
               "code": "ECU7",
+              "displayName": "Ángelo Preciado",
               "isFoil": false
             },
             {
               "code": "ECU8",
+              "displayName": "Joel Ordóñez",
               "isFoil": false
             },
             {
               "code": "ECU9",
+              "displayName": "Moises Caicedo",
               "isFoil": false
             },
             {
               "code": "ECU10",
+              "displayName": "Alan Franco",
               "isFoil": false
             },
             {
               "code": "ECU11",
+              "displayName": "Kendry Paez",
               "isFoil": false
             },
             {
               "code": "ECU12",
+              "displayName": "Pedro Vite",
               "isFoil": false
             },
             {
               "code": "ECU13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ECU14",
+              "displayName": "John Veboah",
               "isFoil": false
             },
             {
               "code": "ECU15",
+              "displayName": "Leonardo Campana",
               "isFoil": false
             },
             {
               "code": "ECU16",
+              "displayName": "Gonzalo Plata",
               "isFoil": false
             },
             {
               "code": "ECU17",
+              "displayName": "Nilson Angulo",
               "isFoil": false
             },
             {
               "code": "ECU18",
+              "displayName": "Alan Minda",
               "isFoil": false
             },
             {
               "code": "ECU19",
+              "displayName": "Kevin Rodriguez",
               "isFoil": false
             },
             {
               "code": "ECU20",
+              "displayName": "Enner Valencia",
               "isFoil": false
             }
           ]
