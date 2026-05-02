@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "24",
+  "version": "25",
   "groups": [
     {
       "id": "OTHERS",
@@ -4219,82 +4219,102 @@
           "stickers": [
             {
               "code": "POR1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "POR2",
+              "displayName": "Diogo Costa",
               "isFoil": false
             },
             {
               "code": "POR3",
+              "displayName": "Jose Sa",
               "isFoil": false
             },
             {
               "code": "POR4",
+              "displayName": "Ruben Dias",
               "isFoil": false
             },
             {
               "code": "POR5",
+              "displayName": "João Cancelo",
               "isFoil": false
             },
             {
               "code": "POR6",
+              "displayName": "Diogo Dalot",
               "isFoil": false
             },
             {
               "code": "POR7",
+              "displayName": "Nuno Mendes",
               "isFoil": false
             },
             {
               "code": "POR8",
+              "displayName": "Gonçalo Inácio",
               "isFoil": false
             },
             {
               "code": "POR9",
+              "displayName": "Bernardo Silva",
               "isFoil": false
             },
             {
               "code": "POR10",
+              "displayName": "Bruno Fernandes",
               "isFoil": false
             },
             {
               "code": "POR11",
+              "displayName": "Ruben Neves",
               "isFoil": false
             },
             {
               "code": "POR12",
+              "displayName": "Vitinha",
               "isFoil": false
             },
             {
               "code": "POR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "POR14",
+              "displayName": "João Neves",
               "isFoil": false
             },
             {
               "code": "POR15",
+              "displayName": "Cristiano Ronaldo",
               "isFoil": false
             },
             {
               "code": "POR16",
+              "displayName": "Francisco Trincao",
               "isFoil": false
             },
             {
               "code": "POR17",
+              "displayName": "João Felix",
               "isFoil": false
             },
             {
               "code": "POR18",
+              "displayName": "Gonçalo Ramos",
               "isFoil": false
             },
             {
               "code": "POR19",
+              "displayName": "Pedro Neto",
               "isFoil": false
             },
             {
               "code": "POR20",
+              "displayName": "Rafael Leão",
               "isFoil": false
             }
           ]
