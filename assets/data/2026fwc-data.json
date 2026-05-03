@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "28",
+  "version": "29",
   "groups": [
     {
       "id": "OTHERS",
@@ -2647,82 +2647,102 @@
           "stickers": [
             {
               "code": "SWE1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "SWE2",
+              "displayName": "Victor Johansson",
               "isFoil": false
             },
             {
               "code": "SWE3",
+              "displayName": "Isak Hien",
               "isFoil": false
             },
             {
               "code": "SWE4",
+              "displayName": "Gabriel Gudmundsson",
               "isFoil": false
             },
             {
               "code": "SWE5",
+              "displayName": "Emil Holm",
               "isFoil": false
             },
             {
               "code": "SWE6",
+              "displayName": "Victor Nilsson Lindelöf",
               "isFoil": false
             },
             {
               "code": "SWE7",
+              "displayName": "Gustaf Lagerbielke",
               "isFoil": false
             },
             {
               "code": "SWE8",
+              "displayName": "Lucas Bergvall",
               "isFoil": false
             },
             {
               "code": "SWE9",
+              "displayName": "Hugo Larsson",
               "isFoil": false
             },
             {
               "code": "SWE10",
+              "displayName": "Jesper Karlström",
               "isFoil": false
             },
             {
               "code": "SWE11",
+              "displayName": "Yasin Ayari",
               "isFoil": false
             },
             {
               "code": "SWE12",
+              "displayName": "Mattias Svanberg",
               "isFoil": false
             },
             {
               "code": "SWE13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SWE14",
+              "displayName": "Daniel Svensson",
               "isFoil": false
             },
             {
               "code": "SWE15",
+              "displayName": "Ken Sema",
               "isFoil": false
             },
             {
               "code": "SWE16",
+              "displayName": "Roony Bardghji",
               "isFoil": false
             },
             {
               "code": "SWE17",
+              "displayName": "Dejan Kulusevski",
               "isFoil": false
             },
             {
               "code": "SWE18",
+              "displayName": "Anthony Elanga",
               "isFoil": false
             },
             {
               "code": "SWE19",
+              "displayName": "Alexander Isak",
               "isFoil": false
             },
             {
               "code": "SWE20",
+              "displayName": "Viktor Gyökeres",
               "isFoil": false
             }
           ]
