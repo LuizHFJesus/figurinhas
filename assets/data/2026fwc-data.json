@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "26",
+  "version": "27",
   "groups": [
     {
       "id": "OTHERS",
@@ -2429,82 +2429,102 @@
           "stickers": [
             {
               "code": "NED1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "NED2",
+              "displayName": "Bart Verbruggen",
               "isFoil": false
             },
             {
               "code": "NED3",
+              "displayName": "Virgil van Dijk",
               "isFoil": false
             },
             {
               "code": "NED4",
+              "displayName": "Micky van de Ven",
               "isFoil": false
             },
             {
               "code": "NED5",
+              "displayName": "Jurien Timber",
               "isFoil": false
             },
             {
               "code": "NED6",
+              "displayName": "Denzel Dumfries",
               "isFoil": false
             },
             {
               "code": "NED7",
+              "displayName": "Nathan Aké",
               "isFoil": false
             },
             {
               "code": "NED8",
+              "displayName": "Jereme Frimpong",
               "isFoil": false
             },
             {
               "code": "NED9",
+              "displayName": "Jan Paul van Hecke",
               "isFoil": false
             },
             {
               "code": "NED10",
+              "displayName": "Tijjani Reijnders",
               "isFoil": false
             },
             {
               "code": "NED11",
+              "displayName": "Ryan Gravenberch",
               "isFoil": false
             },
             {
               "code": "NED12",
+              "displayName": "Teun Koopmeiners",
               "isFoil": false
             },
             {
               "code": "NED13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "NED14",
+              "displayName": "Frenkie de Jong",
               "isFoil": false
             },
             {
               "code": "NED15",
+              "displayName": "Xavi Simons",
               "isFoil": false
             },
             {
               "code": "NED16",
+              "displayName": "Justin Kluivert",
               "isFoil": false
             },
             {
               "code": "NED17",
+              "displayName": "Memphis Depay",
               "isFoil": false
             },
             {
               "code": "NED18",
+              "displayName": "Donyell Malen",
               "isFoil": false
             },
             {
               "code": "NED19",
+              "displayName": "Wout Weghorst",
               "isFoil": false
             },
             {
               "code": "NED20",
+              "displayName": "Cody Gakpo",
               "isFoil": false
             }
           ]
