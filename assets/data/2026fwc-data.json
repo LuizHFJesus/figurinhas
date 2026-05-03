@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "29",
+  "version": "30",
   "groups": [
     {
       "id": "OTHERS",
@@ -2756,82 +2756,102 @@
           "stickers": [
             {
               "code": "TUN1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "TUN2",
+              "displayName": "Bechir Ben Said",
               "isFoil": false
             },
             {
               "code": "TUN3",
+              "displayName": "Aymen Dahmen",
               "isFoil": false
             },
             {
               "code": "TUN4",
+              "displayName": "Van Valery",
               "isFoil": false
             },
             {
               "code": "TUN5",
+              "displayName": "Montassar Talbi",
               "isFoil": false
             },
             {
               "code": "TUN6",
+              "displayName": "Yassine Meriah",
               "isFoil": false
             },
             {
               "code": "TUN7",
+              "displayName": "Ali Abdi",
               "isFoil": false
             },
             {
               "code": "TUN8",
+              "displayName": "Dylan Bronn",
               "isFoil": false
             },
             {
               "code": "TUN9",
+              "displayName": "Ellyes Skhiri",
               "isFoil": false
             },
             {
               "code": "TUN10",
+              "displayName": "Aissa Laidouni",
               "isFoil": false
             },
             {
               "code": "TUN11",
+              "displayName": "Ferjani Sassi",
               "isFoil": false
             },
             {
               "code": "TUN12",
+              "displayName": "Mohamed Ali Ben Romdhane",
               "isFoil": false
             },
             {
               "code": "TUN13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "TUN14",
+              "displayName": "Hannibal Mejbri",
               "isFoil": false
             },
             {
               "code": "TUN15",
+              "displayName": "Elias Achouri",
               "isFoil": false
             },
             {
               "code": "TUN16",
+              "displayName": "Elias Saad",
               "isFoil": false
             },
             {
               "code": "TUN17",
+              "displayName": "Hazem Mastouri",
               "isFoil": false
             },
             {
               "code": "TUN18",
+              "displayName": "Ismael Gharbi",
               "isFoil": false
             },
             {
               "code": "TUN19",
+              "displayName": "Sayfallah Ltaief",
               "isFoil": false
             },
             {
               "code": "TUN20",
+              "displayName": "Naim Sliti",
               "isFoil": false
             }
           ]
