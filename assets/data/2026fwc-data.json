@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "27",
+  "version": "28",
   "groups": [
     {
       "id": "OTHERS",
@@ -2538,82 +2538,102 @@
           "stickers": [
             {
               "code": "JPN1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "JPN2",
+              "displayName": "Zion Suzuki",
               "isFoil": false
             },
             {
               "code": "JPN3",
+              "displayName": "Henry Heroki Mochizuki",
               "isFoil": false
             },
             {
               "code": "JPN4",
+              "displayName": "Ayumu Seko",
               "isFoil": false
             },
             {
               "code": "JPN5",
+              "displayName": "Junnosuke Suzuki",
               "isFoil": false
             },
             {
               "code": "JPN6",
+              "displayName": "Shogo Taniguchi",
               "isFoil": false
             },
             {
               "code": "JPN7",
+              "displayName": "Tsuyoshi Watanabe",
               "isFoil": false
             },
             {
               "code": "JPN8",
+              "displayName": "Kaishu Sano",
               "isFoil": false
             },
             {
               "code": "JPN9",
+              "displayName": "Yuki Soma",
               "isFoil": false
             },
             {
               "code": "JPN10",
+              "displayName": "Ao Tanaka",
               "isFoil": false
             },
             {
               "code": "JPN11",
+              "displayName": "Daichi Kamada",
               "isFoil": false
             },
             {
               "code": "JPN12",
+              "displayName": "Takefusa Kubo",
               "isFoil": false
             },
             {
               "code": "JPN13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "JPN14",
+              "displayName": "Ritsu Doan",
               "isFoil": false
             },
             {
               "code": "JPN15",
+              "displayName": "Keito Nakamura",
               "isFoil": false
             },
             {
               "code": "JPN16",
+              "displayName": "Takumi Minamino",
               "isFoil": false
             },
             {
               "code": "JPN17",
+              "displayName": "Shuto Machino",
               "isFoil": false
             },
             {
               "code": "JPN18",
+              "displayName": "Junya Ito",
               "isFoil": false
             },
             {
               "code": "JPN19",
+              "displayName": "Koki Ogawa",
               "isFoil": false
             },
             {
               "code": "JPN20",
+              "displayName": "Ayase Ueda",
               "isFoil": false
             }
           ]
