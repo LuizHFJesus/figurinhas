@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "32",
+  "version": "33",
   "groups": [
     {
       "id": "OTHERS",
@@ -3089,82 +3089,102 @@
           "stickers": [
             {
               "code": "IRN1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "IRN2",
+              "displayName": "Alirez Beiranvand",
               "isFoil": false
             },
             {
               "code": "IRN3",
+              "displayName": "Morteza Pouraliganji",
               "isFoil": false
             },
             {
               "code": "IRN4",
+              "displayName": "Ehsan Hajsafi",
               "isFoil": false
             },
             {
               "code": "IRN5",
+              "displayName": "Milad Mohammadi",
               "isFoil": false
             },
             {
               "code": "IRN6",
+              "displayName": "Shojae Khalilzadeh",
               "isFoil": false
             },
             {
               "code": "IRN7",
+              "displayName": "Ramin Rezaeian",
               "isFoil": false
             },
             {
               "code": "IRN8",
+              "displayName": "Hossein Kanaani",
               "isFoil": false
             },
             {
               "code": "IRN9",
+              "displayName": "Sadegh Moharrami",
               "isFoil": false
             },
             {
               "code": "IRN10",
+              "displayName": "Saleh Hardani",
               "isFoil": false
             },
             {
               "code": "IRN11",
+              "displayName": "Saeed Ezatolahi",
               "isFoil": false
             },
             {
               "code": "IRN12",
+              "displayName": "Saman Ghoddos",
               "isFoil": false
             },
             {
               "code": "IRN13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "IRN14",
+              "displayName": "Omid Noorafkan",
               "isFoil": false
             },
             {
               "code": "IRN15",
+              "displayName": "Roozbeh Cheshmi",
               "isFoil": false
             },
             {
               "code": "IRN16",
+              "displayName": "Mohammad Mohebi",
               "isFoil": false
             },
             {
               "code": "IRN17",
+              "displayName": "Sardar Azmoun",
               "isFoil": false
             },
             {
               "code": "IRN18",
+              "displayName": "Mehdi Taremi",
               "isFoil": false
             },
             {
               "code": "IRN19",
+              "displayName": "Alireza Jahanbakhsh",
               "isFoil": false
             },
             {
               "code": "IRN20",
+              "displayName": "Ali Gholizadeh",
               "isFoil": false
             }
           ]
