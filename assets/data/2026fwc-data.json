@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "30",
+  "version": "31",
   "groups": [
     {
       "id": "OTHERS",
@@ -2871,82 +2871,102 @@
           "stickers": [
             {
               "code": "BEL1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "BEL2",
+              "displayName": "Thibaut Courtois",
               "isFoil": false
             },
             {
               "code": "BEL3",
+              "displayName": "Arthur Theate",
               "isFoil": false
             },
             {
               "code": "BEL4",
+              "displayName": "Timothy Castagne",
               "isFoil": false
             },
             {
               "code": "BEL5",
+              "displayName": "Zeno Debast",
               "isFoil": false
             },
             {
               "code": "BEL6",
+              "displayName": "Brandon Mechele",
               "isFoil": false
             },
             {
               "code": "BEL7",
+              "displayName": "Maxim De Cuyper",
               "isFoil": false
             },
             {
               "code": "BEL8",
+              "displayName": "Thomas Meunier",
               "isFoil": false
             },
             {
               "code": "BEL9",
+              "displayName": "Youri Tielemans",
               "isFoil": false
             },
             {
               "code": "BEL10",
+              "displayName": "Amadou Onana",
               "isFoil": false
             },
             {
               "code": "BEL11",
+              "displayName": "Nicolas Raskin",
               "isFoil": false
             },
             {
               "code": "BEL12",
+              "displayName": "Alexis Saelemaekers",
               "isFoil": false
             },
             {
               "code": "BEL13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "BEL14",
+              "displayName": "Hans Vanaken",
               "isFoil": false
             },
             {
               "code": "BEL15",
+              "displayName": "Kevin De Bruyne",
               "isFoil": false
             },
             {
               "code": "BEL16",
+              "displayName": "Jérémy Doku",
               "isFoil": false
             },
             {
               "code": "BEL17",
+              "displayName": "Charles De Ketelaere",
               "isFoil": false
             },
             {
               "code": "BEL18",
+              "displayName": "Leandro Trossard",
               "isFoil": false
             },
             {
               "code": "BEL19",
+              "displayName": "Loïs Openda",
               "isFoil": false
             },
             {
               "code": "BEL20",
+              "displayName": "Romelu Lukaku",
               "isFoil": false
             }
           ]
