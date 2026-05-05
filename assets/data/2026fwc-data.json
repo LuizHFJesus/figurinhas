@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "33",
+  "version": "34",
   "groups": [
     {
       "id": "OTHERS",
@@ -3198,82 +3198,102 @@
           "stickers": [
             {
               "code": "NZL1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "NZL2",
+              "displayName": "Max Crocombe Payne",
               "isFoil": false
             },
             {
               "code": "NZL3",
+              "displayName": "Alex Paulsen",
               "isFoil": false
             },
             {
               "code": "NZL4",
+              "displayName": "Michael Boxall",
               "isFoil": false
             },
             {
               "code": "NZL5",
+              "displayName": "Liberato Cacace",
               "isFoil": false
             },
             {
               "code": "NZL6",
+              "displayName": "Tim Payne",
               "isFoil": false
             },
             {
               "code": "NZL7",
+              "displayName": "Tyler Bindon",
               "isFoil": false
             },
             {
               "code": "NZL8",
+              "displayName": "Francis de Vries",
               "isFoil": false
             },
             {
               "code": "NZL9",
+              "displayName": "Finn Surman",
               "isFoil": false
             },
             {
               "code": "NZL10",
+              "displayName": "Joe Bell",
               "isFoil": false
             },
             {
               "code": "NZL11",
+              "displayName": "Sarpreet Singh",
               "isFoil": false
             },
             {
               "code": "NZL12",
+              "displayName": "Ryan Thomas",
               "isFoil": false
             },
             {
               "code": "NZL13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "NZL14",
+              "displayName": "Matthew Garbett",
               "isFoil": false
             },
             {
               "code": "NZL15",
+              "displayName": "Marko Stamenić",
               "isFoil": false
             },
             {
               "code": "NZL16",
+              "displayName": "Ben Old",
               "isFoil": false
             },
             {
               "code": "NZL17",
+              "displayName": "Chris Wood",
               "isFoil": false
             },
             {
               "code": "NZL18",
+              "displayName": "Elijah Just",
               "isFoil": false
             },
             {
               "code": "NZL19",
+              "displayName": "Callum McCowatt",
               "isFoil": false
             },
             {
               "code": "NZL20",
+              "displayName": "Kosta Barbarouses",
               "isFoil": false
             }
           ]
