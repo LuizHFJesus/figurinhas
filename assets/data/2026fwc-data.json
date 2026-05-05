@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "31",
+  "version": "32",
   "groups": [
     {
       "id": "OTHERS",
@@ -2980,82 +2980,102 @@
           "stickers": [
             {
               "code": "EGY1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "EGY2",
+              "displayName": "Mohamed El Shenawy",
               "isFoil": false
             },
             {
               "code": "EGY3",
+              "displayName": "Mohamed Hany",
               "isFoil": false
             },
             {
               "code": "EGY4",
+              "displayName": "Mohamed Hamdy",
               "isFoil": false
             },
             {
               "code": "EGY5",
+              "displayName": "Yasser Ibrahim",
               "isFoil": false
             },
             {
               "code": "EGY6",
+              "displayName": "Khaled Sobhi",
               "isFoil": false
             },
             {
               "code": "EGY7",
+              "displayName": "Ramy Rabia",
               "isFoil": false
             },
             {
               "code": "EGY8",
+              "displayName": "Hossam Abdelmaguid",
               "isFoil": false
             },
             {
               "code": "EGY9",
+              "displayName": "Ahmed Fatouh",
               "isFoil": false
             },
             {
               "code": "EGY10",
+              "displayName": "Marwan Attia",
               "isFoil": false
             },
             {
               "code": "EGY11",
+              "displayName": "Zizo",
               "isFoil": false
             },
             {
               "code": "EGY12",
+              "displayName": "Hamdy Fathy",
               "isFoil": false
             },
             {
               "code": "EGY13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "EGY14",
+              "displayName": "Mohamed Lasheen",
               "isFoil": false
             },
             {
               "code": "EGY15",
+              "displayName": "Emam Ashour",
               "isFoil": false
             },
             {
               "code": "EGY16",
+              "displayName": "Osama Faisal",
               "isFoil": false
             },
             {
               "code": "EGY17",
+              "displayName": "Mohamed Salah",
               "isFoil": false
             },
             {
               "code": "EGY18",
+              "displayName": "Mostafa Mohamed",
               "isFoil": false
             },
             {
               "code": "EGY19",
+              "displayName": "Trezeguet",
               "isFoil": false
             },
             {
               "code": "EGY20",
+              "displayName": "Omar Marsmoush",
               "isFoil": false
             }
           ]
