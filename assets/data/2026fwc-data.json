@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "35",
+  "version": "37",
   "groups": [
     {
       "id": "OTHERS",
@@ -3422,82 +3422,102 @@
           "stickers": [
             {
               "code": "CPV1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "CPV2",
+              "displayName": "Vozinha",
               "isFoil": false
             },
             {
               "code": "CPV3",
+              "displayName": "Logan Costa",
               "isFoil": false
             },
             {
               "code": "CPV4",
+              "displayName": "Pico",
               "isFoil": false
             },
             {
               "code": "CPV5",
+              "displayName": "Diney",
               "isFoil": false
             },
             {
               "code": "CPV6",
+              "displayName": "Steven Moreira",
               "isFoil": false
             },
             {
               "code": "CPV7",
+              "displayName": "Wagner Pina",
               "isFoil": false
             },
             {
               "code": "CPV8",
+              "displayName": "Joao Paulo",
               "isFoil": false
             },
             {
               "code": "CPV9",
+              "displayName": "Yannick Semedo",
               "isFoil": false
             },
             {
               "code": "CPV10",
+              "displayName": "Kevin Pina",
               "isFoil": false
             },
             {
               "code": "CPV11",
+              "displayName": "Patrick Andrade",
               "isFoil": false
             },
             {
               "code": "CPV12",
+              "displayName": "Jamiro Monteiro",
               "isFoil": false
             },
             {
               "code": "CPV13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CPV14",
+              "displayName": "Deroy Duarte",
               "isFoil": false
             },
             {
               "code": "CPV15",
+              "displayName": "Garry Rodrigues",
               "isFoil": false
             },
             {
               "code": "CPV16",
+              "displayName": "Jovane Cabral",
               "isFoil": false
             },
             {
               "code": "CPV17",
+              "displayName": "Ryan Mendes",
               "isFoil": false
             },
             {
               "code": "CPV18",
+              "displayName": "Dailon Livramento",
               "isFoil": false
             },
             {
               "code": "CPV19",
+              "displayName": "Willy Semedo",
               "isFoil": false
             },
             {
               "code": "CPV20",
+              "displayName": "Bebe",
               "isFoil": false
             }
           ]
