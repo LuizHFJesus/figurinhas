@@ -8,11 +8,8 @@ class GetActiveUserAlbumUseCase {
 
   GetActiveUserAlbumUseCase(this._repo, this._ensureDefaultUserAlbum);
 
-  Future<UserAlbum> call(String profileId) async {
-    final defaultAlbum = await _ensureDefaultUserAlbum(profileId);
-    final activeAlbum = await _repo.getActiveUserAlbum(profileId);
-    return activeAlbum ?? defaultAlbum!;
-  }
+  Future<UserAlbum> call(String profileId) async =>
+      _ensureDefaultUserAlbum(profileId);
 
   Stream<UserAlbum> watch(String profileId) =>
       _repo.watchActiveUserAlbum(profileId);

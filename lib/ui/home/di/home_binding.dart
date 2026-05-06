@@ -47,6 +47,7 @@ class HomeBinding extends Bindings {
       Get.lazyPut(
         () => EnsureDefaultUserAlbumUsecase(
           Get.find<CatalogRepository>(),
+          Get.find<UserAlbumRepository>(),
           Get.find<CreateUserAlbumUseCase>(),
           Get.find<UpdateCatalogIfNeededUseCase>(),
         ),
