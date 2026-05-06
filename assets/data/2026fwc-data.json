@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "37",
+  "version": "38",
   "groups": [
     {
       "id": "OTHERS",
@@ -3531,82 +3531,102 @@
           "stickers": [
             {
               "code": "KSA1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "KSA2",
+              "displayName": "Nawaf Alaqidi",
               "isFoil": false
             },
             {
               "code": "KSA3",
+              "displayName": "Abdulrahman Al-Sanbi",
               "isFoil": false
             },
             {
               "code": "KSA4",
+              "displayName": "Saud Abdulhamid",
               "isFoil": false
             },
             {
               "code": "KSA5",
+              "displayName": "Nawaf Bouwashl",
               "isFoil": false
             },
             {
               "code": "KSA6",
+              "displayName": "Jihad Thakri",
               "isFoil": false
             },
             {
               "code": "KSA7",
+              "displayName": "Moteb Al-Harbi",
               "isFoil": false
             },
             {
               "code": "KSA8",
+              "displayName": "Hassan Altambakti",
               "isFoil": false
             },
             {
               "code": "KSA9",
+              "displayName": "Musab Aljuwayr",
               "isFoil": false
             },
             {
               "code": "KSA10",
+              "displayName": "Ziyad Aljohani",
               "isFoil": false
             },
             {
               "code": "KSA11",
+              "displayName": "Abdullah Alkhaibari",
               "isFoil": false
             },
             {
               "code": "KSA12",
+              "displayName": "Nasser Aldawsari",
               "isFoil": false
             },
             {
               "code": "KSA13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "KSA14",
+              "displayName": "Saleh Abu Alshamat",
               "isFoil": false
             },
             {
               "code": "KSA15",
+              "displayName": "Marwan Alsahafi",
               "isFoil": false
             },
             {
               "code": "KSA16",
+              "displayName": "Salem Aldawsari",
               "isFoil": false
             },
             {
               "code": "KSA17",
+              "displayName": "Abdulrahman Al-Aboud",
               "isFoil": false
             },
             {
               "code": "KSA18",
+              "displayName": "Feras Akbrikan",
               "isFoil": false
             },
             {
               "code": "KSA19",
+              "displayName": "Saleh Alshehri",
               "isFoil": false
             },
             {
               "code": "KSA20",
+              "displayName": "Abdullah Al-Hamdan",
               "isFoil": false
             }
           ]
