@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "38",
+  "version": "39",
   "groups": [
     {
       "id": "OTHERS",
@@ -3640,82 +3640,102 @@
           "stickers": [
             {
               "code": "URU1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "URU2",
+              "displayName": "Sergio Rochet",
               "isFoil": false
             },
             {
               "code": "URU3",
+              "displayName": "Santiago Mele",
               "isFoil": false
             },
             {
               "code": "URU4",
+              "displayName": "Ronald Araujo",
               "isFoil": false
             },
             {
               "code": "URU5",
+              "displayName": "José María Giménez",
               "isFoil": false
             },
             {
               "code": "URU6",
+              "displayName": "Sebastian Caceres",
               "isFoil": false
             },
             {
               "code": "URU7",
+              "displayName": "Mathias Olivera",
               "isFoil": false
             },
             {
               "code": "URU8",
+              "displayName": "Guillermo Varela",
               "isFoil": false
             },
             {
               "code": "URU9",
+              "displayName": "Nahitan Nandez",
               "isFoil": false
             },
             {
               "code": "URU10",
+              "displayName": "Federico Valverde",
               "isFoil": false
             },
             {
               "code": "URU11",
+              "displayName": "Giorgian De Arrascaeta",
               "isFoil": false
             },
             {
               "code": "URU12",
+              "displayName": "Rodrigo Bentancur",
               "isFoil": false
             },
             {
               "code": "URU13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "URU14",
+              "displayName": "Manuel Ugarte",
               "isFoil": false
             },
             {
               "code": "URU15",
+              "displayName": "Nicolás de la Cruz",
               "isFoil": false
             },
             {
               "code": "URU16",
+              "displayName": "Maxi Araujo",
               "isFoil": false
             },
             {
               "code": "URU17",
+              "displayName": "Darwin Núñez",
               "isFoil": false
             },
             {
               "code": "URU18",
+              "displayName": "Federico Viñas",
               "isFoil": false
             },
             {
               "code": "URU19",
+              "displayName": "Rodrigo Aguirre",
               "isFoil": false
             },
             {
               "code": "URU20",
+              "displayName": "Facundo Pellistri",
               "isFoil": false
             }
           ]
