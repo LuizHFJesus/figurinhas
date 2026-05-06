@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "34",
+  "version": "35",
   "groups": [
     {
       "id": "OTHERS",
@@ -3313,82 +3313,102 @@
           "stickers": [
             {
               "code": "ESP1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "ESP2",
+              "displayName": "Unai Simon",
               "isFoil": false
             },
             {
               "code": "ESP3",
+              "displayName": "Robin Le Normand",
               "isFoil": false
             },
             {
               "code": "ESP4",
+              "displayName": "Aymeric Laporte",
               "isFoil": false
             },
             {
               "code": "ESP5",
+              "displayName": "Dean Huijsen",
               "isFoil": false
             },
             {
               "code": "ESP6",
+              "displayName": "Pedro Porro",
               "isFoil": false
             },
             {
               "code": "ESP7",
+              "displayName": "Dani Carvajal",
               "isFoil": false
             },
             {
               "code": "ESP8",
+              "displayName": "Marc Cucurella",
               "isFoil": false
             },
             {
               "code": "ESP9",
+              "displayName": "Martín Zubimendi",
               "isFoil": false
             },
             {
               "code": "ESP10",
+              "displayName": "Rodri",
               "isFoil": false
             },
             {
               "code": "ESP11",
+              "displayName": "Pedri",
               "isFoil": false
             },
             {
               "code": "ESP12",
+              "displayName": "Fabian Ruiz",
               "isFoil": false
             },
             {
               "code": "ESP13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ESP14",
+              "displayName": "Mikel Merino",
               "isFoil": false
             },
             {
               "code": "ESP15",
+              "displayName": "Lamine Yamal",
               "isFoil": false
             },
             {
               "code": "ESP16",
+              "displayName": "Dani Olmo",
               "isFoil": false
             },
             {
               "code": "ESP17",
+              "displayName": "Nico Williams",
               "isFoil": false
             },
             {
               "code": "ESP18",
+              "displayName": "Ferran Torres",
               "isFoil": false
             },
             {
               "code": "ESP19",
+              "displayName": "Álvaro Morata",
               "isFoil": false
             },
             {
               "code": "ESP20",
+              "displayName": "Mikel Oyarzabal",
               "isFoil": false
             }
           ]
