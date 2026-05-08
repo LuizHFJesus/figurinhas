@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "40",
+  "version": "41",
   "groups": [
     {
       "id": "OTHERS",
@@ -3864,82 +3864,102 @@
           "stickers": [
             {
               "code": "SEN1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "SEN2",
+              "displayName": "Eduardo Mendy",
               "isFoil": false
             },
             {
               "code": "SEN3",
+              "displayName": "Yehvann Diouf",
               "isFoil": false
             },
             {
               "code": "SEN4",
+              "displayName": "Moussa Niakhaté",
               "isFoil": false
             },
             {
               "code": "SEN5",
+              "displayName": "Abdoulaye Seck",
               "isFoil": false
             },
             {
               "code": "SEN6",
+              "displayName": "Ismail Jakobs",
               "isFoil": false
             },
             {
               "code": "SEN7",
+              "displayName": "El Hadji Malick Diouf",
               "isFoil": false
             },
             {
               "code": "SEN8",
+              "displayName": "Kalidou Koulibaly",
               "isFoil": false
             },
             {
               "code": "SEN9",
+              "displayName": "Idrissa Gana Gueye",
               "isFoil": false
             },
             {
               "code": "SEN10",
+              "displayName": "Pape Matar Sarr",
               "isFoil": false
             },
             {
               "code": "SEN11",
+              "displayName": "Pape Gueye",
               "isFoil": false
             },
             {
               "code": "SEN12",
+              "displayName": "Habib Diarra",
               "isFoil": false
             },
             {
               "code": "SEN13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "SEN14",
+              "displayName": "Lamine Camara",
               "isFoil": false
             },
             {
               "code": "SEN15",
+              "displayName": "Sadio Mane",
               "isFoil": false
             },
             {
               "code": "SEN16",
+              "displayName": "Ismaïla Sarr",
               "isFoil": false
             },
             {
               "code": "SEN17",
+              "displayName": "Boulaye Dia",
               "isFoil": false
             },
             {
               "code": "SEN18",
+              "displayName": "Iliman Ndiaye",
               "isFoil": false
             },
             {
               "code": "SEN19",
+              "displayName": "Nicolas Jackson",
               "isFoil": false
             },
             {
               "code": "SEN20",
+              "displayName": "Krepin Diatta",
               "isFoil": false
             }
           ]
