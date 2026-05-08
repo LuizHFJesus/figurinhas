@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "39",
+  "version": "40",
   "groups": [
     {
       "id": "OTHERS",
@@ -3755,82 +3755,102 @@
           "stickers": [
             {
               "code": "FRA1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "FRA2",
+              "displayName": "Mike Maignan",
               "isFoil": false
             },
             {
               "code": "FRA3",
+              "displayName": "Theo Hernandez",
               "isFoil": false
             },
             {
               "code": "FRA4",
+              "displayName": "William Saliba",
               "isFoil": false
             },
             {
               "code": "FRA5",
+              "displayName": "Jules Kounde",
               "isFoil": false
             },
             {
               "code": "FRA6",
+              "displayName": "Ibrahima Konate",
               "isFoil": false
             },
             {
               "code": "FRA7",
+              "displayName": "Dayot Upamecano",
               "isFoil": false
             },
             {
               "code": "FRA8",
+              "displayName": "Lucas Digne",
               "isFoil": false
             },
             {
               "code": "FRA9",
+              "displayName": "Aurélien Tchouaméni",
               "isFoil": false
             },
             {
               "code": "FRA10",
+              "displayName": "Eduardo Camavinga",
               "isFoil": false
             },
             {
               "code": "FRA11",
+              "displayName": "Manu Kone",
               "isFoil": false
             },
             {
               "code": "FRA12",
+              "displayName": "Adrien Rabiot",
               "isFoil": false
             },
             {
               "code": "FRA13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "FRA14",
+              "displayName": "Michael Olise",
               "isFoil": false
             },
             {
               "code": "FRA15",
+              "displayName": "Ousmane Dembele",
               "isFoil": false
             },
             {
               "code": "FRA16",
+              "displayName": "Bradley Barcola",
               "isFoil": false
             },
             {
               "code": "FRA17",
+              "displayName": "Désiré Doué",
               "isFoil": false
             },
             {
               "code": "FRA18",
+              "displayName": "Kingsley Coman",
               "isFoil": false
             },
             {
               "code": "FRA19",
+              "displayName": "Hugo Ekitike",
               "isFoil": false
             },
             {
               "code": "FRA20",
+              "displayName": "Kylian Mbappe",
               "isFoil": false
             }
           ]
