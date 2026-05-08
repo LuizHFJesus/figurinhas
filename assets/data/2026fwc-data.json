@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "42",
+  "version": "43",
   "groups": [
     {
       "id": "OTHERS",
@@ -4082,82 +4082,102 @@
           "stickers": [
             {
               "code": "NOR1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "NOR2",
+              "displayName": "Orjan Nyland",
               "isFoil": false
             },
             {
               "code": "NOR3",
+              "displayName": "Julian Ryerson",
               "isFoil": false
             },
             {
               "code": "NOR4",
+              "displayName": "Leo Ostigård",
               "isFoil": false
             },
             {
               "code": "NOR5",
+              "displayName": "Kristoffer Vassbakk Ajer",
               "isFoil": false
             },
             {
               "code": "NOR6",
+              "displayName": "Marcus Holmgren Pedersen",
               "isFoil": false
             },
             {
               "code": "NOR7",
+              "displayName": "David Møller Wolfe",
               "isFoil": false
             },
             {
               "code": "NOR8",
+              "displayName": "Torbjørn Heggem",
               "isFoil": false
             },
             {
               "code": "NOR9",
+              "displayName": "Morten Thorsby",
               "isFoil": false
             },
             {
               "code": "NOR10",
+              "displayName": "Martin Ødegaard",
               "isFoil": false
             },
             {
               "code": "NOR11",
+              "displayName": "Sander Berge",
               "isFoil": false
             },
             {
               "code": "NOR12",
+              "displayName": "Andreas Schjelderup",
               "isFoil": false
             },
             {
               "code": "NOR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "NOR14",
+              "displayName": "Patrick Berg",
               "isFoil": false
             },
             {
               "code": "NOR15",
+              "displayName": "Erling Haaland",
               "isFoil": false
             },
             {
               "code": "NOR16",
+              "displayName": "Alexander Sørloth",
               "isFoil": false
             },
             {
               "code": "NOR17",
+              "displayName": "Aron Dønnum",
               "isFoil": false
             },
             {
               "code": "NOR18",
+              "displayName": "Jorgen Strand Larsen",
               "isFoil": false
             },
             {
               "code": "NOR19",
+              "displayName": "Antonio Nusa",
               "isFoil": false
             },
             {
               "code": "NOR20",
+              "displayName": "Oscar Bobb",
               "isFoil": false
             }
           ]
