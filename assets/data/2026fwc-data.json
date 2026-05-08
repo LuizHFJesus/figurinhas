@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "41",
+  "version": "42",
   "groups": [
     {
       "id": "OTHERS",
@@ -3973,82 +3973,102 @@
           "stickers": [
             {
               "code": "IRQ1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "IRQ2",
+              "displayName": "Jalal Hassan",
               "isFoil": false
             },
             {
               "code": "IRQ3",
+              "displayName": "Rebin Sulaka",
               "isFoil": false
             },
             {
               "code": "IRQ4",
+              "displayName": "Hussein Ali",
               "isFoil": false
             },
             {
               "code": "IRQ5",
+              "displayName": "Akam Hashem",
               "isFoil": false
             },
             {
               "code": "IRQ6",
+              "displayName": "Merchas Doski",
               "isFoil": false
             },
             {
               "code": "IRQ7",
+              "displayName": "Zaid Tahseen",
               "isFoil": false
             },
             {
               "code": "IRQ8",
+              "displayName": "Manaf Younis",
               "isFoil": false
             },
             {
               "code": "IRQ9",
+              "displayName": "Zidane Iqbal",
               "isFoil": false
             },
             {
               "code": "IRQ10",
+              "displayName": "Amir Al-Ammari",
               "isFoil": false
             },
             {
               "code": "IRQ11",
+              "displayName": "Ibrahim Bavesh",
               "isFoil": false
             },
             {
               "code": "IRQ12",
+              "displayName": "Ali Jasim",
               "isFoil": false
             },
             {
               "code": "IRQ13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "IRQ14",
+              "displayName": "Youssef Amyn",
               "isFoil": false
             },
             {
               "code": "IRQ15",
+              "displayName": "Aimar Sher",
               "isFoil": false
             },
             {
               "code": "IRQ16",
+              "displayName": "Marko Farji",
               "isFoil": false
             },
             {
               "code": "IRQ17",
+              "displayName": "Osama Rashid",
               "isFoil": false
             },
             {
               "code": "IRQ18",
+              "displayName": "Ali Al-Hamadi",
               "isFoil": false
             },
             {
               "code": "IRQ19",
+              "displayName": "Aymen Hussein",
               "isFoil": false
             },
             {
               "code": "IRQ20",
+              "displayName": "Mohanad Ali",
               "isFoil": false
             }
           ]
