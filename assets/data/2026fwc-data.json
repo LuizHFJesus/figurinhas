@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "44",
+  "version": "45",
   "groups": [
     {
       "id": "OTHERS",
@@ -4306,82 +4306,102 @@
           "stickers": [
             {
               "code": "ALG1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "ALG2",
+              "displayName": "Alexis Guendouz",
               "isFoil": false
             },
             {
               "code": "ALG3",
+              "displayName": "Ramy Bensebaini",
               "isFoil": false
             },
             {
               "code": "ALG4",
+              "displayName": "Youcef Atal",
               "isFoil": false
             },
             {
               "code": "ALG5",
+              "displayName": "Rayan Aït-Nouri",
               "isFoil": false
             },
             {
               "code": "ALG6",
+              "displayName": "Mohamed Amine Tougai",
               "isFoil": false
             },
             {
               "code": "ALG7",
+              "displayName": "Aïssa Mandi",
               "isFoil": false
             },
             {
               "code": "ALG8",
+              "displayName": "Ismael Bennacer",
               "isFoil": false
             },
             {
               "code": "ALG9",
+              "displayName": "Houssem Aquar",
               "isFoil": false
             },
             {
               "code": "ALG10",
+              "displayName": "Hicham Boudaoui",
               "isFoil": false
             },
             {
               "code": "ALG11",
+              "displayName": "Ramiz Zerrouki",
               "isFoil": false
             },
             {
               "code": "ALG12",
+              "displayName": "Nabil Bentalab",
               "isFoil": false
             },
             {
               "code": "ALG13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ALG14",
+              "displayName": "Farés Chaibi",
               "isFoil": false
             },
             {
               "code": "ALG15",
+              "displayName": "Riyad Mahrez",
               "isFoil": false
             },
             {
               "code": "ALG16",
+              "displayName": "Said Benrhama",
               "isFoil": false
             },
             {
               "code": "ALG17",
+              "displayName": "Anis Hadj Moussa",
               "isFoil": false
             },
             {
               "code": "ALG18",
+              "displayName": "Amine Gouiri",
               "isFoil": false
             },
             {
               "code": "ALG19",
+              "displayName": "Baghdad Bounedjah",
               "isFoil": false
             },
             {
               "code": "ALG20",
+              "displayName": "Mohammed Amoura",
               "isFoil": false
             }
           ]
