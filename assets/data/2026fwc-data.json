@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "43",
+  "version": "44",
   "groups": [
     {
       "id": "OTHERS",
@@ -4197,82 +4197,102 @@
           "stickers": [
             {
               "code": "ARG1",
+              "displayName":"Emblem",
               "isFoil": true
             },
             {
               "code": "ARG2",
+              "displayName": "Emiliano Martinez",
               "isFoil": false
             },
             {
               "code": "ARG3",
+              "displayName": "Nahuel Molina",
               "isFoil": false
             },
             {
               "code": "ARG4",
+              "displayName": "Cristian Romero",
               "isFoil": false
             },
             {
               "code": "ARG5",
+              "displayName": "Nicolas Otamendi",
               "isFoil": false
             },
             {
               "code": "ARG6",
+              "displayName": "Nicolas Tagliafico",
               "isFoil": false
             },
             {
               "code": "ARG7",
+              "displayName": "Leonardo Balerdi",
               "isFoil": false
             },
             {
               "code": "ARG8",
+              "displayName": "Enzo Fernandez",
               "isFoil": false
             },
             {
               "code": "ARG9",
+              "displayName": "Alexis Mac Allister",
               "isFoil": false
             },
             {
               "code": "ARG10",
+              "displayName": "Rodrigo De Paul",
               "isFoil": false
             },
             {
               "code": "ARG11",
+              "displayName": "Exequiel Palacios",
               "isFoil": false
             },
             {
               "code": "ARG12",
+              "displayName": "Leandro Paredes",
               "isFoil": false
             },
             {
               "code": "ARG13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ARG14",
+              "displayName": "Nico Paz",
               "isFoil": false
             },
             {
               "code": "ARG15",
+              "displayName": "Franco Mastantuono",
               "isFoil": false
             },
             {
               "code": "ARG16",
+              "displayName": "Nico Gonzalez",
               "isFoil": false
             },
             {
               "code": "ARG17",
+              "displayName": "Lionel Messi",
               "isFoil": false
             },
             {
               "code": "ARG18",
+              "displayName": "Lautaro Martinez",
               "isFoil": false
             },
             {
               "code": "ARG19",
+              "displayName": "Julian Alvarez",
               "isFoil": false
             },
             {
               "code": "ARG20",
+              "displayName": "Giuliano Simeone",
               "isFoil": false
             }
           ]
