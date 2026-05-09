@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "45",
+  "version": "46",
   "groups": [
     {
       "id": "OTHERS",
@@ -4415,82 +4415,102 @@
           "stickers": [
             {
               "code": "AUT1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "AUT2",
+              "displayName": "Alexander Schlager",
               "isFoil": false
             },
             {
               "code": "AUT3",
+              "displayName": "Patrick Pentz",
               "isFoil": false
             },
             {
               "code": "AUT4",
+              "displayName": "David Alaba",
               "isFoil": false
             },
             {
               "code": "AUT5",
+              "displayName": "Kevin Danso",
               "isFoil": false
             },
             {
               "code": "AUT6",
+              "displayName": "Philipp Lienhart",
               "isFoil": false
             },
             {
               "code": "AUT7",
+              "displayName": "Stefan Bosch",
               "isFoil": false
             },
             {
               "code": "AUT8",
+              "displayName": "Phillipp Mwene",
               "isFoil": false
             },
             {
               "code": "AUT9",
+              "displayName": "Alexander Prass",
               "isFoil": false
             },
             {
               "code": "AUT10",
+              "displayName": "Xavier Schlager",
               "isFoil": false
             },
             {
               "code": "AUT11",
+              "displayName": "Marcel Sabitzer",
               "isFoil": false
             },
             {
               "code": "AUT12",
+              "displayName": "Konrad Laimer",
               "isFoil": false
             },
             {
               "code": "AUT13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "AUT14",
+              "displayName": "Florian Grillitsch",
               "isFoil": false
             },
             {
               "code": "AUT15",
+              "displayName": "Nicolas Seiwald",
               "isFoil": false
             },
             {
               "code": "AUT16",
+              "displayName": "Romano Schmid",
               "isFoil": false
             },
             {
               "code": "AUT17",
+              "displayName": "Patrick Wimmer",
               "isFoil": false
             },
             {
               "code": "AUT18",
+              "displayName": "Christoph Baumgartner",
               "isFoil": false
             },
             {
               "code": "AUT19",
+              "displayName": "Michael Gregoritsch",
               "isFoil": false
             },
             {
               "code": "AUT20",
+              "displayName": "Marko Arnautović",
               "isFoil": false
             }
           ]
