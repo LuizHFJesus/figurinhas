@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "46",
+  "version": "47",
   "groups": [
     {
       "id": "OTHERS",
@@ -4524,82 +4524,102 @@
           "stickers": [
             {
               "code": "JOR1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "JOR2",
+              "displayName": "Yazeed Abulaila",
               "isFoil": false
             },
             {
               "code": "JOR3",
+              "displayName": "Ihsan Haddad",
               "isFoil": false
             },
             {
               "code": "JOR4",
+              "displayName": "Mohammad Abu Hashish",
               "isFoil": false
             },
             {
               "code": "JOR5",
+              "displayName": "Yazan Al-Arab",
               "isFoil": false
             },
             {
               "code": "JOR6",
+              "displayName": "Abdallah Nasib",
               "isFoil": false
             },
             {
               "code": "JOR7",
+              "displayName": "Saleem Obaid",
               "isFoil": false
             },
             {
               "code": "JOR8",
+              "displayName": "Mohammad Abualnadi",
               "isFoil": false
             },
             {
               "code": "JOR9",
+              "displayName": "Ibrahim Saadeh",
               "isFoil": false
             },
             {
               "code": "JOR10",
+              "displayName": "Nizar Al-Rashdan",
               "isFoil": false
             },
             {
               "code": "JOR11",
+              "displayName": "Noor Al-Rawabdeh",
               "isFoil": false
             },
             {
               "code": "JOR12",
+              "displayName": "Mohannad Abu Taha",
               "isFoil": false
             },
             {
               "code": "JOR13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "JOR14",
+              "displayName": "Amer Jamous",
               "isFoil": false
             },
             {
               "code": "JOR15",
+              "displayName": "Mousa Al-Taamari",
               "isFoil": false
             },
             {
               "code": "JOR16",
+              "displayName": "Yazan Al-Naimat",
               "isFoil": false
             },
             {
               "code": "JOR17",
+              "displayName": "Mahmoud Al-Mardi",
               "isFoil": false
             },
             {
               "code": "JOR18",
+              "displayName": "Ali Olwan",
               "isFoil": false
             },
             {
               "code": "JOR19",
+              "displayName": "Mohammad Abu Zrayq",
               "isFoil": false
             },
             {
               "code": "JOR20",
+              "displayName": "Ibrahim Sabra",
               "isFoil": false
             }
           ]
