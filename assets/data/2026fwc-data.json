@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "49",
+  "version": "50",
   "groups": [
     {
       "id": "OTHERS",
@@ -5299,82 +5299,102 @@
           "stickers": [
             {
               "code": "GHA1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "GHA2",
+              "displayName": "Lawrence Ati Zigi",
               "isFoil": false
             },
             {
               "code": "GHA3",
+              "displayName": "Tariq Lamptey",
               "isFoil": false
             },
             {
               "code": "GHA4",
+              "displayName": "Mohammed Salisu",
               "isFoil": false
             },
             {
               "code": "GHA5",
+              "displayName": "Alidu Seidu",
               "isFoil": false
             },
             {
               "code": "GHA6",
+              "displayName": "Alexander Djiku",
               "isFoil": false
             },
             {
               "code": "GHA7",
+              "displayName": "Gideon Mensah",
               "isFoil": false
             },
             {
               "code": "GHA8",
+              "displayName": "Caleb Yirenkyi",
               "isFoil": false
             },
             {
               "code": "GHA9",
+              "displayName": "Abdul Issahaku Fatawu",
               "isFoil": false
             },
             {
               "code": "GHA10",
+              "displayName": "Thomas Partey",
               "isFoil": false
             },
             {
               "code": "GHA11",
+              "displayName": "Salis Abdul Samed",
               "isFoil": false
             },
             {
               "code": "GHA12",
+              "displayName": "Kamaldeen Sulemana",
               "isFoil": false
             },
             {
               "code": "GHA13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "GHA14",
+              "displayName": "Mohammed Kudus",
               "isFoil": false
             },
             {
               "code": "GHA15",
+              "displayName": "Inaki Williams",
               "isFoil": false
             },
             {
               "code": "GHA16",
+              "displayName": "Jordan Ayew",
               "isFoil": false
             },
             {
               "code": "GHA17",
+              "displayName": "Andrew Ayew",
               "isFoil": false
             },
             {
               "code": "GHA18",
+              "displayName": "Joseph Paintsil",
               "isFoil": false
             },
             {
               "code": "GHA19",
+              "displayName": "Osman Bukari",
               "isFoil": false
             },
             {
               "code": "GHA20",
+              "displayName": "Antoine Semenyo",
               "isFoil": false
             }
           ]
