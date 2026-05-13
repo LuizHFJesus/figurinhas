@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "48",
+  "version": "49",
   "groups": [
     {
       "id": "OTHERS",
@@ -5190,82 +5190,102 @@
           "stickers": [
             {
               "code": "CRO1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "CRO2",
+              "displayName": "Dominik Livaković",
               "isFoil": false
             },
             {
               "code": "CRO3",
+              "displayName": "Duje Caleta-Car",
               "isFoil": false
             },
             {
               "code": "CRO4",
+              "displayName": "Josko Gvardiol",
               "isFoil": false
             },
             {
               "code": "CRO5",
+              "displayName": "Josip Stanišić",
               "isFoil": false
             },
             {
               "code": "CRO6",
+              "displayName": "Luka Vušković",
               "isFoil": false
             },
             {
               "code": "CRO7",
+              "displayName": "Josip Sutalo",
               "isFoil": false
             },
             {
               "code": "CRO8",
+              "displayName": "Kristijan Jakic",
               "isFoil": false
             },
             {
               "code": "CRO9",
+              "displayName": "Luka Modrić",
               "isFoil": false
             },
             {
               "code": "CRO10",
+              "displayName": "Mateo Kovacic",
               "isFoil": false
             },
             {
               "code": "CRO11",
+              "displayName": "Martin Baturina",
               "isFoil": false
             },
             {
               "code": "CRO12",
+              "displayName": "Lovro Majer",
               "isFoil": false
             },
             {
               "code": "CRO13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "CRO14",
+              "displayName": "Mario Pasalic",
               "isFoil": false
             },
             {
               "code": "CRO15",
+              "displayName": "Petar Sucic",
               "isFoil": false
             },
             {
               "code": "CRO16",
+              "displayName": "Ivan Perišić",
               "isFoil": false
             },
             {
               "code": "CRO17",
+              "displayName": "Marco Pasalic",
               "isFoil": false
             },
             {
               "code": "CRO18",
+              "displayName": "Ante Budimir",
               "isFoil": false
             },
             {
               "code": "CRO19",
+              "displayName": "Andrej Kramarić",
               "isFoil": false
             },
             {
               "code": "CRO20",
+              "displayName": "Franjo Ivanovic",
               "isFoil": false
             }
           ]
