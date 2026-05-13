@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "50",
+  "version": "51",
   "groups": [
     {
       "id": "OTHERS",
@@ -5408,82 +5408,102 @@
           "stickers": [
             {
               "code": "PAN1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "PAN2",
+              "displayName": "Orlando Mosquera",
               "isFoil": false
             },
             {
               "code": "PAN3",
+              "displayName": "Luis Mejia",
               "isFoil": false
             },
             {
               "code": "PAN4",
+              "displayName": "Fidel Escobar",
               "isFoil": false
             },
             {
               "code": "PAN5",
+              "displayName": "Andres Andrade",
               "isFoil": false
             },
             {
               "code": "PAN6",
+              "displayName": "Michael Amir Murillo",
               "isFoil": false
             },
             {
               "code": "PAN7",
+              "displayName": "Eric Davis",
               "isFoil": false
             },
             {
               "code": "PAN8",
+              "displayName": "Jose Cordoba",
               "isFoil": false
             },
             {
               "code": "PAN9",
+              "displayName": "Cesar Blackman",
               "isFoil": false
             },
             {
               "code": "PAN10",
+              "displayName": "Cristian Martinez",
               "isFoil": false
             },
             {
               "code": "PAN11",
+              "displayName": "Aníbal Godoy",
               "isFoil": false
             },
             {
               "code": "PAN12",
+              "displayName": "Adalberto Carrasquilla",
               "isFoil": false
             },
             {
               "code": "PAN13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "PAN14",
+              "displayName": "Édgar Bárcenas",
               "isFoil": false
             },
             {
               "code": "PAN15",
+              "displayName": "Carlos Harvey",
               "isFoil": false
             },
             {
               "code": "PAN16",
+              "displayName": "Ismael Díaz",
               "isFoil": false
             },
             {
               "code": "PAN17",
+              "displayName": "Jose Fajardo",
               "isFoil": false
             },
             {
               "code": "PAN18",
+              "displayName": "Cecilio Waterman",
               "isFoil": false
             },
             {
               "code": "PAN19",
+              "displayName": "Jose Luiz Rodriguez",
               "isFoil": false
             },
             {
               "code": "PAN20",
+              "displayName": "Alberto Quintero",
               "isFoil": false
             }
           ]
