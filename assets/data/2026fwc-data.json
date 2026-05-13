@@ -1,7 +1,7 @@
 {
   "id": "2026FWC",
   "edition": "2026 World Cup",
-  "version": "47",
+  "version": "48",
   "groups": [
     {
       "id": "OTHERS",
@@ -5081,82 +5081,102 @@
           "stickers": [
             {
               "code": "ENG1",
+              "displayName": "Emblem",
               "isFoil": true
             },
             {
               "code": "ENG2",
+              "displayName": "Jordan Pickford",
               "isFoil": false
             },
             {
               "code": "ENG3",
+              "displayName": "John Stones",
               "isFoil": false
             },
             {
               "code": "ENG4",
+              "displayName": "Maric Guéhi",
               "isFoil": false
             },
             {
               "code": "ENG5",
+              "displayName": "Ezri Konsa",
               "isFoil": false
             },
             {
               "code": "ENG6",
+              "displayName": "Trent Alexander-Arnold",
               "isFoil": false
             },
             {
               "code": "ENG7",
+              "displayName": "Reece James",
               "isFoil": false
             },
             {
               "code": "ENG8",
+              "displayName": "Dan Burn",
               "isFoil": false
             },
             {
               "code": "ENG9",
+              "displayName": "Jordan Henderson",
               "isFoil": false
             },
             {
               "code": "ENG10",
+              "displayName": "Declan Rice",
               "isFoil": false
             },
             {
               "code": "ENG11",
+              "displayName": "Jude Bellingham",
               "isFoil": false
             },
             {
               "code": "ENG12",
+              "displayName": "Cole Palmer",
               "isFoil": false
             },
             {
               "code": "ENG13",
+              "displayName": "Team Photo",
               "isFoil": false
             },
             {
               "code": "ENG14",
+              "displayName": "Morgan Rogers",
               "isFoil": false
             },
             {
               "code": "ENG15",
+              "displayName": "Anthony Gordon",
               "isFoil": false
             },
             {
               "code": "ENG16",
+              "displayName": "Phil Foden",
               "isFoil": false
             },
             {
               "code": "ENG17",
+              "displayName": "Bukayo Saka",
               "isFoil": false
             },
             {
               "code": "ENG18",
+              "displayName": "Harry Kane",
               "isFoil": false
             },
             {
               "code": "ENG19",
+              "displayName": "Marcus Rashford",
               "isFoil": false
             },
             {
               "code": "ENG20",
+              "displayName": "Ollie Watkins",
               "isFoil": false
             }
           ]
