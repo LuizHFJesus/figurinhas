@@ -35,25 +35,23 @@ class RenameAlbumDialogState extends State<RenameAlbumDialog> {
 
     return ContentAlertDialog(
       title: 'more_options_rename_album_title'.tr,
-      content: Expanded(
-        child: TextField(
-          controller: _controller,
-          autofocus: true,
-          decoration: InputDecoration(
-            hintText: 'more_options_rename_album_hint'.tr,
-            hintStyle: textTheme.bodyLarge?.copyWith(
-              color: colorScheme.outline,
-            ),
-            filled: true,
-            fillColor: colorScheme.surface,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide.none,
-            ),
+      content: TextField(
+        controller: _controller,
+        autofocus: true,
+        decoration: InputDecoration(
+          hintText: 'more_options_rename_album_hint'.tr,
+          hintStyle: textTheme.bodyLarge?.copyWith(
+            color: colorScheme.outline,
           ),
-          maxLength: 20,
-          textCapitalization: TextCapitalization.sentences,
+          filled: true,
+          fillColor: colorScheme.surface,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
         ),
+        maxLength: 20,
+        textCapitalization: TextCapitalization.sentences,
       ),
       primaryAction: DialogAction(
         label: 'confirm'.tr,
