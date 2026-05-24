@@ -7,11 +7,13 @@ class SectionRouteArgs {
   final UserAlbum? album;
   final Section? section;
   final SectionStats? stats;
+  final List<Section>? allSections;
 
   const SectionRouteArgs({
     required this.sectionId,
     this.album,
     this.section,
     this.stats,
+    this.allSections,
   });
 }

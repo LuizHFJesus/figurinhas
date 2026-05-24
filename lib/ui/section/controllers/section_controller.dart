@@ -65,8 +65,33 @@ class SectionController extends GetxController {
     this._moreOptionsCoordinator,
     this._activeAlbumService, {
     required this.sectionId,
-    required this.sectionArgs,
+    this.sectionArgs,
   });
+
+  static SectionController put(String sectionId, {SectionRouteArgs? args}) {
+    if (Get.isRegistered<SectionController>(tag: sectionId)) {
+      return Get.find<SectionController>(tag: sectionId);
+    }
+
+    return Get.put(
+      SectionController(
+        Get.find<UserProfileRepository>(),
+        Get.find<CatalogRepository>(),
+        Get.find<GetActiveUserAlbumUseCase>(),
+        Get.find<GetStickersBySectionUseCase>(),
+        Get.find<WatchSectionStatsUseCase>(),
+        Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<SetStickerQuantityUseCase>(),
+        Get.find<HasSeenHowItWorksUseCase>(),
+        Get.find<SetHasSeenHowItWorksUseCase>(),
+        Get.find<MoreOptionsCoordinator>(),
+        Get.find<ActiveAlbumService>(),
+        sectionId: sectionId,
+        sectionArgs: args,
+      ),
+      tag: sectionId,
+    );
+  }
 
   @override
   Future<void> onInit() async {
