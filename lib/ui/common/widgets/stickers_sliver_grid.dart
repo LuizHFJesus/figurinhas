@@ -10,9 +10,10 @@ class StickersSliverGrid extends StatelessWidget {
   final void Function(Sticker sticker) onLongPress;
 
   final EdgeInsets padding;
-  final int crossAxisCount;
+  final double maxCrossAxisExtent;
   final double mainAxisSpacing;
   final double crossAxisSpacing;
+  final double childAspectRatio;
 
   const StickersSliverGrid({
     required this.stickers,
@@ -20,9 +21,10 @@ class StickersSliverGrid extends StatelessWidget {
     required this.onTap,
     required this.onLongPress,
     this.padding = const EdgeInsets.symmetric(horizontal: 24),
-    this.crossAxisCount = 4,
+    this.maxCrossAxisExtent = 100,
     this.mainAxisSpacing = 10,
     this.crossAxisSpacing = 10,
+    this.childAspectRatio = 1.0,
     super.key,
   });
 
@@ -31,10 +33,11 @@ class StickersSliverGrid extends StatelessWidget {
     return SliverPadding(
       padding: padding,
       sliver: SliverGrid(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount,
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: maxCrossAxisExtent,
           mainAxisSpacing: mainAxisSpacing,
           crossAxisSpacing: crossAxisSpacing,
+          childAspectRatio: childAspectRatio,
         ),
         delegate: SliverChildBuilderDelegate(
           childCount: stickers.length,
