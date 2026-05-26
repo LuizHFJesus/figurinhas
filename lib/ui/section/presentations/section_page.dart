@@ -72,7 +72,8 @@ class SectionPage extends GetView<SectionController> {
         },
       ),
 
-      header: Padding(
+      header: Container(
+        alignment: Alignment.centerLeft,
         padding: const EdgeInsets.only(bottom: 16),
         child: Obx(
           () => StickerFilterChipsBar(
