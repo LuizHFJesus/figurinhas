@@ -48,7 +48,7 @@ const Map<String, String> ptBR = {
   'share_missing': 'Figurinhas faltantes',
   'share_repeated': 'Figurinhas repetidas',
   'share_app': 'Compartilhar app',
-  'share_app_link': 'Baixe o app "Figurinhas" para ter controle de todas figurinhas do seu álbum:\nhttps://play.google.com/store/apps/details?id=dev.luizhfj.wc22.stickermanager',
+  'share_app_link': 'Baixe o app "Figurinhas" para ter controle de todas figurinhas do seu álbum:\nhttps://play.google.com/store/apps/details?id=dev.luizhfj.figurinhas',
   'share_loading': 'Gerando lista...',
   'share_lbl_album': 'Álbum',
   'share_lbl_edition': 'Edição',
