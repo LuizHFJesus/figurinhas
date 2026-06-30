@@ -1,5 +1,5 @@
 const Map<String, String> ptBR = {
-  'app_name': 'Controle de Figurinhas',
+  'app_name': 'Figurinhas',
 
   // Splash / Bootstrap Errors
   'error_bootstrap_title': 'Ops! Algo deu errado',
