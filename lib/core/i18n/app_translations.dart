@@ -6,6 +6,7 @@ import 'package:sticker_manager_wc22/core/i18n/locales/es_mx.dart';
 import 'package:sticker_manager_wc22/core/i18n/locales/fr_ca.dart';
 import 'package:sticker_manager_wc22/core/i18n/locales/it_it.dart';
 import 'package:sticker_manager_wc22/core/i18n/locales/ja_jp.dart';
+import 'package:sticker_manager_wc22/core/i18n/locales/ko_kr.dart';
 import 'package:sticker_manager_wc22/core/i18n/locales/pt_br.dart';
 
 class AppTranslations extends Translations {
@@ -16,6 +17,7 @@ class AppTranslations extends Translations {
   static const String frCAKey = 'fr_CA';
   static const String esMXKey = 'es_MX';
   static const String jaJPKey = 'ja_JP';
+  static const String koKRKey = 'ko_KR';
 
   @override
   Map<String, Map<String, String>> get keys => {
@@ -26,5 +28,6 @@ class AppTranslations extends Translations {
     frCAKey: frCA,
     esMXKey: esMX,
     jaJPKey: jaJP,
+    koKRKey: koKR,
   };
 }
