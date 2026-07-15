@@ -7,10 +7,13 @@ import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repositor
 import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/create_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/ensure_default_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_groups_and_sections_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/rename_user_album_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/update_catalog_if_needed_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/home/controllers/home_controller.dart';
@@ -32,6 +35,25 @@ class HomeBinding extends Bindings {
 
     Get.lazyPut(() => WatchAlbumStatsUseCase(Get.find<StatsRepository>()));
     Get.lazyPut(() => WatchSectionStatsUseCase(Get.find<StatsRepository>()));
+
+    if (!Get.isRegistered<UpdateCatalogIfNeededUseCase>()) {
+      Get.lazyPut(
+        () => UpdateCatalogIfNeededUseCase(Get.find<CatalogRepository>()),
+        fenix: true,
+      );
+    }
+    
+    if (!Get.isRegistered<EnsureDefaultUserAlbumUsecase>()) {
+      Get.lazyPut(
+        () => EnsureDefaultUserAlbumUsecase(
+          Get.find<CatalogRepository>(),
+          Get.find<UserAlbumRepository>(),
+          Get.find<CreateUserAlbumUseCase>(),
+          Get.find<UpdateCatalogIfNeededUseCase>(),
+        ),
+        fenix: true,
+      );
+    }
 
     if (!Get.isRegistered<GetActiveUserAlbumUseCase>()) {
       Get.lazyPut(
@@ -92,8 +114,16 @@ class HomeBinding extends Bindings {
       );
     }
 
+    if (!Get.isRegistered<RenameUserAlbumUseCase>()) {
+      Get.lazyPut(
+        () => RenameUserAlbumUseCase(Get.find<UserAlbumRepository>()),
+        fenix: true,
+      );
+    }
+
     Get.lazyPut(
       () => MoreOptionsCoordinator(
+        Get.find<RenameUserAlbumUseCase>(),
         Get.find<ClearAlbumUseCase>(),
         Get.find<FillAlbumUseCase>(),
       ),

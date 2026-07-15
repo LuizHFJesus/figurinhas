@@ -24,10 +24,14 @@ class CatalogRepositoryImpl implements CatalogRepository {
 
     final albumId = decoded['id'] as String;
     final edition = decoded['edition'] as String;
+    final hash = decoded['hash'] as String?;
+    final version = decoded['version'] as String?;
 
     final album = AlbumEntity()
       ..albumId = albumId
-      ..edition = edition;
+      ..edition = edition
+      ..hash = hash
+      ..version = version != null ? int.parse(version) : null;
 
     final groups = <GroupEntity>[];
     final sections = <SectionEntity>[];
@@ -92,7 +96,7 @@ class CatalogRepositoryImpl implements CatalogRepository {
         for (final st in (sm['stickers'] as List<dynamic>)) {
           final stm = st as Map<String, dynamic>;
           final code = stm['code'] as String;
-          final displayName = stm['displayName'] as String;
+          final displayName = stm['displayName'] as String? ?? '';
           final isFoil = (stm['isFoil'] as bool?) ?? false;
 
           final stickerSearch = TextNormalizer.buildSearchText([

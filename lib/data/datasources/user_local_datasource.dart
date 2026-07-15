@@ -8,6 +8,14 @@ abstract class UserLocalDataSource {
   // Profile
   Future<UserProfileEntity> ensureLocalProfile();
 
+  Future<bool> hasSeenHowItWorksOnStickerClick(String profileId);
+
+  Future<void> setHasSeenHowItWorksOnStickerClick(String profileId, bool value);
+
+  Future<bool> isAdsRemoved(String profileId);
+
+  Future<void> setAdsRemoved(String profileId, {required bool value});
+
   // UserAlbums
   Future<UserAlbumEntity> createUserAlbum(UserAlbumEntity e);
 
@@ -20,6 +28,11 @@ abstract class UserLocalDataSource {
   Future<void> setActiveUserAlbum({
     required String profileId,
     required String userAlbumId,
+  });
+
+  Future<void> updateUserAlbumName({
+    required String userAlbumId,
+    required String newName,
   });
 
   // StickerState

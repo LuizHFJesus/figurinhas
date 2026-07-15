@@ -16,8 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.1+2
-
+version: 1.0.10+11
 environment:
   sdk: ^3.9.2
 
@@ -38,6 +37,7 @@ dependencies:
   go_router: ^16.2.2
   google_fonts: ^6.3.1
   google_mobile_ads: ^7.0.0
+  in_app_purchase: ^3.2.3
   isar_community: ^3.3.0
   isar_community_flutter_libs: ^3.3.0
   path_provider: ^2.1.5
@@ -71,37 +71,53 @@ flutter:
     - assets/icons/
     - assets/flags/coca-cola.svg
     - assets/flags/ar.svg
+    - assets/flags/at.svg
     - assets/flags/au.svg
+    - assets/flags/ba.svg
     - assets/flags/be.svg
     - assets/flags/br.svg
     - assets/flags/ca.svg
+    - assets/flags/cd.svg
     - assets/flags/ch.svg
-    - assets/flags/cm.svg
-    - assets/flags/cr.svg
+    - assets/flags/ci.svg
+    - assets/flags/co.svg
+    - assets/flags/cv.svg
+    - assets/flags/cw.svg
+    - assets/flags/cz.svg
     - assets/flags/de.svg
-    - assets/flags/dk.svg
+    - assets/flags/dz.svg
     - assets/flags/ec.svg
+    - assets/flags/eg.svg
     - assets/flags/es.svg
     - assets/flags/fr.svg
     - assets/flags/gb-eng.svg
-    - assets/flags/gb-wls.svg
+    - assets/flags/gb-sct.svg
     - assets/flags/gh.svg
     - assets/flags/hr.svg
+    - assets/flags/ht.svg
+    - assets/flags/iq.svg
     - assets/flags/ir.svg
+    - assets/flags/jo.svg
     - assets/flags/jp.svg
     - assets/flags/kr.svg
     - assets/flags/ma.svg
     - assets/flags/mx.svg
     - assets/flags/nl.svg
-    - assets/flags/pl.svg
+    - assets/flags/no.svg
+    - assets/flags/nz.svg
+    - assets/flags/pa.svg
+    - assets/flags/py.svg
     - assets/flags/pt.svg
     - assets/flags/qa.svg
-    - assets/flags/rs.svg
     - assets/flags/sa.svg
+    - assets/flags/se.svg
     - assets/flags/sn.svg
     - assets/flags/tn.svg
+    - assets/flags/tr.svg
     - assets/flags/us.svg
     - assets/flags/uy.svg
+    - assets/flags/uz.svg
+    - assets/flags/za.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -131,7 +147,7 @@ flutter:
 
 flutter_launcher_icons:
   android: true
-  adaptive_icon_background: "#9E0C36"
+  adaptive_icon_background: "#1A1A1A"
   adaptive_icon_foreground: "assets/icons/app_foreground.png"
   image_path: "assets/icons/app.png"
   ios: true

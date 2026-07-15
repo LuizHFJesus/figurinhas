@@ -85,20 +85,22 @@ class StickerGridItem extends StatelessWidget {
                 fontWeight: fontWeightCode,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4),
-              child: Text(
-                sticker.displayName,
-                textAlign: TextAlign.center,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: textTheme.labelSmall?.copyWith(
-                  fontSize: 8,
-                  color: textColor,
-                  fontWeight: fontWeightName,
+
+            if (sticker.displayName.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: Text(
+                  sticker.displayName,
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: textTheme.labelSmall?.copyWith(
+                    fontSize: 8,
+                    color: textColor,
+                    fontWeight: fontWeightName,
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),
@@ -136,17 +138,16 @@ class StickerGridItem extends StatelessWidget {
               right: -4,
               top: -8,
               child: DecoratedBox(
-                decoration: const BoxDecoration(
-                  color: AppPalette.brand,
+                decoration: BoxDecoration(
+                  color: colorScheme.primary,
                   shape: BoxShape.circle,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(6),
                   child: Text(
                     '${quantity - 1}',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
+                    style: textTheme.labelSmall?.copyWith(
+                      color: colorScheme.onPrimary,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -167,6 +168,39 @@ class StickerGridItem extends StatelessWidget {
             ),
         ],
       ),
+    );
+  }
+}
+
+class DummyStickerGridItem extends StatelessWidget {
+  final String code;
+  final String displayName;
+  final bool isFoil;
+  final int quantity;
+
+  const DummyStickerGridItem({
+    required this.code,
+    required this.isFoil,
+    required this.quantity,
+    this.displayName = '',
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return StickerGridItem(
+      sticker: Sticker(
+        code: code,
+        albumId: '',
+        groupId: '',
+        sectionId: '',
+        displayName: displayName,
+        isFoil: isFoil,
+        order: 0,
+      ),
+      quantity: quantity,
+      onTap: () {},
+      onLongPress: () {},
     );
   }
 }

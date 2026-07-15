@@ -1,5 +1,5 @@
 const Map<String, String> ptBR = {
-  'app_name': 'Controle de Figurinhas',
+  'app_name': 'Figurinhas',
 
   // Splash / Bootstrap Errors
   'error_bootstrap_title': 'Ops! Algo deu errado',
@@ -48,14 +48,19 @@ const Map<String, String> ptBR = {
   'share_missing': 'Figurinhas faltantes',
   'share_repeated': 'Figurinhas repetidas',
   'share_app': 'Compartilhar app',
-  'share_app_link': 'Baixe o app "Figurinhas" para ter controle de todas figurinhas do seu álbum:\nhttps://play.google.com/store/apps/details?id=dev.luizhfj.wc22.stickermanager',
+  'share_app_link': 'Baixe o app "Figurinhas" para ter controle de todas figurinhas do seu álbum:\nhttps://play.google.com/store/apps/details?id=dev.luizhfj.figurinhas',
   'share_loading': 'Gerando lista...',
   'share_lbl_album': 'Álbum',
   'share_lbl_edition': 'Edição',
-  'app_link': 'https://play.google.com/store/apps/details?id=dev.luizhfj.wc22.stickermanager',
+  'app_link': 'https://play.google.com/store/apps/details?id=dev.luizhfj.figurinhas',
   
   // More Options
   'more_options_title': 'Mais Opções',
+  'more_options_how_it_works': 'Como funciona?',
+  'more_options_rename_album': 'Renomear álbum',
+  'more_options_rename_album_title': 'Renomear álbum',
+  'more_options_rename_album_hint': 'Nome do álbum',
+  'more_options_album_renamed': 'Álbum renomeado com sucesso!',
   'more_options_clear_album': 'Limpar álbum',
   'more_options_clear_album_title': 'Limpar álbum?',
   'more_options_clear_album_desc': 'Esta ação apagará todas as figurinhas marcadas e não poderá ser desfeita.',
@@ -64,6 +69,20 @@ const Map<String, String> ptBR = {
   'more_options_fill_album_title': 'Completar álbum?',
   'more_options_fill_album_desc': 'Esta ação marcará todas as figurinhas não marcadas e não poderá ser desfeita.',
   'more_options_album_filled': 'Álbum completado com sucesso!',
+  'more_options_remove_ads': 'Remover anúncios',
+  'more_options_restore_purchases': 'Restaurar compras',
   'more_options_rate_app': 'Avaliar app',
+  'confirm': 'Confirmar',
   'cancel': 'Cancelar',
+  'close': 'Fechar',
+  
+  // How it works
+  'how_it_works_title': 'Como funciona?',
+  'how_it_works_select': 'Toque para marcar como obtida',
+  'how_it_works_duplicate': 'Toque novamente para adicionar repetidas',
+  'how_it_works_unselect': 'Segure pressionado para desmarcar',
+
+  // Sticker Quantity
+  'sticker_quantity_title': 'Editar figurinha',
+  'sticker_quantity_description': 'Ajuste a quantidade que você tem da figurinha ',
 };

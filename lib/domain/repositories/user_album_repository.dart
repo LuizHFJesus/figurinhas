@@ -18,4 +18,9 @@ abstract class UserAlbumRepository {
     required String profileId,
     required String userAlbumId,
   });
+
+  Future<void> renameUserAlbum({
+    required String userAlbumId,
+    required String newName,
+  });
 }

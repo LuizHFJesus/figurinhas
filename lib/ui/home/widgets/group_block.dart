@@ -86,6 +86,7 @@ class _SectionTile extends StatelessWidget {
                   album: controller.activeAlbum.value,
                   section: section,
                   stats: snapshot.data,
+                  allSections: controller.allSections,
                 ),
               );
             },

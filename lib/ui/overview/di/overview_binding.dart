@@ -6,14 +6,19 @@ import 'package:sticker_manager_wc22/data/services/isar_stats_updater.dart';
 import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/stats_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/sticker_state_repository.dart';
+import 'package:sticker_manager_wc22/domain/repositories/user_album_repository.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/clear_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/fill_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/rename_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_album_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/overview/controllers/overview_controller.dart';
 import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
@@ -44,6 +49,12 @@ class OverviewBinding extends Bindings {
     Get.lazyPut(() => WatchAlbumStatsUseCase(Get.find<StatsRepository>()));
     Get.lazyPut(
       () => IncrementStickerQuantityUseCase(
+        Get.find<StickerStateRepository>(),
+        Get.find<IsarStatsUpdater>(),
+      ),
+    );
+    Get.lazyPut(
+      () => SetStickerQuantityUseCase(
         Get.find<StickerStateRepository>(),
         Get.find<IsarStatsUpdater>(),
       ),
@@ -79,9 +90,17 @@ class OverviewBinding extends Bindings {
       );
     }
 
+    if (!Get.isRegistered<RenameUserAlbumUseCase>()) {
+      Get.lazyPut(
+        () => RenameUserAlbumUseCase(Get.find<UserAlbumRepository>()),
+        fenix: true,
+      );
+    }
+
     if (!Get.isRegistered<MoreOptionsCoordinator>()) {
       Get.lazyPut(
         () => MoreOptionsCoordinator(
+          Get.find<RenameUserAlbumUseCase>(),
           Get.find<ClearAlbumUseCase>(),
           Get.find<FillAlbumUseCase>(),
         ),
@@ -99,6 +118,9 @@ class OverviewBinding extends Bindings {
         Get.find<MoreOptionsCoordinator>(),
         Get.find<SearchSectionsUseCase>(),
         Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<SetStickerQuantityUseCase>(),
+        Get.find<HasSeenHowItWorksUseCase>(),
+        Get.find<SetHasSeenHowItWorksUseCase>(),
         Get.find<ShareCoordinator>(),
         Get.find<ActiveAlbumService>(),
       ),

@@ -1,7 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/common/utils/text_normalizer.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
@@ -14,9 +14,13 @@ import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_sections_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_all_stickers_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/search_sections_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/dialog/sticker_quantity_dialog.dart';
 import 'package:sticker_manager_wc22/ui/overview/models/overview_view_model.dart';
 import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 import 'package:sticker_manager_wc22/ui/share/coordinators/share_coordinator.dart';
@@ -30,6 +34,9 @@ class OverviewController extends GetxController {
   final MoreOptionsCoordinator _moreOptionsCoordinator;
   final SearchSectionsUseCase _searchSections;
   final IncrementStickerQuantityUseCase _incrementSticker;
+  final SetStickerQuantityUseCase _setStickerQuantity;
+  final HasSeenHowItWorksUseCase _hasSeenHowItWorks;
+  final SetHasSeenHowItWorksUseCase _setHasSeenHowItWorks;
   final ShareCoordinator _shareCoordinator;
   final ActiveAlbumService _activeAlbumService;
 
@@ -70,6 +77,9 @@ class OverviewController extends GetxController {
     this._moreOptionsCoordinator,
     this._searchSections,
     this._incrementSticker,
+    this._setStickerQuantity,
+    this._hasSeenHowItWorks,
+    this._setHasSeenHowItWorks,
     this._shareCoordinator,
     this._activeAlbumService,
   );
@@ -257,9 +267,19 @@ class OverviewController extends GetxController {
     await _rebuildVisibleSections();
   }
 
-  Future<void> onStickerTap(Sticker sticker) async {
+  Future<void> onStickerTap(BuildContext context, Sticker sticker) async {
     final album = activeAlbum.value;
     if (album == null) return;
+
+    final profileId = await _profileRepo.ensureLocalProfileId();
+    final hasSeen = await _hasSeenHowItWorks(profileId);
+
+    if (!hasSeen) {
+      if (context.mounted) {
+        await _moreOptionsCoordinator.showHowItWorks(context);
+        await _setHasSeenHowItWorks(profileId, true);
+      }
+    }
 
     await _incrementSticker(
       userAlbumId: album.userAlbumId,
@@ -268,12 +288,32 @@ class OverviewController extends GetxController {
     );
   }
 
-  Future<void> onStickerLongPress(Sticker sticker) async {
+  Future<void> onStickerLongPress(BuildContext context, Sticker sticker) async {
     final album = activeAlbum.value;
     if (album == null) return;
 
     final current = _activeAlbumService.quantityOf(sticker.code);
     if (current <= 0) return;
+
+    if (current >= 3) {
+      final newQty = await showDialog<int?>(
+        context: context,
+        builder: (context) => StickerQuantityDialog(
+          sticker: sticker,
+          initialQuantity: current,
+        ),
+      );
+
+      if (newQty != null && newQty != current) {
+        await _setStickerQuantity(
+          userAlbumId: album.userAlbumId,
+          albumId: album.albumId,
+          code: sticker.code,
+          quantity: newQty,
+        );
+      }
+      return;
+    }
 
     await _incrementSticker(
       userAlbumId: album.userAlbumId,

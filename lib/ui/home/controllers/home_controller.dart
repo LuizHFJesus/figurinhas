@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/album_stats.dart';
+import 'package:sticker_manager_wc22/domain/models/section.dart';
 import 'package:sticker_manager_wc22/domain/models/section_stats.dart';
 import 'package:sticker_manager_wc22/domain/models/user_album.dart';
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
@@ -32,6 +33,7 @@ class HomeController extends GetxController {
 
   // Data
   final RxList<GroupSections> catalogStructure = <GroupSections>[].obs;
+  final RxList<Section> allSections = <Section>[].obs;
 
   HomeController(
     this._profileRepo,
@@ -67,6 +69,7 @@ class HomeController extends GetxController {
       activeAlbum.value!.albumId,
     );
     catalogStructure.assignAll(viewModels);
+    allSections.assignAll(viewModels.expand((e) => e.sections).toList());
   }
 
   Stream<SectionStats> watchSectionStat(String sectionId) {

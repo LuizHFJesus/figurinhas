@@ -68,4 +68,10 @@ class UserAlbumRepositoryImpl implements UserAlbumRepository {
     required String userAlbumId,
   }) =>
       _local.setActiveUserAlbum(profileId: profileId, userAlbumId: userAlbumId);
+
+  @override
+  Future<void> renameUserAlbum({
+    required String userAlbumId,
+    required String newName,
+  }) => _local.updateUserAlbumName(userAlbumId: userAlbumId, newName: newName);
 }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sticker_manager_wc22/data/services/active_album_service.dart';
 import 'package:sticker_manager_wc22/domain/models/section.dart';
@@ -10,10 +11,15 @@ import 'package:sticker_manager_wc22/domain/repositories/catalog_repository.dart
 import 'package:sticker_manager_wc22/domain/repositories/user_profile_repository.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_active_user_album_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/get_stickers_by_section_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/has_seen_how_it_works_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/increment_sticker_quantity_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_has_seen_how_it_works_usecase.dart';
+import 'package:sticker_manager_wc22/domain/usecases/set_sticker_quantity_usecase.dart';
 import 'package:sticker_manager_wc22/domain/usecases/watch_section_stats_usecase.dart';
 import 'package:sticker_manager_wc22/ui/common/state/sticker_qty_store.dart';
+import 'package:sticker_manager_wc22/ui/common/widgets/dialog/sticker_quantity_dialog.dart';
 import 'package:sticker_manager_wc22/ui/section/models/section_route_args.dart';
+import 'package:sticker_manager_wc22/ui/settings/coordinators/more_options_coordinator.dart';
 
 class SectionController extends GetxController {
   // Dependencies
@@ -23,6 +29,10 @@ class SectionController extends GetxController {
   final GetStickersBySectionUseCase _getStickers;
   final WatchSectionStatsUseCase _watchStats;
   final IncrementStickerQuantityUseCase _incrementSticker;
+  final SetStickerQuantityUseCase _setStickerQuantity;
+  final HasSeenHowItWorksUseCase _hasSeenHowItWorks;
+  final SetHasSeenHowItWorksUseCase _setHasSeenHowItWorks;
+  final MoreOptionsCoordinator _moreOptionsCoordinator;
   final ActiveAlbumService _activeAlbumService;
 
   // Parameters
@@ -49,10 +59,39 @@ class SectionController extends GetxController {
     this._getStickers,
     this._watchStats,
     this._incrementSticker,
+    this._setStickerQuantity,
+    this._hasSeenHowItWorks,
+    this._setHasSeenHowItWorks,
+    this._moreOptionsCoordinator,
     this._activeAlbumService, {
     required this.sectionId,
-    required this.sectionArgs,
+    this.sectionArgs,
   });
+
+  static SectionController put(String sectionId, {SectionRouteArgs? args}) {
+    if (Get.isRegistered<SectionController>(tag: sectionId)) {
+      return Get.find<SectionController>(tag: sectionId);
+    }
+
+    return Get.put(
+      SectionController(
+        Get.find<UserProfileRepository>(),
+        Get.find<CatalogRepository>(),
+        Get.find<GetActiveUserAlbumUseCase>(),
+        Get.find<GetStickersBySectionUseCase>(),
+        Get.find<WatchSectionStatsUseCase>(),
+        Get.find<IncrementStickerQuantityUseCase>(),
+        Get.find<SetStickerQuantityUseCase>(),
+        Get.find<HasSeenHowItWorksUseCase>(),
+        Get.find<SetHasSeenHowItWorksUseCase>(),
+        Get.find<MoreOptionsCoordinator>(),
+        Get.find<ActiveAlbumService>(),
+        sectionId: sectionId,
+        sectionArgs: args,
+      ),
+      tag: sectionId,
+    );
+  }
 
   @override
   Future<void> onInit() async {
@@ -111,9 +150,19 @@ class SectionController extends GetxController {
     _rebuildVisibleStickers();
   }
 
-  Future<void> onStickerTap(Sticker sticker) async {
+  Future<void> onStickerTap(BuildContext context, Sticker sticker) async {
     final album = activeAlbum.value;
     if (album == null) return;
+
+    final profileId = await _profileRepo.ensureLocalProfileId();
+    final hasSeen = await _hasSeenHowItWorks(profileId);
+
+    if (!hasSeen) {
+      if (context.mounted) {
+        await _moreOptionsCoordinator.showHowItWorks(context);
+        await _setHasSeenHowItWorks(profileId, true);
+      }
+    }
 
     await _incrementSticker(
       userAlbumId: album.userAlbumId,
@@ -122,12 +171,32 @@ class SectionController extends GetxController {
     );
   }
 
-  Future<void> onStickerLongPress(Sticker sticker) async {
+  Future<void> onStickerLongPress(BuildContext context, Sticker sticker) async {
     final album = activeAlbum.value;
     if (album == null) return;
 
     final current = quantityOf(sticker.code);
     if (current <= 0) return;
+
+    if (current >= 3) {
+      final newQty = await showDialog<int?>(
+        context: context,
+        builder: (_) => StickerQuantityDialog(
+          sticker: sticker,
+          initialQuantity: current,
+        ),
+      );
+
+      if (newQty != null && newQty != current) {
+        await _setStickerQuantity(
+          userAlbumId: album.userAlbumId,
+          albumId: album.albumId,
+          code: sticker.code,
+          quantity: newQty,
+        );
+      }
+      return;
+    }
 
     await _incrementSticker(
       userAlbumId: album.userAlbumId,
